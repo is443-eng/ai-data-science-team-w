@@ -1,3 +1,15 @@
+Data We Need:
+- Count of measles cases cases over time
+- Count of measles vaccinations over time
+- Count of deaths from measles over time
+- Population/ratio of deaths that were vaccinated 
+- By age groups
+- By location (city or state in US)
+- Policy reference (date of implementation to help identify trends, can be a static data base)
+
+
+Available APIs: 
+
 Socrata API 
 https://dev.socrata.com/
 https://www.opendatanetwork.com/dataset/data.cdc.gov/x9gk-5huc
