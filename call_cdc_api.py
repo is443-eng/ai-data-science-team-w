@@ -10,10 +10,10 @@ Usage:
   No filter:          venv/bin/python docs/call_cdc_api.py --where ""
   Custom filter:      venv/bin/python docs/call_cdc_api.py --where "year=2019"
   Print columns:      venv/bin/python docs/call_cdc_api.py --schema
+  Save as CSV:        venv/bin/python docs/call_cdc_api.py --out data/raw/nndss_measles.csv
 """
 
 import argparse
-import json
 import os
 import sys
 from pathlib import Path
@@ -23,6 +23,11 @@ try:
     import requests
 except ImportError:
     print("Install requests: pip install requests", file=sys.stderr)
+    sys.exit(1)
+try:
+    import pandas as pd
+except ImportError:
+    print("Install pandas: pip install pandas", file=sys.stderr)
     sys.exit(1)
 
 # .env from project root (parent of docs/) or current dir
@@ -100,7 +105,7 @@ def main():
     parser.add_argument("--soda3", action="store_true", help="Use SODA3 POST endpoint instead of legacy GET")
     parser.add_argument("--limit", type=int, default=1000, help="Max rows (default 1000)")
     parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause (default: label = Measles); use '' for no filter")
-    parser.add_argument("--out", type=str, help="Save JSON to this file")
+    parser.add_argument("--out", type=str, help="Save DataFrame to this file as CSV")
     parser.add_argument("--quiet", action="store_true", help="Only print record count and column headers")
     parser.add_argument("--schema", action="store_true", help="Print column list from dataset metadata and exit")
     args = parser.parse_args()
@@ -128,21 +133,21 @@ def main():
     else:
         data = call_legacy(token, limit=args.limit, where=where)
 
-    print(f"Records returned: {len(data)}")
+    df = pd.DataFrame(data)
+    print(f"Records returned: {len(df)}")
 
-    if data:
-        headers = list(data[0].keys())
-        print(f"Column headers in data ({len(headers)}): {', '.join(headers)}")
+    if len(df) > 0:
+        print(f"Column headers in data ({len(df.columns)}): {', '.join(df.columns)}")
 
     if args.out:
-        with open(args.out, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-        print(f"Saved to {args.out}")
+        df.to_csv(args.out, index=False)
+        print(f"Saved to {args.out} (CSV)")
 
-    if not args.quiet and data:
-        print("\nFirst record:", json.dumps(data[0], indent=2))
-        if len(data) > 1:
-            print("\n... (use --out to save full response)")
+    if not args.quiet and len(df) > 0:
+        print("\nFirst row:")
+        print(df.head(1).to_string())
+        if len(df) > 1:
+            print("\n... (use --out to save full DataFrame as CSV)")
 
 
 if __name__ == "__main__":
