@@ -13,6 +13,9 @@ venv/
 .venv/
 env/
 
+# Data output (CSV from API scripts)
+data/
+
 # IDE / OS
 .idea/
 .DS_Store

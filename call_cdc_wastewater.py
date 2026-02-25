@@ -9,11 +9,10 @@ Usage:
   python call_cdc_wastewater.py
   python call_cdc_wastewater.py --where "year=2024" --limit 500
   python call_cdc_wastewater.py --schema
-  python call_cdc_wastewater.py --out wastewater.json
+  python call_cdc_wastewater.py --out data/raw/wastewater.csv
 """
 
 import argparse
-import json
 import os
 import sys
 from pathlib import Path
@@ -23,6 +22,11 @@ try:
     import requests
 except ImportError:
     print("Install requests: pip install requests", file=sys.stderr)
+    sys.exit(1)
+try:
+    import pandas as pd
+except ImportError:
+    print("Install pandas: pip install pandas", file=sys.stderr)
     sys.exit(1)
 
 PROJECT_ROOT = Path(__file__).resolve().parent
@@ -75,7 +79,7 @@ def main():
     parser.add_argument("--soda3", action="store_true", help="Use SODA3 POST instead of legacy GET")
     parser.add_argument("--limit", type=int, default=1000, help="Max rows (default 1000)")
     parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause")
-    parser.add_argument("--out", type=str, help="Save JSON to this file")
+    parser.add_argument("--out", type=str, help="Save DataFrame to this file as CSV")
     parser.add_argument("--quiet", action="store_true", help="Only print record count and column headers")
     parser.add_argument("--schema", action="store_true", help="Print column list and exit")
     args = parser.parse_args()
@@ -93,15 +97,16 @@ def main():
     where = (args.where.strip() or None) if args.where else None
     data = call_soda3(token, args.limit, where) if args.soda3 else call_legacy(token, args.limit, where)
 
-    print(f"Records returned: {len(data)}")
-    if data:
-        print(f"Columns: {', '.join(data[0].keys())}")
+    df = pd.DataFrame(data)
+    print(f"Records returned: {len(df)}")
+    if len(df) > 0:
+        print(f"Columns: {', '.join(df.columns)}")
     if args.out:
-        with open(args.out, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-        print(f"Saved to {args.out}")
-    if not args.quiet and data:
-        print("\nFirst record:", json.dumps(data[0], indent=2))
+        df.to_csv(args.out, index=False)
+        print(f"Saved to {args.out} (CSV)")
+    if not args.quiet and len(df) > 0:
+        print("\nFirst row:")
+        print(df.head(1).to_string())
 
 
 if __name__ == "__main__":
