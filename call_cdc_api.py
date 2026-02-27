@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-Call the CDC Socrata API (dataset x9gk-5huc). By default fetches all rows
-where label = 'Measles' (all columns). Supports legacy GET and SODA3 POST.
+Call the CDC Socrata API (dataset x9gk-5huc). Measles cases only. Dataset has 2022–present only.
 
 Dataset: https://dev.socrata.com/foundry/data.cdc.gov/x9gk-5huc
 
 Usage:
-  From project root:  venv/bin/python docs/call_cdc_api.py
-  No filter:          venv/bin/python docs/call_cdc_api.py --where ""
-  Custom filter:      venv/bin/python docs/call_cdc_api.py --where "year=2019"
-  Print columns:      venv/bin/python docs/call_cdc_api.py --schema
-  Save as CSV:        venv/bin/python docs/call_cdc_api.py --out data/raw/nndss_measles.csv
+  python call_cdc_api.py                    # measles, all years in dataset (2022–present)
+  python call_cdc_api.py --where ""        # all conditions, no filter
+  python call_cdc_api.py --where "year=2019"
+  python call_cdc_api.py --schema
+  python call_cdc_api.py --out data/raw/measles.csv
 """
 
 import argparse
@@ -30,12 +29,10 @@ except ImportError:
     print("Install pandas: pip install pandas", file=sys.stderr)
     sys.exit(1)
 
-# .env from project root (parent of docs/) or current dir
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent
 try:
     from dotenv import load_dotenv
     load_dotenv(PROJECT_ROOT / ".env")
-    load_dotenv(Path(__file__).resolve().parent / ".env")
 except ImportError:
     pass
 
@@ -62,8 +59,9 @@ def fetch_schema() -> list:
     return meta.get("columns", [])
 
 
-# Default: only rows where label is Measles (column "label"; match any casing/variant)
-DEFAULT_WHERE = "lower(label) like '%measles%'"
+# Default: measles cases only. This dataset (x9gk-5huc) has years 2022–present only; use --where "" for no filter
+# year is text in this dataset, so use string comparison
+DEFAULT_WHERE = "lower(label) like '%measles%' AND year >= '2022' AND year <= '2026'"
 
 
 def call_legacy(token: str, limit: int, where: Optional[str]) -> list:
@@ -101,11 +99,12 @@ def call_soda3(token: str, limit: int, where: Optional[str]) -> list:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Call CDC Socrata API - dataset x9gk-5huc (all columns, optional filter)")
-    parser.add_argument("--soda3", action="store_true", help="Use SODA3 POST endpoint instead of legacy GET")
-    parser.add_argument("--limit", type=int, default=1000, help="Max rows (default 1000)")
-    parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause (default: label = Measles); use '' for no filter")
+    parser = argparse.ArgumentParser(description="CDC Socrata API: measles cases only (x9gk-5huc)")
+    parser.add_argument("--legacy", action="store_true", help="Use legacy GET (default is SODA3 POST for reliable year filter)")
+    parser.add_argument("--limit", type=int, default=50000, help="Max rows (default 50000; dataset is 2022–present)")
+    parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause (default: measles only); use '' for no filter")
     parser.add_argument("--out", type=str, help="Save DataFrame to this file as CSV")
+    parser.add_argument("--table", action="store_true", help="Print full data as a table in the terminal (use --out for large data)")
     parser.add_argument("--quiet", action="store_true", help="Only print record count and column headers")
     parser.add_argument("--schema", action="store_true", help="Print column list from dataset metadata and exit")
     args = parser.parse_args()
@@ -126,12 +125,12 @@ def main():
 
     token = get_token()
 
-    # Default: only rows where label is measles; --where "" means no filter
+    # Default: measles, 2022–present (dataset range); --where "" means no filter. SODA3 (POST) by default.
     where = DEFAULT_WHERE if args.where is None else (args.where.strip() or None)
-    if args.soda3:
-        data = call_soda3(token, limit=args.limit, where=where)
-    else:
+    if args.legacy:
         data = call_legacy(token, limit=args.limit, where=where)
+    else:
+        data = call_soda3(token, limit=args.limit, where=where)
 
     df = pd.DataFrame(data)
     print(f"Records returned: {len(df)}")
@@ -143,11 +142,18 @@ def main():
         df.to_csv(args.out, index=False)
         print(f"Saved to {args.out} (CSV)")
 
-    if not args.quiet and len(df) > 0:
+    if args.table and len(df) > 0:
+        pd.set_option("display.max_rows", None)
+        pd.set_option("display.max_columns", None)
+        pd.set_option("display.width", None)
+        pd.set_option("display.max_colwidth", 50)
+        print("\nFull data:")
+        print(df.to_string())
+    elif not args.quiet and len(df) > 0:
         print("\nFirst row:")
         print(df.head(1).to_string())
         if len(df) > 1:
-            print("\n... (use --out to save full DataFrame as CSV)")
+            print("\n... (use --table to print all rows here, or --out file.csv to save and open in a spreadsheet)")
 
 
 if __name__ == "__main__":
