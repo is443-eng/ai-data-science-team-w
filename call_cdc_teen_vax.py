@@ -80,6 +80,7 @@ def main():
     parser.add_argument("--limit", type=int, default=1000, help="Max rows (default 1000)")
     parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause")
     parser.add_argument("--out", type=str, help="Save DataFrame to this file as CSV")
+    parser.add_argument("--table", action="store_true", help="Print full data as a table in the terminal")
     parser.add_argument("--quiet", action="store_true", help="Only print record count and column headers")
     parser.add_argument("--schema", action="store_true", help="Print column list and exit")
     args = parser.parse_args()
@@ -104,7 +105,14 @@ def main():
     if args.out:
         df.to_csv(args.out, index=False)
         print(f"Saved to {args.out} (CSV)")
-    if not args.quiet and len(df) > 0:
+    if args.table and len(df) > 0:
+        pd.set_option("display.max_rows", None)
+        pd.set_option("display.max_columns", None)
+        pd.set_option("display.width", None)
+        pd.set_option("display.max_colwidth", 50)
+        print("\nFull data:")
+        print(df.to_string())
+    elif not args.quiet and len(df) > 0:
         print("\nFirst row:")
         print(df.head(1).to_string())
 
