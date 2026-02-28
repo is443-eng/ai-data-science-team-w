@@ -1,0 +1,501 @@
+vaccine,dose,geography_type,geography,year_season,dimension_type,dimension,coverage_estimate,_95_ci,population_sample_size,:id,:version,:created_at,:updated_at
+≥1 Dose MMR,,States/Local Areas,North Dakota,2021,Age,19 Months,79.9,69.5 to 87.3,143,row-j7ym-ad9j_9wqv,rv-26yp_htph_tqrg,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2020-2021,Age,35 Months,91.0,85.0 to 95.2,391,row-tbcs_tqjq.69xn,rv-kv78.p49m-x3rt,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2020-2021,Age,19 Months,83.8,77.6 to 88.5,391,row-my2v-6dd4-6hrd,rv-639n-5m56-yrxe,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2021,Age,13 Months,62.7,51.1 to 73.0,143,row-btpu_x7p3_grey,rv-43be~qvwm-7vc5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018,Age,13 Months,69.9,61.7 to 77.0,293,row-qc6n_95jg-s3d6,rv-q8a4.rsxw-ih8x,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018-2019,Age,13 Months,70.3,64.8 to 75.3,556,row-7he9~62qn-i3wf,rv-uj7e~ky5k.mvb8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017,Age,13 Months,67.1,60.0 to 73.5,298,row-5fsd~5bpq_pmhv,rv-ahmr_787y_4edf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017-2018,Age,13 Months,68.5,63.1 to 73.4,591,row-srj3-m82s.5gqx,rv-dy44_bxfs_f5d4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2011,Age,13 Months,57.2,50.8 to 63.3,299,row-ct4y.35vf_2xyj,rv-q4cq-3pmq.99wx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2012,Age,13 Months,62.7,57.8 to 67.4,294,row-weyf-5f3p_vr4x,rv-i4yv~723z-3ywr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013,Age,13 Months,60.3,50.5 to 69.3,237,row-nqja-yiqb.tqec,rv-rrfk~gg9p~m2dn,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013-2014,Age,13 Months,62.9,61.2 to 64.6,467,row-ya8p.c42f-we9h,rv-zc9s.ii23-gmjj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016,Age,13 Months,68.5,60.7 to 75.5,227,row-kjrs_6q99_4abd,rv-m6k4-3j9w.ucyr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016-2017,Age,13 Months,67.8,62.6 to 72.7,525,row-xirt~wh6q~b4w3,rv-qwi5-fcnp~4gdh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015,Age,13 Months,71.5,64.3 to 77.8,217,row-7twk_ts5q_yyd9,rv-c7mw_t8hd.58bh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015-2016,Age,13 Months,70.1,64.7 to 74.9,444,row-8e87-j8dt-5nec,rv-7ci5_7hgt-up4d,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014,Age,13 Months,65.4,57.3 to 72.7,230,row-9jjx~ramx.5y5i,rv-vs5j-4ujp.rhsz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2015,Age,13 Months,68.4,63.0 to 73.4,447,row-rpz4-45rx-8b7u,rv-qt8x_iap2~vmgk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016,Age,24 Months,92.1,87.7 to 95.4,227,row-9ucp.pxaf_tjp8,rv-7fxx_b8dx~67bd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016-2017,Age,24 Months,93.2,90.5 to 95.4,525,row-bu6c-by2v~7uvb,rv-rphy.ufhy_dhat,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017,Age,24 Months,94.4,90.9 to 96.9,298,row-yrs5_z8ch~pcc8,rv-mwcm_btdw.xne7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017-2018,Age,24 Months,94.9,92.5 to 96.8,591,row-7gqz-rjr9_7s5u,rv-wy29~rnkk.a9cc,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013,Age,24 Months,92.6,87.2 to 96.3,237,row-88ps.4ken.j63s,rv-jhp6-z4dz.evq5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013-2014,Age,24 Months,92.7,89.3 to 95.4,467,row-mt5v~h3hh_ixr2,rv-9kye-6fiw.kgnh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014,Age,24 Months,92.6,87.7 to 96.1,230,row-dse8_2d88.m2nh,rv-38x2.6msy-4ach,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2015,Age,24 Months,93.0,90.0 to 95.4,447,row-ktni-xz6a~8zei,rv-222p-qa85_f6dz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015,Age,24 Months,93.4,89.4 to 96.3,217,row-tnpm~9w5m_brmn,rv-8ww7.wrei_3xpw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015-2016,Age,24 Months,92.7,89.8 to 95.1,444,row-6dtj_89rh_684g,rv-8ygb~te4w~vzd4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018,Age,24 Months,95.4,91.6 to 97.9,293,row-jqfp.4ww9_ep2r,rv-sddv.n2bc_hv93,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018-2019,Age,24 Months,94.1,91.2 to 96.4,556,row-pifx.86up.fqxe,rv-8cqi.taun~fzwx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2012,Age,24 Months,92.8,88.6 to 95.8,294,row-xmqw~dt8g.fnd7,rv-4nau.7vjb-vkhr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2011,Age,24 Months,91.2,85.9 to 95.1,299,row-i5jr~u7a8~7sfz,rv-bk6n-gc2w_6pjh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2019,Age,19 Months,90.5,85.0 to 94.1,263,row-yx9y_6i68-aw2x,rv-kr2g_5kp2.m2zh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018,Age,19 Months,92.2,86.8 to 95.5,293,row-dt6b.xzp3-3xhr,rv-44mp.9uqe.kcrv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018-2019,Age,19 Months,94.0,90.8 to 96.1,556,row-3hvy_asmc.tbru,rv-rmtd.bhb3.gvb4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2019,Age,13 Months,70.8,63.1 to 77.4,263,row-q9zs-gb5a_knst,rv-ia7w_afw8_76ui,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2012,Age,19 Months,87.5,84.4 to 90.1,294,row-y2bs.t9km.h2pi,rv-77n8-3bzz_a6t2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014,Age,19 Months,89.7,83.8 to 93.7,230,row-jtdr_s8gd-q8x6,rv-nj3x~7uw8-7rwk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2015,Age,19 Months,91.0,87.5 to 93.7,447,row-w47h-rh63-46yn,rv-dq9c-9pp8.9ap8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013,Age,19 Months,85.8,77.1 to 91.6,237,row-2kxj~39hz_i4qy,rv-28k4-vfe4~sawi,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013-2014,Age,19 Months,87.8,84.2 to 90.7,467,row-e77d.6eik_2wj2,rv-seva_ep2c~ukv6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2011,Age,19 Months,82.5,80.4 to 84.4,299,row-bdga_28fw.skfy,rv-g683~pafc_u6ec,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017,Age,19 Months,90.3,85.1 to 93.8,298,row-i26t_s3up-hzf4,rv-bn54-zwb4-8pkn,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017-2018,Age,19 Months,91.2,87.7 to 93.8,591,row-7cd3~i53k.c24k,rv-esdi~fp88_axsw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016,Age,19 Months,88.3,82.4 to 92.4,227,row-gc5i_td9a~jbrv,rv-2pu4~yt37~2yby,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016-2017,Age,19 Months,89.3,85.5 to 92.1,525,row-z2kn.q23e_67ic,rv-4n8d-yvyp-3bwe,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015,Age,19 Months,92.4,90.0 to 94.2,217,row-nifu-8z8s-uwbs,rv-i689.w3jv.gxr4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015-2016,Age,19 Months,90.4,86.8 to 93.1,444,row-68j2~whqw~dj87,rv-nux6_7due_dde2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2020,Age,13 Months,71.4,64.9 to 77.1,459,row-9hns-63dj-x46q,rv-emds.5n2n_gdyd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Urbanicity,Living In a Non-MSA,91.5,85.7 to 97.3,140,row-78x2~t699.fm93,rv-xt5w_kmyz~xu32,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Urbanicity,Living In a MSA Non-Principal City,93.8,90.4 to 97.1,428,row-9ykx-zwhk~dyyj,rv-vm6g-jeix.aert,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Urbanicity,Living In a MSA Principal City,92.8,89.2 to 96.4,518,row-vvbe~u7fs-shh2,rv-4tbz~vx3a-crr6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Overall,Overall,93.0,90.8 to 95.3,1086,row-jxu6_yvry-9x8q,rv-pik4~jg6e_7y6r,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Insurance Coverage,Any Medicaid,91.1,87.2 to 94.9,379,row-wpz9-nnpe.fnd4,rv-g4zn_qmsx-qqft,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Insurance Coverage,Private Insurance Only,95.9,93.6 to 98.1,656,row-inw5-pxqx~ppkh,rv-73fq_whb3-j2k3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2019-2020,Age,13 Months,75.3,70.3 to 79.7,773,row-innw.tpzr.nhb3,rv-5fzq-7i7p_6uqz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2019-2020,Age,24 Months,95.1,92.6 to 97.0,773,row-xfzt-zjkg-wgds,rv-u2a7-6wva.7dbq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2019-2020,Age,35 Months,96.6,94.3 to 98.1,773,row-dsac.33yv-4bp3,rv-tcni.23d7_4r9q,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2019-2020,Age,19 Months,92.4,88.9 to 94.8,773,row-drdy-ixsy-rzck,rv-ik5d_26f3~4s9q,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2020,Age,24 Months,92.0,87.6 to 95.3,459,row-szzs.s7uw~avjd,rv-gx86.qy78.46tr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2020,Age,35 Months,94.1,89.9 to 97.0,459,row-vyi4.kyk8_r4xx,rv-yz6e.pg9c.ybcy,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2020,Age,19 Months,89.8,84.6 to 93.4,459,row-g3vz~3hxd-j8g3,rv-8phr.w673_v7kb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Insurance Coverage,Uninsured,88.3,74.9 to 100.0,30,row-utbz.tjsz~ar4b,rv-mezs-tzuh-3wk8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Race and Ethnicity,"Other or Multiple Races, Non-Hispanic",96.1,91.7 to 100.0,143,row-u3zt~cz7b.iq2a,rv-tdcz_x8d2.2seq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Race and Ethnicity,"Black, Non-Hispanic",89.7,82.6 to 96.9,109,row-7t4a~86xd-ez2d,rv-px82.ncnp-pt6n,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Race and Ethnicity,Hispanic,91.8,86.3 to 97.3,194,row-kehi-5gh7.up2c,rv-zdfd-6ru7.hn3q,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Race and Ethnicity,"White, Non-Hispanic",94.1,91.6 to 96.6,640,row-dgtk~9825-e747,rv-fr6f~hswv.7ib6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2021,Age,35 Months,96.1,93.3 to 98.0,305,row-hefp~ffch~jvr5,rv-f8pt-2xe8_tz78,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Poverty,<133% FPL,90.8,86.4 to 95.2,256,row-uig6.9zk9-wcd6,rv-zmwm~7dnm_qvz7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Poverty,133% to <400% FPL,92.6,88.6 to 96.5,427,row-wza8~yu8n.k77e,rv-adyy.769c~8awu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2016-2019,Poverty,>400% FPL,97.1,94.9 to 99.2,403,row-cnbv.d88a.rjbb,rv-ifwe-xpk8~b2r9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Carolina,2021,Age,24 Months,96.1,93.3 to 98.0,305,row-24f8~cevs~ycdk,rv-z6ni.qb2p~5m78,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Overall,Overall,93.0,91.0 to 95.0,830,row-zixf_qe9a.khta,rv-ed46_8dp5_j75a,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Poverty,<133% FPL,91.2,86.2 to 96.1,155,row-n2uv-wqf9_hani,rv-h2kx~m6m8_iqzm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Urbanicity,Living In a MSA Non-Principal City,92.2,86.7 to 97.6,124,row-a92q-nnkz~4zh9,rv-c5nr~zaf9~75dz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Urbanicity,Living In a Non-MSA,92.9,90.1 to 95.7,421,row-f4en-t9b7.2wzj,rv-dzhk~fcmz~6s3g,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Poverty,133% to <400% FPL,94.0,91.2 to 96.8,408,row-z6xy_vfiy_ssqp,rv-nksh_zbwm-wzj6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Poverty,>400% FPL,92.3,88.7 to 95.8,267,row-wnfz.c3vy~b4h4,rv-dks8_x8uk~jv7w,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Insurance Coverage,Any Medicaid,91.5,87.2 to 95.7,209,row-t2zq_22gm-xrsq,rv-63q3-9c5m.g5yk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Insurance Coverage,Private Insurance Only,94.3,91.9 to 96.6,562,row-g6dp~pxir-idr2,rv-qyw2_f57f-uhk9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Race and Ethnicity,Hispanic,87.0,74.3 to 99.7,48,row-j6m3.w2ag-akqw,rv-ir7r.4f3k.97tp,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Race and Ethnicity,"Other or Multiple Races, Non-Hispanic",92.9,87.6 to 98.3,123,row-bxda~vks7_4pt4,rv-sx8d~ssrc-5v6d,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017,Age,35 Months,95.8,91.9 to 98.1,298,row-9p9d_s5cu_xa6i,rv-6svd-bman.n26e,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2017-2018,Age,35 Months,97.2,94.7 to 98.7,591,row-ytmt-93eq~ih2c,rv-gpcn-849w_rvn4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018,Age,35 Months,98.5,95.2 to 99.7,293,row-guy5-2yfr_43vv,rv-vtpy~s6ak.3dqk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2018-2019,Age,35 Months,96.2,93.2 to 98.1,556,row-tk6r-fwf3~w7nu,rv-manb_u3u3.amn8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2019,Age,35 Months,93.3,88.4 to 96.6,263,row-yy26-u6jj_puf2,rv-b2in~4yxf.yeum,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Insurance Coverage,Other,90.6,81.9 to 99.3,42,row-muxu~4bu3-9m8z,rv-sfj2_5ntm~7cu4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016,Age,35 Months,94.7,90.7 to 97.4,227,row-r6fh~uik8~ytx4,rv-ussw_5zdh.vbed,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2016-2017,Age,35 Months,95.3,92.6 to 97.2,525,row-xpg4~jsi3-icv3,rv-tpr2~9qhv_hm8i,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015,Age,35 Months,94.0,90.0 to 96.8,217,row-5td7-s43t_pm3j,rv-dhth_fk6y.d5ws,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2015-2016,Age,35 Months,94.4,91.6 to 96.5,444,row-aydk-ah5q_k48i,rv-9vun.dj4v-99qs,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014,Age,35 Months,96.0,91.5 to 98.5,230,row-ug4i.evyv-j2rq,rv-i6yn.gnv8~2xtz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2015,Age,35 Months,95.0,92.2 to 97.0,447,row-fvzp-h2g7.i6tk,rv-qdtx-3sus-9zrc,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Race and Ethnicity,"White, Non-Hispanic",93.4,91.2 to 95.6,637,row-cu62.cayy~brjx,rv-vybu-gryv~wjnj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2014-2017,Urbanicity,Living In a MSA Principal City,93.5,90.1 to 96.8,285,row-xcrd_e88t_gs9r,rv-2rbg~p2uj_ju4d,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2019,Age,24 Months,92.8,87.9 to 96.2,263,row-8kqi~ykq3-uhxp,rv-2e5u-6sa2.pwek,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2012,Age,35 Months,96.2,92.2 to 98.4,294,row-h9c7~zs6g-a2s6,rv-tryy~afb7.q6q4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2011,Age,35 Months,91.6,86.4 to 95.4,299,row-zf2p~bfhx_xdhu,rv-imqi_vugx_3sbj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013,Age,35 Months,93.1,87.7 to 96.7,237,row-hq2q_c6xh-fnqv,rv-ke9j~8kpg.2tg6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,North Dakota,2013-2014,Age,35 Months,94.6,91.4 to 96.9,467,row-p9pk~h3ap-t7i5,rv-atm4~ri2j-kwmd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2019-2020,Age,19 Months,88.3,87.6 to 89.0,34652,row-dagk-ubx4-5sj5,rv-nwik-tzpr-8qk7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2019-2020,Age,24 Months,90.9,90.3 to 91.6,34652,row-vd5q~k7zn-ti37,rv-bs4y~m9yg~6rfd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2019-2020,Age,13 Months,66.8,65.7 to 67.7,34652,row-zjuv~qgm9.x2mg,rv-2z52~n9p7.6jcd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2019-2020,Age,35 Months,93.5,92.8 to 94.2,34652,row-ybfu-irxh_bhxp,rv-tbja_fcuf-s4rg,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2020,Age,35 Months,92.7,91.7 to 93.7,17387,row-hzxv_fh25~7wzy,rv-bqhk_3332~78r3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2020,Age,24 Months,90.1,89.0 to 91.0,17387,row-z46e_4qhp-fpfv,rv-qq4a.3jbk_cpxd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2020,Age,13 Months,66.2,64.8 to 67.7,17387,row-r59w~2fpe-ia7z,rv-xgf7-mcpz-p64h,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2020,Age,19 Months,87.4,86.3 to 88.5,17387,row-nq5d~egyh-csic,rv-tzju-f3yq~qsmp,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2016-2019,Insurance Coverage,Uninsured,79.8,76.4 to 83.3,1616,row-3xny~s2tn~qdqk,rv-qgma_f5m6~pt6c,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,United States,2021,Age,24 Months,90.6,89.5 to 91.7,11281,row-zzn8~djvv-sqw9,rv-e46y-yutf_tnmr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2021,Age,24 Months,92.1,89.7 to 94.2,1478,row-dppx_r65d~4c6r,rv-aqrx-t9be.9p8m,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2016,Age,35 Months,92.2,90.6 to 93.7,2855,row-7u53.ykn6~jy99,rv-kkyw.wcz4_w6xv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2016-2017,Age,35 Months,92.0,90.7 to 93.2,5587,row-98sn.4cxz-bref,rv-wi75-hkua-prh2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2014,Age,35 Months,93.6,91.8 to 95.2,2387,row-jcv2_j25x.mrpg,rv-43bc_cys6-buve,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2014-2015,Age,35 Months,93.4,92.2 to 94.5,5094,row-x7jg-pdjm_n8c8,rv-jc4x~3naz_t5hr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2015,Age,35 Months,93.2,91.4 to 94.6,2707,row-tfyv~8utv_qph2,rv-buvq-d2ba_es92,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2015-2016,Age,35 Months,92.7,91.5 to 93.7,5562,row-ndfs_fex6.qph5,rv-eijh.2jyt_3qgp,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2018,Age,35 Months,93.3,91.3 to 94.9,2533,row-je6x~t5is_v28e,rv-mc3g_my4q.qh9g,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2018-2019,Age,35 Months,93.3,91.6 to 94.7,4799,row-84mr_978y-3yqs,rv-we58.4m84-v9w2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2017,Age,35 Months,91.8,89.5 to 93.7,2732,row-a6ck-z867-63b5,rv-dus9.xhjp.gpde,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2017-2018,Age,35 Months,92.5,91.1 to 93.8,5265,row-cker.i6ke_zn2k,rv-9e8k-uw4b_bt25,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 6,2019,Age,35 Months,93.5,90.4 to 95.8,2266,row-x2zn~2yc4-yprs,rv-pv46_ncv2.gqzh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2019-2020,Age,13 Months,66.6,64.5 to 68.6,4262,row-5qc3-ks79~hqie,rv-hfv6-ecms_yp7n,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2019-2020,Age,24 Months,91.1,89.8 to 92.3,4262,row-fg7g-38hz~fsuy,rv-tdw8.s87g-zn5p,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2019-2020,Age,35 Months,94.2,93.0 to 95.3,4262,row-qmam-u2hk~eme8,rv-fsbw-i4fi-b3ia,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2019-2020,Age,19 Months,88.5,87.0 to 89.8,4262,row-72rr.efxu_ker9,rv-qdmt_xfgq-4amq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2020,Age,24 Months,91.7,90.0 to 93.2,2239,row-nbg7_jnrc-8zuw,rv-d68m~fd5a_wmbw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2020,Age,35 Months,94.3,92.7 to 95.6,2239,row-tcrz_tjiu_qeea,rv-5pkf_xc5c.e5xx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2020,Age,19 Months,88.9,86.9 to 90.6,2239,row-pecy~qguw-vsep,rv-tdaa-bfd2-y5em,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2021,Age,35 Months,92.6,90.1 to 94.6,1478,row-5svk.tiq4~8y3s,rv-ywkb.98nz_fgpf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 5,2020,Age,13 Months,69.5,66.8 to 72.1,2239,row-x2g5.rgpi_724j,rv-4snd-be76.yj6p,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2021,Age,24 Months,81.6,71.8 to 89.6,168,row-v55t_7um4~pxjb,rv-pjvd.2w5d.fyaf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Urbanicity,Living In a MSA Non-Principal City,90.6,87.8 to 93.4,874,row-jqkr_v4yv-z72p,rv-uubc~rukj-t9u5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Poverty,>400% FPL,93.9,90.8 to 96.9,515,row-puee_nirq~3u6s,rv-kes2.v8tc_his7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Poverty,133% to <400% FPL,90.4,85.6 to 95.1,290,row-pegy_4ebp.z537,rv-f7n4-nvjf.6gib,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Poverty,<133% FPL,83.5,76.9 to 90.1,203,row-8v4w.2v2j_cb93,rv-28h5.6rn4-i6ad,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Insurance Coverage,Private Insurance Only,93.5,90.7 to 96.3,695,row-4xs7.4gxv_fzes,rv-n96d_38fa~gbs2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Insurance Coverage,Any Medicaid,86.1,81.1 to 91.1,286,row-9hni.9tyz-3bmw,rv-afzg_wz9d-yydh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Overall,Overall,89.8,87.1 to 92.5,1008,row-unby~kavr-n9gq,rv-5juv.qgaw~sszf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2019-2020,Age,19 Months,86.6,81.7 to 90.4,547,row-f3hr_s39f~8uac,rv-kfzj~5cnn_yzy7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2019-2020,Age,24 Months,94.3,91.0 to 96.8,547,row-az9w.ydb4-myu9,rv-mbua_sc27~i3y3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2020,Age,35 Months,96.8,93.5 to 98.7,268,row-4jp2_nwvt_enh6,rv-bca5.bdng-4cf9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2020,Age,24 Months,96.7,93.5 to 98.6,268,row-z7kc-pgqf_zsgw,rv-8p9n-q4dn_7byf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2019-2020,Age,13 Months,59.0,53.0 to 64.7,547,row-ehfy_3u89-8xmw,rv-qwjj_fqyg_r53b,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2019-2020,Age,35 Months,97.6,92.2 to 99.6,547,row-de3w-ixad-qkuh,rv-6yba~efaw.c9y3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2020,Age,19 Months,86.2,79.0 to 91.2,268,row-jjhn-i6bh.iip4,rv-ipef.i8iq_gume,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Urbanicity,Living In a MSA Principal City,86.8,79.0 to 94.6,134,row-2wir.v427_4d6k,rv-a5pj~3pf6~42ev,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Race and Ethnicity,"White, Non-Hispanic",92.1,88.8 to 95.4,506,row-q2y2.mu4m.5zse,rv-3c2m.sti3-ua4z,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Race and Ethnicity,Hispanic,85.9,79.9 to 91.8,276,row-gwed_t57i~78rt,rv-239z.h67f.5r4q,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Race and Ethnicity,"Black, Non-Hispanic",83.9,72.5 to 95.3,59,row-7tev~gvks_kte2,rv-kpgf.xjaw~synz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2016-2019,Race and Ethnicity,"Other or Multiple Races, Non-Hispanic",95.7,91.1 to 100.0,167,row-enwr.hyx2.9cvp,rv-ia45.f3gu-rqj9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2021,Age,35 Months,87.2,76.4 to 94.6,168,row-hpt9.he7z~mpbh,rv-a3fu.85zy-9u66,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Jersey,2020,Age,13 Months,62.4,54.3 to 69.8,268,row-4542.w7gn.e9eh,rv-929x_w8ni-uz8n,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2014,Age,13 Months,61.6,54.1 to 68.6,247,row-4umq.7xze~mvbr,rv-m75a-4c4p_dsqj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2014-2015,Age,13 Months,64.3,58.9 to 69.4,500,row-rd3d.xaqv_rifb,rv-8azj~ucmn_ptea,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2015,Age,13 Months,67.1,59.2 to 74.2,253,row-9c9w-y6gw-95bc,rv-wtcf~q9ky~iar9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2015-2016,Age,13 Months,66.2,61.1 to 71.0,648,row-st4w_5z4x_qnag,rv-uq57_mxju~ps7n,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2016,Age,13 Months,65.2,58.6 to 71.2,395,row-t3wc-b2wj.6tgq,rv-yg9u-uk6j-fcuz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2016-2017,Age,13 Months,65.4,60.9 to 69.7,824,row-vxwt~z5y7_apvf,rv-iecc-ak48-8qft,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2013,Age,13 Months,59.4,49.7 to 68.4,250,row-phf8~ggxk-xzkv,rv-uwfj~9qfu~s52t,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2013-2014,Age,13 Months,60.5,55.1 to 65.6,497,row-4mzt.ujec~w2x6,rv-y6tk-yawe~g7wg,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2012,Age,13 Months,58.5,55.7 to 61.2,263,row-9sv7-iyuf~bgxv,rv-seuk_4eeq~4ngb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2011,Age,13 Months,54.5,48.1 to 60.7,268,row-8jfq_tzp7~x62w,rv-uqj3.6etn_zagq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2017,Age,13 Months,65.7,59.4 to 71.5,429,row-xvvk~jmva~43na,rv-nudh-upys~hj2i,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2017-2018,Age,13 Months,69.9,65.6 to 73.8,876,row-z9as_wa8t_fnjp,rv-hc4n.79nh~waa2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2018,Age,13 Months,74.1,68.1 to 79.3,447,row-av6f_mpan.kf7s,rv-avjb-bhh6-kfvy,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2018-2019,Age,13 Months,73.3,68.9 to 77.2,821,row-7b46~n2p6.xr48,rv-sf6g.54m2~shyh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2019,Age,13 Months,72.4,65.9 to 78.1,374,row-nxja.3jjv.vias,rv-9a39.rp7f.ggqv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2015,Age,19 Months,87.1,80.0 to 92.0,253,row-6fqf_r6ia-k76w,rv-t9vf.mumg~u7y3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2015-2016,Age,19 Months,88.5,84.5 to 91.6,648,row-icwe.v8vm.k6qj,rv-kmpj.9j7z~fchy,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2016,Age,19 Months,90.0,85.4 to 93.2,395,row-idnm-6f37.mmq7,rv-9qsj-qcuc.rgna,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2016-2017,Age,19 Months,90.3,87.3 to 92.7,824,row-g7ca~w9bz~m876,rv-ys3j~t8cc_6x5e,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2017,Age,19 Months,90.6,86.3 to 93.7,429,row-fz5y_bdkn.9kvh,rv-f9t4_6wji.bs2y,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,New Mexico,2017-2018,Age,19 Months,92.6,89.9 to 94.6,876,row-tv2u_2csp_cvap,rv-siub~nvkt.57yj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2020-2021,Age,35 Months,93.3,88.6 to 96.6,634,row-6ikv_zc5y-3bsh,rv-vk6v~9fpr~wv4p,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2020-2021,Age,19 Months,87.5,83.3 to 90.7,634,row-m2ge_yzqw-xzu4,rv-hffr~zgdk-qprs,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2021,Age,13 Months,70.2,61.7 to 77.6,266,row-ugvp~a6v6_cifi,rv-qhz5~pmed.96nq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2021,Age,19 Months,90.1,84.6 to 93.8,266,row-d3ku.78e6~4e9i,rv-thk4_s7ms_iw9j,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2020-2021,Age,13 Months,67.9,62.4 to 72.9,634,row-9azt-hnj6_acwh,rv-rs7y~uvca.8m8k,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2021,Age,24 Months,92.7,87.5 to 96.2,266,row-hryd_rpdk.bevy,rv-hpaz~pe5k_b7pr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2019,Urbanicity,Living In a Non-MSA,87.6,82.3 to 92.8,366,row-cc74_4rzh_gkfz,rv-cdmw-day2.pt2i,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2019,Insurance Coverage,Private Insurance Only,93.9,91.3 to 96.4,749,row-4x4t~ucqf_zjgj,rv-hd57.43pg_gutz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2019,Insurance Coverage,Any Medicaid,83.2,77.3 to 89.0,299,row-86mu-k9mq.3gtm,rv-xk7q.czu8.26ce,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2019,Insurance Coverage,Other,95.4,90.7 to 100.0,177,row-qdpq~9xkn-4pxv,rv-35p3-wnur~ub6e,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2019,Overall,Overall,90.0,87.5 to 92.5,1264,row-z8zt.6jiv.w6tj,rv-7vgi~jads~bwrq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2019,Urbanicity,Living In a MSA Non-Principal City,93.9,90.2 to 97.7,370,row-3cn3~7cau-en57,rv-uirw~n7j9-ezra,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2019,Urbanicity,Living In a MSA Principal City,88.4,84.3 to 92.5,528,row-rcrc-83n3~gzjy,rv-ysbc.5her~nhgb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Nebraska,2021,Age,19 Months,90.5,82.3 to 95.2,171,row-9fdp~cu5g~iq7e,rv-p2rt_5r75~fj5y,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Nebraska,2021,Age,13 Months,68.8,58.2 to 77.8,171,row-hxnr~uhtt-sf6w,rv-jv8a.tr24-u2b4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Nebraska,2020-2021,Age,19 Months,92.7,88.3 to 95.5,422,row-tqy7-c7u2~ge2f,rv-tiww-ejd4_vkc8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Nebraska,2020-2021,Age,35 Months,95.9,91.6 to 98.4,422,row-9dzw.u4uz~bfis,rv-wkn2~gsrx_m6mt,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018,Age,24 Months,93.5,89.5 to 96.3,650,row-e654-hkdk.7nua,rv-ns27-kdk8.6puk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018-2019,Age,24 Months,94.4,92.0 to 96.3,1291,row-tvut-xu2k-ifcv,rv-gu88_5ch9-hcks,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2012,Age,24 Months,90.1,85.2 to 93.9,611,row-zavc-pd4s.bbji,rv-acv4.ixvm-mx7p,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2011,Age,24 Months,93.2,89.3 to 96.1,626,row-jsh2_jbhs-vw82,rv-jzm8.jmf7.nn6k,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2019,Age,19 Months,92.6,88.8 to 95.2,641,row-yze3-wgzb_dgf4,rv-jp9m~ykia_xinx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018,Age,19 Months,93.1,88.8 to 95.8,650,row-f4sf~frhs_3zcr,rv-gwmg-r4va.yw7d,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018-2019,Age,19 Months,95.1,92.7 to 96.8,1291,row-y6j6_awc2~75hd,rv-uq8r_4kaz.u3bi,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2019,Age,24 Months,95.3,92.2 to 97.4,641,row-7q98_nzk6_ut99,rv-rq4e.vsxq_663n,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2012,Age,35 Months,93.7,88.8 to 96.9,611,row-2i5i.zt56.aqqi,rv-t7ng.t7hy.24zz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2011,Age,35 Months,93.8,89.8 to 96.6,626,row-mtnk.9e5v~yqkd,rv-adu6-5ivu~ast9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013,Age,35 Months,96.0,93.3 to 97.8,561,row-rmzj~8a56.3ywx,rv-m94d_9cuw.4jr7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013-2014,Age,35 Months,93.8,91.0 to 96.0,1117,row-in9y-bsxv.qjgb,rv-pzmk-rvdg.mj9y,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016,Age,35 Months,95.5,91.2 to 98.1,580,row-gkuv_xsf5~agbg,rv-xwfj.gsjp_bm7z,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016-2017,Age,35 Months,94.9,92.1 to 97.0,1140,row-86rn_jnp3-jjyd,rv-f3bn~jyyz-4q2a,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015,Age,35 Months,93.4,88.2 to 96.9,517,row-gkyb.v7fy-ucze,rv-5tfc~kkbh-tjwr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015-2016,Age,35 Months,94.8,91.3 to 97.2,1097,row-fvvy~7awn~7z2g,rv-m585~nw4v.uvzq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014,Age,35 Months,92.2,87.4 to 95.7,556,row-ir2v_ngmx~9dvz,rv-mrdx~9puq.jxe5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2015,Age,35 Months,92.3,88.7 to 95.1,1073,row-9ff6~kibx.2v3c,rv-mw5d-wyku_dpwp,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017,Age,35 Months,94.3,90.0 to 97.1,560,row-t3ye-aswc-urnm,rv-iudx-mybv~xfkg,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017-2018,Age,35 Months,95.7,92.2 to 97.9,1210,row-q2kk-yhpd-gkq9,rv-ar5x_3y4f.pmdf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018,Age,35 Months,97.3,92.7 to 99.3,650,row-jpv7-p932_yqdq,rv-mxie-w7qt_juu4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018-2019,Age,35 Months,96.3,93.2 to 98.2,1291,row-t88t.6mw6.z6rf,rv-7v78_njdz.jyxi,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2019,Age,35 Months,95.8,92.7 to 97.8,641,row-3mqa~3s8j_47sa,rv-aau3-xyvt~cwfy,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Insurance Coverage,Other,94.4,89.0 to 99.8,115,row-ncxd.iwc7.m6gq,rv-2qa5.53ja~pvef,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Race and Ethnicity,"White, Non-Hispanic",92.9,90.1 to 95.7,1044,row-hvba.sk5v.b9cq,rv-e776_ds4w_ihvh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Urbanicity,Living In a MSA Principal City,93.2,90.6 to 95.8,982,row-2ke9-4peb_i47m,rv-m4cm~7y9q-wkc9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Insurance Coverage,Any Medicaid,92.4,89.3 to 95.5,741,row-9vg8-iku7~td8h,rv-x99z_249x_ycrr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Insurance Coverage,Private Insurance Only,95.4,93.5 to 97.3,1077,row-2a56.tgpx-5qnk,rv-4z93.dtpi_vt7v,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Race and Ethnicity,Hispanic,95.3,92.3 to 98.3,323,row-i5tg-bds4.zipk,rv-8wa6.7w9v~7pcx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Race and Ethnicity,"Other or Multiple Races, Non-Hispanic",94.8,90.9 to 98.7,288,row-j4st-r7ww~v4fv,rv-cij7-uzc9.a7vm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Race and Ethnicity,"Black, Non-Hispanic",91.7,86.3 to 97.0,320,row-5pfy~3s78~jksg,rv-u6ma~4u4j.xg9t,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Insurance Coverage,Uninsured,70.0,45.4 to 94.6,42,row-ta4z.v35n-trv4,rv-t79n~6vsx_4j7p,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Overall,Overall,93.3,91.4 to 95.3,1975,row-iftp~fc7y~eg56,rv-kbh3-bss4-gfik,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Poverty,<133% FPL,92.1,88.3 to 95.9,636,row-zv4y-67pu_yca6,rv-8zai-4mw9-ntz3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Urbanicity,Living In a MSA Non-Principal City,94.0,91.4 to 96.7,945,row-gmrj.fqa7.dq65,rv-h8zh~ex8b~wah7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Urbanicity,Living In a Non-MSA,88.0,76.4 to 99.5,48,row-d3s3-kibh-skg7,rv-pgp7~6mau.af4s,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Poverty,133% to <400% FPL,91.8,88.2 to 95.4,551,row-m9yi.sksv.xvuj,rv-zu63.pxcc~42ek,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2017,Poverty,>400% FPL,96.0,94.0 to 98.1,788,row-g3h4_i4aj~cqs4,rv-74ym-gyui-kju6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015,Age,13 Months,57.7,49.9 to 65.2,517,row-t27e~wwpn.97w5,rv-m7un.hvrb~guib,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015-2016,Age,13 Months,60.1,54.9 to 65.0,1097,row-4qwm-t64s-2s88,rv-4xbf~agf4-9ngv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014,Age,13 Months,60.3,53.1 to 67.0,556,row-c64h~m6vn.wwg6,rv-iac7-b43e-jprs,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2015,Age,13 Months,59.0,53.7 to 64.1,1073,row-jif4_94du_fj7q,rv-tf4b.jfw2~vfze,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013,Age,13 Months,56.6,51.4 to 61.8,561,row-23ny_bfap_vgnn,rv-d7kd_34zv.z2qm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013-2014,Age,13 Months,58.5,53.2 to 63.6,1117,row-er2d_6nmw-dy2z,rv-3uxp.ugme~wbb7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2011,Age,13 Months,49.2,43.4 to 55.1,626,row-78we_mcpa_6zb2,rv-qcjr_ki44~a992,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2012,Age,13 Months,47.7,41.6 to 54.0,611,row-ihw5-x6mc~n4xh,rv-u2k4~jqqp~hht8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017,Age,13 Months,59.6,52.5 to 66.4,560,row-fk4e_qr7h_iyiq,rv-mczq_ph6m.5xup,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017-2018,Age,13 Months,65.7,61.0 to 70.2,1210,row-tp5b.jvi3-7yqm,rv-38pc~tsqc_fy38,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018,Age,13 Months,71.9,65.8 to 77.3,650,row-pp2c~2728_7kcj,rv-43tx~8zb9_5xkd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2018-2019,Age,13 Months,70.6,66.3 to 74.6,1291,row-qinx_fkp4~auhz,rv-wizi-ckvd_je2y,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016,Age,13 Months,62.4,55.5 to 68.9,580,row-smfj_qwz2~9zzk,rv-vxxc.uqf3~fgtk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016-2017,Age,13 Months,61.0,56.1 to 65.8,1140,row-8feh.4eie_xau6,rv-wk46~cym4.jueu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017,Age,19 Months,89.6,84.3 to 93.2,560,row-qjbk_k6uw.u8fk,rv-6guj-dn48~quy4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017-2018,Age,19 Months,91.3,88.1 to 93.7,1210,row-6e7c_jkcq-qnvm,rv-xbhm~8u8t.22xf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016,Age,19 Months,90.7,85.4 to 94.1,580,row-rkqs~2gnb-rvz8,rv-ggx5~j4fx_mj75,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016-2017,Age,19 Months,90.1,86.6 to 92.8,1140,row-e385~e4hc~awcz,rv-uwdz_casr.jysz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015,Age,19 Months,88.9,85.8 to 91.4,517,row-a5rw.8qub_nwrj,rv-u7ah-xit8.q86i,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015-2016,Age,19 Months,89.8,85.8 to 92.8,1097,row-gqrf_u8uw_4kat,rv-aigc.unj2_3r7v,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2011,Age,19 Months,90.0,84.6 to 93.7,626,row-2u8e~3yh3~9xzd,rv-vakz.ybzx-uacv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2019,Age,13 Months,69.3,63.2 to 74.8,641,row-8hvn~ctbc.8uva,rv-3dq7.txqs_qi2n,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2012,Age,19 Months,88.7,87.3 to 89.9,611,row-snin~9zx5.epc3,rv-6mht~i5ut_fp8h,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014,Age,19 Months,91.0,86.0 to 94.3,556,row-qiux~tm67-fahr,rv-id62~bn22_mf83,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2015,Age,19 Months,89.9,86.0 to 92.9,1073,row-gukr.i6dm.833x,rv-74hj.5ban-pq86,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013,Age,19 Months,88.6,83.5 to 92.2,561,row-paak-mhna.7m9h,rv-2wuy_msnp-xjkm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013-2014,Age,19 Months,89.8,86.8 to 92.1,1117,row-7keu_c4x9~gf97,rv-3ej6.ezwa.h467,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013,Age,24 Months,92.6,88.6 to 95.7,561,row-wsru_z2jx-d9tf,rv-egee.fi8e.ks72,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2013-2014,Age,24 Months,92.0,89.0 to 94.4,1117,row-5xhj~hw2v-3im5,rv-up63-smvx~epmq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014,Age,24 Months,91.6,86.9 to 95.0,556,row-2vmv-9r7s-kkeu,rv-vcuv-umt9~9he5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2014-2015,Age,24 Months,91.5,87.9 to 94.3,1073,row-kkis_9sv5-3gaf,rv-8efz_fk7f-6xce,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015,Age,24 Months,91.8,86.1 to 95.8,517,row-t94u~48zj_fte5,rv-4bdv~uii7-w7fm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2015-2016,Age,24 Months,92.3,88.8 to 95.0,1097,row-h8c6_vxbh.famk,rv-vy55-pkfi_zxvu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016,Age,24 Months,92.9,88.5 to 96.0,580,row-u3nt-4wdv_z6v8,rv-2irn~73xx-tbhi,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2016-2017,Age,24 Months,93.0,90.1 to 95.3,1140,row-4uxq-95uz_f8rp,rv-2iyy_xqcv-2bab,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017,Age,24 Months,93.1,88.8 to 96.2,560,row-r7ux_7n53-c9s9,rv-b75q_rici.6gpq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Pennsylvania,2017-2018,Age,24 Months,93.3,90.5 to 95.6,1210,row-4hrj.3x6c-chur,rv-g4q2_93vu~e6v3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Oregon,2020,Age,13 Months,70.4,62.0 to 77.6,220,row-p8qp_5rj9-nisp,rv-qnaj-3asr-xue9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2011,Age,13 Months,47.7,43.5 to 52.1,271,row-bmfx-c76z_59fv,rv-fydz~auqc~5vdx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2012,Age,13 Months,48.1,40.4 to 55.8,307,row-8ung~d2t9-98hm,rv-kj26_neza_24cw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013,Age,13 Months,51.8,48.8 to 54.7,218,row-v4cf~mpn6_ax96,rv-gxbs~nguv_hhhf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013-2014,Age,13 Months,53.0,50.1 to 55.9,476,row-w2w4-7nax.smys,rv-b8f6~8fbu-iban,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2019,Age,24 Months,87.0,79.4 to 92.9,209,row-msn9-3gg3.i6am,rv-sxt3.yha7.5ngn,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2012,Age,35 Months,94.4,89.8 to 97.3,307,row-773u~t738_iurf,rv-c6bj.2a8a~v4f7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2011,Age,35 Months,91.9,86.4 to 95.9,271,row-k753.3pd3~28s6,rv-9ac4~exn6.45jw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013,Age,35 Months,97.5,92.4 to 99.5,218,row-fp4e.qacc-gemm,rv-qvqx_dnnu_riq4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013-2014,Age,35 Months,92.9,88.8 to 96.0,476,row-ae7m~64c9_7wsb,rv-pyjc-8x42-r7nw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016,Age,24 Months,87.8,82.0 to 92.4,285,row-836u~cwtq_v3du,rv-ar3z_eva9_bk86,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016-2017,Age,24 Months,88.7,85.0 to 91.8,589,row-hh9t_i2jf_9jpi,rv-sp2y~29ia-pw3z,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017,Age,24 Months,89.6,84.7 to 93.5,304,row-sbx4-r45t.fmay,rv-47pk-idj6~9rp8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017-2018,Age,24 Months,87.6,83.8 to 90.8,576,row-axcg.xet6_fzeh,rv-qd2j-c7p7~u3c8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013,Age,24 Months,93.0,87.2 to 96.9,218,row-kghr-k86v_e64t,rv-dmtu~6wn2_y7ry,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013-2014,Age,24 Months,90.8,86.8 to 94.0,476,row-brpy-en33-bmit,rv-3akr.n74j-2a74,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014,Age,24 Months,88.6,82.6 to 93.3,258,row-rkcx.dz5q-dzdy,rv-d7s2_y6hh_vmsh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2015,Age,24 Months,86.9,82.7 to 90.5,509,row-qfh5~kehw_k7vq,rv-exnt-f5jw_59pd,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015,Age,24 Months,85.1,78.9 to 90.4,251,row-5qda.3tvb.i85a,rv-h36u~xb6c~7nv7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015-2016,Age,24 Months,86.5,82.3 to 90.1,536,row-dtxd-6sed.wyiw,rv-q6h3-b3pm-2iz5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018,Age,24 Months,85.6,79.6 to 90.5,272,row-d24m~kdr6~msrp,rv-4q9x-jrwp~i6ft,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018-2019,Age,24 Months,86.3,81.7 to 90.2,481,row-jvgt.arey-52wp,rv-dae2-vfgx-9iib,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2012,Age,24 Months,89.7,84.8 to 93.6,307,row-wwzz~ktrj~9xfx,rv-vtmu_is5v-87ys,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2011,Age,24 Months,89.6,84.4 to 93.7,271,row-u2bf-z999_bdze,rv-kxna.tqry.7rp4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2019,Age,19 Months,84.4,76.1 to 90.2,209,row-vq8f_wb34~xpzk,rv-ypfi~hbd5~w24g,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018,Age,19 Months,83.6,77.2 to 88.5,272,row-caw9-c6w9_ef32,rv-ewwc_zaqt-bqgn,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018-2019,Age,19 Months,93.2,89.6 to 95.6,481,row-u9d6-pkab-s2xa,rv-v8wh_n6w7-cvde,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2012,Age,19 Months,84.3,80.3 to 87.6,307,row-iqz4_gv8j_pqbp,rv-zh2y-jcw6.d2f8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014,Age,19 Months,85.2,78.5 to 90.1,258,row-5mx7-d5zt~qu5p,rv-7pfu.sps3~jj8h,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2015,Age,19 Months,83.1,78.2 to 87.1,509,row-79kv~dcax-c9pz,rv-yr3q-apua~34ev,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013,Age,19 Months,91.8,90.0 to 93.4,218,row-57c5_cd4i-6yw8,rv-yjiw.4qpv-69mf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2013-2014,Age,19 Months,88.5,83.7 to 92.1,476,row-jk3y.8ssv-f8sj,rv-ufae~w3u4.aq84,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2011,Age,19 Months,86.3,79.6 to 91.1,271,row-jayi_hjc7~xuaa,rv-6mwk~k3xx~uq8g,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017,Age,19 Months,86.6,80.8 to 90.8,304,row-zz3d_nmxb_zhz2,rv-piq4~b7bz~ucjv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017-2018,Age,19 Months,85.1,80.9 to 88.4,576,row-pg6c.wufg-dswe,rv-v2yr~wygb-btkm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016,Age,19 Months,85.5,79.2 to 90.1,285,row-4csz.pxpn_me4f,rv-asd6_t8x9-r3bv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016-2017,Age,19 Months,86.0,81.9 to 89.3,589,row-thtg-5fsb.web3,rv-42ci-n9zk.rp98,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015,Age,19 Months,81.0,76.4 to 84.9,251,row-p4zh.5qy6-7ndi,rv-6mjx.66rt-ubz2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015-2016,Age,19 Months,83.2,78.4 to 87.1,536,row-3yay_m289~mjnb,rv-x4g6~4cdm~pi94,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2019,Age,13 Months,59.9,50.4 to 68.8,209,row-k8r5-kccr.7yi9,rv-3kvi_hns7~4wxe,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018,Age,13 Months,60.2,52.4 to 67.4,272,row-tvny-r6z5~ik5m,rv-g2w3~hwq3~vdi9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018-2019,Age,13 Months,60.0,53.9 to 65.9,481,row-jyw5_hxv5~gfv3,rv-qxz6_gyxg.bzi3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017,Age,13 Months,58.0,51.0 to 64.7,304,row-97rk-r42y_bzpq,rv-f3zu-nnn8~pv7c,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017-2018,Age,13 Months,59.1,53.8 to 64.1,576,row-s4yf~sfr9-huta,rv-bj5u.t9ar~ij5y,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016,Age,13 Months,54.0,46.5 to 61.5,285,row-ffpr.u23h_34pc,rv-nnyj~u3wq-bbvg,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016-2017,Age,13 Months,56.0,50.9 to 61.1,589,row-xufv-ykm6-uip5,rv-7eyc~cwkc.iuii,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015,Age,13 Months,45.5,37.1 to 54.2,251,row-94gs.bt9i~rp2a,rv-i95p.2itd~t4rj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015-2016,Age,13 Months,49.7,44.0 to 55.5,536,row-6a4s.gnza.z8j3,rv-4myg.ye8t_s8xp,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014,Age,13 Months,54.3,46.5 to 61.9,258,row-qtkp-5sas.tgs4,rv-wtvz~9cqm~xyqu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2015,Age,13 Months,49.9,44.1 to 55.7,509,row-efar.5zkz~iuz3,rv-qwfp~t3s5-sukq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Urbanicity,Living In a Non-MSA,87.0,81.9 to 92.1,207,row-28tg_eb7d_8m7r,rv-7xje-tq8s_fb64,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Overall,Overall,87.4,84.7 to 90.0,975,row-v3fb.5597.n72g,rv-k7t3_ntu7-6pf3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Poverty,<133% FPL,83.1,78.3 to 88.0,337,row-vkgn.j5wv.3tje,rv-uqxs.uw6n.qqij,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Poverty,133% to <400% FPL,88.8,84.9 to 92.7,405,row-89s9~zs46-zs59,rv-runa.b5iu.utxu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Poverty,>400% FPL,93.5,89.1 to 97.8,233,row-x293-dwbe.4c9k,rv-yntt-9ynp~tsxb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Insurance Coverage,Any Medicaid,86.1,82.1 to 90.0,434,row-5nh2.28uv-vn82,rv-kp34~3g3n.vghn,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Race and Ethnicity,"Black, Non-Hispanic",83.5,73.0 to 94.0,66,row-bq2n~psu6.55f3,rv-8ukx-9x2d.e658,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Insurance Coverage,Uninsured,63.4,45.0 to 81.8,44,row-i3wm.7d3w.brj5,rv-5zs3~gwyz~hyew,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Race and Ethnicity,Hispanic,85.5,77.6 to 93.3,150,row-bb2h-ce5f~u4ek,rv-hznm-db4i-q4q2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Race and Ethnicity,"Other or Multiple Races, Non-Hispanic",92.0,85.7 to 98.3,109,row-j99i-e55d~xx25,rv-pj5j.kxyf.4ehc,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Race and Ethnicity,"White, Non-Hispanic",87.4,84.2 to 90.6,650,row-28cs.asxi.ecmq,rv-buna-a5wb.922w,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Urbanicity,Living In a MSA Principal City,89.0,85.3 to 92.8,452,row-haci.gb37~eujb,rv-gmyr-5eqz.fywj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Urbanicity,Living In a MSA Non-Principal City,85.0,79.7 to 90.3,316,row-nxmd-nps8.r4rp,rv-68ha.nw2c_37c5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017,Age,35 Months,93.5,89.0 to 96.7,304,row-bz8y_95hj-fuiu,rv-tzi7.nuy5_hyez,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2017-2018,Age,35 Months,92.0,87.7 to 95.2,576,row-3dqz.jine-jv2v,rv-d8wx~k4uq.sqg2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018,Age,35 Months,90.3,83.3 to 95.2,272,row-phv7-wpqv.n4y2,rv-unwk-qpjn~mxiz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2018-2019,Age,35 Months,90.1,84.5 to 94.2,481,row-9y3v_4n9u.yr8c,rv-2mbq~ae8i~bftz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2019,Age,35 Months,89.8,80.3 to 95.9,209,row-fsty~pv53-enqk,rv-emiy.vskz.9bzc,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2017,Insurance Coverage,Private Insurance Only,92.2,89.3 to 95.1,483,row-pt6k.pvd6~a69g,rv-7wdb_hpbf~sd9q,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015,Age,35 Months,91.0,84.2 to 95.7,251,row-mk96-hwb5_cdrm,rv-zcda_4kpq~999e,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2015-2016,Age,35 Months,91.4,86.9 to 94.7,536,row-2dd5-sgp9_zzcb,rv-u4bt.p7hm-jgwu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014,Age,35 Months,89.6,83.4 to 94.2,258,row-8k4h~dsha_8y5z,rv-fmi3-rby5-67uh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2014-2015,Age,35 Months,90.3,85.8 to 93.9,509,row-7m8e.bpej~enhj,rv-7fkd-a88j_9r3b,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016,Age,35 Months,90.4,84.8 to 94.6,285,row-5n2a-pbyp-gvqn,rv-jbad_wzcd.8wu7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Indiana,2016-2017,Age,35 Months,91.9,88.4 to 94.7,589,row-bnd4_vw3u-hqdg,rv-mtrt_v8q5~kzes,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,IL-Rest of state,2021,Age,24 Months,92.4,85.0 to 97.0,262,row-4su8_n5d7_tbx7,rv-ejga_zeh7_kjn4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,IL-Rest of state,2016-2019,Overall,Overall,91.3,89.2 to 93.4,1282,row-gncz_bdxe~xer3,rv-mvqm-hahv~4pns,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,IL-Rest of state,2016-2019,Insurance Coverage,Any Medicaid,90.0,86.3 to 93.8,398,row-ksk9-n5wd.kve7,rv-8i4f.hvvd_e4ti,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,IL-Rest of state,2016-2019,Insurance Coverage,Private Insurance Only,93.1,90.9 to 95.3,851,row-gg98.b6j2_7t3s,rv-7g55_gamc~vh57,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2019,Age,19 Months,88.1,81.9 to 92.4,358,row-ifnz.irvg.548h,rv-aine-ys63-zfjg,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018,Age,19 Months,87.6,82.0 to 91.6,395,row-wyga-smfh-hhjz,rv-wqet.q6ie-9duw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018-2019,Age,19 Months,94.0,91.2 to 96.0,753,row-w4dn.qdyb-i6hi,rv-md45.ci5f.dyru,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Insurance Coverage,Any Medicaid,85.0,78.6 to 91.4,209,row-abdw~zqgw-uqri,rv-37hd_y4s8_g6fs,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Race and Ethnicity,"Black, Non-Hispanic",92.6,82.6 to 100.0,35,row-7j9p.nki2-mb94,rv-86sh-dk23-5nj5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Insurance Coverage,Uninsured,67.6,45.2 to 90.1,35,row-fc7j.zyka~acz5,rv-8a9x_g2it~4rzt,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Race and Ethnicity,Hispanic,90.7,85.0 to 96.4,174,row-puhh-g34v.ah26,rv-tu5y.9gm6-2fu5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Race and Ethnicity,"Other or Multiple Races, Non-Hispanic",84.7,74.5 to 94.8,84,row-rjbe.pww2_r3i3,rv-22wb.j5u2~aftv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Race and Ethnicity,"White, Non-Hispanic",90.0,86.8 to 93.2,612,row-p8qx.3u39-6pc9,rv-34t7.wr8q-h9mw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Urbanicity,Living In a MSA Principal City,90.2,86.2 to 94.3,320,row-pzsn-3cxc~zwxu,rv-i9kn-vqvn.3u5v,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Urbanicity,Living In a MSA Non-Principal City,90.8,85.8 to 95.8,270,row-5m5j_5pim_nweg,rv-uhjw~j4s6.2crv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Urbanicity,Living In a Non-MSA,88.0,83.3 to 92.8,315,row-bvjm.hja6_gsw5,rv-h2ps_vn3f~2sdi,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Overall,Overall,89.8,87.1 to 92.4,905,row-8wiq-yafe_w2ta,rv-9e2y-zxvm-ag6b,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Poverty,<133% FPL,83.7,77.5 to 89.8,256,row-p4dq-4csn-r9vz,rv-di6w_y4d9~btn5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Poverty,133% to <400% FPL,91.3,87.9 to 94.7,413,row-ncy2.ruub_wj6z,rv-s49x.cm9m-iynf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Poverty,>400% FPL,94.9,91.4 to 98.3,236,row-3i2c~swuh.y896,rv-xqp9-p2fe.r2j8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016,Age,13 Months,67.3,59.9 to 74.0,301,row-qzn7-rb7n_rjy9,rv-hkjk~pf9w~5xjj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2017,Age,13 Months,69.1,64.3 to 73.6,655,row-2fh4-j7dc.7pwb,rv-t5c5.yk3i~i29u,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015,Age,13 Months,63.7,53.7 to 72.6,180,row-yeft_juga.4u3m,rv-9ipe_ejkw~dhmb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015-2016,Age,13 Months,65.4,59.3 to 71.1,481,row-x5k6~mngv~6adj,rv-k9za-r7wd.jx75,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014,Age,13 Months,65.5,56.7 to 73.3,208,row-pnue_xn8q~eahb,rv-2pej-cfzv.7s96,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2015,Age,13 Months,64.6,58.0 to 70.6,388,row-qm4w-z7qm-b2mz,rv-xui3-zx4i-gc5s,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2019,Age,13 Months,67.9,60.5 to 74.5,358,row-phqq.249u_3869,rv-4tqp.nn33_ive9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018,Age,13 Months,62.8,55.8 to 69.3,395,row-dpep-v2q4~am5p,rv-q6pz~59kn~y5m7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018-2019,Age,13 Months,65.3,60.3 to 70.1,753,row-ms6s-8nk5~cxt3,rv-fvah~cx38-mwy3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017,Age,13 Months,71.0,64.5 to 76.8,354,row-fr2c-972s.jrsc,rv-zdpi_ymxp.x7k9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017-2018,Age,13 Months,67.0,62.2 to 71.4,749,row-wv99~i2kp.tp4u,rv-9pgb.udas~zw9y,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2011,Age,13 Months,56.5,50.4 to 62.4,221,row-mf6n_yrr8-fiyr,rv-g6f4~67hn-fi56,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2012,Age,13 Months,54.8,48.9 to 60.6,224,row-9dqn.ddim_6n6t,rv-uymy~949s~xe9b,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013,Age,13 Months,66.0,62.6 to 69.3,231,row-f4d6~h7fi~pyyv,rv-qmk7~wkkr-fjdq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013-2014,Age,13 Months,65.7,62.5 to 68.8,439,row-jxir-8idr_q5be,rv-5vhx~z3jq.a4mm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017,Age,19 Months,91.7,87.4 to 94.6,354,row-c7ym_etkg-be9d,rv-nap7-am3v-ekdx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017-2018,Age,19 Months,89.6,86.3 to 92.3,749,row-c4bj-t58a_7qiw,rv-pv5u.xawt_q3xq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016,Age,19 Months,87.6,82.0 to 91.7,301,row-2txq.3r7v.umqe,rv-eqwu-egz2_3arj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2017,Age,19 Months,89.6,86.2 to 92.2,655,row-nai4.7wq6.kqid,rv-j7hk.7rsa_kk8e,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015,Age,19 Months,87.3,79.6 to 92.4,180,row-5k7t.6azi~zwhd,rv-j7kt.q5n8.duqk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015-2016,Age,19 Months,87.5,82.9 to 90.9,481,row-5ydj_ckpc~e3uc,rv-dsbv.44wu.zgbx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2012,Age,19 Months,89.2,86.7 to 91.2,224,row-jyfk_8m2i-djcf,rv-kq7a-aj96~dyat,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014,Age,19 Months,90.9,85.6 to 94.4,208,row-xgwa.xbek_kubz,rv-8frk.vqrn-fkqu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2015,Age,19 Months,89.1,84.7 to 92.4,388,row-cw35-dhhp-h44a,rv-s79p~av6f.x56q,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013,Age,19 Months,89.3,85.9 to 91.9,231,row-np6n.57mf~qzvb,rv-rh76~5adx.qkui,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013-2014,Age,19 Months,90.1,88.6 to 91.4,439,row-gg4x.wyyr_ie5c,rv-f4cq.mq4b-cah7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2011,Age,19 Months,85.6,81.0 to 89.2,221,row-6brt-344t~yth6,rv-vpqs~8hba.3kun,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2012,Age,24 Months,93.0,88.2 to 96.3,224,row-vuwk_zfsv~gawc,rv-6h5j~ab6h.kjpm,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2011,Age,24 Months,88.4,82.2 to 93.1,221,row-jerb~ry2e.p6j7,rv-ns77~9qt9~r7rq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013,Age,24 Months,92.3,86.7 to 96.2,231,row-k7hf_tpxn_3v8v,rv-4dn7-22sx_nsus,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013-2014,Age,24 Months,92.0,88.5 to 94.8,439,row-ttjn.kiiw_wpzs,rv-uhha_fde3~c6di,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014,Age,24 Months,91.8,87.0 to 95.3,208,row-irtr_gnqt.2hx2,rv-4bd3_ud8e.s8pn,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2015,Age,24 Months,90.5,86.6 to 93.6,388,row-gt87.8uei-av8j,rv-6riq-czuu.f67m,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015,Age,24 Months,89.2,82.8 to 94.0,180,row-mqui.edzg~xjev,rv-rj5a-i8cf-zkvh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015-2016,Age,24 Months,89.8,85.9 to 92.9,481,row-yt8r~5rj5-q8fj,rv-atv2_8dsm_5rf5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016,Age,24 Months,90.3,85.7 to 93.9,301,row-7dhb-t8st~bhx7,rv-ckyc.uc6j-udf3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2017,Age,24 Months,92.5,89.7 to 94.7,655,row-d6de.hkwp.g575,rv-4stu.ee9y-kh54,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017,Age,24 Months,94.8,91.6 to 97.0,354,row-edp2~nmjs~knah,rv-88js_usxg-j2ud,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017-2018,Age,24 Months,92.9,90.1 to 95.1,749,row-225z-7q74_p2ut,rv-7yza~tih6~yhin,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018,Age,24 Months,90.9,86.3 to 94.5,395,row-hvf8_f8jz~ajhj,rv-ynjp_m8rg~2gjp,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018-2019,Age,24 Months,90.1,86.5 to 93.0,753,row-ahiz.zazq_ahzb,rv-7ake.yyz5-bave,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2019,Age,24 Months,89.2,83.5 to 93.6,358,row-dvim~sezy~d4rw,rv-2nbx-kbwc-3jhk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2012,Age,35 Months,96.0,92.4 to 98.2,224,row-92ki_hk5i-bx9c,rv-deh6_z7nz.fkdz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2011,Age,35 Months,97.0,86.4 to 99.8,221,row-p5k5_2skr~u6jt,rv-zhn5-xim2_siqr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013,Age,35 Months,94.8,90.1 to 97.7,231,row-w4cc.2hug-grnk,rv-y8di.xja2_bzuu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2013-2014,Age,35 Months,96.5,92.4 to 98.8,439,row-74ts_ru98~p73n,rv-jh6c_aa3d-chcx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015,Age,35 Months,93.1,86.7 to 97.1,180,row-npct_juwc-kf8q,rv-exth~2kbn~3r6t,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2015-2016,Age,35 Months,93.1,89.1 to 96.0,481,row-r4st_sm4f~iwpn,rv-6ssg.t3fb~7x3j,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014,Age,35 Months,98.2,93.4 to 99.7,208,row-w5x7_k7bi_h4gf,rv-52r3_zcjg_mz7e,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2015,Age,35 Months,96.3,91.4 to 98.8,388,row-n4vr~gbjs~n4fy,rv-zn23-2c9a-xcm3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016,Age,35 Months,92.7,87.7 to 96.2,301,row-qa29_4tyi-e583,rv-b342.z6gz~h8i3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2016-2017,Age,35 Months,94.4,91.4 to 96.7,655,row-umgh~j754_77qv,rv-69ey_hsxy_kkra,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017,Age,35 Months,96.4,92.4 to 98.6,354,row-pff8.3knz~nm9z,rv-3gpv.pm9w-dqnv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2017-2018,Age,35 Months,93.6,90.7 to 95.8,749,row-b2w9.t8ez~tehv,rv-ce25-vrpi.3vuv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018,Age,35 Months,91.1,86.4 to 94.6,395,row-3r6t_vusr-g9ib,rv-34jp.tgrt.4bec,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2018-2019,Age,35 Months,92.6,89.2 to 95.2,753,row-gqqq~bf29~b5vj,rv-4nz7~fqnq-jbf3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2019,Age,35 Months,94.0,89.1 to 97.2,358,row-vv4g-bvsm~885q,rv-fqm3.v7tc.36tr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Insurance Coverage,Other,93.7,88.5 to 98.9,134,row-s49a_xybc_nwqb,rv-jj3s.x7hm_su97,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Kansas,2014-2017,Insurance Coverage,Private Insurance Only,92.3,89.5 to 95.2,527,row-et82.29ad_65ck,rv-76gj.dea7.hrvj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Iowa,2020-2021,Age,35 Months,93.7,88.5 to 97.1,455,row-4ijc.ysqs_jsri,rv-d7sy~ncuj.9s2u,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Iowa,2021,Age,13 Months,49.7,39.4 to 60.0,184,row-8ni6~e65q.yzuk,rv-7jwg.acqy.37zh,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Iowa,2020-2021,Age,19 Months,88.4,82.9 to 92.3,455,row-yype-epub_nsni,rv-ifmu_wp4z~ukrz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Iowa,2020-2021,Age,13 Months,51.9,45.0 to 58.7,455,row-pprr~f7w9.33hg,rv-2mcf-35ub-qs5i,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Iowa,2021,Age,19 Months,87.9,78.6 to 93.5,184,row-kmg6~hcf6~dmm8,rv-mvz5_m6zy~dhzr,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2021,Age,24 Months,96.7,94.2 to 98.3,446,row-7mku.7imd~v348,rv-fdgk_dmm7.4yjf,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2020-2021,Age,24 Months,92.8,90.2 to 95.0,1241,row-hh9h-wdzx_7aw6,rv-nzv3.7x8f.iwde,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Urbanicity,Living In a MSA Non-Principal City,88.6,86.0 to 91.3,1538,row-n4hg_8njg_vkmu,rv-7ayt~zt3m~496j,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Urbanicity,Living In a Non-MSA,86.5,80.4 to 92.5,225,row-fhxh_e4vr-yawg,rv-9y57~q3rq~6ttv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2020,Age,19 Months,87.7,82.8 to 91.3,795,row-ytm6_695w_z5rx,rv-nxca~xxkn_2cq9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Race and Ethnicity,"Black, Non-Hispanic",84.7,79.0 to 90.4,331,row-7twt~trkv-udta,rv-kgp7_inig.d8m7,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Race and Ethnicity,"White, Non-Hispanic",91.6,89.3 to 93.9,1416,row-qrdz.npay-spxc,rv-dk4g-xp8p-qqky,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Race and Ethnicity,"Other or Multiple Races, Non-Hispanic",90.3,86.7 to 93.9,517,row-jsix_3sp9~zra6,rv-35yq_4evv~7hgy,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Race and Ethnicity,Hispanic,89.3,87.1 to 91.5,2285,row-nh49_cvmr~tcxb,rv-8jn5~5euc.7b38,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Insurance Coverage,Uninsured,79.4,71.5 to 87.3,250,row-2fjg_6bc7~nx9w,rv-zinv.bn3r~su2v,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Insurance Coverage,Any Medicaid,88.4,85.9 to 90.8,1780,row-63ni_6xc6.c333,rv-hhzh~tegs_gune,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Insurance Coverage,Private Insurance Only,91.7,89.7 to 93.6,2267,row-jf6k~j5md-8tzf,rv-raaa-ebpd-337t,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Insurance Coverage,Other,91.9,87.5 to 96.2,252,row-fdbu.tizn.f9gh,rv-d4t8_hz65~s68d,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Overall,Overall,89.5,88.0 to 91.0,4549,row-d5vy-h6y7-636h,rv-rizq-irg2.r7rz,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Poverty,>400% FPL,92.6,90.5 to 94.8,1354,row-s2gn~ezdy.648s,rv-9gw3-v2pr~3ahs,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Poverty,<133% FPL,86.9,84.1 to 89.7,1649,row-zue6~y85d_uqej,rv-exjp_v8rd_3hva,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Poverty,133% to <400% FPL,90.2,87.8 to 92.6,1546,row-j2qn.srma.z8p6,rv-8c9q-3x4s~9rax,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2016-2019,Urbanicity,Living In a MSA Principal City,90.7,88.9 to 92.4,2786,row-cyd3-ikxz~bbqa,rv-k8iq_8npw-3wwb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2021,Age,35 Months,97.3,94.2 to 99.0,446,row-ucqi-hnjm-ga9q,rv-urtv-p8cf-uk9e,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2020,Age,35 Months,91.4,86.2 to 95.2,795,row-anmh.t4pv-58b9,rv-hf4j~hjuf.u4nq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2020,Age,24 Months,88.7,84.2 to 92.5,795,row-7xg9_vpni-dzqc,rv-2mkn.zepp-umqg,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2020,Age,13 Months,71.9,65.5 to 77.6,795,row-3s96.dmuw~yxc8,rv-ea6n~fhfq.hu5w,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2019-2020,Age,19 Months,87.1,83.9 to 89.7,1714,row-haj7.st8z.if4p,rv-86aj.mzn8-5qy6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2019-2020,Age,35 Months,92.5,89.2 to 95.1,1714,row-5id3_zmnx~x6ry,rv-bcn5_2wj5.hcsv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2019-2020,Age,24 Months,89.1,86.1 to 91.6,1714,row-bnzu.abkv~526a,rv-9m4r-qszs_8zip,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Texas,2019-2020,Age,13 Months,70.2,65.9 to 74.2,1714,row-9njc.qmxf.iz7j,rv-gaw6.kmfm.xm2j,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2021,Age,24 Months,90.7,87.2 to 93.6,754,row-249e_zyp8_ubm6,rv-6i6k_c4m5-ah4i,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2020-2021,Age,24 Months,90.0,87.7 to 92.0,2007,row-e53z.j9gt~2nj5,rv-ujtk-d22c-mmit,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2020,Age,19 Months,88.1,84.9 to 90.7,1253,row-rkip-s3f3-7hzh,rv-kyp5-nw8h.pwv6,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2020,Age,35 Months,90.5,87.4 to 93.0,1253,row-wgsf_rcew~bbkp,rv-a52b-uc9f_kbtj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2020,Age,24 Months,89.4,86.4 to 92.0,1253,row-2dqk~tdx7.ukye,rv-dykj.ikir-zepu,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2020,Age,13 Months,70.9,66.9 to 74.6,1253,row-qyf7~w5fr~68gq,rv-t59b.33vn_ad7m,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2019-2020,Age,19 Months,88.4,86.4 to 90.2,2565,row-twxu_udkx_fv8c,rv-kasu-4ntr~wi6p,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2019-2020,Age,35 Months,91.8,89.8 to 93.5,2565,row-spwx-a5rv-r6vp,rv-h9pd~t2ik-69wq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2019-2020,Age,24 Months,89.5,87.5 to 91.2,2565,row-ukmg-ydce.54zn,rv-fshy-erh4.v29s,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2019-2020,Age,13 Months,70.0,67.2 to 72.6,2565,row-qkj6_y4ey-ssai,rv-wik7-gwp6-232z,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2011,Age,13 Months,60.1,54.4 to 65.5,266,row-cu7d.774q~gann,rv-cpjk_x2wa-nvvq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2012,Age,13 Months,60.2,54.5 to 65.6,260,row-zh3x-2nt2~qdyk,rv-ngjt.txjr_pp99,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2016,Age,19 Months,86.0,80.0 to 90.4,293,row-izr8~hpeh.mknx,rv-87hb_7ici.hpei,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2016-2017,Age,19 Months,87.5,83.2 to 90.8,520,row-yng9~vj3b_pkbk,rv-wz5s_vg7d_5qtt,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2015,Age,19 Months,82.5,70.3 to 90.4,241,row-i248_2eh7-2dt4,rv-tgs2~pskq-hny5,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2015-2016,Age,19 Months,84.2,79.8 to 87.8,534,row-ghqp.aw28.7ba2,rv-dp6v_34i3-za2d,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014,Age,19 Months,87.9,82.1 to 92.0,258,row-xbbg_yscd.g9qp,rv-zez2.wcxt_5gad,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2015,Age,19 Months,85.2,80.8 to 88.7,499,row-rvsy-nzjq~9vn7,rv-gfdf.nspq.c7cs,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2017,Age,13 Months,65.3,56.4 to 73.2,227,row-ips8-xhm6_26dq,rv-u63t_2yik.8d5u,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2017-2018,Age,13 Months,68.7,63.1 to 73.9,525,row-9yh6-64u5.z7nr,rv-b5rg.5akz_fbuw,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2016,Age,13 Months,68.9,61.8 to 75.2,293,row-ic9h.76zz_j8ds,rv-h6vi-b7cg_64y2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2016-2017,Age,13 Months,67.1,61.5 to 72.3,520,row-qwzp_ex62.yeex,rv-cav4_id23.4xbb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2018,Age,13 Months,72.4,65.3 to 78.5,298,row-ghgv.2ft7~x5er,rv-ik4u_4d37_pqem,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2018-2019,Age,13 Months,72.1,67.3 to 76.4,628,row-5ky7.27xb~fzxw,rv-bicz-75q7~r2eq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2012,Age,19 Months,84.1,80.9 to 86.9,260,row-cff9~hfh5~igba,rv-kn5q~i29v_hnrt,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2013,Age,19 Months,83.0,80.1 to 85.5,250,row-7ah7_twn7_xj4a,rv-4zbp_3twt~6u2k,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2013-2014,Age,19 Months,85.4,82.1 to 88.3,508,row-aepk.t3rr~bfwr,rv-jyfa_29q6.b6s3,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2019,Age,13 Months,71.7,65.1 to 77.6,330,row-v84d_ymj9-e2zt,rv-yj3h.s22d-ye8b,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2011,Age,19 Months,84.5,74.1 to 91.3,266,row-mun4~i3jv~2ukk,rv-vwi5.zakn_i5ej,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014,Age,13 Months,61.3,53.8 to 68.3,258,row-33nf_iidf_nwn6,rv-cmnj-kv82_hufb,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2015,Age,13 Months,60.9,55.5 to 66.1,499,row-v3um.9jn4~7dj3,rv-5hgf-2m8w_agc2,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2015,Age,13 Months,60.5,52.6 to 68.0,241,row-yti6_g6w9-vtty,rv-sc7y-dgs5_687d,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2015-2016,Age,13 Months,64.7,59.4 to 69.7,534,row-k9ur_nxdm-qig7,rv-wf7f.x64y_9w3v,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2013,Age,13 Months,56.6,50.8 to 62.1,250,row-ceh9~ssyu.j5mk,rv-xbin_7jia~aiyv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2013-2014,Age,13 Months,58.9,56.3 to 61.5,508,row-j6w4-svna-jmhx,rv-p36p.5pf6~dt24,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2019,Age,19 Months,93.0,88.9 to 95.7,330,row-s9vp.ceaw~h236,rv-b422-c77k_46yi,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,HHS Regions/National,Region 10,2020-2021,Age,13 Months,70.5,67.2 to 73.5,2007,row-wbk9~u6gy.zx97,rv-5q87-g7gs.x2vj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2017,Urbanicity,Living In a MSA Non-Principal City,88.9,85.8 to 92.1,520,row-gp8n.jnxr_2vbk,rv-fg2x~dxfx_zjqx,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2017,Urbanicity,Living In a Non-MSA,85.8,77.5 to 94.1,88,row-x6zs-kv6j_rnnz,rv-udmd.qi2p.nnqk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2017,Overall,Overall,89.6,87.2 to 92.0,945,row-ifnj.8nft_4ump,rv-vrkx_ztuw~p6rj,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2017,Poverty,<133% FPL,90.5,85.8 to 95.2,224,row-m98e~md82.kixt,rv-fvnh-mnbm-2wt9,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2017,Poverty,133% to <400% FPL,89.2,86.0 to 92.3,550,row-svbz_d5fv-486e,rv-7f43.nep2_f2yk,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2017,Poverty,>400% FPL,89.6,84.1 to 95.2,171,row-sw6c.z932_x4s7,rv-y2sc-enjk_2yz4,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014,Age,35 Months,94.0,87.5 to 97.8,258,row-mcvi-thy5~q934,rv-mcrc_tq5g.34fv,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2014-2015,Age,35 Months,91.6,87.1 to 95.0,499,row-yfps_sduc~jxm9,rv-bcj3_fmhj~77u8,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2015,Age,35 Months,89.2,82.9 to 94.0,241,row-iw2f_q782-wa6x,rv-3zf6_ufjx~dv9m,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2015-2016,Age,35 Months,90.3,86.1 to 93.6,534,row-rwad_94mf~k637,rv-q7kb_zw7u-42uq,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
+≥1 Dose MMR,,States/Local Areas,Utah,2016,Age,35 Months,91.1,85.3 to 95.3,293,row-b4mp~gkdk-nxg5,rv-7fhm_v6tm-qh6x,2024-09-26T18:08:27.887Z,2024-09-26T18:08:27.887Z
