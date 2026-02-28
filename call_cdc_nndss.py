@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
-Call the CDC Socrata API (dataset x9gk-5huc). Measles cases only. Dataset has 2022–present only.
+Call the CDC Socrata NNDSS API (dataset x9gk-5huc). By default fetches rows for
+Measles, Indigenous and Measles, Imported (all columns). Supports legacy GET and SODA3 POST.
+Fetched data is automatically cleaned to national (US RESIDENTS) and state-level (Location1 populated) rows only.
 
 Dataset: https://dev.socrata.com/foundry/data.cdc.gov/x9gk-5huc
 
 Usage:
-  python call_cdc_api.py                    # measles, all years in dataset (2022–present)
-  python call_cdc_api.py --where ""        # all conditions, no filter
-  python call_cdc_api.py --where "year=2019"
-  python call_cdc_api.py --schema
-  python call_cdc_api.py --out data/raw/measles.csv
+  From project root:  venv/bin/python call_cdc_nndss.py
+  No filter:          venv/bin/python call_cdc_nndss.py --where ""
+  Custom filter:      venv/bin/python call_cdc_nndss.py --where "year=2019"
+  Print columns:      venv/bin/python call_cdc_nndss.py --schema
+  Save as CSV:        venv/bin/python call_cdc_nndss.py --out data/raw/nndss_measles.csv
 """
 
 import argparse
@@ -29,10 +31,12 @@ except ImportError:
     print("Install pandas: pip install pandas", file=sys.stderr)
     sys.exit(1)
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+# .env from project root (parent of docs/) or current dir
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 try:
     from dotenv import load_dotenv
     load_dotenv(PROJECT_ROOT / ".env")
+    load_dotenv(Path(__file__).resolve().parent / ".env")
 except ImportError:
     pass
 
@@ -51,6 +55,41 @@ def get_token():
     return token
 
 
+# Labels we want: Measles, Indigenous and Measles, Imported only
+ALLOWED_LABELS = {"Measles, Indigenous", "Measles, Imported"}
+
+# Reporting Area value for national statistics
+NATIONAL_REPORTING_AREA = "US RESIDENTS"
+
+
+def clean_nndss_data(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Filter NNDSS data to:
+    - Label in {"Measles, Indigenous", "Measles, Imported"}
+    - National stats (Reporting Area = "US RESIDENTS") OR state-level (Location1 populated)
+    """
+    if df.empty:
+        return df
+
+    # Reporting Area: API may use "Reporting Area" or "states" (SoQL fieldName)
+    reporting_area_col = "Reporting Area" if "Reporting Area" in df.columns else "states"
+    required_cols = ["label", reporting_area_col, "location1"]
+    missing = [c for c in required_cols if c not in df.columns]
+    if missing:
+        print(f"Warning: columns {missing} not found; skipping clean. Columns: {list(df.columns)}", file=sys.stderr)
+        return df
+
+    # Filter to allowed labels only
+    label_mask = df["label"].astype(str).str.strip().isin(ALLOWED_LABELS)
+
+    # National (Reporting Area = "US RESIDENTS") or state-level (location1 populated)
+    states_national = df[reporting_area_col].astype(str).str.strip() == NATIONAL_REPORTING_AREA
+    location1_populated = df["location1"].notna() & (df["location1"].astype(str).str.strip() != "")
+    geo_mask = states_national | location1_populated
+
+    return df.loc[label_mask & geo_mask].copy()
+
+
 def fetch_schema() -> list:
     """Fetch view metadata and return column definitions (fieldName, name, dataTypeName)."""
     r = requests.get(META_URL, timeout=30)
@@ -59,9 +98,8 @@ def fetch_schema() -> list:
     return meta.get("columns", [])
 
 
-# Default: measles cases only. This dataset (x9gk-5huc) has years 2022–present only; use --where "" for no filter
-# year is text in this dataset, so use string comparison
-DEFAULT_WHERE = "lower(label) like '%measles%' AND year >= '2022' AND year <= '2026'"
+# Default: only Measles, Indigenous and Measles, Imported
+DEFAULT_WHERE = "label in ('Measles, Indigenous', 'Measles, Imported')"
 
 
 def call_legacy(token: str, limit: int, where: Optional[str]) -> list:
@@ -99,12 +137,11 @@ def call_soda3(token: str, limit: int, where: Optional[str]) -> list:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="CDC Socrata API: measles cases only (x9gk-5huc)")
-    parser.add_argument("--legacy", action="store_true", help="Use legacy GET (default is SODA3 POST for reliable year filter)")
-    parser.add_argument("--limit", type=int, default=50000, help="Max rows (default 50000; dataset is 2022–present)")
-    parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause (default: measles only); use '' for no filter")
+    parser = argparse.ArgumentParser(description="Call CDC Socrata API - dataset x9gk-5huc (all columns, optional filter)")
+    parser.add_argument("--soda3", action="store_true", help="Use SODA3 POST endpoint instead of legacy GET")
+    parser.add_argument("--limit", type=int, default=1000, help="Max rows (default 1000)")
+    parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause (default: Measles Indigenous/Imported only); use '' for no filter")
     parser.add_argument("--out", type=str, help="Save DataFrame to this file as CSV")
-    parser.add_argument("--table", action="store_true", help="Print full data as a table in the terminal (use --out for large data)")
     parser.add_argument("--quiet", action="store_true", help="Only print record count and column headers")
     parser.add_argument("--schema", action="store_true", help="Print column list from dataset metadata and exit")
     args = parser.parse_args()
@@ -125,15 +162,17 @@ def main():
 
     token = get_token()
 
-    # Default: measles, 2022–present (dataset range); --where "" means no filter. SODA3 (POST) by default.
+    # Default: Measles Indigenous/Imported only; --where "" means no filter
     where = DEFAULT_WHERE if args.where is None else (args.where.strip() or None)
-    if args.legacy:
-        data = call_legacy(token, limit=args.limit, where=where)
-    else:
+    if args.soda3:
         data = call_soda3(token, limit=args.limit, where=where)
+    else:
+        data = call_legacy(token, limit=args.limit, where=where)
 
     df = pd.DataFrame(data)
-    print(f"Records returned: {len(df)}")
+    raw_count = len(df)
+    df = clean_nndss_data(df)
+    print(f"Records returned (raw): {raw_count}, after cleaning: {len(df)}")
 
     if len(df) > 0:
         print(f"Column headers in data ({len(df.columns)}): {', '.join(df.columns)}")
@@ -142,18 +181,11 @@ def main():
         df.to_csv(args.out, index=False)
         print(f"Saved to {args.out} (CSV)")
 
-    if args.table and len(df) > 0:
-        pd.set_option("display.max_rows", None)
-        pd.set_option("display.max_columns", None)
-        pd.set_option("display.width", None)
-        pd.set_option("display.max_colwidth", 50)
-        print("\nFull data:")
-        print(df.to_string())
-    elif not args.quiet and len(df) > 0:
+    if not args.quiet and len(df) > 0:
         print("\nFirst row:")
         print(df.head(1).to_string())
         if len(df) > 1:
-            print("\n... (use --table to print all rows here, or --out file.csv to save and open in a spreadsheet)")
+            print("\n... (use --out to save full DataFrame as CSV)")
 
 
 if __name__ == "__main__":
