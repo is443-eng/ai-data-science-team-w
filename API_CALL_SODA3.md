@@ -2,19 +2,19 @@
 
 This document describes how to access CDC data on the Socrata (Tyler Data & Insights) platform using the **SODA3 API**. SODA3 requires identifying the caller (app token or other credentials) and supports a v3 query endpoint.
 
-The script **`call_cdc_api.py`** uses dataset **x9gk-5huc** and supports both legacy GET and SODA3 POST (via `--soda3`). By default it fetches rows where the `label` column matches “Measles” (all columns); use `--where ""` for no filter.
+The script **`call_cdc_nndss.py`** uses dataset **x9gk-5huc** and supports both legacy GET and SODA3 POST (via `--soda3`). By default it fetches rows where the `label` column matches “Measles” (all columns); use `--where ""` for no filter.
 
 **References:**
 - [SODA3 API – Data & Insights](https://support.socrata.com/hc/en-us/articles/34730618169623-SODA3-API) — authentication, behavior, and what’s new.
 - [Socrata Developer Portal – API Endpoints](https://dev.socrata.com/docs/endpoints) — v3 endpoint format and versioning.
-- [CDC dataset (foundry) x9gk-5huc](https://dev.socrata.com/foundry/data.cdc.gov/x9gk-5huc) — dataset used by `call_cdc_api.py`.
+- [CDC dataset (foundry) x9gk-5huc](https://dev.socrata.com/foundry/data.cdc.gov/x9gk-5huc) — dataset used by `call_cdc_nndss.py`.
 
 ---
 
 ## 1. Base URL and dataset
 
 - **Domain:** `https://data.cdc.gov`
-- **Dataset used in `call_cdc_api.py`:** identifier `x9gk-5huc`  
+- **Dataset used in `call_cdc_nndss.py`:** identifier `x9gk-5huc`  
   - Legacy resource URL: `https://data.cdc.gov/resource/x9gk-5huc.json`  
   - SODA3 query endpoint: `https://data.cdc.gov/api/v3/views/x9gk-5huc/query.json`  
   - View metadata (for `--schema`): `https://data.cdc.gov/api/views/x9gk-5huc.json`
@@ -57,7 +57,7 @@ POST https://data.cdc.gov/api/v3/views/x9gk-5huc/query.json
 | `X-App-Token`   | Your app token     |
 | `Content-Type`  | `application/json` |
 
-**Body (example — default in `call_cdc_api.py`: Measles rows, all columns, limit 1000):**
+**Body (example — default in `call_cdc_nndss.py`: Measles rows, all columns, limit 1000):**
 
 ```json
 {
@@ -69,7 +69,7 @@ POST https://data.cdc.gov/api/v3/views/x9gk-5huc/query.json
 }
 ```
 
-**SoQL used in `call_cdc_api.py`:**
+**SoQL used in `call_cdc_nndss.py`:**
 
 - **SELECT:** `*` (all columns)
 - **WHERE:** optional; default is `lower(label) like '%measles%'`. Omit WHERE (or use `--where ""`) for no filter.
@@ -81,7 +81,7 @@ POST https://data.cdc.gov/api/v3/views/x9gk-5huc/query.json
 
 ## 4. Legacy SODA 2.1 style (GET, still supported)
 
-`call_cdc_api.py` uses the **legacy** endpoint by default; pass `--soda3` to use the SODA3 POST endpoint instead.
+`call_cdc_nndss.py` uses the **legacy** endpoint by default; pass `--soda3` to use the SODA3 POST endpoint instead.
 
 **Endpoint:**
 
@@ -144,4 +144,4 @@ Replace `YOUR_APP_TOKEN` with your actual token (or set `SOCRATA_APP_TOKEN` in `
 | Auth       | `X-App-Token` header | `X-App-Token` header  |
 | Query      | JSON body with `query` (SoQL) and `page` | `$select`, `$where`, `$limit` |
 
-Both require an app token (`SOCRATA_APP_TOKEN` in `.env`). **`call_cdc_api.py`** uses legacy GET by default; use the `--soda3` flag to call the SODA3 POST endpoint. Other options: `--where` (SoQL WHERE; default Measles filter), `--limit` (default 1000), `--out` (save JSON), `--schema` (print column list from view metadata).
+Both require an app token (`SOCRATA_APP_TOKEN` in `.env`). **`call_cdc_nndss.py`** uses legacy GET by default; use the `--soda3` flag to call the SODA3 POST endpoint. Other options: `--where` (SoQL WHERE; default Measles filter), `--limit` (default 1000), `--out` (save JSON), `--schema` (print column list from view metadata).
