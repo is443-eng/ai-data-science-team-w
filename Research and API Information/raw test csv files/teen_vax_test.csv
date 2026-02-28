@@ -1,0 +1,501 @@
+vaccine,dose,geography_type,geography,year_season,dimension_type,dimension,coverage_estimate,_95_ci,population_sample_size
+≥2 Doses MMR,,States/Local Areas,North Dakota,2022,Age,13-17 Years,97.6,93.8 to 99.1,280
+≥2 Doses MMR,,States/Local Areas,North Dakota,2021,Age,13-17 Years,98.3,95.7 to 99.3,191
+≥2 Doses MMR,,States/Local Areas,North Dakota,2017,Age,13-17 Years,93.0,89.5 to 95.3,379
+≥2 Doses MMR,,States/Local Areas,North Dakota,2020,Age,13-17 Years,97.0,94.0 to 98.5,401
+≥2 Doses MMR,,States/Local Areas,North Dakota,2019,Age,13-17 Years,97.4,94.2 to 98.9,319
+≥2 Doses MMR,,States/Local Areas,North Dakota,2018,Age,13-17 Years,96.4,92.4 to 98.4,287
+≥2 Doses MMR,,States/Local Areas,North Dakota,2016,Age,13-17 Years,92.7,87.7 to 95.7,293
+≥2 Doses MMR,,States/Local Areas,North Dakota,2015,Age,13-17 Years,89.1,83.8 to 92.8,323
+≥2 Doses MMR,,States/Local Areas,North Dakota,2014,Age,13-17 Years,91.3,86.2 to 94.7,327
+≥2 Doses MMR,,States/Local Areas,North Dakota,2013,Age,13-17 Years,96.1,93.7 to 97.7,344
+≥2 Doses MMR,,States/Local Areas,North Dakota,2012,Age,13-17 Years,89.8,83.7 to 93.8,324
+≥2 Doses MMR,,States/Local Areas,North Dakota,2023,Age,13-17 Years,94.4,89.5 to 97.1,262
+≥2 Doses MMR,,States/Local Areas,North Dakota,2010,Age,13-17 Years,94.2,90.6 to 96.5,299
+≥2 Doses MMR,,States/Local Areas,North Dakota,2011,Age,13-17 Years,90.7,83.6 to 94.9,314
+≥2 Doses MMR,,States/Local Areas,North Dakota,2008,Age,13-17 Years,93.7,90.4 to 96.0,362
+≥2 Doses MMR,,States/Local Areas,North Dakota,2009,Age,13-17 Years,96.0,92.6 to 97.9,272
+≥2 Doses MMR,,States/Local Areas,Illinois,2021,Age,13-17 Years,96.0,93.6 to 97.5,578
+≥2 Doses MMR,,States/Local Areas,Illinois,2022,Age,13-17 Years,93.0,89.4 to 95.4,630
+≥2 Doses MMR,,States/Local Areas,Illinois,2023,Age,13-17 Years,92.4,89.8 to 94.3,664
+≥2 Doses MMR,,States/Local Areas,Illinois,2013,Age,13-17 Years,93.5,90.5 to 95.6,558
+≥2 Doses MMR,,States/Local Areas,Illinois,2012,Age,13-17 Years,87.8,82.4 to 91.7,632
+≥2 Doses MMR,,States/Local Areas,Illinois,2015,Age,13-17 Years,89.9,86.8 to 92.3,779
+≥2 Doses MMR,,States/Local Areas,Illinois,2014,Age,13-17 Years,93.1,90.2 to 95.1,709
+≥2 Doses MMR,,States/Local Areas,Illinois,2016,Age,13-17 Years,93.5,90.8 to 95.4,605
+≥2 Doses MMR,,States/Local Areas,Illinois,2017,Age,13-17 Years,93.1,90.6 to 95.0,683
+≥2 Doses MMR,,States/Local Areas,Illinois,2018,Age,13-17 Years,94.6,92.4 to 96.3,721
+≥2 Doses MMR,,States/Local Areas,Illinois,2019,Age,13-17 Years,95.3,92.6 to 97.0,602
+≥2 Doses MMR,,States/Local Areas,Illinois,2020,Age,13-17 Years,93.3,90.5 to 95.3,699
+≥2 Doses MMR,,States/Local Areas,Florida,2024,Age,13-17 Years,95.7,91.6 to 97.8,256
+≥2 Doses MMR,,States/Local Areas,Delaware,2024,Age,13-17 Years,94.7,91.5 to 96.7,346
+≥2 Doses MMR,,States/Local Areas,Vermont,2023,Age,13-17 Years,93.9,88.6 to 96.8,223
+≥2 Doses MMR,,States/Local Areas,Vermont,2021,Age,13-17 Years,97.1,94.5 to 98.4,488
+≥2 Doses MMR,,States/Local Areas,Vermont,2018,Age,13-17 Years,96.0,93.3 to 97.6,324
+≥2 Doses MMR,,States/Local Areas,Vermont,2019,Age,13-17 Years,98.1,96.3 to 99.0,472
+≥2 Doses MMR,,States/Local Areas,Vermont,2017,Age,13-17 Years,93.9,89.6 to 96.5,366
+≥2 Doses MMR,,States/Local Areas,Vermont,2022,Age,13-17 Years,95.3,91.9 to 97.3,291
+≥2 Doses MMR,,States/Local Areas,Vermont,2020,Age,13-17 Years,97.2,93.8 to 98.7,398
+≥2 Doses MMR,,States/Local Areas,Vermont,2015,Age,13-17 Years,97.0,94.8 to 98.3,404
+≥2 Doses MMR,,States/Local Areas,Vermont,2014,Age,13-17 Years,95.2,91.3 to 97.4,367
+≥2 Doses MMR,,States/Local Areas,Vermont,2012,Age,13-17 Years,95.9,93.0 to 97.6,322
+≥2 Doses MMR,,States/Local Areas,Vermont,2013,Age,13-17 Years,94.5,91.1 to 96.7,326
+≥2 Doses MMR,,States/Local Areas,Vermont,2016,Age,13-17 Years,93.7,89.7 to 96.2,380
+≥2 Doses MMR,,HHS Regions/National,Region 4,2024,Age,13-17 Years,95.1,93.7 to 96.2,2288
+≥2 Doses MMR,,States/Local Areas,Alaska,2024,Age,13-17 Years,91.8,87.0 to 94.9,223
+≥2 Doses MMR,,States/Local Areas,Maryland,2024,Age,13-17 Years,90.4,85.0 to 93.9,390
+≥2 Doses MMR,,HHS Regions/National,Region 3,2010,Age,13-17 Years,92.3,90.5 to 93.8,2436
+≥2 Doses MMR,,HHS Regions/National,Region 3,2011,Age,13-17 Years,91.9,89.9 to 93.5,3073
+≥2 Doses MMR,,HHS Regions/National,Region 3,2008,Age,13-17 Years,90.3,88.1 to 92.1,2306
+≥2 Doses MMR,,HHS Regions/National,Region 3,2009,Age,13-17 Years,91.8,89.5 to 93.6,2214
+≥2 Doses MMR,,HHS Regions/National,Region 3,2007,Age,13-17 Years,87.5,82.9 to 91.0,370
+≥2 Doses MMR,,HHS Regions/National,Region 3,2006,Age,13-17 Years,86.7,82.0 to 90.3,347
+≥2 Doses MMR,,HHS Regions/National,Region 3,2018,Age,13-17 Years,93.8,92.0 to 95.2,2295
+≥2 Doses MMR,,HHS Regions/National,Region 3,2021,Age,13-17 Years,93.4,91.7 to 94.8,3338
+≥2 Doses MMR,,HHS Regions/National,Region 3,2022,Age,13-17 Years,92.3,90.5 to 93.8,2424
+≥2 Doses MMR,,HHS Regions/National,Region 3,2016,Age,13-17 Years,90.2,88.0 to 92.0,2842
+≥2 Doses MMR,,HHS Regions/National,Region 3,2012,Age,13-17 Years,91.5,89.2 to 93.4,2365
+≥2 Doses MMR,,HHS Regions/National,Region 3,2013,Age,13-17 Years,92.6,90.4 to 94.4,2241
+≥2 Doses MMR,,HHS Regions/National,Region 3,2014,Age,13-17 Years,90.8,88.4 to 92.7,2553
+≥2 Doses MMR,,HHS Regions/National,Region 3,2015,Age,13-17 Years,90.6,88.2 to 92.5,2742
+≥2 Doses MMR,,HHS Regions/National,Region 3,2017,Age,13-17 Years,94.5,92.8 to 95.8,2745
+≥2 Doses MMR,,HHS Regions/National,Region 3,2019,Age,13-17 Years,93.4,91.3 to 95.0,2520
+≥2 Doses MMR,,HHS Regions/National,Region 3,2020,Age,13-17 Years,94.2,92.5 to 95.5,3331
+≥2 Doses MMR,,HHS Regions/National,Region 3,2023,Age,13-17 Years,92.2,89.8 to 94.1,2473
+≥2 Doses MMR,,States/Local Areas,New Hampshire,2024,Age,13-17 Years,96.8,94.1 to 98.2,330
+≥2 Doses MMR,,States/Local Areas,Tennessee,2024,Age,13-17 Years,94.0,90.2 to 96.4,279
+≥2 Doses MMR,,States/Local Areas,Rhode Island,2023,Age,13-17 Years,98.3,95.6 to 99.3,201
+≥2 Doses MMR,,States/Local Areas,Rhode Island,2009,Age,13-17 Years,96.9,93.7 to 98.5,409
+≥2 Doses MMR,,States/Local Areas,Rhode Island,2008,Age,13-17 Years,96.3,92.9 to 98.1,297
+≥2 Doses MMR,,States/Local Areas,Rhode Island,2011,Age,13-17 Years,96.6,94.1 to 98.1,449
+≥2 Doses MMR,,States/Local Areas,Rhode Island,2010,Age,13-17 Years,97.0,93.4 to 98.7,330
+≥2 Doses MMR,,States/Local Areas,Nevada,2016,Age,13-17 Years,89.5,84.5 to 93.0,330
+≥2 Doses MMR,,States/Local Areas,Nevada,2022,Age,13-17 Years,86.0,79.9 to 90.4,259
+≥2 Doses MMR,,States/Local Areas,Nevada,2021,Age,13-17 Years,90.3,85.5 to 93.7,333
+≥2 Doses MMR,,States/Local Areas,Nevada,2017,Age,13-17 Years,92.4,88.3 to 95.2,344
+≥2 Doses MMR,,States/Local Areas,Nevada,2020,Age,13-17 Years,84.2,78.1 to 88.8,369
+≥2 Doses MMR,,States/Local Areas,Nevada,2019,Age,13-17 Years,88.1,82.5 to 92.1,313
+≥2 Doses MMR,,States/Local Areas,Nevada,2018,Age,13-17 Years,89.0,84.3 to 92.5,334
+≥2 Doses MMR,,States/Local Areas,Nevada,2015,Age,13-17 Years,90.0,85.3 to 93.4,372
+≥2 Doses MMR,,States/Local Areas,Nevada,2014,Age,13-17 Years,87.4,83.0 to 90.9,351
+≥2 Doses MMR,,States/Local Areas,Nevada,2013,Age,13-17 Years,92.8,88.5 to 95.6,335
+≥2 Doses MMR,,States/Local Areas,Nevada,2012,Age,13-17 Years,94.0,90.7 to 96.2,329
+≥2 Doses MMR,,States/Local Areas,Nevada,2023,Age,13-17 Years,90.6,85.2 to 94.2,325
+≥2 Doses MMR,,States/Local Areas,Nevada,2010,Age,13-17 Years,88.8,83.8 to 92.4,330
+≥2 Doses MMR,,States/Local Areas,Nevada,2011,Age,13-17 Years,86.0,79.5 to 90.6,412
+≥2 Doses MMR,,States/Local Areas,Nevada,2008,Age,13-17 Years,88.8,83.5 to 92.6,235
+≥2 Doses MMR,,States/Local Areas,Nevada,2009,Age,13-17 Years,88.1,82.8 to 91.9,336
+≥2 Doses MMR,,States/Local Areas,Illinois,2024,Age,13-17 Years,93.6,91.0 to 95.6,669
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2009,Age,13-17 Years,84.6,79.1 to 88.8,389
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2008,Age,13-17 Years,83.4,78.3 to 87.5,343
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2011,Age,13-17 Years,92.0,88.3 to 94.7,407
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2010,Age,13-17 Years,88.8,83.9 to 92.3,366
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2022,Age,13-17 Years,92.1,86.5 to 95.5,256
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2021,Age,13-17 Years,92.2,82.2 to 96.8,144
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2020,Age,13-17 Years,91.6,85.4 to 95.3,271
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2019,Age,13-17 Years,92.0,85.2 to 95.8,160
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2018,Age,13-17 Years,94.9,89.1 to 97.6,192
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2017,Age,13-17 Years,86.2,78.4 to 91.5,204
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2016,Age,13-17 Years,92.6,86.6 to 96.0,157
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2014,Age,13-17 Years,90.1,84.1 to 94.0,274
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2015,Age,13-17 Years,91.6,87.1 to 94.6,283
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2012,Age,13-17 Years,88.4,82.7 to 92.4,287
+≥2 Doses MMR,,States/Local Areas,IL-City of Chicago,2013,Age,13-17 Years,88.8,82.3 to 93.2,209
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2023,Age,13-17 Years,87.6,81.5 to 91.9,301
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2009,Age,13-17 Years,99.4,98.2 to 99.8,412
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2008,Age,13-17 Years,94.6,89.9 to 97.2,329
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2011,Age,13-17 Years,96.9,93.0 to 98.7,415
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2010,Age,13-17 Years,98.4,96.6 to 99.3,355
+≥2 Doses MMR,,States/Local Areas,Kansas,2024,Age,13-17 Years,91.0,86.4 to 94.1,276
+≥2 Doses MMR,,States/Local Areas,Kansas,2020,Age,13-17 Years,92.3,88.2 to 95.0,364
+≥2 Doses MMR,,States/Local Areas,Kansas,2019,Age,13-17 Years,90.0,85.6 to 93.2,381
+≥2 Doses MMR,,States/Local Areas,Kansas,2022,Age,13-17 Years,91.9,87.7 to 94.8,310
+≥2 Doses MMR,,States/Local Areas,Kansas,2021,Age,13-17 Years,94.6,90.0 to 97.2,300
+≥2 Doses MMR,,States/Local Areas,Kansas,2017,Age,13-17 Years,89.4,84.5 to 92.8,338
+≥2 Doses MMR,,States/Local Areas,Kansas,2018,Age,13-17 Years,86.5,80.5 to 90.9,297
+≥2 Doses MMR,,States/Local Areas,Kansas,2016,Age,13-17 Years,89.8,85.2 to 93.1,322
+≥2 Doses MMR,,States/Local Areas,Kansas,2014,Age,13-17 Years,84.6,78.9 to 88.9,352
+≥2 Doses MMR,,States/Local Areas,Kansas,2015,Age,13-17 Years,87.6,82.6 to 91.4,375
+≥2 Doses MMR,,States/Local Areas,Kansas,2013,Age,13-17 Years,86.9,81.6 to 90.8,287
+≥2 Doses MMR,,States/Local Areas,Kansas,2012,Age,13-17 Years,88.6,83.2 to 92.4,340
+≥2 Doses MMR,,HHS Regions/National,Region 3,2024,Age,13-17 Years,93.0,91.2 to 94.4,2344
+≥2 Doses MMR,,States/Local Areas,Hawaii,2024,Age,13-17 Years,93.7,90.6 to 95.9,347
+≥2 Doses MMR,,States/Local Areas,North Dakota,2024,Age,13-17 Years,94.7,90.3 to 97.2,197
+≥2 Doses MMR,,HHS Regions/National,United States,2024,Age,13-17 Years,92.6,91.9 to 93.2,16325
+≥2 Doses MMR,,States/Local Areas,North Carolina,2009,Age,13-17 Years,84.1,77.7 to 88.9,323
+≥2 Doses MMR,,States/Local Areas,North Carolina,2008,Age,13-17 Years,82.2,76.4 to 86.8,326
+≥2 Doses MMR,,States/Local Areas,North Carolina,2011,Age,13-17 Years,89.4,84.6 to 92.8,347
+≥2 Doses MMR,,States/Local Areas,North Carolina,2010,Age,13-17 Years,85.7,80.8 to 89.5,366
+≥2 Doses MMR,,HHS Regions/National,Region 1,2024,Age,13-17 Years,93.4,90.9 to 95.2,1574
+≥2 Doses MMR,,States/Local Areas,IL-Rest of state,2024,Age,13-17 Years,94.1,90.9 to 96.2,457
+≥2 Doses MMR,,States/Local Areas,Indiana,2009,Age,13-17 Years,89.5,85.7 to 92.3,873
+≥2 Doses MMR,,States/Local Areas,Indiana,2008,Age,13-17 Years,91.7,88.2 to 94.1,345
+≥2 Doses MMR,,States/Local Areas,Indiana,2011,Age,13-17 Years,95.2,91.1 to 97.4,430
+≥2 Doses MMR,,States/Local Areas,Indiana,2010,Age,13-17 Years,92.6,88.6 to 95.2,316
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2009,Age,13-17 Years,88.4,83.5 to 91.9,324
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2008,Age,13-17 Years,89.3,84.7 to 92.6,345
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2011,Age,13-17 Years,91.4,86.8 to 94.5,387
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2010,Age,13-17 Years,90.9,86.8 to 93.8,371
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2016,Age,13-17 Years,93.0,89.5 to 95.4,349
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2014,Age,13-17 Years,96.6,92.9 to 98.4,343
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2015,Age,13-17 Years,91.5,87.5 to 94.3,340
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2013,Age,13-17 Years,90.2,84.6 to 93.9,307
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2012,Age,13-17 Years,90.9,85.2 to 94.6,348
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2018,Age,13-17 Years,94.7,89.7 to 97.4,237
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2019,Age,13-17 Years,96.6,93.3 to 98.4,242
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2020,Age,13-17 Years,95.8,91.7 to 97.9,263
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2017,Age,13-17 Years,94.5,90.5 to 96.9,362
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2021,Age,13-17 Years,93.9,89.3 to 96.6,330
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2022,Age,13-17 Years,97.0,93.8 to 98.6,267
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2023,Age,13-17 Years,97.4,95.8 to 98.3,467
+≥2 Doses MMR,,States/Local Areas,PA-Philadelphia,2024,Age,13-17 Years,92.9,88.0 to 95.9,195
+≥2 Doses MMR,,States/Local Areas,Virginia,2021,Age,13-17 Years,94.8,90.3 to 97.3,566
+≥2 Doses MMR,,States/Local Areas,Virginia,2020,Age,13-17 Years,93.3,89.5 to 95.8,677
+≥2 Doses MMR,,States/Local Areas,Virginia,2022,Age,13-17 Years,89.8,86.2 to 92.6,595
+≥2 Doses MMR,,States/Local Areas,Virginia,2017,Age,13-17 Years,96.2,91.9 to 98.3,413
+≥2 Doses MMR,,States/Local Areas,Virginia,2019,Age,13-17 Years,89.8,83.6 to 93.8,363
+≥2 Doses MMR,,States/Local Areas,Virginia,2018,Age,13-17 Years,92.3,87.0 to 95.5,327
+≥2 Doses MMR,,States/Local Areas,Virginia,2016,Age,13-17 Years,86.1,79.9 to 90.7,451
+≥2 Doses MMR,,States/Local Areas,Virginia,2013,Age,13-17 Years,92.0,85.5 to 95.8,302
+≥2 Doses MMR,,States/Local Areas,Virginia,2012,Age,13-17 Years,89.1,83.6 to 92.9,334
+≥2 Doses MMR,,States/Local Areas,Virginia,2014,Age,13-17 Years,88.4,82.4 to 92.6,350
+≥2 Doses MMR,,States/Local Areas,Virginia,2015,Age,13-17 Years,87.0,80.5 to 91.6,385
+≥2 Doses MMR,,States/Local Areas,Virginia,2023,Age,13-17 Years,93.6,88.1 to 96.6,319
+≥2 Doses MMR,,States/Local Areas,Virginia,2011,Age,13-17 Years,90.6,86.5 to 93.5,417
+≥2 Doses MMR,,States/Local Areas,Virginia,2008,Age,13-17 Years,83.0,76.7 to 87.9,272
+≥2 Doses MMR,,States/Local Areas,Virginia,2009,Age,13-17 Years,90.2,84.9 to 93.8,358
+≥2 Doses MMR,,States/Local Areas,Virginia,2010,Age,13-17 Years,86.0,80.1 to 90.3,332
+≥2 Doses MMR,,HHS Regions/National,Region 5,2024,Age,13-17 Years,94.4,93.1 to 95.4,2142
+≥2 Doses MMR,,HHS Regions/National,Region 4,2006,Age,13-17 Years,88.0,84.4 to 90.9,608
+≥2 Doses MMR,,HHS Regions/National,Region 4,2007,Age,13-17 Years,91.4,87.8 to 94.0,501
+≥2 Doses MMR,,HHS Regions/National,Region 4,2009,Age,13-17 Years,89.7,87.8 to 91.4,2984
+≥2 Doses MMR,,HHS Regions/National,Region 4,2008,Age,13-17 Years,90.3,88.2 to 92.0,2788
+≥2 Doses MMR,,HHS Regions/National,Region 4,2011,Age,13-17 Years,92.7,91.2 to 93.9,3171
+≥2 Doses MMR,,HHS Regions/National,Region 4,2010,Age,13-17 Years,91.8,90.3 to 93.2,2679
+≥2 Doses MMR,,HHS Regions/National,Region 4,2023,Age,13-17 Years,93.8,91.9 to 95.2,2257
+≥2 Doses MMR,,HHS Regions/National,Region 4,2022,Age,13-17 Years,95.0,93.7 to 96.1,2291
+≥2 Doses MMR,,HHS Regions/National,Region 4,2021,Age,13-17 Years,95.1,93.4 to 96.4,2263
+≥2 Doses MMR,,HHS Regions/National,Region 4,2018,Age,13-17 Years,94.5,93.1 to 95.6,2507
+≥2 Doses MMR,,HHS Regions/National,Region 4,2020,Age,13-17 Years,95.4,94.1 to 96.4,2466
+≥2 Doses MMR,,HHS Regions/National,Region 4,2019,Age,13-17 Years,94.6,92.9 to 95.9,2387
+≥2 Doses MMR,,HHS Regions/National,Region 4,2017,Age,13-17 Years,93.7,92.2 to 94.9,2846
+≥2 Doses MMR,,HHS Regions/National,Region 4,2015,Age,13-17 Years,92.9,91.3 to 94.2,2793
+≥2 Doses MMR,,HHS Regions/National,Region 4,2014,Age,13-17 Years,92.9,91.5 to 94.2,2896
+≥2 Doses MMR,,HHS Regions/National,Region 4,2013,Age,13-17 Years,92.2,90.4 to 93.6,2374
+≥2 Doses MMR,,HHS Regions/National,Region 4,2012,Age,13-17 Years,94.4,93.1 to 95.5,2612
+≥2 Doses MMR,,HHS Regions/National,Region 4,2016,Age,13-17 Years,93.3,91.9 to 94.4,2757
+≥2 Doses MMR,,States/Local Areas,New York,2023,Age,13-17 Years,94.6,91.8 to 96.5,559
+≥2 Doses MMR,,States/Local Areas,New York,2016,Age,13-17 Years,92.9,90.2 to 94.9,655
+≥2 Doses MMR,,States/Local Areas,New York,2022,Age,13-17 Years,95.3,92.5 to 97.1,536
+≥2 Doses MMR,,States/Local Areas,New York,2021,Age,13-17 Years,94.2,90.9 to 96.3,581
+≥2 Doses MMR,,States/Local Areas,New York,2017,Age,13-17 Years,94.1,91.7 to 95.9,651
+≥2 Doses MMR,,States/Local Areas,New York,2020,Age,13-17 Years,94.4,91.8 to 96.2,729
+≥2 Doses MMR,,States/Local Areas,New York,2019,Age,13-17 Years,92.4,88.6 to 95.1,498
+≥2 Doses MMR,,States/Local Areas,New York,2018,Age,13-17 Years,95.2,92.4 to 97.0,535
+≥2 Doses MMR,,States/Local Areas,New York,2015,Age,13-17 Years,94.6,92.6 to 96.1,665
+≥2 Doses MMR,,States/Local Areas,New York,2014,Age,13-17 Years,91.6,88.2 to 94.1,594
+≥2 Doses MMR,,States/Local Areas,New York,2013,Age,13-17 Years,93.3,90.3 to 95.4,710
+≥2 Doses MMR,,States/Local Areas,New York,2012,Age,13-17 Years,93.8,90.6 to 96.0,627
+≥2 Doses MMR,,HHS Regions/National,Region 5,2010,Age,13-17 Years,92.5,91.0 to 93.8,2248
+≥2 Doses MMR,,HHS Regions/National,Region 5,2011,Age,13-17 Years,91.8,90.1 to 93.2,2800
+≥2 Doses MMR,,HHS Regions/National,Region 5,2008,Age,13-17 Years,90.2,88.5 to 91.7,2361
+≥2 Doses MMR,,HHS Regions/National,Region 5,2009,Age,13-17 Years,92.0,90.6 to 93.2,3105
+≥2 Doses MMR,,HHS Regions/National,Region 5,2007,Age,13-17 Years,90.2,86.5 to 92.9,584
+≥2 Doses MMR,,HHS Regions/National,Region 5,2006,Age,13-17 Years,86.1,81.1 to 89.9,458
+≥2 Doses MMR,,HHS Regions/National,Region 5,2016,Age,13-17 Years,94.0,92.7 to 95.1,2284
+≥2 Doses MMR,,HHS Regions/National,Region 5,2012,Age,13-17 Years,90.8,88.6 to 92.5,2297
+≥2 Doses MMR,,HHS Regions/National,Region 5,2013,Age,13-17 Years,93.6,92.1 to 94.8,2264
+≥2 Doses MMR,,HHS Regions/National,Region 5,2014,Age,13-17 Years,92.1,90.5 to 93.5,2465
+≥2 Doses MMR,,HHS Regions/National,Region 5,2015,Age,13-17 Years,92.6,91.2 to 93.8,2543
+≥2 Doses MMR,,HHS Regions/National,Region 5,2017,Age,13-17 Years,95.0,94.0 to 95.9,2433
+≥2 Doses MMR,,HHS Regions/National,Region 5,2019,Age,13-17 Years,95.1,93.8 to 96.1,2097
+≥2 Doses MMR,,HHS Regions/National,Region 5,2020,Age,13-17 Years,94.9,93.6 to 95.9,2344
+≥2 Doses MMR,,HHS Regions/National,Region 5,2018,Age,13-17 Years,93.2,91.6 to 94.5,2276
+≥2 Doses MMR,,HHS Regions/National,Region 5,2021,Age,13-17 Years,94.2,92.5 to 95.5,2060
+≥2 Doses MMR,,HHS Regions/National,Region 5,2022,Age,13-17 Years,93.1,91.2 to 94.6,2019
+≥2 Doses MMR,,HHS Regions/National,Region 5,2023,Age,13-17 Years,94.2,92.8 to 95.4,2242
+≥2 Doses MMR,,HHS Regions/National,Region 7,2021,Age,13-17 Years,92.5,90.0 to 94.5,1154
+≥2 Doses MMR,,HHS Regions/National,Region 7,2022,Age,13-17 Years,91.3,88.7 to 93.4,1048
+≥2 Doses MMR,,HHS Regions/National,Region 7,2016,Age,13-17 Years,89.6,87.3 to 91.6,1394
+≥2 Doses MMR,,HHS Regions/National,Region 7,2012,Age,13-17 Years,88.8,85.7 to 91.3,1285
+≥2 Doses MMR,,HHS Regions/National,Region 7,2013,Age,13-17 Years,89.0,86.2 to 91.2,1251
+≥2 Doses MMR,,HHS Regions/National,Region 7,2014,Age,13-17 Years,87.7,84.8 to 90.2,1362
+≥2 Doses MMR,,HHS Regions/National,Region 7,2015,Age,13-17 Years,89.0,86.3 to 91.3,1451
+≥2 Doses MMR,,HHS Regions/National,Region 7,2017,Age,13-17 Years,90.7,88.4 to 92.5,1340
+≥2 Doses MMR,,HHS Regions/National,Region 7,2019,Age,13-17 Years,91.8,89.2 to 93.8,1256
+≥2 Doses MMR,,HHS Regions/National,Region 7,2020,Age,13-17 Years,92.9,90.9 to 94.4,1446
+≥2 Doses MMR,,HHS Regions/National,Region 7,2018,Age,13-17 Years,90.8,88.4 to 92.7,1191
+≥2 Doses MMR,,HHS Regions/National,Region 7,2010,Age,13-17 Years,88.3,85.9 to 90.3,1291
+≥2 Doses MMR,,HHS Regions/National,Region 7,2011,Age,13-17 Years,87.5,84.4 to 90.0,1528
+≥2 Doses MMR,,HHS Regions/National,Region 7,2008,Age,13-17 Years,85.3,82.5 to 87.6,1295
+≥2 Doses MMR,,HHS Regions/National,Region 7,2009,Age,13-17 Years,86.6,83.9 to 88.9,1250
+≥2 Doses MMR,,HHS Regions/National,Region 7,2007,Age,13-17 Years,85.1,76.5 to 91.0,165
+≥2 Doses MMR,,HHS Regions/National,Region 7,2006,Age,13-17 Years,87.1,80.2 to 91.8,165
+≥2 Doses MMR,,States/Local Areas,South Dakota,2024,Age,13-17 Years,94.5,91.0 to 96.6,294
+≥2 Doses MMR,,States/Local Areas,Wyoming,2016,Age,13-17 Years,92.1,88.4 to 94.6,373
+≥2 Doses MMR,,States/Local Areas,Wyoming,2014,Age,13-17 Years,90.1,86.1 to 93.1,446
+≥2 Doses MMR,,States/Local Areas,Wyoming,2015,Age,13-17 Years,92.1,88.0 to 94.9,331
+≥2 Doses MMR,,States/Local Areas,Wyoming,2013,Age,13-17 Years,90.6,85.8 to 93.9,325
+≥2 Doses MMR,,States/Local Areas,Wyoming,2012,Age,13-17 Years,91.0,86.6 to 94.1,333
+≥2 Doses MMR,,States/Local Areas,Wyoming,2018,Age,13-17 Years,90.0,84.9 to 93.5,241
+≥2 Doses MMR,,States/Local Areas,Wyoming,2019,Age,13-17 Years,95.6,91.7 to 97.7,329
+≥2 Doses MMR,,States/Local Areas,Wyoming,2017,Age,13-17 Years,92.7,88.7 to 95.3,360
+≥2 Doses MMR,,States/Local Areas,Wyoming,2022,Age,13-17 Years,93.6,89.2 to 96.3,294
+≥2 Doses MMR,,States/Local Areas,Wyoming,2021,Age,13-17 Years,91.3,86.1 to 94.6,261
+≥2 Doses MMR,,States/Local Areas,Wyoming,2020,Age,13-17 Years,90.8,86.2 to 93.9,324
+≥2 Doses MMR,,States/Local Areas,Wyoming,2024,Age,13-17 Years,92.2,87.9 to 95.1,257
+≥2 Doses MMR,,States/Local Areas,Alabama,2024,Age,13-17 Years,93.6,90.0 to 96.0,373
+≥2 Doses MMR,,States/Local Areas,Alaska,2012,Age,13-17 Years,90.6,86.6 to 93.5,340
+≥2 Doses MMR,,States/Local Areas,Alaska,2011,Age,13-17 Years,88.6,82.6 to 92.7,330
+≥2 Doses MMR,,States/Local Areas,Alaska,2010,Age,13-17 Years,87.8,82.6 to 91.7,294
+≥2 Doses MMR,,States/Local Areas,Alaska,2009,Age,13-17 Years,87.4,82.2 to 91.2,274
+≥2 Doses MMR,,States/Local Areas,Alaska,2008,Age,13-17 Years,84.4,79.3 to 88.5,304
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2017,Age,13-17 Years,92.9,87.8 to 95.9,318
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2016,Age,13-17 Years,94.8,91.3 to 96.9,377
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2015,Age,13-17 Years,90.0,85.3 to 93.3,418
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2014,Age,13-17 Years,92.7,87.5 to 95.9,285
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2013,Age,13-17 Years,85.9,75.0 to 92.5,192
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2012,Age,13-17 Years,93.6,88.6 to 96.4,342
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2021,Age,13-17 Years,87.8,82.6 to 91.6,409
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2022,Age,13-17 Years,74.0,65.2 to 81.3,237
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2018,Age,13-17 Years,75.5,67.5 to 82.0,283
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2020,Age,13-17 Years,88.7,83.7 to 92.3,404
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2019,Age,13-17 Years,89.1,82.1 to 93.6,282
+≥2 Doses MMR,,States/Local Areas,District of Columbia,2024,Age,13-17 Years,79.3,71.3 to 85.5,383
+≥2 Doses MMR,,HHS Regions/National,Region 2,2024,Age,13-17 Years,93.8,92.0 to 95.3,965
+≥2 Doses MMR,,States/Local Areas,California,2023,Age,13-17 Years,85.1,77.7 to 90.3,266
+≥2 Doses MMR,,States/Local Areas,California,2024,Age,13-17 Years,90.5,86.2 to 93.5,328
+≥2 Doses MMR,,States/Local Areas,Mississippi,2024,Age,13-17 Years,95.2,91.3 to 97.4,220
+≥2 Doses MMR,,States/Local Areas,Missouri,2009,Age,13-17 Years,86.2,81.0 to 90.1,374
+≥2 Doses MMR,,States/Local Areas,Missouri,2008,Age,13-17 Years,84.2,79.0 to 88.4,351
+≥2 Doses MMR,,States/Local Areas,Missouri,2011,Age,13-17 Years,85.5,79.7 to 89.9,402
+≥2 Doses MMR,,States/Local Areas,Missouri,2010,Age,13-17 Years,88.1,83.6 to 91.4,347
+≥2 Doses MMR,,States/Local Areas,Indiana,2024,Age,13-17 Years,95.1,91.7 to 97.1,349
+≥2 Doses MMR,,States/Local Areas,Iowa,2010,Age,13-17 Years,83.0,77.2 to 87.5,264
+≥2 Doses MMR,,States/Local Areas,Iowa,2011,Age,13-17 Years,88.3,82.3 to 92.5,359
+≥2 Doses MMR,,States/Local Areas,Iowa,2008,Age,13-17 Years,86.4,81.7 to 90.1,308
+≥2 Doses MMR,,States/Local Areas,Iowa,2009,Age,13-17 Years,88.1,83.8 to 91.4,338
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2021,Age,13-17 Years,85.5,79.3 to 90.1,296
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2022,Age,13-17 Years,90.4,85.1 to 93.9,253
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2019,Age,13-17 Years,89.1,83.9 to 92.8,293
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2020,Age,13-17 Years,85.0,79.8 to 89.0,314
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2017,Age,13-17 Years,83.3,77.6 to 87.7,336
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2018,Age,13-17 Years,85.8,80.3 to 90.0,298
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2023,Age,13-17 Years,85.1,78.8 to 89.7,278
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2024,Age,13-17 Years,86.3,81.9 to 89.8,320
+≥2 Doses MMR,,States/Local Areas,TX-City of Houston,2009,Age,13-17 Years,78.6,70.8 to 84.8,239
+≥2 Doses MMR,,States/Local Areas,TX-City of Houston,2008,Age,13-17 Years,87.0,80.2 to 91.7,233
+≥2 Doses MMR,,States/Local Areas,TX-City of Houston,2011,Age,13-17 Years,87.7,83.1 to 91.2,490
+≥2 Doses MMR,,States/Local Areas,TX-City of Houston,2010,Age,13-17 Years,82.3,76.7 to 86.8,413
+≥2 Doses MMR,,HHS Regions/National,Region 8,2024,Age,13-17 Years,93.2,91.1 to 94.9,1608
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2010,Age,13-17 Years,97.0,94.6 to 98.4,371
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2011,Age,13-17 Years,93.5,88.9 to 96.3,493
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2008,Age,13-17 Years,95.4,91.7 to 97.5,337
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2009,Age,13-17 Years,94.3,89.5 to 97.0,255
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2023,Age,13-17 Years,92.7,87.3 to 95.9,319
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2022,Age,13-17 Years,94.6,91.4 to 96.6,485
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2021,Age,13-17 Years,92.6,89.0 to 95.0,599
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2017,Age,13-17 Years,95.8,93.1 to 97.5,489
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2020,Age,13-17 Years,95.4,91.3 to 97.6,502
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2019,Age,13-17 Years,95.7,92.5 to 97.6,492
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2018,Age,13-17 Years,96.4,93.4 to 98.0,412
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2012,Age,13-17 Years,93.4,88.9 to 96.1,393
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2013,Age,13-17 Years,94.3,90.3 to 96.7,444
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2015,Age,13-17 Years,92.6,88.5 to 95.3,492
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2014,Age,13-17 Years,92.3,87.9 to 95.2,442
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2016,Age,13-17 Years,93.4,90.4 to 95.5,526
+≥2 Doses MMR,,States/Local Areas,PA-Rest of state,2024,Age,13-17 Years,93.6,90.2 to 95.9,335
+≥2 Doses MMR,,HHS Regions/National,Region 9,2024,Age,13-17 Years,91.0,87.7 to 93.5,1093
+≥2 Doses MMR,,States/Local Areas,Vermont,2024,Age,13-17 Years,98.4,95.8 to 99.4,202
+≥2 Doses MMR,,States/Local Areas,Arizona,2024,Age,13-17 Years,93.0,87.9 to 96.0,206
+≥2 Doses MMR,,States/Local Areas,Washington,2023,Age,13-17 Years,92.9,87.8 to 96.0,236
+≥2 Doses MMR,,States/Local Areas,Washington,2024,Age,13-17 Years,94.4,90.1 to 96.9,231
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2023,Age,13-17 Years,96.2,93.3 to 97.9,426
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2020,Age,13-17 Years,94.9,91.1 to 97.1,277
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2021,Age,13-17 Years,98.6,96.3 to 99.5,306
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2022,Age,13-17 Years,93.3,88.1 to 96.4,274
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2017,Age,13-17 Years,96.2,93.2 to 97.9,324
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2019,Age,13-17 Years,96.9,94.1 to 98.4,331
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2018,Age,13-17 Years,93.9,89.8 to 96.4,332
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2011,Age,13-17 Years,90.9,84.8 to 94.7,416
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2010,Age,13-17 Years,90.3,85.5 to 93.6,277
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2009,Age,13-17 Years,91.8,87.9 to 94.5,345
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2008,Age,13-17 Years,93.0,89.0 to 95.7,264
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2012,Age,13-17 Years,94.0,90.3 to 96.3,307
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2013,Age,13-17 Years,93.9,89.8 to 96.4,330
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2015,Age,13-17 Years,94.9,91.3 to 97.1,365
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2014,Age,13-17 Years,94.3,90.0 to 96.8,340
+≥2 Doses MMR,,States/Local Areas,Wisconsin,2016,Age,13-17 Years,96.4,93.2 to 98.1,333
+≥2 Doses MMR,,HHS Regions/National,United States,2022,Age,13-17 Years,91.2,90.2 to 92.1,16043
+≥2 Doses MMR,,HHS Regions/National,United States,2018,Age,13-17 Years,91.9,91.2 to 92.6,18700
+≥2 Doses MMR,,HHS Regions/National,United States,2021,Age,13-17 Years,92.2,91.2 to 93.2,18002
+≥2 Doses MMR,,HHS Regions/National,United States,2020,Age,13-17 Years,92.4,91.6 to 93.2,20163
+≥2 Doses MMR,,HHS Regions/National,United States,2019,Age,13-17 Years,91.9,90.8 to 92.8,18788
+≥2 Doses MMR,,HHS Regions/National,United States,2017,Age,13-17 Years,92.1,91.3 to 92.8,20949
+≥2 Doses MMR,,HHS Regions/National,United States,2015,Age,13-17 Years,90.7,89.9 to 91.4,21875
+≥2 Doses MMR,,HHS Regions/National,United States,2014,Age,13-17 Years,90.7,89.9 to 91.4,20827
+≥2 Doses MMR,,HHS Regions/National,United States,2013,Age,13-17 Years,91.8,91.0 to 92.6,18264
+≥2 Doses MMR,,HHS Regions/National,United States,2012,Age,13-17 Years,91.4,90.6 to 92.1,19199
+≥2 Doses MMR,,HHS Regions/National,United States,2016,Age,13-17 Years,90.9,90.1 to 91.6,20475
+≥2 Doses MMR,,HHS Regions/National,Region 10,2024,Age,13-17 Years,92.9,90.5 to 94.6,1003
+≥2 Doses MMR,,States/Local Areas,Colorado,2012,Age,13-17 Years,94.6,90.4 to 97.0,311
+≥2 Doses MMR,,States/Local Areas,Colorado,2013,Age,13-17 Years,92.4,88.3 to 95.2,331
+≥2 Doses MMR,,States/Local Areas,Colorado,2014,Age,13-17 Years,92.1,88.1 to 94.8,394
+≥2 Doses MMR,,States/Local Areas,Colorado,2015,Age,13-17 Years,92.3,88.6 to 94.9,354
+≥2 Doses MMR,,States/Local Areas,Colorado,2017,Age,13-17 Years,90.2,85.4 to 93.6,354
+≥2 Doses MMR,,States/Local Areas,Colorado,2016,Age,13-17 Years,91.5,86.8 to 94.6,322
+≥2 Doses MMR,,States/Local Areas,Colorado,2024,Age,13-17 Years,92.6,88.7 to 95.3,304
+≥2 Doses MMR,,HHS Regions/National,Region 7,2024,Age,13-17 Years,92.4,89.9 to 94.3,895
+≥2 Doses MMR,,States/Local Areas,Ohio,2024,Age,13-17 Years,95.1,92.0 to 97.1,322
+≥2 Doses MMR,,HHS Regions/National,Region 10,2023,Age,13-17 Years,91.7,88.9 to 93.9,1060
+≥2 Doses MMR,,HHS Regions/National,Region 10,2021,Age,13-17 Years,92.3,89.8 to 94.2,1245
+≥2 Doses MMR,,HHS Regions/National,Region 10,2015,Age,13-17 Years,87.9,85.3 to 90.2,1455
+≥2 Doses MMR,,HHS Regions/National,Region 10,2014,Age,13-17 Years,87.1,84.4 to 89.5,1491
+≥2 Doses MMR,,HHS Regions/National,Region 10,2012,Age,13-17 Years,88.3,85.0 to 90.9,1431
+≥2 Doses MMR,,HHS Regions/National,Region 10,2013,Age,13-17 Years,90.0,87.4 to 92.2,1316
+≥2 Doses MMR,,HHS Regions/National,Region 10,2016,Age,13-17 Years,88.5,85.6 to 90.8,1429
+≥2 Doses MMR,,HHS Regions/National,Region 10,2018,Age,13-17 Years,89.8,86.7 to 92.3,1266
+≥2 Doses MMR,,HHS Regions/National,Region 10,2019,Age,13-17 Years,93.3,90.9 to 95.1,1332
+≥2 Doses MMR,,HHS Regions/National,Region 10,2017,Age,13-17 Years,90.5,88.1 to 92.5,1400
+≥2 Doses MMR,,HHS Regions/National,Region 10,2020,Age,13-17 Years,93.0,90.3 to 95.0,1403
+≥2 Doses MMR,,HHS Regions/National,Region 10,2022,Age,13-17 Years,93.8,91.0 to 95.7,1034
+≥2 Doses MMR,,HHS Regions/National,Region 10,2010,Age,13-17 Years,86.2,83.4 to 88.6,1275
+≥2 Doses MMR,,HHS Regions/National,Region 10,2009,Age,13-17 Years,85.9,83.0 to 88.4,1208
+≥2 Doses MMR,,HHS Regions/National,Region 10,2008,Age,13-17 Years,80.6,76.9 to 83.8,1082
+≥2 Doses MMR,,HHS Regions/National,Region 10,2006,Age,13-17 Years,79.3,70.3 to 86.1,159
+≥2 Doses MMR,,HHS Regions/National,Region 10,2007,Age,13-17 Years,79.0,69.5 to 86.1,118
+≥2 Doses MMR,,HHS Regions/National,Region 10,2011,Age,13-17 Years,86.3,82.9 to 89.0,1423
+≥2 Doses MMR,,States/Local Areas,Florida,2023,Age,13-17 Years,91.3,85.3 to 95.0,283
+≥2 Doses MMR,,States/Local Areas,Florida,2017,Age,13-17 Years,93.6,89.1 to 96.3,415
+≥2 Doses MMR,,States/Local Areas,Florida,2016,Age,13-17 Years,95.6,92.9 to 97.3,376
+≥2 Doses MMR,,States/Local Areas,Florida,2012,Age,13-17 Years,96.7,93.2 to 98.4,325
+≥2 Doses MMR,,States/Local Areas,Florida,2013,Age,13-17 Years,93.5,88.5 to 96.5,323
+≥2 Doses MMR,,States/Local Areas,Florida,2014,Age,13-17 Years,94.1,90.0 to 96.6,363
+≥2 Doses MMR,,States/Local Areas,Florida,2015,Age,13-17 Years,93.4,88.5 to 96.3,321
+≥2 Doses MMR,,States/Local Areas,Florida,2021,Age,13-17 Years,95.2,90.0 to 97.8,312
+≥2 Doses MMR,,States/Local Areas,Florida,2022,Age,13-17 Years,96.3,92.6 to 98.2,307
+≥2 Doses MMR,,States/Local Areas,Florida,2018,Age,13-17 Years,96.1,91.7 to 98.2,337
+≥2 Doses MMR,,States/Local Areas,Florida,2019,Age,13-17 Years,94.5,88.6 to 97.4,329
+≥2 Doses MMR,,States/Local Areas,Florida,2020,Age,13-17 Years,95.4,92.0 to 97.3,355
+≥2 Doses MMR,,States/Local Areas,Florida,2010,Age,13-17 Years,94.2,89.6 to 96.9,344
+≥2 Doses MMR,,States/Local Areas,Florida,2011,Age,13-17 Years,93.9,89.8 to 96.4,483
+≥2 Doses MMR,,States/Local Areas,Florida,2008,Age,13-17 Years,92.3,85.8 to 96.0,284
+≥2 Doses MMR,,States/Local Areas,Florida,2009,Age,13-17 Years,90.4,84.9 to 94.1,412
+≥2 Doses MMR,,States/Local Areas,Hawaii,2023,Age,13-17 Years,91.5,87.2 to 94.4,278
+≥2 Doses MMR,,States/Local Areas,Hawaii,2018,Age,13-17 Years,93.7,90.5 to 95.9,327
+≥2 Doses MMR,,States/Local Areas,Hawaii,2019,Age,13-17 Years,92.1,87.2 to 95.3,304
+≥2 Doses MMR,,States/Local Areas,Hawaii,2020,Age,13-17 Years,94.5,91.0 to 96.6,290
+≥2 Doses MMR,,States/Local Areas,Hawaii,2013,Age,13-17 Years,90.4,84.9 to 94.1,315
+≥2 Doses MMR,,States/Local Areas,Hawaii,2012,Age,13-17 Years,90.9,86.3 to 94.1,342
+≥2 Doses MMR,,States/Local Areas,Hawaii,2015,Age,13-17 Years,91.5,87.5 to 94.3,340
+≥2 Doses MMR,,States/Local Areas,Hawaii,2014,Age,13-17 Years,88.6,83.5 to 92.2,363
+≥2 Doses MMR,,States/Local Areas,Hawaii,2016,Age,13-17 Years,93.0,89.1 to 95.6,317
+≥2 Doses MMR,,States/Local Areas,Hawaii,2017,Age,13-17 Years,90.2,85.5 to 93.5,314
+≥2 Doses MMR,,States/Local Areas,Hawaii,2021,Age,13-17 Years,91.6,86.2 to 95.0,258
+≥2 Doses MMR,,States/Local Areas,Hawaii,2022,Age,13-17 Years,92.2,87.2 to 95.3,237
+≥2 Doses MMR,,States/Local Areas,Missouri,2016,Age,13-17 Years,87.2,82.4 to 90.9,360
+≥2 Doses MMR,,States/Local Areas,Missouri,2014,Age,13-17 Years,83.9,77.8 to 88.5,361
+≥2 Doses MMR,,States/Local Areas,Missouri,2015,Age,13-17 Years,85.9,79.9 to 90.3,300
+≥2 Doses MMR,,States/Local Areas,Missouri,2013,Age,13-17 Years,88.3,82.6 to 92.4,280
+≥2 Doses MMR,,States/Local Areas,Missouri,2012,Age,13-17 Years,87.0,80.4 to 91.7,292
+≥2 Doses MMR,,States/Local Areas,Missouri,2017,Age,13-17 Years,87.6,83.1 to 91.1,335
+≥2 Doses MMR,,States/Local Areas,Missouri,2018,Age,13-17 Years,89.4,84.8 to 92.7,319
+≥2 Doses MMR,,States/Local Areas,Missouri,2020,Age,13-17 Years,92.6,88.5 to 95.3,397
+≥2 Doses MMR,,States/Local Areas,Missouri,2019,Age,13-17 Years,90.4,84.8 to 94.1,288
+≥2 Doses MMR,,States/Local Areas,Missouri,2023,Age,13-17 Years,87.5,81.0 to 92.0,246
+≥2 Doses MMR,,States/Local Areas,Missouri,2022,Age,13-17 Years,89.3,83.6 to 93.2,284
+≥2 Doses MMR,,States/Local Areas,Missouri,2021,Age,13-17 Years,88.3,82.9 to 92.2,340
+≥2 Doses MMR,,States/Local Areas,Georgia,2024,Age,13-17 Years,97.1,92.6 to 98.9,201
+≥2 Doses MMR,,States/Local Areas,Texas,2024,Age,13-17 Years,85.3,81.9 to 88.2,1188
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2010,Age,13-17 Years,85.6,80.9 to 89.2,382
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2011,Age,13-17 Years,93.4,89.9 to 95.8,448
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2008,Age,13-17 Years,82.2,75.6 to 87.2,269
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2009,Age,13-17 Years,80.7,73.9 to 86.1,305
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2012,Age,13-17 Years,88.6,82.2 to 92.9,346
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2013,Age,13-17 Years,87.0,81.9 to 90.8,317
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2014,Age,13-17 Years,88.0,83.8 to 91.3,385
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2015,Age,13-17 Years,84.7,79.5 to 88.8,368
+≥2 Doses MMR,,States/Local Areas,TX-Bexar County,2016,Age,13-17 Years,86.8,81.8 to 90.6,334
+≥2 Doses MMR,,States/Local Areas,Idaho,2017,Age,13-17 Years,87.8,82.2 to 91.8,353
+≥2 Doses MMR,,States/Local Areas,Idaho,2016,Age,13-17 Years,85.7,81.0 to 89.4,358
+≥2 Doses MMR,,States/Local Areas,Idaho,2014,Age,13-17 Years,84.5,79.0 to 88.8,341
+≥2 Doses MMR,,States/Local Areas,Idaho,2015,Age,13-17 Years,80.4,74.7 to 85.0,356
+≥2 Doses MMR,,States/Local Areas,Idaho,2012,Age,13-17 Years,84.5,79.1 to 88.7,357
+≥2 Doses MMR,,States/Local Areas,Idaho,2013,Age,13-17 Years,85.2,78.9 to 89.9,272
+≥2 Doses MMR,,States/Local Areas,Idaho,2022,Age,13-17 Years,92.7,87.4 to 95.9,251
+≥2 Doses MMR,,States/Local Areas,Idaho,2021,Age,13-17 Years,89.2,84.0 to 92.9,334
+≥2 Doses MMR,,States/Local Areas,Idaho,2020,Age,13-17 Years,89.7,85.1 to 93.0,376
+≥2 Doses MMR,,States/Local Areas,Idaho,2019,Age,13-17 Years,86.9,81.1 to 91.2,332
+≥2 Doses MMR,,States/Local Areas,Idaho,2018,Age,13-17 Years,88.5,83.6 to 92.1,291
+≥2 Doses MMR,,States/Local Areas,Idaho,2009,Age,13-17 Years,83.7,76.8 to 88.9,227
+≥2 Doses MMR,,States/Local Areas,Idaho,2008,Age,13-17 Years,73.2,66.4 to 79.0,268
+≥2 Doses MMR,,States/Local Areas,Idaho,2011,Age,13-17 Years,79.9,72.9 to 85.5,385
+≥2 Doses MMR,,States/Local Areas,Idaho,2010,Age,13-17 Years,84.2,79.0 to 88.3,318
+≥2 Doses MMR,,States/Local Areas,South Carolina,2016,Age,13-17 Years,89.9,85.3 to 93.2,314
+≥2 Doses MMR,,States/Local Areas,South Carolina,2012,Age,13-17 Years,90.1,85.0 to 93.6,310
+≥2 Doses MMR,,States/Local Areas,South Carolina,2013,Age,13-17 Years,91.0,86.5 to 94.2,296
+≥2 Doses MMR,,States/Local Areas,South Carolina,2014,Age,13-17 Years,85.8,80.4 to 90.0,380
+≥2 Doses MMR,,States/Local Areas,South Carolina,2015,Age,13-17 Years,89.5,84.8 to 92.8,360
+≥2 Doses MMR,,States/Local Areas,South Carolina,2017,Age,13-17 Years,89.9,84.9 to 93.4,328
+≥2 Doses MMR,,States/Local Areas,South Carolina,2019,Age,13-17 Years,94.7,91.2 to 96.8,319
+≥2 Doses MMR,,States/Local Areas,South Carolina,2020,Age,13-17 Years,92.3,87.4 to 95.4,311
+≥2 Doses MMR,,States/Local Areas,South Carolina,2018,Age,13-17 Years,92.5,88.1 to 95.4,318
+≥2 Doses MMR,,States/Local Areas,South Carolina,2021,Age,13-17 Years,95.3,91.9 to 97.3,263
+≥2 Doses MMR,,States/Local Areas,South Carolina,2022,Age,13-17 Years,94.9,90.0 to 97.5,269
+≥2 Doses MMR,,States/Local Areas,South Carolina,2010,Age,13-17 Years,89.4,84.9 to 92.7,317
+≥2 Doses MMR,,States/Local Areas,South Carolina,2011,Age,13-17 Years,91.7,87.0 to 94.8,362
+≥2 Doses MMR,,States/Local Areas,South Carolina,2008,Age,13-17 Years,90.9,87.0 to 93.7,367
+≥2 Doses MMR,,States/Local Areas,South Carolina,2009,Age,13-17 Years,89.7,85.3 to 92.9,299
+≥2 Doses MMR,,States/Local Areas,Texas,2023,Age,13-17 Years,85.0,79.6 to 89.1,872
+≥2 Doses MMR,,States/Local Areas,Texas,2009,Age,13-17 Years,81.5,77.1 to 85.2,1470
+≥2 Doses MMR,,States/Local Areas,Texas,2008,Age,13-17 Years,81.6,75.6 to 86.5,840
+≥2 Doses MMR,,States/Local Areas,Texas,2011,Age,13-17 Years,88.1,85.2 to 90.6,2224
+≥2 Doses MMR,,States/Local Areas,Texas,2010,Age,13-17 Years,84.3,80.4 to 87.5,1709
+≥2 Doses MMR,,States/Local Areas,Minnesota,2009,Age,13-17 Years,90.7,86.6 to 93.6,336
+≥2 Doses MMR,,States/Local Areas,Minnesota,2008,Age,13-17 Years,90.1,85.5 to 93.3,338
+≥2 Doses MMR,,States/Local Areas,Minnesota,2011,Age,13-17 Years,90.3,84.3 to 94.2,327
+≥2 Doses MMR,,States/Local Areas,Minnesota,2010,Age,13-17 Years,93.5,88.9 to 96.3,310
+≥2 Doses MMR,,States/Local Areas,Minnesota,2016,Age,13-17 Years,91.3,86.7 to 94.4,375
+≥2 Doses MMR,,States/Local Areas,Minnesota,2012,Age,13-17 Years,94.3,90.7 to 96.5,322
+≥2 Doses MMR,,States/Local Areas,Minnesota,2013,Age,13-17 Years,94.0,89.8 to 96.5,369
+≥2 Doses MMR,,States/Local Areas,Minnesota,2014,Age,13-17 Years,93.9,88.9 to 96.8,286
+≥2 Doses MMR,,States/Local Areas,Minnesota,2015,Age,13-17 Years,95.8,92.3 to 97.7,366
+≥2 Doses MMR,,States/Local Areas,Minnesota,2021,Age,13-17 Years,95.2,89.9 to 97.8,296
+≥2 Doses MMR,,States/Local Areas,Minnesota,2022,Age,13-17 Years,96.2,92.8 to 98.1,331
+≥2 Doses MMR,,States/Local Areas,Minnesota,2018,Age,13-17 Years,97.1,94.2 to 98.5,285
+≥2 Doses MMR,,States/Local Areas,Minnesota,2017,Age,13-17 Years,95.1,91.9 to 97.1,356
+≥2 Doses MMR,,States/Local Areas,Minnesota,2019,Age,13-17 Years,97.0,93.3 to 98.6,276
+≥2 Doses MMR,,States/Local Areas,Minnesota,2020,Age,13-17 Years,97.1,94.2 to 98.6,330
+≥2 Doses MMR,,States/Local Areas,Kentucky,2023,Age,13-17 Years,95.4,92.2 to 97.4,297
+≥2 Doses MMR,,States/Local Areas,Kentucky,2022,Age,13-17 Years,92.0,86.5 to 95.3,276
+≥2 Doses MMR,,States/Local Areas,Kentucky,2021,Age,13-17 Years,94.6,90.1 to 97.1,240
+≥2 Doses MMR,,States/Local Areas,Kentucky,2019,Age,13-17 Years,94.5,90.4 to 96.9,292
+≥2 Doses MMR,,States/Local Areas,Kentucky,2020,Age,13-17 Years,95.9,92.4 to 97.8,255
+≥2 Doses MMR,,States/Local Areas,Kentucky,2018,Age,13-17 Years,91.7,86.9 to 94.9,270
+≥2 Doses MMR,,States/Local Areas,Kentucky,2017,Age,13-17 Years,91.6,87.1 to 94.7,372
+≥2 Doses MMR,,States/Local Areas,Kentucky,2012,Age,13-17 Years,93.0,88.4 to 95.8,333
+≥2 Doses MMR,,States/Local Areas,Kentucky,2013,Age,13-17 Years,92.7,88.1 to 95.7,291
+≥2 Doses MMR,,States/Local Areas,Kentucky,2015,Age,13-17 Years,93.2,89.5 to 95.6,330
+≥2 Doses MMR,,States/Local Areas,Kentucky,2014,Age,13-17 Years,93.4,89.1 to 96.1,335
+≥2 Doses MMR,,States/Local Areas,Kentucky,2016,Age,13-17 Years,93.0,88.9 to 95.7,333
+≥2 Doses MMR,,States/Local Areas,Rhode Island,2024,Age,13-17 Years,90.9,82.4 to 95.5,140
+≥2 Doses MMR,,States/Local Areas,Ohio,2023,Age,13-17 Years,93.4,88.2 to 96.4,280
+≥2 Doses MMR,,States/Local Areas,Ohio,2012,Age,13-17 Years,86.6,79.9 to 91.4,327
+≥2 Doses MMR,,States/Local Areas,Ohio,2013,Age,13-17 Years,92.9,88.7 to 95.6,319
+≥2 Doses MMR,,States/Local Areas,Ohio,2014,Age,13-17 Years,88.2,83.3 to 91.7,430
+≥2 Doses MMR,,States/Local Areas,Ohio,2015,Age,13-17 Years,90.0,85.4 to 93.2,332
+≥2 Doses MMR,,States/Local Areas,Ohio,2016,Age,13-17 Years,93.3,89.0 to 96.0,338
+≥2 Doses MMR,,States/Local Areas,Ohio,2018,Age,13-17 Years,89.5,84.7 to 93.0,329
+≥2 Doses MMR,,States/Local Areas,Ohio,2019,Age,13-17 Years,92.7,88.7 to 95.3,302
+≥2 Doses MMR,,States/Local Areas,Ohio,2020,Age,13-17 Years,93.3,89.2 to 95.9,338
+≥2 Doses MMR,,States/Local Areas,Ohio,2017,Age,13-17 Years,94.2,91.4 to 96.1,408
+≥2 Doses MMR,,States/Local Areas,Ohio,2021,Age,13-17 Years,95.0,89.8 to 97.6,254
+≥2 Doses MMR,,States/Local Areas,Ohio,2022,Age,13-17 Years,89.6,83.0 to 93.9,269
+≥2 Doses MMR,,States/Local Areas,Ohio,2009,Age,13-17 Years,94.4,91.3 to 96.5,351
+≥2 Doses MMR,,States/Local Areas,Ohio,2008,Age,13-17 Years,84.8,79.7 to 88.8,311
+≥2 Doses MMR,,States/Local Areas,Ohio,2011,Age,13-17 Years,86.5,81.1 to 90.6,381
+≥2 Doses MMR,,States/Local Areas,Ohio,2010,Age,13-17 Years,90.7,86.5 to 93.7,302
+≥2 Doses MMR,,States/Local Areas,Maine,2016,Age,13-17 Years,95.6,92.6 to 97.5,347
+≥2 Doses MMR,,States/Local Areas,Maine,2023,Age,13-17 Years,94.6,91.3 to 96.7,322
+≥2 Doses MMR,,States/Local Areas,Maine,2010,Age,13-17 Years,93.7,89.4 to 96.3,312
+≥2 Doses MMR,,States/Local Areas,Maine,2011,Age,13-17 Years,94.9,91.6 to 96.9,411

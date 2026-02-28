@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Call the CDC Socrata API: Vaccination Coverage among Adolescents 13-17 Years (ee48-w5t6).
+Call the CDC Socrata API: Vaccination Coverage and Exemptions among Kindergarten (ijqb-a7ye).
 Uses SOCRATA_APP_TOKEN from .env. Supports legacy GET and SODA3 POST.
+By default fetches MMR-only rows (MMR, MMR (PAC)). Data is cleaned every run.
 
-Dataset: https://dev.socrata.com/foundry/data.cdc.gov/ee48-w5t6
+Dataset: https://dev.socrata.com/foundry/data.cdc.gov/ijqb-a7ye
 
 Usage:
-  python call_cdc_teen_vax.py
-  python call_cdc_teen_vax.py --where "year=2023" --limit 500
-  python call_cdc_teen_vax.py --schema
-  python call_cdc_teen_vax.py --out data/raw/teen_vax.csv
+  python call_cdc_kindergarten_vax.py
+  python call_cdc_kindergarten_vax.py --where "school_year='2022-23'" --limit 500
+  python call_cdc_kindergarten_vax.py --schema
+  python call_cdc_kindergarten_vax.py --out data/raw/kindergarten_vax.csv
 """
 
 import argparse
@@ -29,15 +30,35 @@ except ImportError:
     print("Install pandas: pip install pandas", file=sys.stderr)
     sys.exit(1)
 
-PROJECT_ROOT = Path(__file__).resolve().parent
+_SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = _SCRIPT_DIR.parent
 try:
     from dotenv import load_dotenv
     load_dotenv(PROJECT_ROOT / ".env")
+    load_dotenv(_SCRIPT_DIR / ".env")
 except ImportError:
     pass
 
-VIEW_ID = "ee48-w5t6"
+VIEW_ID = "ijqb-a7ye"
 META_URL = f"https://data.cdc.gov/api/views/{VIEW_ID}.json"
+
+DEFAULT_WHERE = "vaccine in ('MMR', 'MMR (PAC)')"
+MMR_VACCINE_VALUES = {"MMR", "MMR (PAC)"}
+
+
+def clean_kindergarten_vax_data(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Filter kindergarten vax data to vaccine in {MMR, MMR (PAC)} only.
+    """
+    if df.empty:
+        return df
+
+    if "vaccine" not in df.columns:
+        print("Warning: 'vaccine' column not found; skipping clean. Columns:", list(df.columns), file=sys.stderr)
+        return df
+
+    mask = df["vaccine"].astype(str).str.strip().isin(MMR_VACCINE_VALUES)
+    return df.loc[mask].copy()
 LEGACY_URL = f"https://data.cdc.gov/resource/{VIEW_ID}.json"
 SODA3_URL = f"https://data.cdc.gov/api/v3/views/{VIEW_ID}/query.json"
 
@@ -75,10 +96,10 @@ def call_soda3(token: str, limit: int, where: Optional[str]) -> list:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="CDC Socrata API: Vaccination Coverage Adolescents 13-17 (ee48-w5t6)")
+    parser = argparse.ArgumentParser(description="CDC Socrata API: Kindergarten Vaccination & Exemptions (ijqb-a7ye)")
     parser.add_argument("--soda3", action="store_true", help="Use SODA3 POST instead of legacy GET")
-    parser.add_argument("--limit", type=int, default=1000, help="Max rows (default 1000)")
-    parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause")
+    parser.add_argument("--limit", type=int, default=50000, help="Max rows per request (default 50000; Socrata max per request)")
+    parser.add_argument("--where", type=str, default=None, help="SoQL WHERE clause (default: MMR/MMR PAC only); use '' for no filter")
     parser.add_argument("--out", type=str, help="Save DataFrame to this file as CSV")
     parser.add_argument("--quiet", action="store_true", help="Only print record count and column headers")
     parser.add_argument("--schema", action="store_true", help="Print column list and exit")
@@ -94,11 +115,13 @@ def main():
         return
 
     token = get_token()
-    where = (args.where.strip() or None) if args.where else None
+    where = DEFAULT_WHERE if args.where is None else (args.where.strip() or None)
     data = call_soda3(token, args.limit, where) if args.soda3 else call_legacy(token, args.limit, where)
 
     df = pd.DataFrame(data)
-    print(f"Records returned: {len(df)}")
+    raw_count = len(df)
+    df = clean_kindergarten_vax_data(df)
+    print(f"Records returned (raw): {raw_count}, after cleaning: {len(df)}")
     if len(df) > 0:
         print(f"Columns: {', '.join(df.columns)}")
     if args.out:

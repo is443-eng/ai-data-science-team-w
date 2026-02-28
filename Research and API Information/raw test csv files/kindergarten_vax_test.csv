@@ -1,0 +1,501 @@
+vaccine,dose,geography_type,geography,year_season,coverage_estimate,population_sample_size,percent_surveyed,foot_notes,survey_type
+MMR,,States,Oregon,2023-24,91.2,39568,100,*. ‡,Census
+MMR,,States,Oregon,2024-25,90.5,38247,100,*. ‡,Census
+MMR,,States,Oklahoma,2010-11,NA,,,,NA
+MMR,,States,Oklahoma,2009-10,97.3,51128,88.9,,Voluntary response
+MMR,,States,Oklahoma,2017-18,92.6,53898,92.1,§,Census (public). voluntary response (private)
+MMR,,States,Oklahoma,2018-19,92.2,54806,92.1,§,Census (public). voluntary response (private)
+MMR,,States,Oklahoma,2016-17,NA,52184,0,‡.¶,Census
+MMR,,States,Oklahoma,2015-16,94.4,54335,96.1,‡,Census
+MMR,,States,Oklahoma,2019-20,93.0,55348,85.6,§,Voluntary response
+MMR,,States,Oklahoma,2020-21,90.5,52656,90,‡.§,Census (public). voluntary response (private)
+MMR,,States,Oklahoma,2021-22,90.9,54042,84.3,‡,Vol. response
+MMR,,States,Oklahoma,2014-15,90.3,56967,95.9,‡,Census
+MMR,,States,Oklahoma,2013-14,96.4,57377,71.3,,Voluntary response
+MMR,,States,Oklahoma,2012-13,90.5,56943,95.5,,Census
+MMR,,States,Oklahoma,2011-12,95.0,52987,90.9,¶,Census
+MMR,,States,Illinois,2016-17,94.9,151309,97.7,,Census
+MMR,,States,Illinois,2018-19,94.7,143876,100,*,Census
+MMR,,States,Illinois,2017-18,95.2,144858,100,*,Census
+MMR,,States,Illinois,2020-21,NR,,,,Not Conducted
+MMR,,States,Illinois,2019-20,96.6,145891,100,*,Census
+MMR,,States,Illinois,2021-22,92.1,137699,100,*,Census
+MMR,,States,Illinois,2015-16,94.9,151309,100,*,Census
+MMR,,States,Illinois,2011-12,97.3,163311,100,*,Census
+MMR,,States,Illinois,2012-13,95.5,166884,100,*,Census
+MMR,,States,Illinois,2013-14,94.7,163316,100,*,Census
+MMR,,States,Illinois,2014-15,94.7,156942,100,*,Census
+MMR,,States,Illinois,2009-10,94.5,165845,100,,Census
+MMR,,States,Illinois,2010-11,NA,,,,NA
+MMR,,States,District of Columbia,2023-24,92.0,7874,100,*,Census
+MMR,,States,District of Columbia,2024-25,92.7,7997,100,*,Census
+MMR,,States,Delaware,2015-16,97.6,11589,9.5,,Stratified 2-stage cluster sample
+MMR,,States,Delaware,2014-15,97.8,11476,7.9,,Stratified 2-stage cluster sample
+MMR,,States,Delaware,2013-14,96.4,11997,12.2,≥,Stratified  2-stage cluster sample
+MMR,,States,Delaware,2012-13,95.7,11997,7.8,≥,2-stage Cluster Sample
+MMR,,States,Delaware,2011-12,96.9,11327,7.4,≥,2-stage Cluster Sample
+MMR,,States,Delaware,2016-17,98.5,11490,9.3,,Stratified 2-stage cluster sample
+MMR,,States,Delaware,2018-19,97.8,10798,9.5,,Stratified 2-stage cluster sample
+MMR,,States,Delaware,2017-18,96.7,10988,9.5,,Stratified 2-stage cluster sample
+MMR,,States,Delaware,2021-22,96.4,11181,9.5,‡,Stratified 2-stage cluster sample
+MMR,,States,Delaware,2020-21,95.7,10587,9.2,,Stratified 2-stage cluster sample
+MMR,,States,Delaware,2019-20,NA,,,,Not Conducted
+MMR,,States,District of Columbia,2022-23,87.5,8064,100,*,Census
+MMR,,States,Kansas,2021-22,91.0,36526,29.5,†. ‡. §,Stratified 1-stage cluster sample
+MMR,,States,Kansas,2019-20,90.0,37865,34.3,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2020-21,92.6,34687,32.7,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2017-18,89.1,38484,23.1,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2018-19,90.8,37838,23.1,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2016-17,89.5,38298,22.9,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2015-16,89.4,39555,21,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2014-15,89.2,39685,24.5,†.‡,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2013-14,86.9,41107,29,†. ‡,Stratified 1-stage sample  (Public);  Census (Private)
+MMR,,States,Kansas,2012-13,90.0,40738,31.8,†. ‡,Stratified 1-stage sample  (Public);  Census (Private)
+MMR,,States,Kansas,2011-12,88.2,38402,52.7,†,Stratified 1-stage sample  (Public);  Census (Private)
+MMR,,States,Kansas,2010-11,NA,,,,NA
+MMR,,States,Kansas,2009-10,90.9,39073,39.1,†,Stratified 1-stage sample  (Public);  Census (Private)
+MMR,,States,Kentucky,2024-25,86.9,51319,100,*. §,Census
+MMR,,States,Kentucky,2023-24,90.0,52609,100,>=. *. ‡. §,Census
+MMR,,States,North Carolina,2009-10,NA,116087,96,,Census
+MMR,,States,North Carolina,2010-11,NA,,,,NA
+MMR,,States,New Mexico,2023-24,95.0,20699,100,*,Census
+MMR,,States,New Mexico,2024-25,94.8,20180,100,*,Census
+MMR,,States,New Jersey,2014-15,92.3,120471,93.9,≥. ‡,Census (public); Voluntary response (private)
+MMR,,States,New Jersey,2013-14,96.8,123085,95.4,≥. ‡,Census
+MMR,,States,New Jersey,2012-13,97.0,122516,96.7,≥. ‡,Census
+MMR,,States,New Jersey,2011-12,NA,118669,96.6,,Census
+MMR,,States,New Jersey,2021-22,94.1,104240,100,>=. §. *,Census
+MMR,,States,New Jersey,2019-20,95.9,107900,100,≥.*,Census
+MMR,,States,New Jersey,2020-21,94.3,100144,100,>=.*,Census
+MMR,,States,New Jersey,2017-18,96.1,107630,100,≥.*,Census
+MMR,,States,New Jersey,2018-19,95.0,109161,100,≥.*,Census
+MMR,,States,New Jersey,2016-17,96.5,109577,100,≥.*,Census
+MMR,,States,New Jersey,2015-16,96.3,110116,100,≥.*,Census
+MMR,,States,New Jersey,2010-11,NA,,,,NA
+MMR,,States,New Jersey,2009-10,NA,118347,95.1,,Census
+MMR,,States,Pennsylvania,2024-25,92.4,140160,95.3,,"Census (pub.), vol. response (prv.)"
+MMR,,States,Pennsylvania,2023-24,93.5,137593,96.5,,Census
+MMR,,States,Colorado,2015-16,87.1,69137,0.5,,Simple random sample
+MMR,,States,Colorado,2014-15,86.9,70597,0.5,,Simple random sample
+MMR,,States,Colorado,2013-14,81.7,69904,0.5,,Random Sample
+MMR,,States,Colorado,2012-13,85.7,70657,0.5,,Simple Random Sample
+MMR,,States,Colorado,2011-12,86.8,70142,0.5,,Simple Random Sample
+MMR,,States,Colorado,2016-17,87.3,64440,100,*,Census
+MMR,,States,Colorado,2018-19,87.4,64191,100,*,Census
+MMR,,States,Colorado,2017-18,88.7,65718,100,*,Census
+MMR,,States,Colorado,2021-22,88.4,66900,97.5,,Census
+MMR,,States,Colorado,2020-21,90.5,63619,97.3,,Census
+MMR,,States,Colorado,2019-20,91.1,69088,98.2,,Census
+MMR,,States,North Carolina,2022-23,94.0,125679,83.1,§. ‡,Vol. response
+MMR,,States,North Carolina,2023-24,93.8,125964,90.8,§,"Census (pub.), vol. response (prv.)"
+MMR,,States,Montana,2015-16,94.9,11484,100,*,Census
+MMR,,States,Montana,2014-15,94.6,12501,95.7,,Census (public); Voluntary response (private)
+MMR,,States,Montana,2013-14,93.7,12855,95.4,,Census
+MMR,,States,Montana,2012-13,94.8,12516,95.8,,Census
+MMR,,States,Montana,2011-12,95.0,12128,100,*,Census
+MMR,,States,Montana,2019-20,93.6,12501,100,*,Census
+MMR,,States,Montana,2020-21,92.9,11279,100,*,Census
+MMR,,States,Montana,2017-18,93.2,12188,100,*,Census
+MMR,,States,Montana,2018-19,93.3,12480,100,*,Census
+MMR,,States,Montana,2016-17,93.8,11956,100,*,Census
+MMR,,States,New Mexico,2015-16,96.2,29049,2.7,†,Stratified 2-stage cluster sample
+MMR,,States,New Mexico,2016-17,95.5,27119,4.5,,Stratified 2-stage cluster sample
+MMR,,States,New Mexico,2018-19,96.1,25269,99.6,,Census
+MMR,,States,New Mexico,2017-18,94.8,26896,99.6,,Stratified 2-stage cluster sample
+MMR,,States,New Mexico,2020-21,95.7,20589,100,*,Census
+MMR,,States,New Mexico,2019-20,97.0,23087,100,*,Census
+MMR,,States,New Mexico,2021-22,94.3,20736,100,*,Census
+MMR,,States,New Mexico,2011-12,95.7,29159,2,,2-stage Cluster Sample
+MMR,,States,New Mexico,2012-13,93.9,29279,3.3,‡ ,2-stage Cluster Sample
+MMR,,States,New Mexico,2013-14,95.9,30725,2.7,‡,Stratified  2-stage cluster sample
+MMR,,States,New Mexico,2014-15,97.7,29918,3.3,†,Stratified 2-stage cluster sample
+MMR,,States,New York,2024-25,97.8,234054,85.1,,Vol. response
+MMR,,States,New York,2023-24,97.7,200894,98.8,,Census
+MMR,,States,New Mexico,2009-10,97.6,26318,2.2,,Random sample
+MMR,,States,New Mexico,2010-11,NA,,,,NA
+MMR,,States,Indiana,2022-23,92.0,81307,87.5,§,"Vol. response (pub.), census (pvt.)"
+MMR,,States,Louisiana,2022-23,92.2,54314,100,*,Census
+MMR,,States,Utah,2022-23,90.0,46635,100,*,Census
+MMR,,States,Utah,2023-24,88.8,46228,100,*,Census
+MMR,,States,Utah,2024-25,88.6,45818,100,*,Census
+MMR,,States,Minnesota,2023-24,87.0,66032,99.1,,Census
+MMR,,States,Minnesota,2024-25,86.5,64898,99.7,,Census
+MMR,,States,Michigan,2010-11,NA,,,,NA
+MMR,,States,Michigan,2009-10,95.3,129810,100,*,Census
+MMR,,States,New Mexico,2022-23,94.9,21068,100,*,Census
+MMR,,States,Washington,2021-22,92.5,87256,97.3,§,"Census (pub.), vol. response (pvt.)"
+MMR,,States,Washington,2020-21,94.4,74931,100,§,Census
+MMR,,States,Washington,2019-20,94.4,87757,91.9,§,Census
+MMR,,States,Washington,2018-19,90.8,87510,96.9,§,Census
+MMR,,States,Washington,2017-18,90.6,85118,96.9,§,Census
+MMR,,States,Washington,2016-17,90.5,87142,98.2,§,Census
+MMR,,States,Washington,2015-16,91.0,86492,97.3,§,Census
+MMR,,States,Washington,2014-15,89.4,88809,96.7,,Census (public); Voluntary response (private)
+MMR,,States,Washington,2013-14,89.7,89165,88.5,,Voluntary response
+MMR,,States,Washington,2012-13,91.7,87773,94.7,,Census
+MMR,,States,Washington,2011-12,91.8,85134,89.1,,Voluntary Response
+MMR,,States,Washington,2010-11,NA,,,,NA
+MMR,,States,Washington,2009-10,91.7,81511,93.3,,Census
+MMR,,States,West Virginia,2023-24,98.3,18261,82.8,‡. §,Vol. response
+MMR,,States,Oregon,2009-10,94.4,44676,100,*,Census
+MMR,,States,Oregon,2010-11,NA,,,,NA
+MMR,,States,Oregon,2011-12,94.0,45855,100,*,Census
+MMR,,States,Oregon,2012-13,93.5,47102,100,*. ‡,Census
+MMR,,States,Oregon,2013-14,93.2,47649,100,*. ‡,Census
+MMR,,States,Oregon,2014-15,94.1,46229,100,*.‡,Census
+MMR,,States,Oregon,2021-22,93.0,41538,100,*. ‡,Census
+MMR,,States,Oregon,2020-21,92.7,39568,100,*.‡,Census
+MMR,,States,Oregon,2019-20,93.4,45959,100,*.‡,Census
+MMR,,States,Oregon,2015-16,93.9,45531,100,*.‡,Census
+MMR,,States,Oregon,2016-17,93.8,45705,100,*.‡,Census
+MMR,,States,Oregon,2018-19,93.0,45870,100,*.‡,Census
+MMR,,States,Oregon,2017-18,93.2,45818,100,*.‡,Census
+MMR,,States,Virginia,2011-12,93.0,101121,4.3,,2-stage Cluster Sample
+MMR,,States,Virginia,2012-13,93.1,104826,4.2,,2-stage Cluster Sample
+MMR,,States,Virginia,2013-14,93.1,105692,4.1,,2-stage cluster  sample
+MMR,,States,Virginia,2014-15,93.4,103821,4.1,,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2015-16,95.7,100074,4.3,†.§,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2016-17,94.1,102357,4,†,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2017-18,95.5,100581,4.4,†,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2018-19,95.0,100394,4.4,†,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2019-20,94.6,99399,1.2,†,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2020-21,95.8,88273,2,†,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2021-22,95.5,95996,2.8,†,Stratified 2-stage cluster sample
+MMR,,States,Virginia,2009-10,92.1,100891,4.4,,Random sample
+MMR,,States,Virginia,2010-11,NA,,,,NA
+MMR,,States,Missouri,2022-23,91.3,69126,100,*,Census
+MMR,,States,Hawaii,2010-11,NA,,,,NA
+MMR,,States,Hawaii,2009-10,NA,18427,6.4,,Random sample
+MMR,,States,Hawaii,2015-16,91.6,16325,6.7,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2014-15,NA,20085,5.6,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2013-14,NA,20056,5.4,,Stratified  2-stage cluster sample
+MMR,,States,Hawaii,2012-13,NA,20104,6.7,,2-stage Cluster Sample
+MMR,,States,Hawaii,2011-12,NA,19443,7.7,,2-stage Cluster Sample
+MMR,,States,Hawaii,2021-22,94.3,13368,6.7,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2020-21,90.7,13074,9.3,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2019-20,89.7,15695,8.9,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2017-18,95.6,16325,6.6,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2018-19,91.5,16051,6.7,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2016-17,93.5,16325,6.7,,Stratified 2-stage cluster sample
+MMR,,National,United States,2021-22,93.0,3835130,92.2,,
+MMR,,National,United States,2020-21,93.9,3510744,90.8,,
+MMR,,National,United States,2019-20,95.2,,,,NaN
+MMR,,National,United States,2015-16,94.7,,,,NaN
+MMR,,National,United States,2016-17,95.0,,,,NaN
+MMR,,National,United States,2018-19,94.7,,,,NaN
+MMR,,National,United States,2017-18,95.0,,,,NaN
+MMR,,National,United States,2011-12,94.7,,,,NaN
+MMR,,National,United States,2012-13,94.1,,,,NaN
+MMR,,National,United States,2013-14,94.0,,,,NaN
+MMR,,National,United States,2014-15,94.0,,,,NaN
+MMR,,States,Connecticut,2022-23,97.3,35580,100,*,Census
+MMR,,States,Alabama,2009-10,94.0,75358,100,≥. *. **,Census
+MMR,,States,Alabama,2010-11,NA,,,,NA
+MMR,,States,Alabama,2011-12,93.6,73190,100,≥. * .**,Census
+MMR,,States,Alabama,2012-13,92.8,72929,100,≥. * . ‡. **,Census
+MMR,,States,Alabama,2013-14,92.0,76927,100,≥. *. **,Census
+MMR,,States,Alabama,2014-15,93.5,59660,100,≥. *,Census
+MMR,,States,Alabama,2015-16,93.1,60392,100,≥.*,Census
+MMR,,States,Alabama,2016-17,93.8,58394,100,≥.*,Census
+MMR,,States,Alabama,2017-18,92.7,57245,100,≥.*,Census
+MMR,,States,Alabama,2018-19,90.6,77739,100,≥.*,Census
+MMR,,States,Alabama,2019-20,86.6,59477,94.9,≥,Census
+MMR,,States,Alabama,2020-21,94.7,56974,100,>=.*,Census
+MMR,,States,Alabama,2021-22,94.9,60332,100,>=. *,Census
+MMR,,States,Alaska,2023-24,84.3,8644,88.9,¶,"Census (pub.), not conducted (prv.)"
+MMR,,States,Alaska,2024-25,81.2,7338,99.8,¶,"Census (pub.), not conducted (prv.)"
+MMR,,States,TX-City of Houston,2023-24,93.6,37882,67.7,‡. §,Vol. response
+MMR,,States,TX-City of Houston,2024-25,88.7,36981,98.8,‡. §,"Census (pub.), vol. response (prv.)"
+MMR,,States,TX-City of Houston,2022-23,91.3,37664,98.8,‡. §,"Census (pub.), vol. response (pvt.)"
+MMR,,States,Mississippi,2015-16,99.4,41042,100,≥.*,Census
+MMR,,States,Mississippi,2014-15,99.2,44129,100,≥. *,Census
+MMR,,States,Mississippi,2013-14,99.7,45719,100,≥. *,Census
+MMR,,States,Mississippi,2012-13,99.9,46595,100,≥. *,Census
+MMR,,States,Mississippi,2011-12,99.2,44912,100,≥. *,Census
+MMR,,States,Mississippi,2021-22,98.6,36524,100,>=. *,Census
+MMR,,States,Mississippi,2019-20,99.1,37870,100,≥.*,Census
+MMR,,States,Mississippi,2020-21,98.9,34028,100,>=.*,Census
+MMR,,States,Mississippi,2017-18,99.4,39284,100,≥.*,Census
+MMR,,States,Mississippi,2018-19,99.2,37775,100,≥.*,Census
+MMR,,States,Mississippi,2016-17,99.4,40509,100,≥.*,Census
+MMR,,States,Missouri,2023-24,90.4,69014,100,*,Census
+MMR,,States,Missouri,2024-25,90.0,68163,100,*,Census
+MMR,,States,Mississippi,2010-11,NA,,,,NA
+MMR,,States,Mississippi,2009-10,99.7,46922,100,≥. *,Census
+MMR,,National,United States,2022-23,93.1,3832381,92.9,,
+MMR,,States,Nevada,2023-24,91.9,31261,91.3,,Census
+MMR,,States,Nevada,2024-25,91.3,33272,92.6,,"Census (pub.), vol. response (prv.)"
+MMR,,States,Nebraska,2016-17,96.7,27117,100,*.‡.‡‡,Census
+MMR,,States,Nebraska,2018-19,96.9,26925,98.6,‡.‡‡,Census
+MMR,,States,Nebraska,2017-18,96.2,26313,98.6,‡.‡‡,Census
+MMR,,States,Nebraska,2020-21,95.5,25681,94.8,‡,Census (public). voluntary response (private)
+MMR,,States,Nebraska,2019-20,96.3,26893,96.7,‡.‡‡,Census
+MMR,,States,Nebraska,2021-22,96.2,25018,99.5,‡,Census
+MMR,,States,Nebraska,2011-12,99.0,26715,96.6,,Census
+MMR,,States,Nebraska,2012-13,96.0,24999,96.6,‡,Census
+MMR,,States,Nebraska,2013-14,96.6,27000,97.3,‡,Census
+MMR,,States,Nebraska,2014-15,96.0,26665,100,*. ‡,Census
+MMR,,States,Nebraska,2015-16,95.6,30409,100,*.‡,Census
+MMR,,States,Nebraska,2009-10,97.5,29607,96.4,,Census
+MMR,,States,Nebraska,2010-11,NA,,,,NA
+MMR,,States,Wyoming,2022-23,90.8,7060,100,*,Census
+MMR,,States,Wisconsin,2014-15,91.6,69335,2.5,‡,Stratified 2-stage cluster sample
+MMR,,States,Wisconsin,2013-14,92.6,71363,2.8,‡,Stratified  2-stage cluster sample
+MMR,,States,Wisconsin,2012-13,92.8,72416,1.8,‡,2-stage Cluster Sample
+MMR,,States,Wisconsin,2011-12,93.1,70672,2.3,,2-stage Cluster Sample
+MMR,,States,Wisconsin,2021-22,82.6,64275,96.8,>=. ‡,"Census (pub.), vol. response (pvt.)"
+MMR,,States,Wisconsin,2020-21,87.2,63486,84.5,>=.†.‡.§,Voluntary response
+MMR,,States,Wisconsin,2019-20,92.8,67391,2.6,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Wisconsin,2018-19,92.6,66344,2.3,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Wisconsin,2017-18,91.8,66178,2.3,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Wisconsin,2016-17,94.0,67607,2.2,†.‡.§,Stratified 2-stage cluster sample
+MMR,,States,Wisconsin,2015-16,93.2,70220,2,‡.§,Stratified 2-stage cluster sample
+MMR,,States,Wyoming,2023-24,93.5,6754,100,*,Census
+MMR,,States,Wyoming,2024-25,93.6,6564,100,*,Census
+MMR,,States,Idaho,2023-24,79.6,22376,100,*,Census
+MMR,,States,Idaho,2024-25,78.5,22242,99.5,,Census
+MMR,,States,Vermont,2023-24,92.9,5630,100,*,Census
+MMR,,States,Vermont,2024-25,93.5,5432,100,*,Census
+MMR,,States,Utah,2009-10,97.7,49957,100,*,Census
+MMR,,States,Utah,2010-11,NA,,,,NA
+MMR,,States,Utah,2011-12,98.0,53800,100,*,Census
+MMR,,States,Utah,2012-13,96.3,54605,100,*,Census
+MMR,,States,Utah,2013-14,98.5,54779,100,*,Census
+MMR,,States,Utah,2014-15,94.0,50916,100,*,Census
+MMR,,States,Utah,2015-16,94.2,50114,100,*,Census
+MMR,,States,Utah,2016-17,93.8,49073,100,*,Census
+MMR,,States,Utah,2017-18,93.4,48827,100,*,Census
+MMR,,States,Utah,2018-19,92.8,50179,100,*,Census
+MMR,,States,Utah,2019-20,92.7,49208,100,*,Census
+MMR,,States,Utah,2020-21,91.4,46247,100,*,Census
+MMR,,States,Utah,2021-22,90.0,48995,100,*,Census
+MMR,,States,Iowa,2022-23,89.9,39178,100,>=. *,Census
+MMR,,States,Georgia,2022-23,88.1,123771,100,>=. *,Census
+MMR,,States,Kansas,2022-23,91.6,35543,30.8,†. ‡. §,Stratified 1-stage cluster sample
+MMR,,States,Iowa,2009-10,84.5,42698,100,≥,Census
+MMR,,States,Iowa,2010-11,NA,,,,NA
+MMR,,States,Iowa,2016-17,92.6,39587,100,≥.*,Census
+MMR,,States,Iowa,2018-19,93.3,40624,100,≥.*,Census
+MMR,,States,Iowa,2017-18,93.0,39632,100,≥.*,Census
+MMR,,States,Iowa,2020-21,93.4,39141,100,>=.*,Census
+MMR,,States,Iowa,2019-20,93.2,40812,100,≥.*,Census
+MMR,,States,Iowa,2021-22,90.6,40111,100,>=. *,Census
+MMR,,States,Iowa,2011-12,91.1,40978,100,≥. *,Census
+MMR,,States,Iowa,2012-13,90.5,41701,99.9,≥,Census
+MMR,,States,Iowa,2013-14,91.0,43728,94.6,≥,Census
+MMR,,States,Iowa,2014-15,91.9,43239,96.3,≥,Census
+MMR,,States,Iowa,2015-16,91.8,41215,100,≥.*,Census
+MMR,,States,Idaho,2022-23,81.3,23721,99.3,,Census
+MMR,,States,Wisconsin,2010-11,NA,,,,NA
+MMR,,States,Wisconsin,2009-10,94.2,61095,2.3,¶,Random sample
+MMR,,States,Maine,2011-12,93.0,13829,97,,Census
+MMR,,States,Maine,2012-13,91.3,14313,94.6,‡,Census
+MMR,,States,Maine,2013-14,89.9,15441,82.4,‡,Voluntary response
+MMR,,States,Maine,2014-15,92.1,13704,88.9,‡,Voluntary response (public); Census (private)
+MMR,,States,Maine,2015-16,95.1,13526,90.5,,Census
+MMR,,States,Maine,2016-17,94.9,13834,90.1,,Voluntary response (public). census (private)
+MMR,,States,Maine,2018-19,93.8,13419,95.9,,Census
+MMR,,States,Maine,2017-18,94.3,13255,95.9,,Census
+MMR,,States,Maine,2020-21,94.3,13477,85,,Voluntary response (public). census (private)
+MMR,,States,Maine,2019-20,94.1,13450,99.6,,Census 
+MMR,,States,Maine,2021-22,96.7,12881,91.6,,Census
+MMR,,States,Maine,2009-10,95.5,14162,75.3,,Voluntary response
+MMR,,States,Maine,2010-11,NA,,,,NA
+MMR,,States,Massachusetts,2011-12,94.2,79551,97.5,,Census
+MMR,,States,Massachusetts,2012-13,94.8,79661,97.6,‡,Census
+MMR,,States,Massachusetts,2013-14,95.1,79894,97.9,‡,Census
+MMR,,States,Massachusetts,2014-15,94.7,74869,100,*. ‡,Census
+MMR,,States,Massachusetts,2015-16,96.4,72897,100,*.‡,Census
+MMR,,States,Massachusetts,2016-17,96.1,70109,100,*.‡,Census
+MMR,,States,Massachusetts,2018-19,96.9,65279,100,*.‡,Census
+MMR,,States,Massachusetts,2017-18,96.3,63377,100,*.‡,Census
+MMR,,States,Massachusetts,2020-21,95.9,60724,100,*.‡,Census
+MMR,,States,Massachusetts,2019-20,97.3,66756,100,*.‡,Census
+MMR,,States,Massachusetts,2021-22,96.2,65582,100,*. ‡,Census
+MMR,,States,Michigan,2024-25,91.6,107636,100,*. ‡,Census
+MMR,,States,Michigan,2023-24,92.1,110156,100,*,Census
+MMR,,States,Massachusetts,2009-10,93.0,74476,100,*,Census
+MMR,,States,Massachusetts,2010-11,NA,,,,NA
+MMR,,States,Texas,2011-12,99.3,388178,100,*,Census
+MMR,,States,Texas,2012-13,97.5,414688,96.6,‡,Census
+MMR,,States,Texas,2013-14,97.5,409255,97.1,‡,Census
+MMR,,States,Texas,2014-15,97.4,406099,98.3,‡,Census (public); Voluntary response (private)
+MMR,,States,Texas,2021-22,94.0,389037,99.3,‡. §,Census
+MMR,,States,Texas,2019-20,96.9,398680,99.6,‡.§,Census
+MMR,,States,Texas,2020-21,95.3,377840,98.9,‡.§,Census
+MMR,,States,Texas,2015-16,97.6,394801,98.7,‡.§,Census (public); Voluntary response (private)
+MMR,,States,Texas,2016-17,97.3,389999,99,‡.§,Census
+MMR,,States,Texas,2017-18,96.9,387981,99.4,‡.§,Census
+MMR,,States,Texas,2018-19,96.9,390034,99.4,‡.§,Census
+MMR,,States,Texas,2009-10,98.1,381425,98.3,,Census
+MMR,,States,Texas,2010-11,NA,,,,NA
+MMR,,States,Nebraska,2022-23,95.1,23176,100,*. ‡,Census
+MMR,,States,Massachusetts,2022-23,96.5,66041,100,*. ‡,Census
+MMR,,States,Michigan,2015-16,95.7,116299,100,*,Census
+MMR,,States,Michigan,2014-15,94.3,117963,100,*,Census
+MMR,,States,Michigan,2013-14,97.5,120297,100,*,Census
+MMR,,States,Michigan,2012-13,94.4,124662,100,*,Census
+MMR,,States,Michigan,2011-12,95.0,124962,100,*,Census
+MMR,,States,Michigan,2021-22,93.6,114251,100,*,Census
+MMR,,States,Michigan,2019-20,94.8,120565,100,*,Census
+MMR,,States,Michigan,2020-21,94.6,106657,100,*,Census
+MMR,,States,Michigan,2017-18,95.0,119028,100,*,Census
+MMR,,States,Michigan,2018-19,94.6,118632,100,*,Census
+MMR,,States,Michigan,2016-17,95.6,118777,100,*,Census
+MMR,,States,TX-City of San Antonio,2024-25,94.7,24929,100,*. ‡. §,Census
+MMR,,States,TX-City of Houston,2020-21,83.7,39627,94.9,‡.§,Census (public). voluntary response (private)
+MMR,,States,TX-City of Houston,2021-22,88.2,40123,99.3,‡. §,Census
+MMR,,States,Alaska,2022-23,83.6,9650,88.8,¶,"Vol. response (pub.), not conducted (pvt.)"
+MMR,,States,Arkansas,2010-11,NA,,,,NA
+MMR,,States,Arkansas,2009-10,98.3,34733,100,*,Census
+MMR,,States,Maryland,2024-25,96.4,66135,95.6,‡,"Census (pub.), vol. response (prv.)"
+MMR,,States,Maryland,2023-24,96.6,63224,100,>=. *. ‡,Census
+MMR,,States,Texas,2022-23,94.2,381680,98,‡. §,Census
+MMR,,States,Vermont,2022-23,93.1,5816,100,*,Census
+MMR,,States,Mississippi,2022-23,98.4,36048,100,>=. *,Census
+MMR,,States,Ohio,2022-23,89.3,134893,93.7,,"Census (pub.), vol. response (pvt.)"
+MMR,,States,South Dakota,2009-10,96.8,11499,100,*,Census
+MMR,,States,South Dakota,2010-11,NA,,,,NA
+MMR,,States,South Dakota,2011-12,97.4,12127,100,*,Census
+MMR,,States,South Dakota,2012-13,97.9,12468,100,*,Census
+MMR,,States,South Dakota,2013-14,96.6,12566,100,*,Census
+MMR,,States,South Dakota,2014-15,97.1,12008,100,*,Census
+MMR,,States,South Dakota,2021-22,93.7,12251,100,*,Census
+MMR,,States,South Dakota,2019-20,96.0,12367,99.8,,Census
+MMR,,States,South Dakota,2020-21,94.6,11512,99.9,,Census
+MMR,,States,South Dakota,2015-16,96.5,12181,100,*,Census
+MMR,,States,South Dakota,2016-17,96.7,12106,99.8,,Census
+MMR,,States,South Dakota,2017-18,96.6,12125,99.9,,Census
+MMR,,States,South Dakota,2018-19,96.2,12062,99.9,,Census
+MMR,,States,Louisiana,2023-24,92.4,51839,100,*,Census
+MMR,,States,Louisiana,2024-25,92.6,49229,100,*,Census
+MMR,,States,Tennessee,2010-11,NA,,,,NA
+MMR,,States,Tennessee,2009-10,97.4,90811,88.1,≥,Voluntary response
+MMR,,States,Missouri,2016-17,95.4,73355,100,*,Census
+MMR,,States,Missouri,2018-19,94.8,72687,100,*,Census
+MMR,,States,Missouri,2017-18,95.2,73113,100,*,Census
+MMR,,States,Missouri,2020-21,92.6,63093,100,*,Census
+MMR,,States,Missouri,2019-20,94.6,72324,100,*,Census
+MMR,,States,Missouri,2021-22,91.6,71034,100,*,Census
+MMR,,States,Missouri,2011-12,96.8,75240,4.7,,2-stage Cluster Sample
+MMR,,States,Missouri,2012-13,96.7,78416,5.9,,2-stage Cluster Sample
+MMR,,States,Missouri,2013-14,95.5,78140,100,*,Census
+MMR,,States,Missouri,2014-15,95.8,75900,100,*,Census
+MMR,,States,Missouri,2015-16,95.7,74413,100,*.§,Census
+MMR,,States,Missouri,2009-10,97.3,75958,3,,Random sample
+MMR,,States,Missouri,2010-11,NA,,,,NA
+MMR,,States,Minnesota,2022-23,87.6,68152,97.9,,Census
+MMR,,States,Maryland,2022-23,96.7,59684,100,*. ‡,Census
+MMR,,States,Virginia,2022-23,95.8,93271,1.6,†,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2024-25,89.9,13804,10.5,,Stratified 2-stage cluster sample
+MMR,,States,Hawaii,2023-24,89.8,13995,8.2,,Stratified 2-stage cluster sample
+MMR,,States,Arizona,2022-23,89.9,80814,97.7,,Census
+MMR,,States,North Dakota,2014-15,89.8,10017,99.9,,Census
+MMR,,States,North Dakota,2013-14,90.0,9780,96.1,,Census (Public); Stratified  2-stage cluster sample(Private)
+MMR,,States,North Dakota,2012-13,89.9,9503,4.9,,2-stage Cluster Sample
+MMR,,States,North Dakota,2011-12,90.6,8412,5.8,¶,Convenient 
+MMR,,States,North Dakota,2017-18,94.2,10365,99.4,,Census
+MMR,,States,North Dakota,2018-19,93.6,10382,99.4,,Census
+MMR,,States,North Dakota,2016-17,93.8,9799,98.7,,Census
+MMR,,States,North Dakota,2015-16,90.7,9875,97.1,,Census
+MMR,,States,North Dakota,2019-20,94.8,10587,99.5,,Census
+MMR,,States,North Dakota,2020-21,93.3,10116,99.1,,Census
+MMR,,States,North Dakota,2021-22,91.5,10755,96.6,,Census
+MMR,,States,Tennessee,2022-23,95.4,79692,100,§. *,Census
+MMR,,States,Tennessee,2023-24,95.1,79323,95.8,§,Census
+MMR,,States,Tennessee,2024-25,94.4,78299,96.7,§,Census
+MMR,,States,Georgia,2009-10,99.6,141949,1.2,,Random sample
+MMR,,States,Georgia,2010-11,NA,,,,NA
+MMR,,States,Georgia,2011-12,96.6,143065,1.9,,2-stage Cluster Sample
+MMR,,States,Georgia,2012-13,95.1,142732,2.4,≥,2-stage Cluster Sample
+MMR,,States,Georgia,2013-14,94.0,143988,100,≥. *,Census
+MMR,,States,Georgia,2014-15,94.0,139471,100,≥. *,Census
+MMR,,States,Georgia,2015-16,94.6,131403,100,≥.*,Census
+MMR,,States,Georgia,2016-17,93.3,136165,100,≥.*,Census
+MMR,,States,Georgia,2018-19,93.6,131275,100,≥.*,Census
+MMR,,States,Georgia,2017-18,93.4,131459,100,≥.*,Census
+MMR,,States,Georgia,2019-20,93.1,130102,100,≥.*,Census
+MMR,,States,Georgia,2020-21,88.5,83191,100,>=.*,Census
+MMR,,States,Georgia,2021-22,83.2,118742,100,>=. *,Census
+MMR,,States,West Virginia,2022-23,95.6,19175,86.1,>=. ‡. §,"Vol. response (pub.), census (pvt.)"
+MMR,,States,Oklahoma,2022-23,89.6,52548,89.5,‡,"Census (pub.), vol. response (pvt.)"
+MMR,,States,New Hampshire,2022-23,89.4,11332,100,>=. §. *,Census
+MMR,,States,Florida,2022-23,90.6,230309,97.7,>=,Census
+MMR,,States,Florida,2024-25,88.8,221053,100,>=. *,Census
+MMR,,States,Florida,2023-24,88.1,228213,100,>=. *,Census
+MMR,,States,Nevada,2022-23,92.8,34333,89.1,,"Vol. response (pub.), census (pvt.)"
+MMR,,States,Indiana,2024-25,90.8,73744,92.7,§,"Census (pub.), vol. response (prv.)"
+MMR,,States,Indiana,2023-24,90.8,80639,88.5,§,"Census (pub.), vol. response (prv.)"
+MMR,,States,Kentucky,2011-12,92.0,58185,91.8,,Census
+MMR,,States,Kentucky,2012-13,92.4,58466,97.2,‡,Census
+MMR,,States,Kentucky,2013-14,92.6,57857,100,*,Census
+MMR,,States,Kentucky,2014-15,92.7,57884,97.2,‡,Census
+MMR,,States,Kentucky,2015-16,92.2,54353,99.5,‡.§,Census
+MMR,,States,Kentucky,2016-17,90.8,51487,92.9,‡.§,Census
+MMR,,States,Kentucky,2018-19,93.4,55587,99,‡.§,Census
+MMR,,States,Kentucky,2017-18,92.6,55152,99,‡.§,Census
+MMR,,States,Kentucky,2020-21,88.9,59233,86.4,‡.§,Census (public). voluntary response (private)
+MMR,,States,Kentucky,2019-20,93.1,59233,92.9,‡.§,Census
+MMR,,States,Kentucky,2021-22,86.5,59233,91.5,>=. ‡. §,Census
+MMR,,States,Kentucky,2009-10,92.2,56526,92.9,,Census
+MMR,,States,Kentucky,2010-11,NA,,,,NA
+MMR,,States,Kansas,2024-25,91.0,33892,29.2,†. ‡. §,Stratified 2-stage cluster sample
+MMR,,States,Kansas,2023-24,90.4,34178,37.1,†. ‡. §,Stratified 2-stage cluster sample
+MMR,,States,Washington,2023-24,91.3,84053,97.2,§,Census
+MMR,,States,Washington,2024-25,90.9,76756,97.9,,Census
+MMR,,States,Pennsylvania,2022-23,94.0,137259,97.2,,"Census (pub.), vol. response (pvt.)"
+MMR,,States,Washington,2022-23,91.4,86284,97.9,§,Census
+MMR,,States,California,2022-23,96.5,541132,100,‡,Census
+MMR,,States,North Dakota,2022-23,92.0,10554,99.4,,Census
+MMR,,States,North Dakota,2024-25,90.0,9659,98.8,,Census
+MMR,,States,North Dakota,2023-24,90.9,9708,97.5,,Census
+MMR,,States,North Carolina,2021-22,96.1,118191,78.5,§. ‡,Vol. response
+MMR,,States,North Carolina,2020-21,95.2,120995,89,‡.§,Census (public). voluntary response (private)
+MMR,,States,North Carolina,2019-20,95.5,124548,97.8,‡.§,Census
+MMR,,States,North Carolina,2015-16,97.3,128290,92,‡.§,Census (public). Voluntary response (private)
+MMR,,States,North Carolina,2016-17,96.2,126454,88.2,‡.§,Voluntary response
+MMR,,States,North Carolina,2018-19,93.2,124343,90.9,‡.§,Census (public). voluntary response (private)
+MMR,,States,North Carolina,2017-18,97.0,127197,90.9,‡.§,Census
+MMR,,States,North Carolina,2011-12,NA,128854,95.4,,Census
+MMR,,States,North Carolina,2012-13,NA,130612,97.3,,Census
+MMR,,States,North Carolina,2013-14,NA,126084,97.7,,Census
+MMR,,States,North Carolina,2014-15,96.5,129792,95,,Census (public). Voluntary response (private)
+MMR,,States,Illinois,2022-23,91.7,135332,100,*,Census
+MMR,,States,District of Columbia,2011-12,NA,6854,100,*,Census
+MMR,,States,District of Columbia,2012-13,NA,7842,100,*,Census
+MMR,,States,District of Columbia,2013-14,NA,7856,100,*,Census
+MMR,,States,District of Columbia,2014-15,89.9,7840,100,*,Census
+MMR,,States,District of Columbia,2015-16,88.5,8080,100,*,Census
+MMR,,States,District of Columbia,2009-10,NA,6092,100,*,Census
+MMR,,States,District of Columbia,2010-11,NA,,,,NA
+MMR,,States,District of Columbia,2019-20,NA,,,,Not Conducted
+MMR,,States,District of Columbia,2020-21,78.9,8262,100,*,Census
+MMR,,States,District of Columbia,2021-22,82.0,8959,100,*,Census
+MMR,,States,Idaho,2010-11,NA,,,,NA
+MMR,,States,Idaho,2009-10,87.0,22624,100,*,Census
+MMR,,States,Idaho,2015-16,90.2,22686,100,*,Census
+MMR,,States,Idaho,2014-15,89.5,22968,100,*,Census
+MMR,,States,Idaho,2013-14,88.2,23934,100,*,Census
+MMR,,States,Idaho,2012-13,88.4,23888,100,*,Census
+MMR,,States,Idaho,2011-12,89.2,22762,100,*,Census
+MMR,,States,Idaho,2021-22,83.9,23854,99.6,,Census
+MMR,,States,Idaho,2019-20,89.1,23301,98.5,,Census
+MMR,,States,Idaho,2020-21,86.5,22677,98.3,,Census
+MMR,,States,Idaho,2017-18,89.5,22553,99,,Census
+MMR,,States,Idaho,2018-19,89.5,22995,99,,Census
+MMR,,States,Idaho,2016-17,89.9,22589,100,*,Census
+MMR,,States,Illinois,2024-25,91.8,132769,99.5,,Census
+MMR,,States,Illinois,2023-24,91.6,133578,100,*,Census
+MMR,,States,Wyoming,2015-16,96.9,7825,74,§.¶,Voluntary response
+MMR,,States,Wyoming,2016-17,NA,,,,Not conducted
+MMR,,States,Wyoming,2017-18,NA,,,,Not conducted 
+MMR,,States,Wyoming,2018-19,95.1,7734,100,*,Census
+MMR,,States,Wyoming,2019-20,94.5,7913,100,*,Census
+MMR,,States,Wyoming,2020-21,90.2,6923,100,>=.*,Census
+MMR,,States,Wyoming,2021-22,92.9,7382,100,*,Census
+MMR,,States,Wyoming,2011-12,NA,,,,Not conducted
+MMR,,States,Wyoming,2012-13,97.5,8133,100,* .¶,Census
+MMR,,States,Wyoming,2013-14,NA,,,,Not conducted
+MMR,,States,Wyoming,2014-15,96.8,7983,97.9,¶,Census
+MMR,,States,Wyoming,2009-10,NA,,,,Not conducted
+MMR,,States,Wyoming,2010-11,NA,,,,NA

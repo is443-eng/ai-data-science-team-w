@@ -4,7 +4,7 @@ Use the same **`SOCRATA_APP_TOKEN`** (in `.env`) for all of these. They are all 
 
 | Dataset | View ID | Description |
 |--------|---------|-------------|
-| NNDSS Weekly Reports | `x9gk-5huc` | Measles cases (domestic/imported); use `call_cdc_api.py` |
+| NNDSS Weekly Reports | `x9gk-5huc` | Measles cases (domestic/imported); use `call_cdc_nndss.py` |
 | CDC Wastewater – Measles | `akvg-8vrb` | Wastewater data for measles |
 | Teen Vaccination Coverage (13–17) | `ee48-w5t6` | Vaccination coverage, adolescents |
 | Child Vaccination Coverage (0–35 mo) | `fhky-rtsk` | Vaccination coverage, young children |
@@ -12,7 +12,7 @@ Use the same **`SOCRATA_APP_TOKEN`** (in `.env`) for all of these. They are all 
 
 ## API pattern (legacy GET)
 
-Same as `call_cdc_api.py`, but change the view ID:
+Same as `call_cdc_nndss.py`, but change the view ID:
 
 ```
 GET https://data.cdc.gov/resource/{VIEW_ID}.json?$select=*&$limit=1000
