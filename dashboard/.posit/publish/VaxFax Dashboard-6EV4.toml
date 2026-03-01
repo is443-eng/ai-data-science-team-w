@@ -20,7 +20,8 @@ files = [
   '/.posit/publish/deployments/deployment-R3ER.toml',
   '/dashboard.log',
   '/utils',
-  '/tests'
+  '/tests',
+  '/measles_annual_1985.csv'
 ]
 title = 'VaxFax Dashboard'
 secrets = ['SOCRATA_APP_TOKEN', 'OLLAMA_API_KEY']
