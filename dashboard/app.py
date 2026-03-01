@@ -158,7 +158,7 @@ def _render_main(page: str) -> None:
                 if not neg.empty:
                     st.markdown("**Top negative drivers** (push alarm down): " + ", ".join([f"{r['feature']} ({r['coefficient']:.2f})" for _, r in neg.head(3).iterrows()]) + ".")
                 st.caption("Coefficients (positive = increases probability, negative = decreases):")
-                st.dataframe(coef_df, width="stretch", hide_index=True)
+                st.dataframe(coef_df, use_container_width=True, hide_index=True)
             st.markdown(
                 "**Plain language:** Risk increases when recent wastewater levels are higher, when kindergarten coverage is lower, "
                 "or when the time of year is typically associated with more cases. The model combines these into a single probability."
@@ -234,7 +234,7 @@ def _render_main(page: str) -> None:
             recent5 = agg[["year", "week", "cases"]].tail(5).copy()
             recent5["Year-Week"] = recent5["year"].astype(int).astype(str) + "-W" + recent5["week"].astype(int).apply(lambda x: str(x).zfill(2))
             st.caption("**Five most recent NNDSS cases (national weekly) available to this app:**")
-            st.dataframe(recent5[["Year-Week", "cases"]].rename(columns={"cases": "Cases"}), width="stretch", hide_index=True)
+            st.dataframe(recent5[["Year-Week", "cases"]].rename(columns={"cases": "Cases"}), use_container_width=True, hide_index=True)
         with st.expander("NNDSS data audit", expanded=False):
             if nndss_audit:
                 st.write("**Case column used:**", nndss_audit.get("case_column_used"), "| **Year range:**", nndss_audit.get("year_min"), "–", nndss_audit.get("year_max"), "| **Most recent (year, week):**", nndss_audit.get("year_week_max"))
@@ -308,7 +308,7 @@ def _render_main(page: str) -> None:
                     fig_map.update_layout(height=400)
                     st.plotly_chart(fig_map, width="stretch")
                 table_df = cov_agg[[state_col, "coverage"]].rename(columns={state_col: "State", "coverage": "Percent coverage"})
-                st.dataframe(table_df, width="stretch", hide_index=True)
+                st.dataframe(table_df, use_container_width=True, hide_index=True)
             else:
                 st.info("No coverage data for selected filters.")
         else:
@@ -500,7 +500,7 @@ def _render_main(page: str) -> None:
                 tbl = tbl[show_cols].rename(columns={"state": "State", "cases_recent": "Recent cases", "total_risk": "Final score"})
             else:
                 tbl = sr[["state", "risk_tier", "risk_score"]].copy().rename(columns={"state": "State", "risk_tier": "Risk tier", "risk_score": "Risk score"})
-            st.dataframe(tbl, width="stretch", hide_index=True)
+            st.dataframe(tbl, use_container_width=True, hide_index=True)
             with st.expander("How state risk is calculated", expanded=False):
                 has_ww_pts = "wastewater_points" in sr.columns and (sr["wastewater_points"].fillna(0) != 0).any()
                 st.markdown(
@@ -523,7 +523,7 @@ def _render_main(page: str) -> None:
                         ["Wastewater", ex.get("wastewater_points", 0)],
                         ["Total", ex.get("total_risk", 0)],
                     ], columns=["Component", "Points"])
-                    st.dataframe(breakdown, width="stretch", hide_index=True)
+                    st.dataframe(breakdown, use_container_width=True, hide_index=True)
             st.subheader("AI report for a state")
             from dashboard.utils.state_maps import state_to_abbr, STATE_TO_ABBR
             abbr_to_name = {v: k for k, v in STATE_TO_ABBR.items()}
@@ -589,7 +589,7 @@ def _render_main(page: str) -> None:
             forecast_table = sr.copy()
             forecast_table["Outlook"] = forecast_table["risk_tier"].apply(_outlook)
             forecast_table["What's driving it"] = forecast_table.apply(_drivers, axis=1)
-            st.dataframe(forecast_table[["state", "Outlook", "What's driving it"]].rename(columns={"state": "State"}), width="stretch", hide_index=True)
+            st.dataframe(forecast_table[["state", "Outlook", "What's driving it"]].rename(columns={"state": "State"}), use_container_width=True, hide_index=True)
             national_line = ""
             if st.session_state.get("forecast_df") is not None and not st.session_state.forecast_df.empty:
                 fc = st.session_state.forecast_df

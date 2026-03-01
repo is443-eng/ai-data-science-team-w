@@ -473,6 +473,13 @@ def _build_modeling_dataset(
     )
     national["outbreak_next_4w"] = (national["cases_next4"] > outbreak_threshold).astype(int)
     ww = _wastewater_national_weekly(wastewater)
+    # Coerce year/week to int in both so merge does not mix int64 and object
+    national = national.copy()
+    national["year"] = pd.to_numeric(national["year"], errors="coerce").fillna(0).astype(int)
+    national["week"] = pd.to_numeric(national["week"], errors="coerce").fillna(0).astype(int)
+    ww = ww.copy()
+    ww["year"] = pd.to_numeric(ww["year"], errors="coerce").fillna(0).astype(int)
+    ww["week"] = pd.to_numeric(ww["week"], errors="coerce").fillna(0).astype(int)
     national = national.merge(ww, on=["year", "week"], how="left")
     national["ww_signal"] = national.get("ww_signal", pd.Series(dtype=float)).fillna(0).astype(float)
     # Use prior 8–12 weeks of wastewater (lags 1–12) for alarm model
