@@ -16,8 +16,10 @@ from dashboard.utils.logging_config import get_logger
 
 logger = get_logger("risk")
 
-# Default outbreak threshold: 1 if total cases in next 4 weeks > this
+# Default outbreak threshold: 1 if total cases in next 4 weeks > this (used when not using percentile)
 DEFAULT_OUTBREAK_THRESHOLD = 0
+# When using data-driven threshold: "outbreak" = next-4-weeks cases above this percentile of historical 4-week counts
+DEFAULT_OUTBREAK_PERCENTILE = 95.0
 # How many weeks to forecast
 FORECAST_WEEKS = 8
 # Time-based split: last N weeks as test (for metrics); train on rest
@@ -499,15 +501,51 @@ def _build_modeling_dataset(
     return national.dropna(subset=["outbreak_next_4w"]).reset_index(drop=True)
 
 
+def get_outbreak_threshold_from_data(
+    nndss: pd.DataFrame,
+    percentile: float = DEFAULT_OUTBREAK_PERCENTILE,
+) -> Optional[float]:
+    """
+    Compute outbreak threshold from the distribution of 4-week case counts in the data.
+    Returns the given percentile of (sum of cases in next 4 weeks) across all year-weeks.
+    "Outbreak" = next-4-weeks cases above this value (unusually high).
+    Returns None if insufficient data.
+    """
+    national = _national_weekly_cases(nndss)
+    if national.empty or len(national) < 5:
+        return None
+    national = national.sort_values(["year", "week"]).reset_index(drop=True)
+    cases_next4 = (
+        national["cases"].shift(-1)
+        + national["cases"].shift(-2)
+        + national["cases"].shift(-3)
+        + national["cases"].shift(-4)
+    )
+    valid = cases_next4.dropna()
+    if valid.empty or len(valid) < 10:
+        return None
+    threshold = float(np.percentile(valid, percentile))
+    logger.info(
+        "Outbreak threshold from data: %.1f (%.0fth percentile of next-4-weeks cases, n=%s)",
+        threshold,
+        percentile,
+        len(valid),
+    )
+    return threshold
+
+
 def fit_stage1(
     nndss: pd.DataFrame,
     wastewater: pd.DataFrame,
     kindergarten: pd.DataFrame,
     outbreak_threshold: float = DEFAULT_OUTBREAK_THRESHOLD,
+    outbreak_percentile: Optional[float] = DEFAULT_OUTBREAK_PERCENTILE,
 ) -> Tuple[Optional[object], Optional[pd.DataFrame], float, Optional[dict]]:
     """
     Fit Stage 1 logistic regression. Returns (model, coefficients_df, auc, metrics_dict).
     On failure returns (None, None, 0.5, None) and logs.
+    If outbreak_percentile is set (e.g. 75), threshold is computed from data (that percentile of
+    next-4-weeks case counts); otherwise outbreak_threshold is used.
     """
     try:
         from sklearn.linear_model import LogisticRegression
@@ -516,7 +554,12 @@ def fit_stage1(
     except ImportError:
         logger.error("sklearn not installed")
         return None, None, 0.5, None
-    df = _build_modeling_dataset(nndss, wastewater, kindergarten, outbreak_threshold)
+    threshold = outbreak_threshold
+    if outbreak_percentile is not None:
+        data_threshold = get_outbreak_threshold_from_data(nndss, outbreak_percentile)
+        if data_threshold is not None:
+            threshold = data_threshold
+    df = _build_modeling_dataset(nndss, wastewater, kindergarten, outbreak_threshold=threshold)
     if df.empty or len(df) < 20:
         logger.warning("Stage 1 fit skipped: insufficient rows after build (%s)", len(df))
         return None, None, 0.5, None
@@ -537,6 +580,9 @@ def fit_stage1(
         y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
     else:
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    if y_train.nunique() < 2:
+        logger.warning("Stage 1 fit skipped: training set has only one class (try higher outbreak_percentile or different threshold)")
+        return None, None, 0.5, None
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         model = LogisticRegression(max_iter=1000, random_state=42)
@@ -558,11 +604,17 @@ def predict_alarm_probability(
     wastewater: pd.DataFrame,
     kindergarten: pd.DataFrame,
     outbreak_threshold: float = DEFAULT_OUTBREAK_THRESHOLD,
+    outbreak_percentile: Optional[float] = DEFAULT_OUTBREAK_PERCENTILE,
 ) -> float:
     """Predict P(outbreak in next 4 weeks) for the most recent week. Returns 0.5 if model is None."""
     if model is None:
         return 0.5
-    df = _build_modeling_dataset(nndss, wastewater, kindergarten, outbreak_threshold)
+    threshold = outbreak_threshold
+    if outbreak_percentile is not None:
+        data_threshold = get_outbreak_threshold_from_data(nndss, outbreak_percentile)
+        if data_threshold is not None:
+            threshold = data_threshold
+    df = _build_modeling_dataset(nndss, wastewater, kindergarten, outbreak_threshold=threshold)
     if df.empty:
         return 0.5
     feature_cols = [c for c in df.columns if c.startswith("ww_lag") or c in ("week_of_year", "kg_coverage")]

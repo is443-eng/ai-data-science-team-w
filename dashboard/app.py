@@ -44,7 +44,7 @@ if "coef_df" not in st.session_state:
     st.session_state.coef_df = None
 
 
-def load_and_model(use_cache: bool = True, outbreak_threshold: float = 0):
+def load_and_model(use_cache: bool = True, outbreak_percentile: float = 95.0):
     from dashboard.loaders import load_all, clear_cache
     from dashboard.risk import (
         fit_stage1,
@@ -71,11 +71,11 @@ def load_and_model(use_cache: bool = True, outbreak_threshold: float = 0):
         recent = nndss_agg.tail(5)
         logger.info("Five most recent NNDSS (national weekly cases) available to app: %s", recent[["year", "week", "cases"]].to_dict("records"))
     try:
-        model, coef_df, auc, _ = fit_stage1(nndss, ww, kg, outbreak_threshold=outbreak_threshold)
+        model, coef_df, auc, _ = fit_stage1(nndss, ww, kg, outbreak_percentile=outbreak_percentile)
         st.session_state.model_stage1 = model
         st.session_state.coef_df = coef_df
         st.session_state.auc = auc
-        st.session_state.alarm_prob = predict_alarm_probability(model, nndss, ww, kg, outbreak_threshold)
+        st.session_state.alarm_prob = predict_alarm_probability(model, nndss, ww, kg, outbreak_percentile=outbreak_percentile)
     except Exception as e:
         logger.exception("Stage 1 fit/predict failed")
         st.session_state.alarm_prob = 0.5
@@ -683,7 +683,7 @@ with st.sidebar:
     st.caption("Data sources")
     st.session_state.data_loaded = False
     try:
-        load_and_model(use_cache=use_cache, outbreak_threshold=0)
+        load_and_model(use_cache=use_cache, outbreak_percentile=95.0)
         st.session_state.data_loaded = True
     except Exception as e:
         logger.exception("load_and_model failed")
