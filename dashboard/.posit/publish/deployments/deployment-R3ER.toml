@@ -11,9 +11,9 @@ id = '7dda0a08-af91-437f-a038-c12b59e3d9df'
 dashboard_url = 'https://connect.systems-apps.com/connect/#/apps/7dda0a08-af91-437f-a038-c12b59e3d9df'
 direct_url = 'https://connect.systems-apps.com/content/7dda0a08-af91-437f-a038-c12b59e3d9df/'
 logs_url = 'https://connect.systems-apps.com/connect/#/apps/7dda0a08-af91-437f-a038-c12b59e3d9df/logs'
-deployed_at = '2026-03-01T16:21:49-05:00'
-bundle_id = '186'
-bundle_url = 'https://connect.systems-apps.com/__api__/v1/content/7dda0a08-af91-437f-a038-c12b59e3d9df/bundles/186/download'
+deployed_at = '2026-03-01T16:41:54-05:00'
+bundle_id = '190'
+bundle_url = 'https://connect.systems-apps.com/__api__/v1/content/7dda0a08-af91-437f-a038-c12b59e3d9df/bundles/190/download'
 files = [
   '.posit/publish/VaxFax Dashboard-6EV4.toml',
   '.posit/publish/deployments/deployment-R3ER.toml',
@@ -21,6 +21,7 @@ files = [
   'app.py',
   'dashboard.log',
   'loaders.py',
+  'measles_annual_1985.csv',
   'ollama_client.py',
   'requirements.txt',
   'risk.py',
@@ -58,7 +59,8 @@ files = [
   '/.posit/publish/deployments/deployment-R3ER.toml',
   '/dashboard.log',
   '/utils',
-  '/tests'
+  '/tests',
+  '/measles_annual_1985.csv'
 ]
 title = 'VaxFax Dashboard'
 secrets = ['SOCRATA_APP_TOKEN', 'OLLAMA_API_KEY']
