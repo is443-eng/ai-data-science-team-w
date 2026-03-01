@@ -25,6 +25,9 @@ logger = get_logger("app")
 # Page config
 st.set_page_config(page_title="Risk of Measles Outbreak in US", page_icon="📊", layout="wide")
 
+# Set to True to show the "Show debug panel" checkbox and debug expander in the UI
+SHOW_DEBUG_UI = False
+
 # Session state for cached data and model
 if "load_status" not in st.session_state:
     st.session_state.load_status = {}
@@ -146,7 +149,7 @@ def _render_main(page: str) -> None:
             },
         ))
         fig_gauge.update_layout(height=180, margin=dict(l=40, r=40, t=50, b=30))
-        st.plotly_chart(fig_gauge, use_container_width=True)
+        st.plotly_chart(fig_gauge, width="stretch")
         with st.expander("How is alarm probability calculated?", expanded=False):
             st.markdown("**Inputs used:** Recent national cases, wastewater trend (prior 8–12 weeks of detection data), kindergarten MMR coverage (national), and week of year (seasonality).")
             coef_df = st.session_state.get("coef_df")
@@ -158,7 +161,7 @@ def _render_main(page: str) -> None:
                 if not neg.empty:
                     st.markdown("**Top negative drivers** (push alarm down): " + ", ".join([f"{r['feature']} ({r['coefficient']:.2f})" for _, r in neg.head(3).iterrows()]) + ".")
                 st.caption("Coefficients (positive = increases probability, negative = decreases):")
-                st.dataframe(coef_df, use_container_width=True, hide_index=True)
+                st.dataframe(coef_df, width="stretch", hide_index=True)
             st.markdown(
                 "**Plain language:** Risk increases when recent wastewater levels are higher, when kindergarten coverage is lower, "
                 "or when the time of year is typically associated with more cases. The model combines these into a single probability."
@@ -234,7 +237,7 @@ def _render_main(page: str) -> None:
             recent5 = agg[["year", "week", "cases"]].tail(5).copy()
             recent5["Year-Week"] = recent5["year"].astype(int).astype(str) + "-W" + recent5["week"].astype(int).apply(lambda x: str(x).zfill(2))
             st.caption("**Five most recent NNDSS cases (national weekly) available to this app:**")
-            st.dataframe(recent5[["Year-Week", "cases"]].rename(columns={"cases": "Cases"}), use_container_width=True, hide_index=True)
+            st.dataframe(recent5[["Year-Week", "cases"]].rename(columns={"cases": "Cases"}), width="stretch", hide_index=True)
         with st.expander("NNDSS data audit", expanded=False):
             if nndss_audit:
                 st.write("**Case column used:**", nndss_audit.get("case_column_used"), "| **Year range:**", nndss_audit.get("year_min"), "–", nndss_audit.get("year_max"), "| **Most recent (year, week):**", nndss_audit.get("year_week_max"))
@@ -293,22 +296,51 @@ def _render_main(page: str) -> None:
             if pct_col and not kg_work.empty:
                 kg_work["coverage"] = pd.to_numeric(kg_work[pct_col], errors="coerce")
                 cov_agg = kg_work.groupby(state_col, as_index=False)["coverage"].mean()
-                cov_agg = cov_agg.dropna(subset=["coverage"])
-                from dashboard.utils.state_maps import state_to_abbr
+                from dashboard.utils.state_maps import state_to_abbr, STATE_TO_ABBR
                 cov_agg["abbr"] = cov_agg[state_col].astype(str).apply(state_to_abbr)
-                cov_map = cov_agg.dropna(subset=["abbr"])
-                if not cov_map.empty:
-                    import plotly.express as px
-                    fig_map = px.choropleth(
-                        cov_map, locations="abbr", locationmode="USA-states",
-                        color="coverage", scope="usa",
-                        color_continuous_scale="Blues",
-                        title="MMR coverage % by state (darker = higher coverage)",
+                # Include all US states so MT, WV etc. show "Data Unavailable" on hover
+                all_states = pd.DataFrame([{"abbr": abbr} for abbr in STATE_TO_ABBR.values()])
+                map_df = all_states.merge(cov_agg[["abbr", "coverage"]], on="abbr", how="left")
+                map_df["hover_text"] = map_df["coverage"].apply(
+                    lambda x: f"{x:.1f}%" if pd.notna(x) else "Data Unavailable"
+                )
+                import plotly.express as px
+                import plotly.graph_objects as go
+                map_with_data = map_df[map_df["coverage"].notna()]
+                map_no_data = map_df[map_df["coverage"].isna()]
+                r = map_df["coverage"].dropna()
+                range_color = (float(r.min()), float(r.max())) if len(r) else (0, 100)
+                fig_map = px.choropleth(
+                    map_with_data, locations="abbr", locationmode="USA-states",
+                    color="coverage", scope="usa",
+                    color_continuous_scale="Blues",
+                    title="MMR coverage % by state (darker = higher coverage)",
+                    custom_data=["hover_text"],
+                    range_color=range_color,
+                )
+                fig_map.update_traces(
+                    hovertemplate="%{location}<br>%{customdata[0]}<extra></extra>"
+                )
+                # Second trace for states with no data so MT, WV etc. are hoverable with "Data Unavailable"
+                if not map_no_data.empty:
+                    fig_map.add_trace(
+                        go.Choropleth(
+                            locations=map_no_data["abbr"],
+                            locationmode="USA-states",
+                            z=[0] * len(map_no_data),
+                            colorscale=[[0, "lightgray"], [1, "lightgray"]],
+                            showscale=False,
+                            hoverinfo="text",
+                            text=[f"{abbr}<br>Data Unavailable" for abbr in map_no_data["abbr"]],
+                            hoverlabel=dict(bgcolor="white", font=dict(color="black")),
+                        )
                     )
-                    fig_map.update_layout(height=400)
-                    st.plotly_chart(fig_map, width="stretch")
-                table_df = cov_agg[[state_col, "coverage"]].rename(columns={state_col: "State", "coverage": "Percent coverage"})
-                st.dataframe(table_df, use_container_width=True, hide_index=True)
+                fig_map.update_layout(height=400)
+                st.plotly_chart(fig_map, width="stretch")
+                table_df = cov_agg.dropna(subset=["coverage"])[[state_col, "coverage"]].rename(
+                    columns={state_col: "State", "coverage": "Percent coverage"}
+                )
+                st.dataframe(table_df, width="stretch", hide_index=True)
             else:
                 st.info("No coverage data for selected filters.")
         else:
@@ -419,7 +451,7 @@ def _render_main(page: str) -> None:
                         xaxis=dict(title="Week", type="category", tickangle=-45),
                         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
                     )
-                    st.plotly_chart(fig, width="stretch", use_container_width=True)
+                    st.plotly_chart(fig, width="stretch")
         # AI Reporter: Wastewater vs NNDSS
         st.subheader("AI Reporter: Wastewater vs NNDSS")
         ww_nndss_summary_parts = []
@@ -493,14 +525,20 @@ def _render_main(page: str) -> None:
                 display_cols = ["state", "cases_recent", "ww_recent", "total_risk"]
             if all(c in sr.columns for c in display_cols):
                 tbl = sr[display_cols].copy()
-                tbl["Wastewater signal"] = tbl["ww_recent"].apply(lambda x: "No coverage" if (x is None or (isinstance(x, float) and pd.isna(x))) else (round(x, 4) if isinstance(x, (int, float)) else x))
+                def _ww_display(val):
+                    if val is None or (isinstance(val, float) and pd.isna(val)):
+                        return "No coverage"
+                    if isinstance(val, (int, float)):
+                        return str(round(val / 100_000, 2))
+                    return str(val)
+                tbl["Wastewater signal (per 100k)"] = tbl["ww_recent"].apply(_ww_display)
                 if "wastewater_coverage" in tbl.columns:
                     tbl["Wastewater coverage"] = tbl["wastewater_coverage"].map({True: "Yes", False: "No"})
-                show_cols = ["state", "cases_recent", "Wastewater signal"] + (["Wastewater coverage"] if "wastewater_coverage" in tbl.columns else []) + ["total_risk"]
+                show_cols = ["state", "cases_recent", "Wastewater signal (per 100k)"] + (["Wastewater coverage"] if "wastewater_coverage" in tbl.columns else []) + ["total_risk"]
                 tbl = tbl[show_cols].rename(columns={"state": "State", "cases_recent": "Recent cases", "total_risk": "Final score"})
             else:
                 tbl = sr[["state", "risk_tier", "risk_score"]].copy().rename(columns={"state": "State", "risk_tier": "Risk tier", "risk_score": "Risk score"})
-            st.dataframe(tbl, use_container_width=True, hide_index=True)
+            st.dataframe(tbl, width="stretch", hide_index=True)
             with st.expander("How state risk is calculated", expanded=False):
                 has_ww_pts = "wastewater_points" in sr.columns and (sr["wastewater_points"].fillna(0) != 0).any()
                 st.markdown(
@@ -523,7 +561,16 @@ def _render_main(page: str) -> None:
                         ["Wastewater", ex.get("wastewater_points", 0)],
                         ["Total", ex.get("total_risk", 0)],
                     ], columns=["Component", "Points"])
-                    st.dataframe(breakdown, use_container_width=True, hide_index=True)
+                    st.dataframe(breakdown, width="stretch", hide_index=True)
+            with st.expander("What is the wastewater signal?", expanded=False):
+                st.markdown(
+                    "The **wastewater signal** is a measure of how much measles virus genetic material was detected "
+                    "in wastewater (sewage) for that state over the last 4 weeks. The number is normalized for flow and "
+                    "population so states can be compared. In the table above it is shown **per 100k** (e.g. 2.48 = 248,000 in raw units). "
+                    "**Higher values** mean more measles signal in wastewater in that period; **lower values** mean less. "
+                    "States with no wastewater monitoring in the dataset show **No coverage**. "
+                    "The signal comes from CDC wastewater surveillance (WastewaterScan) and is used here as one input to state risk."
+                )
             st.subheader("AI report for a state")
             from dashboard.utils.state_maps import state_to_abbr, STATE_TO_ABBR
             abbr_to_name = {v: k for k, v in STATE_TO_ABBR.items()}
@@ -589,7 +636,7 @@ def _render_main(page: str) -> None:
             forecast_table = sr.copy()
             forecast_table["Outlook"] = forecast_table["risk_tier"].apply(_outlook)
             forecast_table["What's driving it"] = forecast_table.apply(_drivers, axis=1)
-            st.dataframe(forecast_table[["state", "Outlook", "What's driving it"]].rename(columns={"state": "State"}), use_container_width=True, hide_index=True)
+            st.dataframe(forecast_table[["state", "Outlook", "What's driving it"]].rename(columns={"state": "State"}), width="stretch", hide_index=True)
             national_line = ""
             if st.session_state.get("forecast_df") is not None and not st.session_state.forecast_df.empty:
                 fc = st.session_state.forecast_df
@@ -624,7 +671,7 @@ def _render_main(page: str) -> None:
         else:
             st.info("No state risk data yet. Load **Kindergarten** and click **Refresh data**.")
 
-    if st.session_state.get("show_debug"):
+    if SHOW_DEBUG_UI and st.session_state.get("show_debug"):
         with st.expander("Debug", expanded=True):
             # NNDSS
             na = st.session_state.get("nndss_agg")
@@ -677,7 +724,8 @@ with st.sidebar:
         ["Overview", "Historical trends", "Kindergarten coverage", "Wastewater vs NNDSS", "State risk", "Forecast"],
         label_visibility="collapsed",
     )
-    show_debug = st.checkbox("Show debug panel", value=False, key="show_debug")
+    if SHOW_DEBUG_UI:
+        show_debug = st.checkbox("Show debug panel", value=False, key="show_debug")
     refresh = st.button("Refresh data")
     use_cache = not refresh
     st.caption("Data sources")
