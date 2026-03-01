@@ -8,16 +8,19 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-# Add project root for imports when running as streamlit run dashboard/app.py
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
+# App directory (dashboard/ locally, bundle root on Connect) must be on path so
+# "from loaders", "from utils.logging_config" etc. work in both layouts.
+APP_DIR = Path(__file__).resolve().parent
+if str(APP_DIR) not in sys.path:
+    sys.path.insert(0, str(APP_DIR))
+# Project root for .env (parent of dashboard when run locally)
+PROJECT_ROOT = APP_DIR.parent
 
 import numpy as np
 import pandas as pd
 import streamlit as st
 
-from dashboard.utils.logging_config import setup_logging, get_logger
+from utils.logging_config import setup_logging, get_logger
 
 setup_logging()
 logger = get_logger("app")
@@ -48,8 +51,8 @@ if "coef_df" not in st.session_state:
 
 
 def load_and_model(use_cache: bool = True, outbreak_percentile: float = 95.0):
-    from dashboard.loaders import load_all, clear_cache
-    from dashboard.risk import (
+    from loaders import load_all, clear_cache
+    from risk import (
         fit_stage1,
         predict_alarm_probability,
         get_forecast,
@@ -66,7 +69,7 @@ def load_and_model(use_cache: bool = True, outbreak_percentile: float = 95.0):
     st.session_state.ww = ww
     st.session_state.nndss = nndss
     # Single canonical NNDSS national weekly aggregation for all tabs
-    from dashboard.risk import get_national_weekly_cases
+    from risk import get_national_weekly_cases
     nndss_agg, nndss_audit = get_national_weekly_cases(nndss) if (nndss is not None and not nndss.empty) else (pd.DataFrame(), {})
     st.session_state.nndss_agg = nndss_agg
     st.session_state.nndss_audit = nndss_audit
@@ -167,7 +170,7 @@ def _render_main(page: str) -> None:
                 "or when the time of year is typically associated with more cases. The model combines these into a single probability."
             )
         with st.expander("How is baseline risk/score calculated?", expanded=False):
-            from dashboard.risk import get_baseline_risk_components
+            from risk import get_baseline_risk_components
             comp = get_baseline_risk_components(
                 hist if hist is not None else pd.DataFrame(),
                 nndss if nndss is not None else pd.DataFrame(),
@@ -210,7 +213,7 @@ def _render_main(page: str) -> None:
         nndss_agg = st.session_state.get("nndss_agg")
         nndss_audit = st.session_state.get("nndss_audit", {})
         if (nndss_agg is None or (isinstance(nndss_agg, pd.DataFrame) and nndss_agg.empty)) and nndss is not None and not nndss.empty:
-            from dashboard.risk import get_national_weekly_cases
+            from risk import get_national_weekly_cases
             nndss_agg, nndss_audit = get_national_weekly_cases(nndss)
         if nndss is not None and not nndss.empty and (nndss_agg is None or (isinstance(nndss_agg, pd.DataFrame) and nndss_agg.empty)):
             top10 = nndss_audit.get("columns_available_top10") if nndss_audit else list(nndss.columns)[:10]
@@ -296,7 +299,7 @@ def _render_main(page: str) -> None:
             if pct_col and not kg_work.empty:
                 kg_work["coverage"] = pd.to_numeric(kg_work[pct_col], errors="coerce")
                 cov_agg = kg_work.groupby(state_col, as_index=False)["coverage"].mean()
-                from dashboard.utils.state_maps import state_to_abbr, STATE_TO_ABBR
+                from utils.state_maps import state_to_abbr, STATE_TO_ABBR
                 cov_agg["abbr"] = cov_agg[state_col].astype(str).apply(state_to_abbr)
                 # Include all US states so MT, WV etc. show "Data Unavailable" on hover
                 all_states = pd.DataFrame([{"abbr": abbr} for abbr in STATE_TO_ABBR.values()])
@@ -348,7 +351,7 @@ def _render_main(page: str) -> None:
 
     elif page == "Wastewater vs NNDSS":
         st.header("Wastewater vs NNDSS: detection frequency")
-        from dashboard.risk import (
+        from risk import (
             compute_ww_detection_frequency,
             validate_ww_nndss_audit,
         )
@@ -477,7 +480,7 @@ def _render_main(page: str) -> None:
         ww_nndss_summary_text = " ".join(ww_nndss_summary_parts) if ww_nndss_summary_parts else "No summary data available."
         data_as_of_ww = st.session_state.get("data_as_of", "")
         if st.button("Generate AI report", key="btn_ww_nndss_report"):
-            from dashboard.ollama_client import get_ollama_ww_nndss_report
+            from ollama_client import get_ollama_ww_nndss_report
             report = get_ollama_ww_nndss_report(ww_nndss_summary_text, data_as_of_ww)
             st.session_state.ww_nndss_ai_report = report or "Could not generate (add OLLAMA_API_KEY to .env or check dashboard.log)."
         if st.session_state.get("ww_nndss_ai_report"):
@@ -506,7 +509,7 @@ def _render_main(page: str) -> None:
         st.caption("Risk tier and score by state (coverage, recent cases, wastewater where available).")
         sr = st.session_state.get("state_risk_df")
         if sr is not None and not sr.empty:
-            from dashboard.utils.state_maps import state_to_abbr
+            from utils.state_maps import state_to_abbr
             sr = sr.copy()
             sr["abbr"] = sr["state"].apply(state_to_abbr)
             sr_map = sr.dropna(subset=["abbr"])
@@ -572,7 +575,7 @@ def _render_main(page: str) -> None:
                     "The signal comes from CDC wastewater surveillance (WastewaterScan) and is used here as one input to state risk."
                 )
             st.subheader("AI report for a state")
-            from dashboard.utils.state_maps import state_to_abbr, STATE_TO_ABBR
+            from utils.state_maps import state_to_abbr, STATE_TO_ABBR
             abbr_to_name = {v: k for k, v in STATE_TO_ABBR.items()}
             seen_abbr = set()
             state_options = ["— Select a state —"]
@@ -599,7 +602,7 @@ def _render_main(page: str) -> None:
                         if not sub.empty:
                             cov_pct = pd.to_numeric(sub[pc], errors="coerce").mean()
                 if st.button("Generate AI report for this state", key="btn_state_report"):
-                    from dashboard.ollama_client import get_ollama_state_report
+                    from ollama_client import get_ollama_state_report
                     report = get_ollama_state_report(
                         selected, str(row["risk_tier"]), float(row["risk_score"]),
                         coverage_pct=cov_pct, data_as_of=st.session_state.get("data_as_of", ""),
@@ -652,7 +655,7 @@ def _render_main(page: str) -> None:
                     st.rerun()
             else:
                 if st.button("Generate AI interpretation", key="forecast_ai_btn"):
-                    from dashboard.ollama_client import get_ollama_forecast_interpretation
+                    from ollama_client import get_ollama_forecast_interpretation
                     outlook_counts = forecast_table["Outlook"].value_counts()
                     summary = "State outlooks: " + "; ".join([f"{k}: {v} states" for k, v in outlook_counts.items()]) + ". Sample drivers: " + "; ".join(forecast_table["What's driving it"].head(5).tolist())
                     # Current hotspots: top 5–10 states by risk_score
@@ -685,7 +688,7 @@ def _render_main(page: str) -> None:
             # Wastewater
             ww_df = st.session_state.get("ww")
             if ww_df is not None and not ww_df.empty:
-                from dashboard.risk import compute_ww_detection_frequency
+                from risk import compute_ww_detection_frequency
                 ww_weekly, ww_val = compute_ww_detection_frequency(ww_df, year_min=None, year_max=None)
                 st.write("**Wastewater** — pcr_target_used:", ww_val.get("pcr_target_used"), "| weeks_min:", ww_val.get("weeks_min"), "| weeks_max:", ww_val.get("weeks_max"))
                 if not ww_weekly.empty:

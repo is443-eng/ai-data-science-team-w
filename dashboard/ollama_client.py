@@ -12,7 +12,7 @@ from typing import Optional
 
 import requests
 
-from dashboard.utils.logging_config import get_logger
+from utils.logging_config import get_logger
 
 logger = get_logger("ollama_client")
 

@@ -12,7 +12,7 @@ from typing import Optional, Tuple
 import numpy as np
 import pandas as pd
 
-from dashboard.utils.logging_config import get_logger
+from utils.logging_config import get_logger
 
 logger = get_logger("risk")
 
@@ -76,7 +76,7 @@ def get_national_weekly_cases(nndss: pd.DataFrame) -> Tuple[pd.DataFrame, dict]:
     If US RESIDENTS is missing or incomplete (max year < overall max), builds national by summing
     valid jurisdiction rows only (state_to_abbr). Uses m2-first case column priority.
     """
-    from dashboard.utils.state_maps import state_to_abbr
+    from utils.state_maps import state_to_abbr
     empty_df = pd.DataFrame(columns=["year", "week", "cases"])
     audit = {"case_column_used": None, "year_min": None, "year_max": None, "year_week_max": None, "columns_available_top10": None,
              "n_national_rows": None, "year_max_before_agg": None, "year_max_after_agg": None, "candidate_case_columns": None,
@@ -250,7 +250,7 @@ def _state_weekly_cases(nndss: pd.DataFrame) -> pd.DataFrame:
 
 def _wastewater_state_weekly(ww: pd.DataFrame) -> pd.DataFrame:
     """Wastewater signal by state (normalized to state abbr via state_to_abbr). Returns df with state=abbr, year, week, ww_signal."""
-    from dashboard.utils.state_maps import state_to_abbr
+    from utils.state_maps import state_to_abbr
     if ww.empty or "wwtp_jurisdiction" not in ww.columns:
         return pd.DataFrame(columns=["state", "year", "week", "ww_signal"])
     year_col = next((c for c in ("year", "mmwr_year") if c in ww.columns), None)
@@ -746,7 +746,7 @@ def get_state_risk_df(
         pct_col = kindergarten.columns[1] if len(kindergarten.columns) > 1 else None
 
     # Last 4 weeks: state-level cases (keyed by state abbreviation for consistent lookup)
-    from dashboard.utils.state_maps import state_to_abbr
+    from utils.state_maps import state_to_abbr
     state_cases = _state_weekly_cases(nndss) if nndss is not None and not nndss.empty else pd.DataFrame()
     state_ww = _wastewater_state_weekly(wastewater) if wastewater is not None and not wastewater.empty else pd.DataFrame()
     cases_recent_by_state = {}

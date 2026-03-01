@@ -14,7 +14,7 @@ from typing import Any, Optional, Tuple
 import pandas as pd
 import requests
 
-from dashboard.utils.logging_config import get_logger
+from utils.logging_config import get_logger
 
 logger = get_logger("loaders")
 
