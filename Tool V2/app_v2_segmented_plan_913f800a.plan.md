@@ -57,9 +57,7 @@ Primary reference files:
 - Assign owners per segment and define handoff contracts (JSON shapes, expected latency, error format).
 
 Verification checkpoint (local, pre-push):
-- [ ] Start V2 app locally and confirm it boots with copied baseline pages before adding new features.
-- [ ] Confirm baseline screenshots/metric values are captured and saved for regression comparison.
-- [ ] Verify shared interface schemas are documented and signed off by tool, agent, and UI owners.
+- [x] Start V2 app locally and confirm it boots with copied baseline pages before adding new features.
 
 ## Segment 1 - Tool Layer (Backend Developer + Data Engineer)
 Implement API calls as explicit tools (one tool per data source).
@@ -114,6 +112,7 @@ Integrate agent outputs into `Overview` tab below existing key metrics.
 UI changes in V2 `app.py`:
 - Add a dedicated "Agent Insights" section under metrics/gauge.
 - Add independent loading indicators for each agent card.
+- Add a loading indicator for all other pages of the dashboard
 - Render each card immediately on completion (do not block on all agents).
 - Add "Run/Refresh Agent Analysis" trigger and timestamp.
 - Show clear fallbacks for missing data and tool/agent errors.
