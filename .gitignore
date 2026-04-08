@@ -16,6 +16,9 @@ env/
 # Data output (CSV from API scripts)
 data/
 
+# Streamlit local log (Tool V2 / dashboard)
+**/dashboard.log
+
 # IDE / OS
 .idea/
 .DS_Store
