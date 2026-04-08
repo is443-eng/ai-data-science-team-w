@@ -36,6 +36,20 @@ Use `contracts.schemas.ToolErrorDetail` for the same shape when attaching to met
 
 Parameters remain backward-compatible with V1 dashboard semantics (Segment 1 fills these per tool).
 
+## Registered tool names (Segment 1)
+
+| `tool_name` | Module | Source / notes |
+|-------------|--------|----------------|
+| `child_vax` | `tools/child_vax_tool.py` | CDC `fhky-rtsk` (0–35 mo MMR); default WHERE matches V1 script |
+| `kindergarten_vax` | `tools/kindergarten_vax_tool.py` | Same as `loaders.load_kindergarten` (`ijqb-a7ye`) |
+| `teen_vax` | `tools/teen_vax_tool.py` | CDC `ee48-w5t6` (13–17 MMR); default WHERE matches V1 script |
+| `wastewater` | `tools/wastewater_tool.py` | Same as `loaders.load_wastewater` (`akvg-8vrb`) |
+| `nndss` | `tools/nndss_tool.py` | Same as `loaders.load_nndss` (`x9gk-5huc`) |
+
+Dynamic dispatch: `tools.registry.run_tool(name, parameters)`. Unknown `name` returns `ToolOutput` with `status: "error"` and `errors` containing `unknown_tool:…` plus `known_tools:…`.
+
+Shared parameters (where supported): `use_cache` (bool, default `true`) for loader-backed tools; `limit`, `timeout_s`, optional `where` for child/teen (see tool modules).
+
 ## `ToolOutput`
 
 ```json

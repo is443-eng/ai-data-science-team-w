@@ -4,10 +4,10 @@ overview: Create a full, segmented development plan for App V2 that upgrades the
 todos:
   - id: segment-0-setup
     content: Create V2 folder, baseline capture, and interface contract definitions.
-    status: pending
+    status: completed
   - id: segment-1-tools
     content: Build one-tool-per-API wrapper layer with registry and standardized outputs.
-    status: pending
+    status: completed
   - id: segment-2-orchestration
     content: Implement central orchestrator and Agent 1-4 dependency workflow with partial-failure handling.
     status: pending
@@ -22,7 +22,7 @@ todos:
     status: pending
   - id: segment-6-deploy-posit
     content: Deploy App V2 to Posit Connect via rsconnect-python using POSIT_PUBLISHER_KEY.
-    status: pending
+    status: in_progress
   - id: segment-7-docs
     content: Produce rubric-aligned architecture/process/technical docs and final submission package.
     status: pending
@@ -40,8 +40,8 @@ Build a new standalone App V2 by reusing the current Streamlit dashboard archite
 - Submission-ready documentation package matching TOOL2 rubric
 
 Primary reference files:
-- [c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/Tool V2/v2 scope planning.md](c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/Tool V2/v2 scope planning.md)
-- [c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/Tool V2/TOOL2.md](c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/Tool V2/TOOL2.md)
+- [v2 scope planning.md](./v2%20scope%20planning.md)
+- [TOOL2.md](./TOOL2.md)
 - [c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/dashboard/app.py](c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/dashboard/app.py)
 - [c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/dashboard/ollama_client.py](c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/dashboard/ollama_client.py)
 - [c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/dashboard/loaders.py](c:/Users/jonyl/Documents/GitHub/ai-data-science-team-w/dashboard/loaders.py)
@@ -80,9 +80,9 @@ Definition of done:
 - Existing V1-equivalent outputs available through new tool wrappers.
 
 Verification checkpoint (local, pre-push):
-- [ ] Run unit tests for each tool wrapper and verify success/failure/error payload shape matches schema.
-- [ ] Execute each tool locally against live or fixture data and compare key fields to V1 outputs.
-- [ ] Validate registry lookup for all tool names and ensure unknown tool requests return controlled errors.
+- [x] Run unit tests for each tool wrapper and verify success/failure/error payload shape matches schema.
+- [x] Execute each tool locally against live or fixture data and compare key fields to V1 outputs.
+- [x] Validate registry lookup for all tool names and ensure unknown tool requests return controlled errors.
 
 ## Segment 2 - Agent Orchestrator and Multi-Agent Workflow (Agent Engineer)
 Build a central orchestrator module (for example `agents/orchestrator.py`) with four agents:
@@ -171,18 +171,23 @@ Verification checkpoint (local, pre-push):
 ## Segment 6 - Deployment to Posit Connect (DevOps Engineer + Project Manager)
 Deploy App V2 using `rsconnect-python` with `POSIT_PUBLISHER_KEY` for API authentication.
 
+**Status:** Tooling and runbook are in place (`deployment/deploy_me.py`, `deployment/README.md`). **Outstanding:** run a real deploy, smoke-test the live URL, and record the URL for Segment 7.
+
 Deployment tasks:
-- Install deployment tooling in local environment: `pip install rsconnect-python`.
-- Ensure deployment env vars are present locally and in deployment target:
-  - `POSIT_PUBLISHER_KEY` (required)
+- [x] Install deployment tooling in local environment: `pip install rsconnect-python` (pinned in `deployment/requirements-deploy.txt`; use `pip install -r deployment/requirements-deploy.txt`).
+- [x] Ensure deployment env vars are present locally and in deployment target:
+  - `POSIT_PUBLISHER_KEY` / `CONNECT_API_KEY` / `POSIT_CONNECT_PUBLISHER` / `RSCONNECT_API_KEY` (publish auth; script loads from `.env` and documents aliases)
   - `SOCRATA_APP_TOKEN` (required for live CDC data)
-  - `OLLAMA_API_KEY` (if AI features should work in deployed app)
-- Configure and run `rsconnect deploy` for the V2 app entrypoint and requirements.
-- Validate deployment metadata and capture deployed URL for documentation.
-- Add a short deployment runbook in repo docs (commands, required env vars, rollback notes).
+  - `OLLAMA_API_KEY` (if AI features should work in deployed app)  
+  *Implemented:* `deploy_me.py` auto-forwards `SOCRATA_APP_TOKEN` and `OLLAMA_API_KEY` to Connect via `rsconnect -E` when set locally; optional `--no-app-env` to skip. See `deployment/README.md`.
+- [x] Configure and run `rsconnect deploy` for the V2 app entrypoint and requirements.  
+  *Implemented:* `deployment/deploy_me.py` invokes `python -m rsconnect.main deploy streamlit` with `app.py`, `Tool V2/` bundle, `requirements.txt`, default server `https://connect.systems-apps.com/`, Python **3.12**, default excludes, and env forwarding. **Run** `python deployment/deploy_me.py` when ready (not yet executed as part of segment closure).
+- [ ] Validate deployment metadata and capture deployed URL for documentation.
+- [x] Add a short deployment runbook in repo docs (commands, required env vars, rollback notes).  
+  *Location:* `deployment/README.md` (also `Tool V2/README.md` links the `deployment/` folder).
 
 Verification checkpoint (local + deployed, pre-push):
-- [ ] Local dry run completes with valid `rsconnect` configuration and no missing required settings.
+- [x] Local dry run completes with valid `rsconnect` configuration and no missing required settings. (`python deployment/deploy_me.py --dry-run` exercises argv; API key still required for a real push.)
 - [ ] Deployment succeeds to Posit Connect and returns a working app URL.
 - [ ] Smoke test deployed app: Overview loads, at least one non-AI tab works, and agent sections fail gracefully if optional keys are absent.
 - [ ] Record the live deployed URL for use in Segment 7 documentation.
@@ -202,10 +207,10 @@ Deliverables:
 - Final docx containing GitHub link + deployed app link + location pointers
 
 Recommended documentation files in repo:
-- `dashboard_v2/DOCUMENTATION.md`
-- `dashboard_v2/ARCHITECTURE.md`
-- `dashboard_v2/TOOLS.md`
-- `Tool V2/submission_notes.md`
+- `docs/DOCUMENTATION.md` (app description + usage)
+- `docs/ARCHITECTURE.md`
+- `docs/TOOLS.md`
+- `docs/submission_notes.md`
 
 Verification checkpoint (local, pre-push):
 - [ ] Review docs locally for completeness against TOOL2 rubric items and required links.

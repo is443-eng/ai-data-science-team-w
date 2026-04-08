@@ -1,0 +1,2 @@
+# Optional: install only when deploying (keeps the main app env minimal)
+rsconnect-python>=1.28.0
