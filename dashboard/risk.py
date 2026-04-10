@@ -249,7 +249,9 @@ def _state_weekly_cases(nndss: pd.DataFrame) -> pd.DataFrame:
 def _wastewater_state_weekly(ww: pd.DataFrame) -> pd.DataFrame:
     """Wastewater signal by state (normalized to state abbr via state_to_abbr). Returns df with state=abbr, year, week, ww_signal."""
     from dashboard.utils.state_maps import state_to_abbr
-    if ww.empty or "wwtp_jurisdiction" not in ww.columns:
+    _jur = ("wwtp_jurisdiction", "state_territory", "state", "jurisdiction", "geography")
+    jur_col = next((c for c in _jur if c in ww.columns), None)
+    if ww.empty or not jur_col:
         return pd.DataFrame(columns=["state", "year", "week", "ww_signal"])
     year_col = next((c for c in ("year", "mmwr_year") if c in ww.columns), None)
     week_col = next((c for c in ("week", "mmwr_week") if c in ww.columns), None)
@@ -259,7 +261,7 @@ def _wastewater_state_weekly(ww: pd.DataFrame) -> pd.DataFrame:
     if not signal_col:
         return pd.DataFrame(columns=["state", "year", "week", "ww_signal"])
     ww = ww.copy()
-    ww["state"] = ww["wwtp_jurisdiction"].astype(str).str.strip().apply(state_to_abbr)
+    ww["state"] = ww[jur_col].astype(str).str.strip().apply(state_to_abbr)
     ww = ww.dropna(subset=["state"])
     if ww.empty:
         return pd.DataFrame(columns=["state", "year", "week", "ww_signal"])
