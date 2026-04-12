@@ -122,7 +122,9 @@ def _render_main(page: str) -> None:
 
     if page == "Overview":
         st.header("Risk of Measles Outbreak in US")
-        st.caption("Key risk metrics at a glance.")
+        st.caption(
+            "A quick, easy-to-read snapshot of risk. Use the **other tabs** for charts, maps, and technical detail."
+        )
         c1, c2, c3 = st.columns(3)
         with c1:
             st.metric("Outbreak alarm", f"{st.session_state.get('alarm_prob', 0.5):.0%}",
@@ -153,6 +155,9 @@ def _render_main(page: str) -> None:
         ))
         fig_gauge.update_layout(height=180, margin=dict(l=40, r=40, t=50, b=30))
         st.plotly_chart(fig_gauge, width="stretch")
+        from ui.agent_insights import render_agent_insights_overview
+
+        render_agent_insights_overview()
         with st.expander("How is alarm probability calculated?", expanded=False):
             st.markdown("**Inputs used:** Recent national cases, wastewater trend (prior 8–12 weeks of detection data), kindergarten MMR coverage (national), and week of year (seasonality).")
             coef_df = st.session_state.get("coef_df")

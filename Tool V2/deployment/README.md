@@ -77,6 +77,12 @@ python deployment/deploy_me.py --app-id <guid-from-connect>
 
 See `python deployment/deploy_me.py --help` for all options.
 
+## After deploy: testing and recording the URL
+
+1. Track dry-run and real deploy in [`../docs/DEPLOYMENT_TEST_LOG.md`](../docs/DEPLOYMENT_TEST_LOG.md).
+2. Copy the live content URL into [`../docs/submission_notes.md`](../docs/submission_notes.md).
+3. Optional: `bash deployment/smoke_check_url.sh 'https://…'` then run the browser checklist in `submission_notes.md`.
+
 ## References
 
 - [rsconnect-python](https://docs.posit.co/rsconnect-python/)

@@ -8,7 +8,7 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 import requests
 
@@ -19,8 +19,68 @@ logger = get_logger("ollama_client")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OLLAMA_URL = "https://ollama.com/api/chat"
 # Prefer cloud model tag; some setups use short name
-OLLAMA_MODELS = ("gpt-oss:20b-cloud", "gpt-oss:20b", "llama3.2:3b")
+OLLAMA_MODELS = ("gemma4:31b-cloud", "gpt-oss:20b-cloud", "gpt-oss:20b", "llama3.2:3b")
 MAX_PROMPT_CHARS = 8000
+
+
+def _post_chat_messages(messages: list[dict[str, Any]], *, timeout: int = 90) -> Optional[str]:
+    """
+    POST /api/chat with model fallback. Shared by dashboard helpers and orchestrator agents.
+    Returns assistant text or None (missing key, HTTP error, parse error).
+    """
+    _load_env()
+    key = (os.environ.get("OLLAMA_API_KEY") or "").strip()
+    if not key:
+        logger.warning("Ollama skipped: OLLAMA_API_KEY not set")
+        return None
+    headers = {
+        "Authorization": f"Bearer {key}",
+        "Content-Type": "application/json",
+    }
+    for model in OLLAMA_MODELS:
+        body = {
+            "model": model,
+            "messages": messages,
+            "stream": False,
+        }
+        try:
+            response = requests.post(OLLAMA_URL, headers=headers, json=body, timeout=timeout)
+        except requests.RequestException as e:
+            logger.error("Ollama request failed reason=%s", e)
+            return None
+        if response.status_code == 200:
+            break
+        if response.status_code in (404, 422):
+            logger.warning("Ollama model %s not available status=%s", model, response.status_code)
+            continue
+        logger.error("Ollama request failed status=%s body=%s", response.status_code, response.text[:300])
+        return None
+    else:
+        logger.error("Ollama: no model succeeded")
+        return None
+    try:
+        out = response.json()
+        report = out.get("message", {}).get("content", "")
+        return (report or "").strip() or None
+    except (KeyError, json.JSONDecodeError) as e:
+        logger.error("Ollama parse failed reason=%s", e)
+        return None
+
+
+def chat_completion(system: str, user: str, *, timeout_s: int = 90) -> Optional[str]:
+    """
+    System + user chat for multi-agent orchestration. Truncates user text if the combined
+    payload exceeds MAX_PROMPT_CHARS (system kept intact).
+    """
+    system = system or ""
+    user = user or ""
+    if len(system) + len(user) > MAX_PROMPT_CHARS:
+        budget = max(0, MAX_PROMPT_CHARS - len(system) - len("\n... (truncated)"))
+        user = user[:budget] + "\n... (truncated)"
+    return _post_chat_messages(
+        [{"role": "system", "content": system}, {"role": "user", "content": user}],
+        timeout=timeout_s,
+    )
 
 
 def _load_env() -> None:
@@ -44,11 +104,6 @@ def get_ollama_summary(
     Send current risk summary to Ollama Cloud; return AI-generated interpretation.
     On failure (missing key, timeout, 4xx/5xx) returns None and logs (no key).
     """
-    _load_env()
-    key = (os.environ.get("OLLAMA_API_KEY") or "").strip()
-    if not key:
-        logger.warning("Ollama skipped: OLLAMA_API_KEY not set")
-        return None
     drivers_str = ""
     if top_drivers:
         drivers_str = "Top drivers of outbreak alarm: " + "; ".join(str(d) for d in top_drivers[:5])
@@ -69,38 +124,7 @@ def get_ollama_summary(
         "Do not make up numbers; only use the provided data. Use clear, non-technical language.\n\n"
         f"{payload_text}"
     )
-    headers = {
-        "Authorization": f"Bearer {key}",
-        "Content-Type": "application/json",
-    }
-    for model in OLLAMA_MODELS:
-        body = {
-            "model": model,
-            "messages": [{"role": "user", "content": prompt}],
-            "stream": False,
-        }
-        try:
-            response = requests.post(OLLAMA_URL, headers=headers, json=body, timeout=90)
-        except requests.RequestException as e:
-            logger.error("Ollama request failed reason=%s", e)
-            return None
-        if response.status_code == 200:
-            break
-        if response.status_code in (404, 422):
-            logger.warning("Ollama model %s not available status=%s", model, response.status_code)
-            continue
-        logger.error("Ollama request failed status=%s body=%s", response.status_code, response.text[:300])
-        return None
-    else:
-        logger.error("Ollama: no model succeeded")
-        return None
-    try:
-        out = response.json()
-        report = out.get("message", {}).get("content", "")
-        return (report or "").strip() or None
-    except (KeyError, json.JSONDecodeError) as e:
-        logger.error("Ollama parse failed reason=%s", e)
-        return None
+    return _post_chat_messages([{"role": "user", "content": prompt}], timeout=90)
 
 
 def get_ollama_follow_up(question: str, context_summary: str) -> Optional[str]:
