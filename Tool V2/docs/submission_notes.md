@@ -11,7 +11,7 @@
 - **Live app URL:** _Paste the Connect content URL after a successful deploy — e.g. `https://connect.systems-apps.com/.../`_
 - **Deploy command (from `Tool V2/`):**  
   `python3 deployment/deploy_me.py`  
-  Set `CONNECT_API_KEY` (or `POSIT_PUBLISHER_KEY` / `RSCONNECT_API_KEY`) and optionally `SOCRATA_APP_TOKEN`, `OLLAMA_API_KEY` in `.env` so the bundle forwards API access to Connect (`-E` flags in script).
+  Set `CONNECT_API_KEY` (or `POSIT_PUBLISHER_KEY` / `RSCONNECT_API_KEY`) and optionally `SOCRATA_APP_TOKEN`, `OLLAMA_API_KEY`, **`OPENAI_API_KEY`** (and optional `OPENAI_MODEL`) in `.env` so the bundle forwards API access to Connect (`-E` flags in script). Use **OpenAI** for agents when `OPENAI_API_KEY` is set; otherwise the app uses Ollama Cloud if `OLLAMA_API_KEY` is set.
 - **Dry-run (validates bundle args without publishing):**  
   `python3 deployment/deploy_me.py --dry-run`  
   Verified: exits `0`, prints `rsconnect` command and `Tool V2` working directory (no Connect key required). Full deploy requires a key in `.env` or `--api-key`.

@@ -152,12 +152,13 @@ def test_order_parallel_then_sequential(mock_tools: MagicMock, mock_chat: MagicM
 @patch("ollama_client._load_env")
 @patch("agents.orchestrator.registry_run_tool")
 def test_missing_api_key_llm_agents_error(mock_tools: MagicMock, mock_load_env: MagicMock, monkeypatch) -> None:
-    """chat_completion returns None when OLLAMA_API_KEY is unset (conftest may load .env)."""
+    """chat_completion returns None when no LLM key is set (conftest may load .env)."""
     mock_tools.side_effect = lambda name, p=None: _ok_tool(name)
     from agents.orchestrator import RiskFields, run_agent_pipeline
 
     mock_load_env.return_value = None
     monkeypatch.delenv("OLLAMA_API_KEY", raising=False)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
     run = run_agent_pipeline(
         request_id="t4",
         selected_state="Texas",
