@@ -1,0 +1,40 @@
+%% Tool V2 — data + agent flow (Mermaid source; paste into docx or render with mermaid-cli / GitHub)
+flowchart TB
+  subgraph Data["Data layer"]
+    CDC["CDC Socrata APIs"]
+    L["loaders.load_all"]
+    CDC --> L
+  end
+
+  subgraph Model["Risk model"]
+    R["risk: stage-1 alarm, forecast, state risk"]
+    L --> R
+  end
+
+  subgraph UI["Streamlit app.py"]
+    O["Overview + agent insights"]
+    T1["Historical / Kindergarten / WW vs NNDSS"]
+    T2["State risk / Forecast"]
+    R --> O
+    R --> T1
+    R --> T2
+  end
+
+  subgraph Orch["Orchestrator agents"]
+    A1["Agent 1: tools via registry"]
+    A2["Agent 2: state LLM"]
+    A3["Agent 3: national LLM"]
+    A4["Agent 4: parent brief LLM"]
+    A1 --> A2
+    A1 --> A3
+    A2 --> A4
+    A3 -.-> O
+  end
+
+  L --> A1
+  OC["Ollama Cloud chat API"] --> A2
+  OC --> A3
+  OC --> A4
+  A2 --> O
+  A3 --> O
+  A4 --> O
