@@ -37,10 +37,11 @@ def _format_last_run_utc(iso_ts: str) -> str:
 
 def _friendly_pipeline_error(msg: str) -> str:
     m = (msg or "").lower()
-    if "ollama" in m or "api_key" in m:
+    if "ollama" in m or "openai" in m or "api_key" in m:
         return (
-            "We couldn’t generate the AI summaries. Add **OLLAMA_API_KEY** to your `.env` file, "
-            "or turn off **Include AI-written summaries** and try again for a data-only refresh."
+            "We couldn’t generate the AI summaries. Add **OPENAI_API_KEY** (OpenAI) or **OLLAMA_API_KEY** (Ollama Cloud) "
+            "to your environment or `.env`, or set them on Posit Connect under **Vars**. "
+            "You can turn off **Include AI-written summaries** for a data-only refresh."
         )
     if "timeout" in m or "network" in m:
         return "Something timed out or the network was unavailable. Wait a moment and tap **Update my summaries** again."
@@ -83,7 +84,7 @@ def render_agent_insights_overview() -> None:
         st.checkbox(
             "Include AI-written summaries",
             key="agent_include_llm",
-            help="When on, we add short AI paragraphs (needs an Ollama Cloud key). When off, only the automatic data check runs—usually faster.",
+            help="When on, we add short AI paragraphs (needs OPENAI_API_KEY or OLLAMA_API_KEY). When off, only the automatic data check runs—usually faster.",
         )
 
     run_llm = bool(st.session_state.get("agent_include_llm", True))

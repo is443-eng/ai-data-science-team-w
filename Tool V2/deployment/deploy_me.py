@@ -13,9 +13,9 @@ set ``DEPLOY_STREAMLIT_TITLE``, or ``--app-id`` / ``DEPLOY_CONNECT_APP_ID``.
 
 The Connect bundle requests **Python 3.12** by default (``--override-python-version``).
 
-If ``SOCRATA_APP_TOKEN`` and/or ``OLLAMA_API_KEY`` are set in the environment used to
-run this script (including after loading ``.env``), they are forwarded to the
-published content via ``rsconnect -E`` so the live app can reach CDC and Ollama.
+If ``SOCRATA_APP_TOKEN``, ``OLLAMA_API_KEY``, ``OPENAI_API_KEY``, and/or ``OPENAI_MODEL``
+are set in the environment used to run this script (including after loading ``.env``),
+they are forwarded to the published content via ``rsconnect -E`` so the live app can reach CDC and LLM APIs.
 
 Invocation uses ``python -m rsconnect.main`` so deploy works when ``rsconnect`` is
 not on ``PATH``.
@@ -51,6 +51,8 @@ DEFAULT_EXCLUDES = (
 AUTO_FORWARD_ENV_KEYS = (
     "SOCRATA_APP_TOKEN",
     "OLLAMA_API_KEY",
+    "OPENAI_API_KEY",
+    "OPENAI_MODEL",
 )
 
 
