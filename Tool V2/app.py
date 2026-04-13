@@ -561,8 +561,9 @@ def _render_main(page: str) -> None:
                 if not has_ww_pts:
                     st.caption("States without wastewater coverage get wastewater_points=0 and total score capped at 80 (coverage + cases only); they are not rescaled to 100.")
                 st.markdown(
-                    "**Risk tier:** **High** = total ≥ 70; **Medium** = 40–69; **Low** &lt; 40. "
-                    "Thresholds and formulas are for situational awareness only."
+                    "**Risk tier:** **High**, **medium**, and **low** split states into **three equal groups** by "
+                    "**total_risk** on this run (highest third = high, middle third = medium, lowest third = low)—not fixed score cutoffs. "
+                    "Use **Final score** for absolute comparison. Tiers are for situational awareness only."
                 )
                 br_cols = ["coverage_points", "case_points", "wastewater_points", "total_risk"]
                 if all(c in sr.columns for c in br_cols):

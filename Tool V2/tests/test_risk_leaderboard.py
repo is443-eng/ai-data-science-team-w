@@ -45,6 +45,22 @@ def test_format_state_tier_counts_from_records_json() -> None:
     assert "low: 1 states" in t
 
 
+def test_assign_state_risk_tiers_equal_count_tertiles() -> None:
+    """51 jurisdictions → ~17 high, ~17 medium, ~17 low when scores differ."""
+    from collections import Counter
+
+    import numpy as np
+    import pandas as pd
+
+    from risk import assign_state_risk_tiers_from_total_risk
+
+    n = 51
+    tr = pd.Series(np.linspace(10.0, 60.0, n))
+    tiers = assign_state_risk_tiers_from_total_risk(tr)
+    c = Counter(tiers.tolist())
+    assert c["high"] == 17 and c["medium"] == 17 and c["low"] == 17
+
+
 def test_harmonize_baseline_caps_against_max_state_total_risk() -> None:
     """Overview baseline should not read ~100 when state composite max is far lower (same 0–100 display)."""
     from risk import BASELINE_STATE_COMPOSITE_HEADROOM, harmonize_baseline_with_state_composite

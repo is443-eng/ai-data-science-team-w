@@ -832,6 +832,9 @@ def get_state_risk_df(
     case_points, wastewater_points, total_risk, risk_tier, risk_score.
     States with no wastewater data get wastewater_points=0 and total_risk capped at 80 (no rescale).
 
+    **risk_tier** is **high / medium / low** by **equal-count tertiles** of ``total_risk`` among jurisdictions on this run
+    (top third / middle third / bottom third by score), not fixed cutoffs—so labels stay differentiated when scores cluster.
+
     Rows include **all 50 states + DC** (from STATE_TO_ABBR), including when kindergarten and state-level
     NNDSS are empty (imputed coverage 85.0, zero recent cases) so rankings and agent summaries always have a table.
     Kindergarten may be sparse: coverage for states missing from the kindergarten extract uses the **median
@@ -949,12 +952,6 @@ def get_state_risk_df(
         total_risk = min(cap, total_raw)
         if cases_recent == 0 and not has_ww_state:
             total_risk = min(total_risk, 60.0)
-        if total_risk >= 70:
-            tier = "high"
-        elif total_risk >= 40:
-            tier = "medium"
-        else:
-            tier = "low"
         rows.append({
             "state": st,
             "coverage": round(cov, 1),
@@ -965,15 +962,44 @@ def get_state_risk_df(
             "case_points": round(case_pts, 1),
             "wastewater_points": round(ww_pts, 1) if has_ww_state else 0.0,
             "total_risk": round(total_risk, 1),
-            "risk_tier": tier,
             "risk_score": round(total_risk, 1),
         })
     out = pd.DataFrame(rows)
+    out["risk_tier"] = assign_state_risk_tiers_from_total_risk(out["total_risk"])
     if "state" in out.columns:
         out = out.sort_values(["total_risk", "state"], ascending=[False, True])
     else:
         out = out.sort_values("total_risk", ascending=False)
     return out.reset_index(drop=True)
+
+
+def _tertile_sizes(n: int) -> tuple[int, int, int]:
+    """Equal-count split into three groups (high / medium / low); remainder goes to first groups."""
+    if n <= 0:
+        return (0, 0, 0)
+    base = n // 3
+    rem = n % 3
+    n_high = base + (1 if rem >= 1 else 0)
+    n_medium = base + (1 if rem >= 2 else 0)
+    n_low = n - n_high - n_medium
+    return (n_high, n_medium, n_low)
+
+
+def assign_state_risk_tiers_from_total_risk(total_risk: pd.Series) -> pd.Series:
+    """
+    Map total_risk to high / medium / low using **equal-count tertiles** on this run (higher score = higher tier).
+
+    Fixed cutoffs (e.g. 70/40) left almost all jurisdictions in **low** when scores clustered after imputation;
+    relative tiers keep the distribution usable for maps and the national tier sentence.
+    """
+    n = len(total_risk)
+    if n == 0:
+        return pd.Series(dtype=str)
+    tr = pd.to_numeric(total_risk, errors="coerce").fillna(0.0)
+    rk = tr.rank(method="first", ascending=False)
+    a, b, _ = _tertile_sizes(n)
+    labels = np.where(rk <= a, "high", np.where(rk <= a + b, "medium", "low"))
+    return pd.Series(labels, index=total_risk.index, dtype=str)
 
 
 # --- National weekly NNDSS trend (Agent 3 tool; deterministic summaries) ---
