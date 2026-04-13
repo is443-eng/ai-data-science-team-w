@@ -93,16 +93,16 @@ def load_and_model(use_cache: bool = True, outbreak_percentile: float = 95.0):
     except Exception:
         st.session_state.forecast_df = None
     try:
-        baseline_tier, baseline_val = get_baseline_risk(hist, nndss)
+        st.session_state.state_risk_df = get_state_risk_df(kg, nndss, ww)
+    except Exception:
+        st.session_state.state_risk_df = None
+    try:
+        baseline_tier, baseline_val = get_baseline_risk(hist, nndss, st.session_state.state_risk_df)
         st.session_state.baseline_tier = baseline_tier
         st.session_state.baseline_val = baseline_val
     except Exception:
         st.session_state.baseline_tier = "low"
         st.session_state.baseline_val = 0.0
-    try:
-        st.session_state.state_risk_df = get_state_risk_df(kg, nndss, ww)
-    except Exception:
-        st.session_state.state_risk_df = None
     return hist, kg, ww, nndss
 
 
@@ -125,16 +125,12 @@ def _render_main(page: str) -> None:
         st.caption(
             "A quick, easy-to-read snapshot of risk. Use the **other tabs** for charts, maps, and technical detail."
         )
-        c1, c2, c3 = st.columns(3)
-        with c1:
-            st.metric("Outbreak alarm", f"{st.session_state.get('alarm_prob', 0.5):.0%}",
-                      help="Probability that reported cases will exceed the threshold in the next 4 weeks.")
-        with c2:
-            st.metric("Baseline risk", st.session_state.get("baseline_tier", "low").upper(),
-                      help="Low / medium / high compared to past years.")
-        with c3:
-            st.metric("Risk score (0–100)", f"{st.session_state.get('baseline_val', 0):.0f}",
-                      help="Higher = more concern based on recent vs historical cases.")
+        st.metric(
+            "Baseline risk",
+            str(st.session_state.get("baseline_tier", "low")).upper(),
+            help="Low / medium / high compared to past years (from recent vs historical national cases).",
+        )
+        st.caption(f"Data as of: **{st.session_state.get('data_as_of', 'N/A')}**")
         baseline_val = float(st.session_state.get("baseline_val", 0))
         import plotly.graph_objects as go
         fig_gauge = go.Figure(go.Indicator(
@@ -158,6 +154,10 @@ def _render_main(page: str) -> None:
         from ui.agent_insights import render_agent_insights_overview
 
         render_agent_insights_overview()
+
+    elif page == "Historical trends":
+        st.header("Historical trends")
+        st.caption("The **Overview** tab shows baseline tier and the baseline risk meter; methodology for baseline and for the outbreak alarm model is below.")
         with st.expander("How is alarm probability calculated?", expanded=False):
             st.markdown("**Inputs used:** Recent national cases, wastewater trend (prior 8–12 weeks of detection data), kindergarten MMR coverage (national), and week of year (seasonality).")
             coef_df = st.session_state.get("coef_df")
@@ -179,6 +179,7 @@ def _render_main(page: str) -> None:
             comp = get_baseline_risk_components(
                 hist if hist is not None else pd.DataFrame(),
                 nndss if nndss is not None else pd.DataFrame(),
+                state_risk_df=st.session_state.get("state_risk_df"),
             )
             st.markdown("**Inputs used:** Historical national annual cases (CSV) and recent NNDSS weekly national cases.")
             st.markdown(
@@ -188,9 +189,15 @@ def _render_main(page: str) -> None:
             st.caption(f"Recent 5-year average: **{comp.get('recent_5yr_avg', '—')}**. Overall average: **{comp.get('overall_avg', '—')}**. Ratio: **{comp.get('ratio', '—')}**.")
             if comp.get("formula"):
                 st.caption(comp["formula"])
+            ph = comp.get("pre_harmonization_score")
+            if ph is not None and comp.get("score") is not None and float(ph) > float(comp["score"]) + 0.05:
+                st.caption(
+                    f"**Alignment with state table:** The annual/YTD-only score was **{float(ph):.1f}**; the Overview meter uses **{float(comp['score']):.1f}** "
+                    "so it stays in line with this run’s state composite scores (same 0–100 display, different formulas)."
+                )
+            if (comp.get("harmonization_note") or "").strip():
+                st.caption(comp["harmonization_note"])
             st.markdown("**Plain language:** Higher recent case levels relative to history mean a higher baseline score and medium or high tier.")
-        st.caption("See the **Forecast** tab for state-level outlook.")
-        # Export
         import io
         import csv
         rows = [
@@ -203,10 +210,7 @@ def _render_main(page: str) -> None:
         buf = io.StringIO()
         w = csv.writer(buf)
         w.writerows(rows)
-        st.download_button("Download summary as CSV", buf.getvalue(), file_name="overview_summary.csv", mime="text/csv", key="dl_overview")
-
-    elif page == "Historical trends":
-        st.header("Historical trends")
+        st.download_button("Download summary metrics as CSV", buf.getvalue(), file_name="overview_summary.csv", mime="text/csv", key="dl_historical_summary")
         if hist is not None and not hist.empty:
             case_col = "Measles Cases" if "Measles Cases" in hist.columns else hist.columns[1]
             import plotly.express as px
@@ -557,8 +561,9 @@ def _render_main(page: str) -> None:
                 if not has_ww_pts:
                     st.caption("States without wastewater coverage get wastewater_points=0 and total score capped at 80 (coverage + cases only); they are not rescaled to 100.")
                 st.markdown(
-                    "**Risk tier:** **High** = total ≥ 70; **Medium** = 40–69; **Low** &lt; 40. "
-                    "Thresholds and formulas are for situational awareness only."
+                    "**Risk tier:** **High**, **medium**, and **low** split states into **three equal groups** by "
+                    "**total_risk** on this run (highest third = high, middle third = medium, lowest third = low)—not fixed score cutoffs. "
+                    "Use **Final score** for absolute comparison. Tiers are for situational awareness only."
                 )
                 br_cols = ["coverage_points", "case_points", "wastewater_points", "total_risk"]
                 if all(c in sr.columns for c in br_cols):

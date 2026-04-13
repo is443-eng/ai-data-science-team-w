@@ -6,9 +6,10 @@ from pathlib import Path
 _PROMPTS_DIR = Path(__file__).resolve().parent
 
 _ROLE_FILES = {
-    "agent_2": "agent_2_state.md",
-    "agent_3": "agent_3_national.md",
+    "agent_2": "agent_2_state_analyst.md",
+    "agent_3": "agent_3_national_analyst.md",
     "agent_4": "agent_4_parent.md",
+    "agent_5": "agent_5_national_reporter.md",
 }
 
 
@@ -20,7 +21,7 @@ def _read(name: str) -> str:
 def orchestrator_system(role: str) -> str:
     """
     Combined system prompt: shared guardrails + role-specific instructions.
-    ``role`` is ``agent_2``, ``agent_3``, or ``agent_4``.
+    ``role`` is ``agent_2``, ``agent_3``, ``agent_4``, or ``agent_5``.
     """
     if role not in _ROLE_FILES:
         raise ValueError(f"Unknown orchestrator role: {role!r}")

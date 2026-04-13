@@ -7,7 +7,7 @@ Run after code changes that touch loaders, risk model, orchestrator, or UI. Pair
 | Step | Page / area | What to verify |
 |------|----------------|----------------|
 | 1 | Sidebar | **Refresh data** runs without unhandled errors; **data as of** caption updates or shows message if loads fail. |
-| 2 | **Overview** | Alarm / baseline / forecast snapshot renders; **AI agent insights** section loads (or shows clear error if LLM unavailable); expanders for each agent; changing **state** in sidebar changes state-specific narrative when data matches. |
+| 2 | **Overview** | Alarm / baseline / forecast snapshot renders; **AI agent insights** — after **Update my summaries**, Agent 2 reads as **state history + current risk** (metrics + excerpts); Agent 4 reads as a **simpler family version** of Agent 2; expanders match updated titles; changing **state** changes state-focused text when rows match. |
 | 3 | **Historical trends** | Charts and NNDSS weekly view selector work; no blank page on valid data. |
 | 4 | **Kindergarten coverage** | Map and table for selected year; year selector updates visuals. |
 | 5 | **Wastewater vs NNDSS** | Detection frequency / comparison visuals load; year filters behave sensibly. |
