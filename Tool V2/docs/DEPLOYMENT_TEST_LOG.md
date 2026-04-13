@@ -17,7 +17,7 @@ python3 deployment/deploy_me.py --dry-run
 
 1. Install deploy deps: `pip install -r deployment/requirements-deploy.txt`
 2. Set one of: `CONNECT_API_KEY`, `POSIT_PUBLISHER_KEY`, `POSIT_CONNECT_PUBLISHER`, or `RSCONNECT_API_KEY` in repo or `Tool V2` `.env`.
-3. Optional: set `SOCRATA_APP_TOKEN` and `OLLAMA_API_KEY` so the script forwards them (`-E`) to Connect.
+3. Optional: set `SOCRATA_APP_TOKEN`, `OPENAI_API_KEY` (recommended for agent tool calling), and/or `OLLAMA_API_KEY` so the script forwards them (`-E`) to Connect.
 4. Run:
 
 ```bash

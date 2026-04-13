@@ -29,8 +29,10 @@ Full manual pass: [`MANUAL_QA_CHECKLIST.md`](MANUAL_QA_CHECKLIST.md).
 
 ## Documentation for instructors
 
+- **Index:** [`README.md`](README.md) (this folder).
 - Deployment checklist: [`DEPLOYMENT_TEST_LOG.md`](DEPLOYMENT_TEST_LOG.md).
 - App readiness before final docs: [`APP_SUBMISSION_READINESS.md`](APP_SUBMISSION_READINESS.md).
-- Architecture and workflow: [`ARCHITECTURE.md`](ARCHITECTURE.md) (includes process diagram source).
+- Manual QA: [`MANUAL_QA_CHECKLIST.md`](MANUAL_QA_CHECKLIST.md).
+- Architecture and **five-agent** workflow: [`ARCHITECTURE.md`](ARCHITECTURE.md) (includes Mermaid + [`diagrams/architecture.mmd`](diagrams/architecture.mmd)).
 - Tool registry / contracts: [`INTERFACE_CONTRACTS.md`](INTERFACE_CONTRACTS.md), [`../tools/`](../tools/) modules.
 - TOOL2 written deliverable (export to **.docx** for Canvas, **after** URL + app freeze): [`TOOL2_SUBMISSION_PACKAGE.md`](TOOL2_SUBMISSION_PACKAGE.md).
