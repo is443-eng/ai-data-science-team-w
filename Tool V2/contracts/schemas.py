@@ -11,7 +11,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Any, Literal, Optional
 
 ToolStatus = Literal["success", "partial", "error"]
-AgentId = Literal["agent_1", "agent_2", "agent_3", "agent_4"]
+AgentId = Literal["agent_1", "agent_2", "agent_3", "agent_4", "agent_5"]
 AgentRunStatus = Literal["pending", "running", "success", "error"]
 
 
@@ -42,7 +42,7 @@ class ToolOutput:
 
 @dataclass
 class AgentContext:
-    """Shared context published after Agent 1; consumed by Agents 2–4 and the UI."""
+    """Shared context published after Agent 1; consumed by downstream LLM agents and the UI."""
 
     request_id: str
     selected_state: str

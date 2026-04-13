@@ -85,7 +85,7 @@ Shared parameters (where supported): `use_cache` (bool, default `true`) for load
 
 ```json
 {
-  "agent_id": "agent_2",
+  "agent_id": "agent_5",
   "status": "success",
   "content": "…",
   "error_message": null,
@@ -104,8 +104,8 @@ Shared parameters (where supported): `use_cache` (bool, default `true`) for load
 | Single tool call (cached) | &lt; 1 s |
 | Single tool call (live CDC) | 5–90 s |
 | Agent 1 (all tools) | dominated by slowest tool |
-| Agent 2 + 3 in parallel | LLM latency × 1 |
-| Agent 4 (after Agent 2) | LLM latency |
+| Agents 2 + 3 in parallel | LLM latency × 1 |
+| Agents 4 + 5 in parallel (after 2/3) | LLM latency × 1 |
 
 ## Code reference
 

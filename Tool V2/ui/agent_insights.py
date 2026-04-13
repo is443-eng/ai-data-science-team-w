@@ -7,11 +7,82 @@ from __future__ import annotations
 
 import uuid
 from datetime import datetime, timezone
+from typing import Any
 
+import pandas as pd
 import streamlit as st
 
 from agents.orchestrator import RiskFields, run_agent_pipeline
+from risk import format_state_risk_snapshot_line, get_baseline_risk_components
 from utils.state_maps import STATE_TO_ABBR
+
+
+def _risk_fields_from_session(selected_state: str) -> RiskFields:
+    load_status = st.session_state.get("load_status") or {}
+    ls = {str(k): str(v) for k, v in load_status.items()}
+    hist = st.session_state.get("hist")
+    nndss = st.session_state.get("nndss")
+    if hist is None:
+        hist = pd.DataFrame()
+    if nndss is None:
+        nndss = pd.DataFrame()
+    comp = get_baseline_risk_components(hist, nndss, state_risk_df=st.session_state.get("state_risk_df"))
+    lines: list[str] = []
+    if comp.get("recent_5yr_avg") is not None:
+        lines.append(f"recent_5yr_avg_annual_cases: {comp['recent_5yr_avg']}")
+    if comp.get("overall_avg") is not None:
+        lines.append(f"overall_avg_annual_cases: {comp['overall_avg']}")
+    if comp.get("ratio") is not None:
+        lines.append(f"recent_to_overall_ratio: {comp['ratio']}")
+    if comp.get("formula"):
+        lines.append(f"formula: {comp['formula']}")
+    if (comp.get("interpretation_note") or "").strip():
+        lines.append(str(comp["interpretation_note"]).strip())
+    if (comp.get("harmonization_note") or "").strip():
+        lines.append(str(comp["harmonization_note"]).strip())
+    baseline_explanation = "\n".join(lines) if lines else None
+    bv = st.session_state.get("baseline_val")
+    if bv is None:
+        bs = float(comp["score"]) if comp.get("score") is not None else None
+    else:
+        try:
+            bs = float(bv)
+        except (TypeError, ValueError):
+            bs = float(comp["score"]) if comp.get("score") is not None else None
+    state_snap = format_state_risk_snapshot_line(st.session_state.get("state_risk_df"), selected_state)
+    sr = st.session_state.get("state_risk_df")
+    sr_json: str | None = None
+    if sr is not None and not sr.empty:
+        cols = [
+            c
+            for c in (
+                "state",
+                "total_risk",
+                "risk_tier",
+                "cases_recent",
+                "coverage",
+                "wastewater_coverage",
+            )
+            if c in sr.columns
+        ]
+        if cols:
+            sr_json = sr[cols].to_json(orient="records")
+    nndss_agg = st.session_state.get("nndss_agg")
+    national_weekly_trend_json = None
+    if nndss_agg is not None and not getattr(nndss_agg, "empty", True):
+        from risk import national_weekly_trend_json_from_agg
+
+        national_weekly_trend_json = national_weekly_trend_json_from_agg(nndss_agg)
+    return RiskFields(
+        alarm_probability=float(st.session_state.get("alarm_prob", 0.5)),
+        baseline_tier=str(comp.get("tier") or st.session_state.get("baseline_tier") or "low"),
+        baseline_score=bs,
+        baseline_explanation=baseline_explanation,
+        state_risk_snapshot=state_snap,
+        state_risk_records_json=sr_json,
+        national_weekly_trend_json=national_weekly_trend_json,
+        load_status=ls,
+    )
 
 
 def _state_options_for_select() -> list[str]:
@@ -44,73 +115,81 @@ def _friendly_pipeline_error(msg: str) -> str:
             "You can turn off **Include AI-written summaries** for a data-only refresh."
         )
     if "timeout" in m or "network" in m:
-        return "Something timed out or the network was unavailable. Wait a moment and tap **Update my summaries** again."
+        return "Something timed out or the network was unavailable. Wait a moment and tap **Generate insights** again."
     return msg
 
 
+NATIONAL_ONLY_LABEL = "— National only —"
+
+
+def _render_agent_result(res: Any, *, friendly_llm_errors: bool = True) -> None:
+    """Streamlit: show one AgentResult."""
+    if res is None:
+        return
+    if res.status == "success" and (res.content or "").strip():
+        st.markdown(res.content)
+    if res.error_message:
+        disp = _friendly_pipeline_error(res.error_message) if friendly_llm_errors else res.error_message
+        st.error(disp)
+    for w in res.warnings or []:
+        st.warning(w)
+
+
 def render_agent_insights_overview() -> None:
-    """Plain-language insights block on Overview (after gauge)."""
-    state_options = _state_options_for_select()
-    if not state_options:
-        state_options = ["California"]
-    default_state = state_options[0]
+    """Insights block on Overview: optional state, Generate insights, national-only or full pipeline."""
+    base_opts = _state_options_for_select()
+    state_options = [NATIONAL_ONLY_LABEL] + base_opts
 
     if "agent_insights_state" not in st.session_state:
-        st.session_state.agent_insights_state = default_state
+        st.session_state.agent_insights_state = NATIONAL_ONLY_LABEL
     elif st.session_state.agent_insights_state not in state_options:
-        st.session_state.agent_insights_state = default_state
+        st.session_state.agent_insights_state = NATIONAL_ONLY_LABEL
 
     if "agent_include_llm" not in st.session_state:
         st.session_state.agent_include_llm = True
 
     st.divider()
-    st.subheader("Plain-language insights")
+    st.subheader("Insights")
     st.markdown(
-        "We pull the **latest public CDC data** and turn it into **short summaries** you can read without a statistics background. "
-        "This is separate from the scores and gauge above. "
-        "*Not medical advice—see your clinician or "
-        "[CDC measles information](https://www.cdc.gov/measles/about/index.html) for health decisions.*"
+        "Refresh CDC-backed data and generate readable summaries. "
+        "*Not medical advice—see [CDC measles information](https://www.cdc.gov/measles/about/index.html) for health decisions.*"
     )
 
     col_a, col_b = st.columns([3, 1])
     with col_a:
         st.selectbox(
-            "Pick a state you care about",
+            "State (optional)",
             options=state_options,
             key="agent_insights_state",
-            help="Most people choose their home state. One summary focuses on that state; another looks at the whole country.",
+            help="**National only** shows a US-wide summary. Choose a state to add a short state summary below the national summary.",
         )
     with col_b:
         st.checkbox(
             "Include AI-written summaries",
             key="agent_include_llm",
-            help="When on, we add short AI paragraphs (needs OPENAI_API_KEY or OLLAMA_API_KEY). When off, only the automatic data check runs—usually faster.",
+            help="When on, we call the LLM (needs OPENAI_API_KEY or OLLAMA_API_KEY). When off, only the automatic CDC data check runs—usually faster.",
         )
 
     run_llm = bool(st.session_state.get("agent_include_llm", True))
-    selected = str(st.session_state.get("agent_insights_state", default_state))
+    raw_pick = st.session_state.agent_insights_state
+    selected_state = "" if raw_pick == NATIONAL_ONLY_LABEL else str(raw_pick).strip()
+    run_display_state = raw_pick if raw_pick != NATIONAL_ONLY_LABEL else ""
 
     st.caption(
-        "First load can take **about 30–90 seconds** when AI summaries are on. "
-        "Use the other tabs for charts and deeper technical detail."
+        "First run can take **about 30–90 seconds** when AI summaries are on (CDC fetch + model). "
+        "**Generate insights** refreshes CDC tool data and runs the selected analysis."
     )
 
-    if st.button("Update my summaries", type="primary", key="btn_agent_insights_run"):
+    if st.button("Generate insights", type="primary", key="btn_agent_insights_run"):
         st.session_state.agent_last_run_error = None
-        load_status = st.session_state.get("load_status") or {}
-        ls = {str(k): str(v) for k, v in load_status.items()}
-        rf = RiskFields(
-            alarm_probability=float(st.session_state.get("alarm_prob", 0.5)),
-            baseline_tier=str(st.session_state.get("baseline_tier", "low")),
-            load_status=ls,
-        )
+        rf = _risk_fields_from_session(selected_state)
         request_id = str(uuid.uuid4())
         try:
-            hint = "Fetching latest CDC data and writing summaries…" if run_llm else "Fetching latest CDC data…"
+            hint = "Fetching CDC data and generating insights…" if run_llm else "Fetching CDC data…"
             with st.spinner(hint):
                 run = run_agent_pipeline(
                     request_id=request_id,
-                    selected_state=selected,
+                    selected_state=selected_state,
                     risk_fields=rf,
                     tool_parameters=None,
                     run_llm_agents=run_llm,
@@ -118,11 +197,15 @@ def render_agent_insights_overview() -> None:
             st.session_state.agent_results = dict(run.results)
             st.session_state.agent_last_run_utc = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
             st.session_state.agent_last_run_included_llm = run_llm
+            st.session_state.agent_last_run_had_state = bool(selected_state.strip())
+            st.session_state.agent_last_run_display_state = run_display_state or None
         except Exception as e:
             st.session_state.agent_results = None
             st.session_state.agent_last_run_error = str(e)
             st.session_state.agent_last_run_utc = None
             st.session_state.agent_last_run_included_llm = False
+            st.session_state.agent_last_run_had_state = False
+            st.session_state.agent_last_run_display_state = None
 
     err = st.session_state.get("agent_last_run_error")
     if err:
@@ -136,66 +219,59 @@ def render_agent_insights_overview() -> None:
 
     results = st.session_state.get("agent_results")
     if not results:
-        st.info("Tap **Update my summaries** when you’re ready. We’ll refresh public data and, if enabled, generate readable write-ups.")
+        st.info("Tap **Generate insights** when you’re ready. We refresh public CDC data and, if enabled, generate the summaries above.")
         return
 
     included_llm = st.session_state.get("agent_last_run_included_llm", True)
 
-    labels = {
-        "agent_1": ("Latest data check", "Automatic status of the CDC data pulls."),
-        "agent_2": (f"Focus on {selected}", "Plain-language read for the state you picked."),
-        "agent_3": ("National big picture", "How things look across the U.S. from the same sources."),
-        "agent_4": ("Simple takeaway for families", "Short, cautious wording—not medical advice."),
-    }
+    if not included_llm:
+        r1 = results.get("agent_1")
+        with st.expander("Latest data check", expanded=True):
+            st.caption("Automatic status of the CDC data pulls.")
+            _render_agent_result(r1, friendly_llm_errors=False)
+        return
 
+    had_state = bool(st.session_state.get("agent_last_run_had_state", False))
+    state_label = st.session_state.get("agent_last_run_display_state") or "Your state"
+
+    r5 = results.get("agent_5")
     r4 = results.get("agent_4")
-    promoted_r4 = bool(
-        included_llm
-        and r4 is not None
-        and r4.status == "success"
-        and (r4.content or "").strip()
-    )
-    if promoted_r4:
-        st.markdown("##### Start here")
-        st.markdown(r4.content)
-        st.divider()
+    r1 = results.get("agent_1")
 
-    # Expanders: state, national, data check; optionally agent_4 if not promoted
-    expander_order: list[str] = []
-    if included_llm:
-        expander_order.extend(["agent_2", "agent_3", "agent_1"])
-        if not promoted_r4:
-            expander_order.insert(0, "agent_4")
-    else:
-        expander_order = ["agent_1"]
+    if not had_state:
+        st.subheader("National summary")
+        _render_agent_result(r5)
+        with st.expander("How this run works", expanded=False):
+            st.markdown(
+                "**National only:** Agent 1 loads CDC tools; **Agent 3** (national data analyst) and **Agent 5** "
+                "(national reporter) produce the US-wide summary. State-level agents are not run. Pick a state and run again "
+                "to add a state summary."
+            )
+        return
 
-    for aid in expander_order:
-        res = results.get(aid)
-        if res is None:
-            continue
-        title, subtitle = labels[aid]
-        expanded = aid == "agent_1" and not included_llm
-        with st.expander(title, expanded=expanded):
-            st.caption(subtitle)
-            if res.status == "success" and res.content:
-                st.markdown(res.content)
-            if res.error_message:
-                disp = _friendly_pipeline_error(res.error_message) if aid != "agent_1" else res.error_message
-                st.error(disp)
-            for w in res.warnings or []:
-                st.warning(w)
+    st.subheader("National summary")
+    _render_agent_result(r5)
+
+    st.subheader(f"{state_label}: state summary")
+    st.caption("Readable summary from the state data agent—not medical advice.")
+    _render_agent_result(r4)
+
+    st.subheader("Latest data check")
+    st.caption("Automatic status of the CDC data pulls.")
+    _render_agent_result(r1, friendly_llm_errors=False)
 
     with st.expander("How this works (for instructors and technical readers)", expanded=False):
         st.markdown(
-            "**Pipeline:** **Agent 1** runs CDC-backed tools (child vaccination, kindergarten coverage, teen coverage, wastewater, NNDSS). "
-            "**Agents 2–4** are optional AI summaries: state focus, national view, and family-oriented takeaway. "
-            "Agent 4 is written after Agent 2 when AI is enabled."
+            "**Pipeline:** **Agent 1** runs CDC-backed tools. **Agent 3** (national data analyst) and **Agent 5** (national reporter) "
+            "produce the US-wide summary. With a state selected, **Agent 2** runs in parallel with **Agent 3**, then **Agent 4** "
+            "(state reporter) runs in parallel with **Agent 5**. **Display order** on this page: national summary → state summary → data check."
         )
         st.markdown(
             "| Step | Role |\n"
             "|------|------|\n"
-            "| Agent 1 | Data package from tool registry |\n"
-            "| Agent 2 | State-focused LLM summary |\n"
-            "| Agent 3 | National LLM summary |\n"
-            "| Agent 4 | Family-style LLM brief |"
+            "| Agent 1 | Tool registry: load CDC extracts |\n"
+            "| Agent 2 | State data analyst (OpenAI tools + CDC rows) |\n"
+            "| Agent 3 | National data analyst (tools + registry summary) |\n"
+            "| Agent 4 | State reporter (from Agent 2 + excerpts) |\n"
+            "| Agent 5 | National reporter (from Agent 3 + metrics) |"
         )

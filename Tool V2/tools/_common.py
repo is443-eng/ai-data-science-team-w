@@ -25,6 +25,23 @@ def dataframe_to_json_payload(df: pd.DataFrame) -> dict[str, Any]:
     return {"columns": list(df.columns), "records": records, "row_count": len(records)}
 
 
+def tool_payload_to_dataframe(data: dict[str, Any] | list[Any] | None) -> pd.DataFrame:
+    """Reconstruct a DataFrame from ``ToolOutput.data`` (see ``dataframe_to_json_payload``)."""
+    if not data or not isinstance(data, dict):
+        return pd.DataFrame()
+    records = data.get("records")
+    if not records:
+        return pd.DataFrame()
+    return pd.DataFrame(records)
+
+
+def tool_output_to_dataframe(out: ToolOutput | None) -> pd.DataFrame:
+    """Reconstruct a DataFrame from a tool result, or empty if missing."""
+    if out is None or out.data is None:
+        return pd.DataFrame()
+    return tool_payload_to_dataframe(out.data if isinstance(out.data, dict) else None)
+
+
 def loader_status_to_tool_status(load_status: str, df: pd.DataFrame, errors: list[str]) -> ToolStatus:
     if load_status == "fail":
         return "error"

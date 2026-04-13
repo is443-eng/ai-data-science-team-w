@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import os
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any, Optional
 
@@ -27,7 +28,9 @@ OPENAI_CHAT_URL = "https://api.openai.com/v1/chat/completions"
 # Prefer cloud model tag; some setups use short name
 OLLAMA_MODELS = ("gemma4:31b-cloud", "gpt-oss:20b-cloud", "gpt-oss:20b", "llama3.2:3b")
 DEFAULT_OPENAI_MODEL = "gpt-4o-mini"
-MAX_PROMPT_CHARS = 8000
+# Orchestrator user prompts include metrics + CDC tool summary + state ranking blocks; 8k truncated the tail
+# and hid TOP STATES from the national reporter (ranking "unavailable" in prose).
+MAX_PROMPT_CHARS = 28000
 
 
 def _post_openai_chat_messages(messages: list[dict[str, Any]], *, timeout: int = 90) -> Optional[str]:
@@ -56,6 +59,108 @@ def _post_openai_chat_messages(messages: list[dict[str, Any]], *, timeout: int =
     except (KeyError, IndexError, TypeError, json.JSONDecodeError) as e:
         logger.error("OpenAI parse failed reason=%s", e)
         return None
+
+
+def _openai_chat_completions_raw(
+    messages: list[dict[str, Any]],
+    *,
+    tools: Optional[list[dict[str, Any]]] = None,
+    timeout: int = 90,
+) -> Optional[dict[str, Any]]:
+    """POST /v1/chat/completions; return parsed JSON or None."""
+    _load_env()
+    key = (os.environ.get("OPENAI_API_KEY") or "").strip()
+    if not key:
+        return None
+    model = (os.environ.get("OPENAI_MODEL") or DEFAULT_OPENAI_MODEL).strip() or DEFAULT_OPENAI_MODEL
+    headers = {
+        "Authorization": f"Bearer {key}",
+        "Content-Type": "application/json",
+    }
+    body: dict[str, Any] = {"model": model, "messages": messages}
+    if tools is not None:
+        body["tools"] = tools
+    try:
+        response = requests.post(OPENAI_CHAT_URL, headers=headers, json=body, timeout=timeout)
+    except requests.RequestException as e:
+        logger.error("OpenAI request failed reason=%s", e)
+        return None
+    if response.status_code != 200:
+        logger.error("OpenAI request failed status=%s body=%s", response.status_code, response.text[:500])
+        return None
+    try:
+        return response.json()
+    except json.JSONDecodeError as e:
+        logger.error("OpenAI JSON parse failed reason=%s", e)
+        return None
+
+
+def chat_completion_with_tools_openai(
+    system: str,
+    user: str,
+    *,
+    tools: list[dict[str, Any]],
+    on_tool_call: Callable[[str, dict[str, Any]], str],
+    timeout_s: int = 90,
+    max_tool_rounds: int = 4,
+) -> Optional[str]:
+    """
+    OpenAI Chat Completions with function tools: run tool handlers when the model requests them,
+    then continue until the model returns text (no tool_calls). Returns None if not using OpenAI or on error.
+
+    **Requires OPENAI_API_KEY.** Ollama does not use this path — callers should fall back to ``chat_completion``.
+    """
+    _load_env()
+    if not (os.environ.get("OPENAI_API_KEY") or "").strip():
+        logger.warning("chat_completion_with_tools_openai: OPENAI_API_KEY not set")
+        return None
+    system = system or ""
+    user = user or ""
+    if len(system) + len(user) > MAX_PROMPT_CHARS:
+        budget = max(0, MAX_PROMPT_CHARS - len(system) - len("\n... (truncated)"))
+        user = user[:budget] + "\n... (truncated)"
+    messages: list[dict[str, Any]] = [
+        {"role": "system", "content": system},
+        {"role": "user", "content": user},
+    ]
+    for _ in range(max_tool_rounds):
+        data = _openai_chat_completions_raw(messages, tools=tools, timeout=timeout_s)
+        if data is None:
+            return None
+        try:
+            choice = data["choices"][0]
+            msg = choice["message"]
+        except (KeyError, IndexError, TypeError) as e:
+            logger.error("OpenAI tool response shape error reason=%s", e)
+            return None
+        tool_calls = msg.get("tool_calls")
+        content = msg.get("content")
+        if tool_calls:
+            assistant_msg: dict[str, Any] = {"role": "assistant", "tool_calls": tool_calls}
+            assistant_msg["content"] = content if content else None
+            messages.append(assistant_msg)
+            for tc in tool_calls:
+                try:
+                    tid = tc["id"]
+                    fn = tc.get("function") or {}
+                    name = fn.get("name", "")
+                    raw_args = fn.get("arguments") or "{}"
+                    args = json.loads(raw_args) if isinstance(raw_args, str) else {}
+                except (KeyError, TypeError, json.JSONDecodeError) as e:
+                    logger.warning("Bad tool_call payload reason=%s", e)
+                    tid = tc.get("id", "")
+                    name = ""
+                    args = {}
+                    tool_content = f"Invalid tool request: {e}"
+                else:
+                    tool_content = on_tool_call(name, args)
+                messages.append({"role": "tool", "tool_call_id": tid, "content": tool_content})
+            continue
+        if content and str(content).strip():
+            return str(content).strip()
+        return None
+    logger.warning("chat_completion_with_tools_openai: max_tool_rounds exceeded")
+    return None
 
 
 def _post_ollama_chat_messages(messages: list[dict[str, Any]], *, timeout: int = 90) -> Optional[str]:

@@ -11,7 +11,7 @@ The **Predictive Measles Risk Dashboard** (Streamlit) loads CDC surveillance and
 1. **Loaders** (`loaders/`) pull kindergarten coverage, wastewater, NNDSS, and related tables from public CDC endpoints (Socrata).
 2. **Risk** (`risk/`) builds a stage-1 alarm model, national weekly aggregates, state risk scores, and forecast drivers used across tabs.
 3. **Streamlit** (`app.py`) renders pages: Overview (with optional **AI agent insights** from the orchestrator), Historical, Kindergarten, Wastewater vs NNDSS, State risk, Forecast.
-4. **Orchestrator** (`agents/orchestrator.py`) runs **Agent 1** (five registered tools in fixed order), then **Agents 2 & 3** in parallel (LLM), then **Agent 4** (LLM, depends on Agent 2). Prompts load from `prompts/*.md` via `prompts/loader.py`. LLM calls go through `ollama_client.py`: **OpenAI** Chat Completions if `OPENAI_API_KEY` is set (optional `OPENAI_MODEL`, default `gpt-4o-mini`), otherwise **Ollama Cloud** with model fallback starting with `gemma4:31b-cloud`.
+4. **Orchestrator** (`agents/orchestrator.py`) runs **Agent 1** (five registered tools in fixed order), then **Agents 2 & 3** in parallel (LLM), then **Agent 4** (LLM, depends on Agent 2). **Agent 2** produces state-level **history + current risk** (state-filtered tool rows + dashboard metrics). **Agent 4** rewrites **Agent 2’s output** for a parent audience. User messages prepend a **DASHBOARD METRICS** block (alarm, baseline tier, `data_as_of`). Prompts load from `prompts/*.md` via `prompts/loader.py`. LLM calls go through `ollama_client.py`: **OpenAI** Chat Completions if `OPENAI_API_KEY` is set (optional `OPENAI_MODEL`, default `gpt-4o-mini`), otherwise **Ollama Cloud** with model fallback starting with `gemma4:31b-cloud`.
 5. **Contracts** (`contracts/schemas.py`) define `AgentContext`, `AgentResult`, `ToolOutput` for consistent payloads and tests.
 
 ## Process diagram (Mermaid)
@@ -65,9 +65,9 @@ flowchart TB
 | Agent | Role | Inputs | Output use |
 |-------|------|--------|------------|
 | 1 | Runs CDC tool wrappers (`child_vax`, `kindergarten_vax`, `teen_vax`, `wastewater`, `nndss`) via `tools/registry.py` | Per-tool parameters, session context | Structured `ToolOutput` payloads in `AgentContext` |
-| 2 | State-focused analyst | State-filtered tool rows + compact context | Overview “state” insight |
-| 3 | National / multi-source analyst | Compact tool context | Overview “national” insight |
-| 4 | Parent-facing brief | Agent 2 text + state-filtered rows + context | Overview “parent” insight |
+| 2 | State history + current risk | Dashboard metrics block + state-filtered rows + compact context | Overview state insight (sections A/B in prompt) |
+| 3 | National / multi-source analyst | Dashboard metrics + compact context | Overview national insight |
+| 4 | Parent-language interpretation of Agent 2 | Agent 2 text + metrics + excerpts + context | Overview family-facing insight |
 
 Agent 4 is skipped with a clear error if Agent 2 does not succeed.
 
