@@ -18,8 +18,8 @@ python3 -m pytest tests/ -q
 
 ## Agents and data
 
-- [ ] **Overview:** Agent insights load with `OLLAMA_API_KEY` set, or show a clear message when the key is missing.
-- [ ] **State:** Changing the sidebar state updates state-scoped narratives when tool rows match (see orchestrator behavior in [`../agents/orchestrator.py`](../agents/orchestrator.py)).
+- [ ] **Overview → Insights:** **Generate insights** completes; with `OPENAI_API_KEY` or `OLLAMA_API_KEY`, national summary (Agent 5) renders; with a state selected, state summary (Agent 4) renders; or a clear error when keys are missing.
+- [ ] **State:** Changing **State (optional)** and re-running updates state-scoped content when tool rows match (see [`../agents/orchestrator.py`](../agents/orchestrator.py)).
 
 ## Deployment
 
