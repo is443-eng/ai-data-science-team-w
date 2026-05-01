@@ -1,0 +1,24 @@
+{
+  "captured_at_utc": "2026-04-08T02:31:11.178560+00:00",
+  "data_as_of": "2026-04-08 02:31",
+  "load_status": {
+    "historical": "ok",
+    "kindergarten": "ok",
+    "wastewater": "ok",
+    "nndss": "ok"
+  },
+  "row_counts": {
+    "historical": 42,
+    "kindergarten": 1276,
+    "wastewater": 39472,
+    "nndss": 30800
+  },
+  "historical_csv": {
+    "columns": [
+      "Year",
+      "Measles Cases"
+    ],
+    "year_min": 1985,
+    "year_max": 2026
+  }
+}
