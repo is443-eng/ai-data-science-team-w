@@ -46,7 +46,9 @@ Target server: [Cornell Systems Engineering Connect](https://connect.systems-app
 
 The app needs **`SOCRATA_APP_TOKEN`** (CDC data) and optionally **`OLLAMA_API_KEY`** (AI features).
 
-**Automatic forwarding:** If those variables are set in the environment when you run `deploy_me.py` (including after loading `.env`), the script adds `rsconnect` **`-E SOCRATA_APP_TOKEN`** and **`-E OLLAMA_API_KEY`** so their current values are stored on the Connect content. Values are **not** echoed in the printed command for name-only `-E` flags (only the variable name appears).
+**Automatic forwarding:** If those variables are set in the environment when you run `deploy_me.py` (including after loading `.env`), the script adds `rsconnect` **`-E`** entries for **`SOCRATA_APP_TOKEN`**, **`OLLAMA_API_KEY`**, **`OPENAI_API_KEY`**, and **`OPENAI_MODEL`** (when set) so their values are stored on the Connect content. Values are **not** echoed in the printed command for name-only `-E` flags (only the variable name appears).
+
+**LLM provider on Connect:** Set **`OPENAI_API_KEY`** (and optionally **`OPENAI_MODEL`**, e.g. `gpt-4o-mini`) to use OpenAI for all agent and tab AI text. If **`OPENAI_API_KEY`** is unset, the app uses **`OLLAMA_API_KEY`** (Ollama Cloud) as before.
 
 Use **`--no-app-env`** if you prefer to set vars only in the Connect UI and not copy them from your laptop.
 
@@ -76,6 +78,12 @@ python deployment/deploy_me.py --app-id <guid-from-connect>
 ```
 
 See `python deployment/deploy_me.py --help` for all options.
+
+## After deploy: testing and recording the URL
+
+1. Track dry-run and real deploy in [`../docs/DEPLOYMENT_TEST_LOG.md`](../docs/DEPLOYMENT_TEST_LOG.md).
+2. Copy the live content URL into [`../docs/submission_notes.md`](../docs/submission_notes.md).
+3. Optional: `bash deployment/smoke_check_url.sh 'https://…'` then run the browser checklist in `submission_notes.md`.
 
 ## References
 

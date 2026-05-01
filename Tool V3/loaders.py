@@ -19,13 +19,13 @@ from utils.logging_config import get_logger
 logger = get_logger("loaders")
 
 # Paths: Tool V3 app dir + repo root fallbacks (V1 dashboard / repo CSV)
-TOOL_V3_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = TOOL_V3_DIR.parent
+TOOL_V2_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = TOOL_V2_DIR.parent
 HISTORICAL_CSV_PATHS = [
-    TOOL_V3_DIR / "data" / "measles_annual_1985.csv",
+    TOOL_V2_DIR / "data" / "measles_annual_1985.csv",
     PROJECT_ROOT / "Shiny App V1" / "measles_annual_1985.csv",
     PROJECT_ROOT / "measles_annual_1985.csv",
-    TOOL_V3_DIR / "measles_annual_1985.csv",
+    TOOL_V2_DIR / "measles_annual_1985.csv",
 ]
 
 # CDC Socrata view IDs and defaults
@@ -47,7 +47,7 @@ def _load_env() -> None:
     try:
         from dotenv import load_dotenv
         load_dotenv(PROJECT_ROOT / ".env")
-        load_dotenv(TOOL_V3_DIR / ".env")
+        load_dotenv(TOOL_V2_DIR / ".env")
     except ImportError:
         pass
 

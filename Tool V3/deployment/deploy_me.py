@@ -13,9 +13,9 @@ set ``DEPLOY_STREAMLIT_TITLE``, or ``--app-id`` / ``DEPLOY_CONNECT_APP_ID``.
 
 The Connect bundle requests **Python 3.12** by default (``--override-python-version``).
 
-If ``SOCRATA_APP_TOKEN`` and/or ``OLLAMA_API_KEY`` are set in the environment used to
-run this script (including after loading ``.env``), they are forwarded to the
-published content via ``rsconnect -E`` so the live app can reach CDC and Ollama.
+If ``SOCRATA_APP_TOKEN``, ``OLLAMA_API_KEY``, ``OPENAI_API_KEY``, and/or ``OPENAI_MODEL``
+are set in the environment used to run this script (including after loading ``.env``),
+they are forwarded to the published content via ``rsconnect -E`` so the live app can reach CDC and LLM APIs.
 
 Invocation uses ``python -m rsconnect.main`` so deploy works when ``rsconnect`` is
 not on ``PATH``.
@@ -51,10 +51,12 @@ DEFAULT_EXCLUDES = (
 AUTO_FORWARD_ENV_KEYS = (
     "SOCRATA_APP_TOKEN",
     "OLLAMA_API_KEY",
+    "OPENAI_API_KEY",
+    "OPENAI_MODEL",
 )
 
 
-def _tool_v3_root() -> Path:
+def _tool_v2_root() -> Path:
     return Path(__file__).resolve().parent.parent
 
 
@@ -64,7 +66,7 @@ def _load_dotenv() -> None:
         from dotenv import load_dotenv
     except ImportError:
         return
-    root = _tool_v3_root()
+    root = _tool_v2_root()
     load_dotenv(root.parent / ".env")
     load_dotenv(root / ".env")
 
@@ -191,7 +193,7 @@ def redact_argv_for_print(cmd: list[str]) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     _load_dotenv()
-    root = _tool_v3_root()
+    root = _tool_v2_root()
     p = argparse.ArgumentParser(
         description="Deploy Tool V3 Streamlit app to Posit Connect (rsconnect-python)."
     )

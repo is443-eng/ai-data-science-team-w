@@ -15,8 +15,8 @@ from utils.logging_config import get_logger
 
 logger = get_logger("tools.cdc_child_teen")
 
-TOOL_V3_DIR = Path(__file__).resolve().parent.parent
-PROJECT_ROOT = TOOL_V3_DIR.parent
+TOOL_V2_DIR = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = TOOL_V2_DIR.parent
 
 CHILD_VIEW_ID = "fhky-rtsk"
 TEEN_VIEW_ID = "ee48-w5t6"
@@ -36,7 +36,7 @@ def _get_token() -> Optional[str]:
         from dotenv import load_dotenv
 
         load_dotenv(PROJECT_ROOT / ".env")
-        load_dotenv(TOOL_V3_DIR / ".env")
+        load_dotenv(TOOL_V2_DIR / ".env")
     except ImportError:
         pass
     return (os.environ.get("SOCRATA_APP_TOKEN") or "").strip() or None
