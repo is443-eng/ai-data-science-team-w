@@ -73,19 +73,35 @@ Shared parameters (where supported): `use_cache` (bool, default `true`) for load
   "data_as_of": "2026-04-07 12:00",
   "tool_outputs": {},
   "alarm_probability": 0.42,
-  "baseline_tier": "elevated",
+  "baseline_tier": "medium",
   "load_status": { "historical": "ok", "kindergarten": "ok" },
-  "extra": {}
+  "extra": {
+    "baseline_explanation": "…",
+    "baseline_score": 72.5,
+    "state_risk_snapshot": "…",
+    "state_risk_records_json": "[{\"state\":\"…\",\"total_risk\":…}]",
+    "national_weekly_trend_json": "[{\"year\":2026,\"week\":12,\"cases\":…}]"
+  }
 }
 ```
 
 `tool_outputs` maps tool name → `ToolOutput` object.
 
+`extra` (optional keys used by orchestrator LLM steps):
+
+| Key | Purpose |
+|-----|---------|
+| `baseline_explanation` | Text from `get_baseline_risk_components` for LLM attribution |
+| `baseline_score` | Overview baseline gauge 0–100 (may be harmonized with state composite max) |
+| `state_risk_snapshot` | One-state composite lines when a state is selected |
+| `state_risk_records_json` | JSON array of state risk rows for leaderboard / tier tools |
+| `national_weekly_trend_json` | Serialized national weekly series for national activity trend tool |
+
 ## `AgentResult` (per card on Overview)
 
 ```json
 {
-  "agent_id": "agent_2",
+  "agent_id": "agent_5",
   "status": "success",
   "content": "…",
   "error_message": null,
@@ -104,8 +120,8 @@ Shared parameters (where supported): `use_cache` (bool, default `true`) for load
 | Single tool call (cached) | &lt; 1 s |
 | Single tool call (live CDC) | 5–90 s |
 | Agent 1 (all tools) | dominated by slowest tool |
-| Agent 2 + 3 in parallel | LLM latency × 1 |
-| Agent 4 (after Agent 2) | LLM latency |
+| Agents 2 + 3 in parallel | LLM latency × 1 |
+| Agents 4 + 5 in parallel (after 2/3) | LLM latency × 1 |
 
 ## Code reference
 

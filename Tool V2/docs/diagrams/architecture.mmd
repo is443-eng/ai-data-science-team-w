@@ -1,0 +1,45 @@
+%% Tool V2 - process diagram (Mermaid source)
+%% Export: paste into https://mermaid.live -> PNG/SVG, or: npx @mermaid-js/mermaid-cli -i architecture.mmd -o architecture.png
+%% Orchestrator: Agent 1, then Agents 2 and 3 in parallel, then Agents 4 and 5 in parallel (see orchestrator.py)
+%% Copy only the flowchart below (one diagram). Do not paste twice; keep blank lines between statements.
+flowchart TB
+  subgraph Data["CDC data layer"]
+    CDC["CDC Socrata APIs"]
+    L["loaders.load_all"]
+    CDC --> L
+  end
+
+  subgraph Model["Risk model (risk.py)"]
+    R["Stage-1 alarm, forecast, state composite, baseline gauge"]
+    L --> R
+  end
+
+  subgraph UI["Streamlit app.py"]
+    Ov["Overview: gauge + Generate insights"]
+    T1["Historical, Kindergarten, WW vs NNDSS"]
+    T2["State risk, Forecast"]
+    R --> Ov
+    R --> T1
+    R --> T2
+  end
+
+  subgraph Orch["Orchestrator (agents/orchestrator.py)"]
+    A1["Agent 1: 5 tools via registry"]
+    A2["Agent 2: state analyst LLM"]
+    A3["Agent 3: national analyst LLM"]
+    A4["Agent 4: state reporter LLM"]
+    A5["Agent 5: national reporter LLM"]
+    A1 --> A2
+    A1 --> A3
+    A2 --> A4
+    A3 --> A5
+  end
+
+  L --> A1
+  LLM["OpenAI or Ollama Cloud"]
+  LLM --> A2
+  LLM --> A3
+  LLM --> A4
+  LLM --> A5
+  A4 --> Ov
+  A5 --> Ov

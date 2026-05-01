@@ -1,29 +1,33 @@
 # Tool V2 — Measles risk dashboard (App V2)
 
+Streamlit app: CDC data loaders, risk models (alarm, forecast, **state composite** scores), multi-tab charts, and **agentic Insights** (five LLM agents after a unified tool run).
+
 ## Layout
 
-| Path | Segment | Contents |
-|------|---------|----------|
-| `app.py` | UI | Streamlit entrypoint |
-| `run_me.py` | — | Local dev launcher |
-| `loaders.py`, `risk.py`, `ollama_client.py` | Core | Data, model, LLM client |
-| `contracts/` | 0 | Shared `ToolOutput` / `AgentContext` dataclasses |
-| `tools/` | 1 | CDC tool wrappers + `registry.py` |
-| `agents/` | 2 | Orchestrator and multi-agent workflow |
-| `prompts/` | 4 | Per-agent prompt templates (to be wired) |
-| `utils/` | Core | Logging, state maps |
-| `tests/` | 5 | Pytest suite |
-| `baseline/` | 0 | Regression metrics JSON |
-| `scripts/` | 0 | e.g. `capture_baseline.py` |
-| `reference/shiny_v1_cdc/` | — | Legacy CDC API scripts (reference only) |
-| `ui/` | 3 | Reusable Streamlit components (agent cards, loaders) |
-| `deployment/` | 6 | `deploy_me.py` + Posit Connect notes (`rsconnect-python`) |
-| `docs/` | 7 | Contracts, planning, submission notes |
+| Path | Contents |
+|------|----------|
+| `app.py` | Streamlit entrypoint |
+| `run_me.py` | Local dev launcher |
+| `loaders.py`, `risk.py`, `ollama_client.py` | Data, models, LLM client |
+| `contracts/` | `ToolOutput` / `AgentContext` / `AgentResult` |
+| `tools/` | CDC tool wrappers + `registry.py` |
+| `agents/` | Orchestrator (**Agents 1–5**) |
+| `prompts/` | Per-agent system prompts (`loader.py` + `shared_guardrails.md`) |
+| `ui/` | `agent_insights.py` (Overview Insights block) |
+| `utils/` | Logging, state maps |
+| `tests/` | Pytest (orchestrator, risk, tools, national trend) |
+| `deployment/` | `deploy_me.py`, Posit Connect notes |
+| `docs/` | **Architecture, interface contracts, submission package, QA checklists** |
 
 ## Run locally
 
 ```bash
+cd "Tool V2"
 python run_me.py
 ```
 
-See `docs/planning/` for the full segmented build plan.
+Set `SOCRATA_APP_TOKEN` in a `.env` at repo root or in `Tool V2/` for reliable CDC pulls. For **Insights**, set `OPENAI_API_KEY` and/or `OLLAMA_API_KEY`.
+
+## Documentation
+
+Start at **[`docs/README.md`](docs/README.md)** (submission package index, architecture, contracts).
