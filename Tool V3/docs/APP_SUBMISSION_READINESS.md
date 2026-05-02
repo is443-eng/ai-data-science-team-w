@@ -3,6 +3,10 @@
 Use this checklist when you are ready to **freeze** the app before finalizing the V3 documentation package.
 Recommended order: **deploy testing** ([`DEPLOYMENT_TEST_LOG.md`](DEPLOYMENT_TEST_LOG.md)) → **this checklist** → **finalize** [`TOOL2_SUBMISSION_PACKAGE.md`](TOOL2_SUBMISSION_PACKAGE.md) (or your current package file).
 
+## Collaboration plan
+
+- [ ] For ian/jonathan ownership, handoff criteria, and collaboration rhythm, use [`final_weekend_handoff_plan.md`](final_weekend_handoff_plan.md).
+
 ## Automated tests
 
 From repo root (or target the Tool V3 tests directly):
