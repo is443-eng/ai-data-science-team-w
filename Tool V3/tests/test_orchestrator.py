@@ -15,6 +15,9 @@ from tools._common import make_tool_output, utc_as_of
 def _clear_openai_env(monkeypatch: pytest.MonkeyPatch) -> None:
     """Keep orchestrator tests deterministic by forcing non-OpenAI branch unless test opts in."""
     monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    # Override tests/conftest.py load_dotenv() and developer shells so refinement does not add LLM calls.
+    monkeypatch.setenv("INSIGHT_REFINEMENT_ENABLED", "0")
+    monkeypatch.setenv("INSIGHT_QC_ENABLED", "0")
 
 
 def test_metrics_and_attribution_prefix_includes_baseline_and_state_blocks() -> None:
@@ -339,6 +342,10 @@ def test_agent4_receives_state_analyst_from_agent2(mock_tools: MagicMock, mock_c
 
     def chat_side(system: str, user: str, *, timeout_s: int = 90) -> str | None:
         s = system or ""
+        u = user or ""
+        # Refinement reuses reporter role system prompts; handle before "State **reporter**" branch.
+        if "You are revising the" in u and "faithfulness" in u:
+            return "refined draft"
         if "Tool-first" in s and "national data analyst" in s:
             return "NAT_ANALYST"
         if "National **reporter**" in s:
