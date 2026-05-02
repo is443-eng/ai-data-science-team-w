@@ -122,6 +122,50 @@ def _friendly_pipeline_error(msg: str) -> str:
 NATIONAL_ONLY_LABEL = "— National only —"
 
 
+def _qc_field(res: Any, name: str, default: Any = None) -> Any:
+    if res is None:
+        return default
+    if isinstance(res, dict):
+        return res.get(name, default)
+    return getattr(res, name, default)
+
+
+def _render_insight_quality_expander() -> None:
+    """Show optional Module 09–style rubric when INSIGHT_QC_ENABLED produced results."""
+    iq = st.session_state.get("agent_insight_quality") or {}
+    if not iq:
+        return
+    with st.expander("Insight quality rubric (optional)", expanded=False):
+        st.caption(
+            "Enabled when **INSIGHT_QC_ENABLED=1**. A separate model pass scores each summary against the same CDC "
+            "context. Adjust **INSIGHT_QC_MIN_OVERALL** (default 3.0) and **INSIGHT_QC_REQUIRE_ACCURATE** (default on)."
+        )
+        for title, key in (("National summary", "national"), ("State summary", "state")):
+            r = iq.get(key)
+            if not r:
+                continue
+            st.markdown(f"**{title}**")
+            status = _qc_field(r, "status")
+            if status == "skipped":
+                st.caption("Skipped (no text).")
+                continue
+            if status == "error":
+                st.warning(_qc_field(r, "error_message") or "QC failed.")
+                continue
+            passed = _qc_field(r, "passed")
+            overall = _qc_field(r, "overall_score")
+            acc = _qc_field(r, "accurate")
+            det = _qc_field(r, "details")
+            if passed is True:
+                st.success(f"Pass — overall {overall}/5 (accurate={acc}).")
+            elif passed is False:
+                st.error(f"Below threshold — overall {overall}/5 (accurate={acc}).")
+            else:
+                st.info(f"Scored — overall {overall}/5 (accurate={acc}).")
+            if det:
+                st.caption(det)
+
+
 def _render_agent_result(res: Any, *, friendly_llm_errors: bool = True) -> None:
     """Streamlit: show one AgentResult."""
     if res is None:
@@ -195,12 +239,14 @@ def render_agent_insights_overview() -> None:
                     run_llm_agents=run_llm,
                 )
             st.session_state.agent_results = dict(run.results)
+            st.session_state.agent_insight_quality = dict(run.insight_quality)
             st.session_state.agent_last_run_utc = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
             st.session_state.agent_last_run_included_llm = run_llm
             st.session_state.agent_last_run_had_state = bool(selected_state.strip())
             st.session_state.agent_last_run_display_state = run_display_state or None
         except Exception as e:
             st.session_state.agent_results = None
+            st.session_state.agent_insight_quality = {}
             st.session_state.agent_last_run_error = str(e)
             st.session_state.agent_last_run_utc = None
             st.session_state.agent_last_run_included_llm = False
@@ -241,6 +287,7 @@ def render_agent_insights_overview() -> None:
     if not had_state:
         st.subheader("National summary")
         _render_agent_result(r5)
+        _render_insight_quality_expander()
         with st.expander("How this run works", expanded=False):
             st.markdown(
                 "**National only:** Agent 1 loads CDC tools; **Agent 3** (national data analyst) and **Agent 5** "
@@ -255,6 +302,8 @@ def render_agent_insights_overview() -> None:
     st.subheader(f"{state_label}: state summary")
     st.caption("Readable summary from the state data agent—not medical advice.")
     _render_agent_result(r4)
+
+    _render_insight_quality_expander()
 
     st.subheader("Latest data check")
     st.caption("Automatic status of the CDC data pulls.")

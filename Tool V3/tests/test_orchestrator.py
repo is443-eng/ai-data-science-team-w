@@ -5,9 +5,16 @@ import json
 import os
 from unittest.mock import MagicMock, patch
 
-from contracts.schemas import AgentContext, ToolOutput
+import pytest
+from contracts.schemas import AgentContext, InsightQCResult, ToolOutput
 
 from tools._common import make_tool_output, utc_as_of
+
+
+@pytest.fixture(autouse=True)
+def _clear_openai_env(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Keep orchestrator tests deterministic by forcing non-OpenAI branch unless test opts in."""
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
 
 
 def test_metrics_and_attribution_prefix_includes_baseline_and_state_blocks() -> None:
@@ -389,3 +396,56 @@ def test_run_agent_pipeline_extra_includes_national_weekly_trend_json() -> None:
         run_llm_agents=False,
     )
     assert run.context.extra.get("national_weekly_trend_json") is not None
+
+
+@patch("agents.orchestrator.chat_completion")
+@patch("agents.orchestrator.run_insight_qc")
+def test_refinement_loop_respects_rounds_and_updates_content(mock_qc: MagicMock, mock_chat: MagicMock, monkeypatch) -> None:
+    from agents.orchestrator import _run_refinement_if_enabled
+
+    monkeypatch.setenv("INSIGHT_REFINEMENT_ENABLED", "1")
+    monkeypatch.setenv("INSIGHT_QC_ENABLED", "1")
+    monkeypatch.setenv("INSIGHT_REFINEMENT_MIN_ROUNDS", "1")
+    monkeypatch.setenv("INSIGHT_REFINEMENT_MAX_ROUNDS", "2")
+
+    ctx = AgentContext(request_id="r", selected_state="", data_as_of="d")
+    from agents.orchestrator import _agent_result
+
+    results = {
+        "agent_5": _agent_result("agent_5", "success", content="draft national"),
+        "agent_4": _agent_result("agent_4", "success", content="draft state"),
+    }
+    iq = {
+        "national": InsightQCResult(role="national", status="success", passed=False, overall_score=2.5, accurate=False),
+        "state": InsightQCResult(role="state", status="success", passed=False, overall_score=2.5, accurate=False),
+    }
+    mock_chat.side_effect = ["national revised", "state revised"]
+    mock_qc.side_effect = [
+        InsightQCResult(role="national", status="success", passed=True, overall_score=4.1, accurate=True),
+        InsightQCResult(role="state", status="success", passed=True, overall_score=3.9, accurate=True),
+    ]
+
+    out_results, out_iq = _run_refinement_if_enabled(ctx, results, iq)
+
+    assert (out_results["agent_5"].content or "") == "national revised"
+    assert (out_results["agent_4"].content or "") == "state revised"
+    assert out_iq["national"].passed is True
+    assert out_iq["state"].passed is True
+    assert mock_chat.call_count == 2
+    assert mock_qc.call_count == 2
+
+
+@patch("agents.orchestrator.chat_completion")
+def test_refinement_loop_skips_when_qc_disabled(mock_chat: MagicMock, monkeypatch) -> None:
+    from agents.orchestrator import _run_refinement_if_enabled, _agent_result
+
+    monkeypatch.setenv("INSIGHT_REFINEMENT_ENABLED", "1")
+    monkeypatch.setenv("INSIGHT_QC_ENABLED", "0")
+    ctx = AgentContext(request_id="r", selected_state="", data_as_of="d")
+    results = {"agent_5": _agent_result("agent_5", "success", content="draft national")}
+    iq = {"national": InsightQCResult(role="national", status="success", passed=False, overall_score=2.0, accurate=False)}
+
+    out_results, out_iq = _run_refinement_if_enabled(ctx, results, iq)
+    assert (out_results["agent_5"].content or "") == "draft national"
+    assert out_iq["national"].passed is False
+    assert mock_chat.call_count == 0

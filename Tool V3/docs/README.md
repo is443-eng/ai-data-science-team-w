@@ -28,6 +28,7 @@ Documentation for **Tool V2** submission and maintenance.
 | [**ARCHITECTURE.md**](ARCHITECTURE.md) | System flow, **five-agent** orchestration, Mermaid diagram, state risk + baseline notes |
 | [**diagrams/architecture.mmd**](diagrams/architecture.mmd) | Same diagram for export (docx, PNG) |
 | [**INTERFACE_CONTRACTS.md**](INTERFACE_CONTRACTS.md) | `ToolOutput`, `AgentContext`, `AgentResult`, registry names |
+| [**INSIGHT_QUALITY_REGRESSION.md**](INSIGHT_QUALITY_REGRESSION.md) | Manual smoke checks + prompt score comparison workflow |
 
 ## Planning (historical / scope)
 

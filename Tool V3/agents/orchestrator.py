@@ -17,10 +17,12 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any
 
-from contracts.schemas import AgentContext, AgentResult, ToolOutput
+from contracts.schemas import AgentContext, AgentResult, InsightQCResult, ToolOutput
 
 from ollama_client import chat_completion, chat_completion_with_tools_openai
 from prompts.loader import orchestrator_system
+
+from .insight_quality import insight_qc_enabled, run_insight_qc
 from tools._common import make_tool_output, tool_output_to_dataframe, utc_as_of
 from tools.registry import run_tool as registry_run_tool
 from utils.logging_config import get_logger
@@ -179,12 +181,183 @@ AGENT2_OPENAI_TOOLS: list[dict[str, Any]] = [
 class OrchestratorRun:
     context: AgentContext
     results: dict[str, AgentResult]
+    insight_quality: dict[str, InsightQCResult] = field(default_factory=dict)
 
     def to_json_dict(self) -> dict[str, Any]:
         return {
             "context": self.context.to_json_dict(),
             "results": {k: v.to_json_dict() for k, v in self.results.items()},
+            "insight_quality": {k: v.to_json_dict() for k, v in self.insight_quality.items()},
         }
+
+
+def _insight_qc_source_bundle(ctx: AgentContext, *, max_compact_chars: int = 14000) -> str:
+    """Authoritative context string for rubric scoring (matches reporters' grounding)."""
+    parts = [
+        _metrics_and_attribution_prefix(ctx),
+        "--- Compact registry summary (tool statuses and shapes; cite counts only from context) ---",
+        _compact_context_for_llm(ctx, max_chars=max_compact_chars),
+    ]
+    ex = ctx.extra or {}
+    nt = (ex.get("national_weekly_trend_json") or "").strip()
+    if nt:
+        parts.append("--- national_weekly_trend_json (excerpt) ---\n" + nt[:6000])
+    srj = (ex.get("state_risk_records_json") or "").strip()
+    if srj:
+        parts.append("--- state_risk_records_json (excerpt) ---\n" + srj[:8000])
+    return "\n\n".join(parts)
+
+
+def _run_insight_qc_if_enabled(
+    ctx: AgentContext,
+    results: dict[str, AgentResult],
+) -> dict[str, InsightQCResult]:
+    """Optional post-pass rubric calls (INSIGHT_QC_ENABLED). Does not mutate reporter text."""
+    out: dict[str, InsightQCResult] = {}
+    if not insight_qc_enabled():
+        return out
+
+    bundle = _insight_qc_source_bundle(ctx)
+    r5 = results.get("agent_5")
+    if r5 and r5.status == "success" and (r5.content or "").strip():
+        out["national"] = run_insight_qc("national", str(r5.content), bundle)
+
+    r4 = results.get("agent_4")
+    if r4 and r4.status == "success" and (r4.content or "").strip():
+        out["state"] = run_insight_qc("state", str(r4.content), bundle)
+
+    return out
+
+
+def _env_bool(name: str, default: bool = False) -> bool:
+    raw = (os.getenv(name) or "").strip().lower()
+    if not raw:
+        return default
+    return raw in ("1", "true", "yes", "on")
+
+
+def _env_int(name: str, default: int, *, lo: int, hi: int) -> int:
+    raw = (os.getenv(name) or "").strip()
+    try:
+        n = int(raw)
+    except (TypeError, ValueError):
+        n = default
+    return max(lo, min(hi, n))
+
+
+def _refinement_enabled() -> bool:
+    return _env_bool("INSIGHT_REFINEMENT_ENABLED", default=False)
+
+
+def _refinement_round_limits() -> tuple[int, int]:
+    """
+    Returns (min_rounds, max_rounds), both clamped small to cap cost/latency.
+    """
+    max_rounds = _env_int("INSIGHT_REFINEMENT_MAX_ROUNDS", 1, lo=1, hi=3)
+    min_rounds = _env_int("INSIGHT_REFINEMENT_MIN_ROUNDS", 1, lo=1, hi=max_rounds)
+    return min_rounds, max_rounds
+
+
+def _refinement_user_prompt(
+    *,
+    role: str,
+    current_text: str,
+    qc: InsightQCResult,
+    source_bundle: str,
+    round_idx: int,
+    min_rounds: int,
+    max_rounds: int,
+) -> str:
+    label = "national summary" if role == "national" else "state summary"
+    qc_json = json.dumps(qc.to_json_dict(), default=str)
+    must_continue = round_idx < min_rounds
+    nudge = (
+        "Do not finish yet: produce a stronger revision and tighten unsupported claims."
+        if must_continue
+        else "If this draft already satisfies all checks, keep edits minimal and preserve grounded facts."
+    )
+    return (
+        f"You are revising the {label} for quality and faithfulness.\n\n"
+        f"Round {round_idx}/{max_rounds}. Minimum required rounds before accepting final output: {min_rounds}.\n"
+        f"{nudge}\n\n"
+        "Use only the Source context below; do not invent numbers.\n\n"
+        "--- Source context ---\n"
+        f"{source_bundle}\n\n"
+        "--- Current draft ---\n"
+        f"{current_text}\n\n"
+        "--- QC rubric result for current draft ---\n"
+        f"{qc_json}\n\n"
+        "Rewrite the full draft now. Keep it concise and readable for dashboard users."
+    )
+
+
+def _run_refinement_if_enabled(
+    ctx: AgentContext,
+    results: dict[str, AgentResult],
+    iq: dict[str, InsightQCResult],
+) -> tuple[dict[str, AgentResult], dict[str, InsightQCResult]]:
+    """
+    Optional bounded rewrite loop for Agent 4/5 outputs.
+
+    Uses Module 10-style loop controls: environment gate, min/max rounds, and a verification nudge.
+    """
+    if not _refinement_enabled():
+        return results, iq
+    if not insight_qc_enabled():
+        logger.info("insight refinement skipped: INSIGHT_QC_ENABLED is off")
+        return results, iq
+
+    source_bundle = _insight_qc_source_bundle(ctx)
+    min_rounds, max_rounds = _refinement_round_limits()
+    role_specs = (
+        ("national", "agent_5", "agent_5"),
+        ("state", "agent_4", "agent_4"),
+    )
+    for role, key, prompt_id in role_specs:
+        res = results.get(key)
+        qc = iq.get(role)
+        if not res or res.status != "success" or not (res.content or "").strip():
+            continue
+        if not qc or qc.status != "success":
+            continue
+
+        current = str(res.content)
+        latest_qc = qc
+        rounds_used = 0
+        for round_idx in range(1, max_rounds + 1):
+            rounds_used = round_idx
+            if round_idx > min_rounds and latest_qc.passed is True:
+                break
+            revised = chat_completion(
+                orchestrator_system(prompt_id),
+                _refinement_user_prompt(
+                    role=role,
+                    current_text=current,
+                    qc=latest_qc,
+                    source_bundle=source_bundle,
+                    round_idx=round_idx,
+                    min_rounds=min_rounds,
+                    max_rounds=max_rounds,
+                ),
+                timeout_s=90,
+            )
+            if not (revised or "").strip():
+                msg = f"Insight refinement stopped ({role}): LLM returned no text on round {round_idx}."
+                logger.warning(msg)
+                res.warnings.append(msg)
+                break
+            current = str(revised).strip()
+            latest_qc = run_insight_qc(role, current, source_bundle)
+            iq[role] = latest_qc
+            if latest_qc.status != "success":
+                msg = f"Insight refinement halted ({role}): QC parsing failed on round {round_idx}."
+                logger.warning(msg)
+                res.warnings.append(msg)
+                break
+        res.content = current
+        res.warnings.append(f"Insight refinement rounds ({role}): {rounds_used}/{max_rounds}.")
+
+    return results, iq
 
 
 def _run_tool_safe(name: str, parameters: dict[str, Any] | None) -> ToolOutput:
@@ -805,7 +978,9 @@ def run_agent_pipeline(
             results["agent_3"].status,
             results["agent_5"].status,
         )
-        return OrchestratorRun(context=ctx, results=results)
+        iq = _run_insight_qc_if_enabled(ctx, results)
+        results, iq = _run_refinement_if_enabled(ctx, results, iq)
+        return OrchestratorRun(context=ctx, results=results, insight_quality=iq)
 
     # Agents 2 and 3 in parallel, then state reporter (4) and national reporter (5) in parallel
     with ThreadPoolExecutor(max_workers=2) as ex:
@@ -834,4 +1009,6 @@ def run_agent_pipeline(
         results["agent_5"].status,
     )
 
-    return OrchestratorRun(context=ctx, results=results)
+    iq = _run_insight_qc_if_enabled(ctx, results)
+    results, iq = _run_refinement_if_enabled(ctx, results, iq)
+    return OrchestratorRun(context=ctx, results=results, insight_quality=iq)

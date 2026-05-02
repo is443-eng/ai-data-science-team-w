@@ -13,6 +13,7 @@ from typing import Any, Literal, Optional
 ToolStatus = Literal["success", "partial", "error"]
 AgentId = Literal["agent_1", "agent_2", "agent_3", "agent_4", "agent_5"]
 AgentRunStatus = Literal["pending", "running", "success", "error"]
+InsightQCStatus = Literal["success", "error", "skipped"]
 
 
 @dataclass
@@ -57,6 +58,27 @@ class AgentContext:
         d = asdict(self)
         d["tool_outputs"] = {k: v.to_json_dict() if isinstance(v, ToolOutput) else v for k, v in self.tool_outputs.items()}
         return d
+
+
+@dataclass
+class InsightQCResult:
+    """
+    Structured AI rubric scores for an Insight paragraph (national or state reporter).
+
+    Populated when optional insight QC runs after Agents 4–5; see agents.insight_quality.
+    """
+
+    role: Literal["national", "state"]
+    status: InsightQCStatus
+    passed: Optional[bool] = None
+    overall_score: Optional[float] = None
+    accurate: Optional[bool] = None
+    scores: dict[str, Any] = field(default_factory=dict)
+    details: Optional[str] = None
+    error_message: Optional[str] = None
+
+    def to_json_dict(self) -> dict[str, Any]:
+        return asdict(self)
 
 
 @dataclass
