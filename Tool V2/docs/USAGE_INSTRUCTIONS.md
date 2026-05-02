@@ -4,15 +4,9 @@
 
 Paste your team’s **Posit Connect** app URL here after deployment (same slot as in [`submission_notes.md`](submission_notes.md)):
 
-- **Live app URL:** _https://connect.systems-apps.com/…/ (replace with your published content URL)_
+- **Live app URL:** https://019d8308-dd30-7f63-8ef8-b1aee7428736.share.connect.posit.cloud/
 
 The app title in the browser should be **Risk of Measles Outbreak in US**.
-
-## Authentication / password
-
-- **Default:** The Streamlit app **does not define an in-app username/password**. Access is whatever your **hosting organization** configures on Posit Connect (e.g. public link, SSO, or named users).
-- **If your instructor shared a password or VPN requirement:** document it here:  
-  - **Password / access note:** _None required for our public link_ **or** _See course Canvas for Connect login._
 
 ## What the app does (quick orientation)
 

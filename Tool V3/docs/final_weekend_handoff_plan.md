@@ -36,13 +36,15 @@ Use this sequence every cycle (not just at the end) so each handoff has clear en
 
 ### 1) ian -> jonathan: feature-ready handoff
 
+**Done (ian, 2026-05-02):** feature scope is on `FEATURE_READY_HANDOFF_1` and pushed to `origin`; local `python3 -m pytest tests/ -q` is green (live Socrata parity tests may skip without `SOCRATA_APP_TOKEN` or when CDC/Socrata is unavailable). Orchestrator unit tests pin `INSIGHT_REFINEMENT_ENABLED=0` and `INSIGHT_QC_ENABLED=0` for determinism; enable toggles for QA per env/`TECHNICAL_DETAILS.md`. No known blockers for Jonathan’s QA pass beyond upstream API availability for optional live parity tests.
+
 ian marks handoff ready only when all are true:
 
-- [ ] Relevant feature scope is merged/in branch and runnable locally.
-- [ ] `python3 -m pytest "Tool V3/tests/" -q` passes locally (or targeted failures are documented and approved).
-- [ ] For the changed scope, `test_insight_quality.py`, `test_insight_regression.py`, and `test_orchestrator.py` are green.
-- [ ] Behavior notes are posted with exact toggle settings used (`INSIGHT_QC_ENABLED`, `INSIGHT_REFINEMENT_ENABLED`, model path).
-- [ ] Known limitations/regressions (if any) are explicitly listed with expected QA impact.
+- [x] Relevant feature scope is merged/in branch and runnable locally.
+- [x] `python3 -m pytest "Tool V3/tests/" -q` passes locally (or targeted failures are documented and approved).
+- [x] For the changed scope, `test_insight_quality.py`, `test_insight_regression.py`, and `test_orchestrator.py` are green.
+- [x] Behavior notes are posted with exact toggle settings used (`INSIGHT_QC_ENABLED`, `INSIGHT_REFINEMENT_ENABLED`, model path).
+- [x] Known limitations/regressions (if any) are explicitly listed with expected QA impact.
 
 ### 2) jonathan QA pass: validation + feedback handoff
 
