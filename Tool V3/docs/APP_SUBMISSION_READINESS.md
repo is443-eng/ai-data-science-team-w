@@ -1,11 +1,11 @@
 # App submission readiness (Tool V3)
 
 Use this checklist when you are ready to **freeze** the app before finalizing the V3 documentation package.
-Recommended order: **deploy testing** ([`DEPLOYMENT_TEST_LOG.md`](DEPLOYMENT_TEST_LOG.md)) → **this checklist** → **finalize** [`TOOL2_SUBMISSION_PACKAGE.md`](TOOL2_SUBMISSION_PACKAGE.md) (or your current package file).
+Recommended order: **deploy testing** ([`DEPLOYMENT_TEST_LOG.md`](DEPLOYMENT_TEST_LOG.md)) → **this checklist** → **finalize** [`TOOL3_SUBMISSION_PACKAGE.md`](TOOL3_SUBMISSION_PACKAGE.md) (see [`TOOL3.md`](TOOL3.md) rubric).
 
 ## Collaboration plan
 
-- [ ] For ian/jonathan ownership, handoff criteria, and collaboration rhythm, use [`final_weekend_handoff_plan.md`](final_weekend_handoff_plan.md).
+- [ ] For ian/jonathan ownership, handoff criteria, and collaboration rhythm, use [`planning/final_weekend_handoff_plan.md`](planning/final_weekend_handoff_plan.md).
 
 ## Automated tests
 
@@ -40,9 +40,9 @@ python3 -m pytest "Tool V3/tests/" -q
 
 ## Documentation sync (post-deploy-ready)
 
-- [ ] Update [`TECHNICAL_DETAILS.md`](TECHNICAL_DETAILS.md) with final quality/loop env var defaults and deployment notes.
-- [ ] Update [`INTERFACE_CONTRACTS.md`](INTERFACE_CONTRACTS.md) to reflect `InsightQCResult` and `OrchestratorRun.insight_quality`.
-- [ ] Update [`USAGE_INSTRUCTIONS.md`](USAGE_INSTRUCTIONS.md) and [`MANUAL_QA_CHECKLIST.md`](MANUAL_QA_CHECKLIST.md) for quality/loop UX and validation steps.
-- [ ] Verify docs index links in [`README.md`](README.md) include all new quality/regression docs and remain accurate.
+- [x] Update [`TECHNICAL_DETAILS.md`](TECHNICAL_DETAILS.md) with final quality/loop env var defaults and deployment notes.
+- [x] Update [`INTERFACE_CONTRACTS.md`](INTERFACE_CONTRACTS.md) to reflect `InsightQCResult` and `OrchestratorRun.insight_quality`.
+- [x] Update [`USAGE_INSTRUCTIONS.md`](USAGE_INSTRUCTIONS.md) and [`MANUAL_QA_CHECKLIST.md`](MANUAL_QA_CHECKLIST.md) for quality/loop UX and validation steps.
+- [x] Verify docs index links in [`README.md`](README.md) include all new quality/regression docs and remain accurate.
 
 Final docx / Canvas narrative is **last** — complete after all checks above pass.

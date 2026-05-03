@@ -1,4 +1,4 @@
-# App V2 interface contracts (Segment 0)
+# App V3 interface contracts (Tool V3)
 
 Frozen JSON-oriented shapes for the tool layer, orchestrator, and UI. Field names are **snake_case**. All timestamps are ISO-8601 strings where applicable.
 
@@ -113,6 +113,38 @@ Shared parameters (where supported): `use_cache` (bool, default `true`) for load
 
 `status` is one of: `pending`, `running`, `success`, `error`.
 
+## `InsightQCResult` (optional — insight quality rubric)
+
+Returned when **`INSIGHT_QC_ENABLED=1`** scores national or state reporter output. Dataclass: `contracts.schemas.InsightQCResult`.
+
+```json
+{
+  "role": "national",
+  "status": "success",
+  "passed": true,
+  "overall_score": 4.2,
+  "accurate": true,
+  "scores": {},
+  "details": "…",
+  "error_message": null
+}
+```
+
+- **`role`:** `"national"` | `"state"`.
+- **`status`:** e.g. `success`, `skipped`, `error` (see `InsightQCStatus` in code).
+
+## `OrchestratorRun` (orchestrator return value)
+
+The pipeline returns a bundle used by the UI (not all fields are persisted to JSON on disk):
+
+| Field | Type | Purpose |
+|-------|------|---------|
+| `context` | `AgentContext` | Request id, tool outputs, metrics, `extra` blocks for LLMs |
+| `results` | `dict[str, AgentResult]` | Keys such as `agent_1` … `agent_5` |
+| `insight_quality` | `dict[str, InsightQCResult]` | Optional QC entries (e.g. national/state keys used by the Overview expander) |
+
+`OrchestratorRun.to_json_dict()` includes `insight_quality` for debugging and tests (`agents/orchestrator.py`).
+
 ## Latency expectations (planning, not SLAs)
 
 | Step | Typical |
@@ -127,8 +159,8 @@ Shared parameters (where supported): `use_cache` (bool, default `true`) for load
 
 Python dataclasses live in `contracts/schemas.py` with `to_json_dict()` helpers.
 
-## Sign-off checklist (Segment 0)
+## Sign-off checklist
 
-- [ ] Tool owner: `ToolInput` / `ToolOutput` field names approved for Segment 1.
-- [ ] Orchestration owner: `AgentContext` and `AgentResult` approved for Segment 2–3.
-- [ ] UI owner: `AgentResult.content` display rules (string vs structured) noted for Segment 3.
+- [ ] Tool owner: `ToolInput` / `ToolOutput` field names stable for registry consumers.
+- [ ] Orchestration owner: `AgentContext`, `AgentResult`, optional **`InsightQCResult`** / **`OrchestratorRun.insight_quality`** documented for UI and tests.
+- [ ] UI owner: `AgentResult.content` display rules (string vs structured) and QC expander behavior when enabled.

@@ -50,11 +50,11 @@ ian marks handoff ready only when all are true:
 
 jonathan validates and returns one of two outcomes: **Pass** or **Needs fixes**.
 
-- [ ] Run [`MANUAL_QA_CHECKLIST.md`](MANUAL_QA_CHECKLIST.md) against the same toggle settings ian reported.
-- [ ] Confirm Overview -> Insights works in both national-only and state-selected modes.
-- [ ] Confirm QC/refinement UX and metadata behavior match checklist expectations.
-- [ ] Record reproducible issues with: steps, expected vs actual, env/toggles, and screenshots/logs if helpful.
-- [ ] Send a short QA result note: **Pass** (ready for deploy/doc sync) or **Needs fixes** (returns to ian with issue list).
+- [x] Run [`MANUAL_QA_CHECKLIST.md`](MANUAL_QA_CHECKLIST.md) against the same toggle settings ian reported.
+- [x] Confirm Overview -> Insights works in both national-only and state-selected modes.
+- [x] Confirm QC/refinement UX and metadata behavior match checklist expectations.
+- [x] Record reproducible issues with: steps, expected vs actual, env/toggles, and screenshots/logs if helpful.
+- [x] Send a short QA result note: **Pass** (ready for deploy/doc sync) or **Needs fixes** (returns to ian with issue list).
 
 ### 3) ian fix loop (only if QA finds issues)
 

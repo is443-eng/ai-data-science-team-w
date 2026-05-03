@@ -20,6 +20,7 @@ SOURCE = "cdc_socrata:ee48-w5t6"
 
 def run(parameters: dict[str, Any] | None = None) -> ToolOutput:
     parameters = parameters or {}
+    use_cache = bool(parameters.get("use_cache", True))
     limit = int(parameters.get("limit", 50_000))
     timeout = int(parameters.get("timeout_s", 90))
     if "where" in parameters:
@@ -38,11 +39,14 @@ def run(parameters: dict[str, Any] | None = None) -> ToolOutput:
             status="error",
             data=None,
             errors=["SOCRATA_APP_TOKEN not set"],
-            metadata={"view_id": TEEN_VIEW_ID, "parameters": {k: parameters.get(k) for k in ("limit", "where", "timeout_s")}},
+            metadata={
+                "view_id": TEEN_VIEW_ID,
+                "parameters": {k: parameters.get(k) for k in ("limit", "where", "timeout_s", "use_cache")},
+            },
         )
 
     def fetch() -> list:
-        return soda3_select(token, TEEN_VIEW_ID, where, limit=limit, timeout=timeout)
+        return soda3_select(token, TEEN_VIEW_ID, where, limit=limit, timeout=timeout, use_cache=use_cache)
 
     try:
         raw = retry_http(fetch, retries=int(parameters.get("retries", 3)))

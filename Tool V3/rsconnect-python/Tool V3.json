@@ -1,0 +1,12 @@
+{
+    "https://connect.systems-apps.com/": {
+        "server_url": "https://connect.systems-apps.com/",
+        "filename": "C:\\Users\\jonyl\\Documents\\GitHub\\ai-data-science-team-w\\Tool V3",
+        "app_url": "https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/",
+        "app_id": "256",
+        "app_guid": "b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933",
+        "title": "Measles Risk Tool V3 [ca04ee7d]",
+        "app_mode": "python-streamlit",
+        "app_store_version": 1
+    }
+}

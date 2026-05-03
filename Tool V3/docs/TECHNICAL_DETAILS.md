@@ -1,4 +1,4 @@
-# Technical details
+# Technical details (Tool V3)
 
 ## API keys and environment variables
 
@@ -8,9 +8,11 @@
 | **`OPENAI_API_KEY`** | When set, orchestrator LLM steps prefer **OpenAI** Chat Completions; enables optional **function calling** for agents 2–3. |
 | **`OPENAI_MODEL`** | Optional model name (default in code is typically `gpt-4o-mini` unless overridden). |
 | **`OLLAMA_API_KEY`** | When OpenAI is not used, **Ollama Cloud** can serve LLM calls if this is set. |
+| **`INSIGHT_QC_ENABLED`** | Set to `1` to run optional rubric scoring on national/state insight text (`INSIGHT_QC_MIN_OVERALL`, `INSIGHT_QC_REQUIRE_ACCURATE`). |
+| **`INSIGHT_REFINEMENT_ENABLED`** | Set to `1` with QC enabled for optional refinement rounds (`INSIGHT_REFINEMENT_MIN_ROUNDS`, `INSIGHT_REFINEMENT_MAX_ROUNDS`). |
 | **`CONNECT_API_KEY`** (or publisher equivalents) | Used **locally** when publishing to Posit Connect with `deployment/deploy_me.py`, not by the Streamlit runtime unless your platform injects them. |
 
-Secrets are often loaded from `.env` at the project root or `Tool V2/.env` (see `python-dotenv` usage in loaders and deploy script).
+Secrets are loaded from `.env` at the **project root** or **`Tool V3/.env`** (see `python-dotenv` in loaders, client, and deploy script).
 
 ## Endpoints and data sources
 
@@ -31,50 +33,55 @@ Secrets are often loaded from `.env` at the project root or `Tool V2/.env` (see 
 
 ### Historical national cases
 
-- Loaded from bundled CSV search paths (e.g. `Tool V2/data/measles_annual_1985.csv` and repo fallbacks); not a live API in the default path.
+- Loaded from bundled CSV search paths (e.g. `Tool V3/data/measles_annual_1985.csv` and repo fallbacks); not a live API in the default path.
 
 ### LLM APIs
 
-- **OpenAI:** HTTPS to OpenAI Chat Completions API (see `ollama_client.py` for paths and options).
-- **Ollama Cloud:** HTTPS per Ollama client configuration when OpenAI is not used.
+- **OpenAI:** HTTPS to OpenAI Chat Completions API (see `ollama_client.py`).
+- **Ollama Cloud:** HTTPS per `ollama_client.py` when OpenAI is not used.
 
 ## Python packages (runtime)
 
-Pinned in `Tool V2/requirements.txt` (minimum versions include):
+Declared in **`Tool V3/requirements.txt`** (minimum versions include):
 
-- **streamlit** — UI
-- **pandas**, **numpy** — data
-- **requests** — HTTP to CDC / LLM
-- **python-dotenv** — optional `.env` loading
-- **plotly** — charts/maps
-- **scikit-learn** — stage-1 model
+- **streamlit** — UI  
+- **tornado** — required on **Posit Connect** for the bundled Streamlit runtime (`connect_streamlit_runtime.py`)  
+- **pandas**, **numpy** — data  
+- **requests** — HTTP to CDC / LLM  
+- **python-dotenv** — optional `.env` loading  
+- **plotly** — charts/maps  
+- **scikit-learn**, **scipy** — stage-1 model and stats (`risk.py` imports **scipy** directly)  
+- **pytest** — tests (included in bundle today; optional split to dev-only for smaller images)
 
-Deployment may use `deployment/requirements-deploy.txt` for publisher-specific pins.
+Deployment publisher deps: `deployment/requirements-deploy.txt` (`rsconnect-python`).
 
 ## File structure (main)
 
 ```
-Tool V2/
+Tool V3/
   app.py                 # Streamlit entrypoint
   loaders.py             # CDC + CSV loaders
   ollama_client.py       # LLM client (OpenAI / Ollama)
   requirements.txt
-  agents/                # Orchestrator
-  contracts/             # Schemas
+  .python-version        # 3.12.4 (Posit Connect local env match)
+  agents/                # Orchestrator, insight QC, regression helpers
+  contracts/             # Schemas (ToolOutput, AgentContext, AgentResult, InsightQCResult)
   prompts/               # Agent prompts (.md)
-  risk/                  # Model and metrics
+  risk.py                # Model and metrics
   tools/                 # Registry + CDC tool wrappers
   ui/                    # UI helpers (e.g. agent insights)
   tests/                 # Pytest
   deployment/            # deploy_me.py, smoke scripts
-  docs/                  # Architecture, contracts, submission docs
+  docs/                  # Architecture, contracts, TOOL3 submission package
 ```
 
-## Deployment platform
+## Deployment platform (as deployed)
 
-- **Target:** **Posit Connect** (configurable server; default in `deployment/deploy_me.py` is `https://connect.systems-apps.com/`).
+- **Server:** **Posit Connect** — `https://connect.systems-apps.com/`
+- **Live content (direct):** https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/
 - **Publisher:** `rsconnect-python` via `python -m rsconnect.main deploy` (see `deployment/deploy_me.py`).
-- **Environment forwarding:** Deploy script can pass `-E` for variables such as `SOCRATA_APP_TOKEN`, `OPENAI_API_KEY`, `OLLAMA_API_KEY`, `OPENAI_MODEL` so the hosted app can call CDC and LLMs.
+- **Python:** **3.12.4** on Connect (`--override-python-version` / `.python-version`).
+- **Environment forwarding:** Deploy script passes `-E` for `SOCRATA_APP_TOKEN`, `OPENAI_API_KEY`, `OLLAMA_API_KEY`, `OPENAI_MODEL` when set locally so the hosted app can call CDC and LLMs.
 
 Operational checklists: [`submission_notes.md`](submission_notes.md), [`DEPLOYMENT_TEST_LOG.md`](DEPLOYMENT_TEST_LOG.md).
 
@@ -82,3 +89,5 @@ Operational checklists: [`submission_notes.md`](submission_notes.md), [`DEPLOYME
 
 - [`SYSTEM_ARCHITECTURE.md`](SYSTEM_ARCHITECTURE.md) — agents and data flow.
 - [`USAGE_INSTRUCTIONS.md`](USAGE_INSTRUCTIONS.md) — how to use the live app.
+- [`INTERFACE_CONTRACTS.md`](INTERFACE_CONTRACTS.md) — JSON shapes including QC.
+- [`TOOL3.md`](TOOL3.md) — course rubric.

@@ -1,22 +1,22 @@
-# System architecture (Tool V2)
+# System architecture (Tool V3)
 
 This document describes **agent roles**, **end-to-end workflow**, and **how major components interact** in the Predictive Measles Risk Dashboard with agentic orchestration.
 
 ## System purpose
 
-The Streamlit application loads **public CDC surveillance and coverage data**, runs a **risk model** (alarm probability, state composite scores, baseline gauge, forecast inputs), and renders interactive charts and maps. **Tool V2** adds an **orchestrator** that runs CDC-backed **tools** first, then **LLM agents** that produce state-level and national narratives grounded in tool output and dashboard metrics.
+The Streamlit application loads **public CDC surveillance and coverage data**, runs a **risk model** (alarm probability, state composite scores, baseline gauge, forecast inputs), and renders interactive charts and maps. **Tool V3** ships a **production-ready** **orchestrator** that runs CDC-backed **tools** first, then **LLM agents** that produce state-level and national narratives grounded in tool output and dashboard metrics, with optional **insight quality control** and **refinement** when enabled.
 
 ## Component overview
 
 | Layer | Location (conceptual) | Responsibility |
 |-------|----------------------|----------------|
 | Data | `loaders.py` | Fetch or load kindergarten coverage, wastewater, NNDSS, and historical CSV; report per-source status. |
-| Risk model | `risk/` | Stage-1 alarm fit/predict, national weekly NNDSS aggregation, per-state composite (`get_state_risk_df`), baseline gauge (`get_baseline_risk`), forecast helpers. |
+| Risk model | `risk.py` | Stage-1 alarm fit/predict, national weekly NNDSS aggregation, per-state composite (`get_state_risk_df`), baseline gauge (`get_baseline_risk`), forecast helpers. |
 | UI | `app.py`, `ui/` | Tabs: Overview, Historical, Kindergarten, Wastewater vs NNDSS, State risk, Forecast; Overview integrates orchestrator insights. |
 | Tools | `tools/*.py`, `tools/registry.py` | Five named tools wrapping CDC Socrata (and loaders); return structured `ToolOutput`. |
 | Orchestration | `agents/orchestrator.py` | Runs Agent 1 then parallel LLM steps; prompts from `prompts/*.md`. |
 | LLM client | `ollama_client.py` | OpenAI Chat Completions when configured, else Ollama Cloud. |
-| Contracts | `contracts/schemas.py` | `ToolOutput`, `AgentContext`, `AgentResult` for consistent payloads. |
+| Contracts | `contracts/schemas.py` | `ToolOutput`, `AgentContext`, `AgentResult`, optional `InsightQCResult` for consistent payloads. |
 
 ## Workflow (data to UI)
 

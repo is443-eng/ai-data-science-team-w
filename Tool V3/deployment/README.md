@@ -24,7 +24,7 @@ Target server: [Cornell Systems Engineering Connect](https://connect.systems-app
 
 4. **Server URL** — Default is the Cornell Connect URL above. Override with `CONNECT_SERVER` or `POSIT_CONNECT_SERVER`, or `--server`.
 
-5. **App directory** — `deploy_me.py` deploys the **Tool V3** folder, using `app.py` as the Streamlit entrypoint and `requirements.txt` for the bundle. Default **Python 3.12** (`--override-python-version`); override with `--python-version 3.11` if needed.
+5. **App directory** — `deploy_me.py` deploys the **Tool V3** folder, using `app.py` as the Streamlit entrypoint and `requirements.txt` for the bundle. Default **Python 3.12.4** (matches Cornell Connect’s local env); override with `--python-version X.Y.Z` if your server differs.
 
 6. **Bundle size** — Default **exclude** patterns (`-x`) mirror common practice: `tests`, `.pytest_cache`, `__pycache__`, `deployment`, `scripts`, `docs`, `reference`, `baseline`. Add more with `python deployment/deploy_me.py -x mypattern`.
 
@@ -44,7 +44,7 @@ Target server: [Cornell Systems Engineering Connect](https://connect.systems-app
 
 ## Runtime environment on Posit Connect
 
-The app needs **`SOCRATA_APP_TOKEN`** (CDC data) and optionally **`OLLAMA_API_KEY`** (AI features).
+Set **`SOCRATA_APP_TOKEN`** for reliable CDC pulls and for child/teen tools that query Socrata directly (optional but recommended—see [`../docs/TECHNICAL_DETAILS.md`](../docs/TECHNICAL_DETAILS.md)). For **Insights** and tab AI text, set **`OPENAI_API_KEY`** (preferred) and/or **`OLLAMA_API_KEY`** on Connect.
 
 **Automatic forwarding:** If those variables are set in the environment when you run `deploy_me.py` (including after loading `.env`), the script adds `rsconnect` **`-E`** entries for **`SOCRATA_APP_TOKEN`**, **`OLLAMA_API_KEY`**, **`OPENAI_API_KEY`**, and **`OPENAI_MODEL`** (when set) so their values are stored on the Connect content. Values are **not** echoed in the printed command for name-only `-E` flags (only the variable name appears).
 
@@ -84,6 +84,15 @@ See `python deployment/deploy_me.py --help` for all options.
 1. Track dry-run and real deploy in [`../docs/DEPLOYMENT_TEST_LOG.md`](../docs/DEPLOYMENT_TEST_LOG.md).
 2. Copy the live content URL into [`../docs/submission_notes.md`](../docs/submission_notes.md).
 3. Optional: `bash deployment/smoke_check_url.sh 'https://…'` then run the browser checklist in `submission_notes.md`.
+
+## Current deployment (as shipped — Tool V3)
+
+| | |
+|--|--|
+| **Content GUID** | `b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933` |
+| **Direct URL** | https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/ |
+
+Update command: `python deployment/deploy_me.py --app-id b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933` (add `--no-verify` if the CLI post-check flakes while the app is healthy).
 
 ## References
 

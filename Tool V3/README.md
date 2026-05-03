@@ -28,6 +28,12 @@ python run_me.py
 
 Set `SOCRATA_APP_TOKEN` in a `.env` at repo root or in `Tool V3/` for reliable CDC pulls. For **Insights**, set `OPENAI_API_KEY` and/or `OLLAMA_API_KEY`.
 
+## Deployed app (Posit Connect)
+
+- **Direct:** https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/
+
+See **[`docs/submission_notes.md`](docs/submission_notes.md)** for dashboard link, deploy commands, and env forwarding.
+
 ## Documentation
 
-Start at **[`docs/README.md`](docs/README.md)** (submission package index, architecture, contracts).
+Start at **[`docs/README.md`](docs/README.md)** (TOOL3 submission package index, architecture, contracts). Course rubric: **[`docs/TOOL3.md`](docs/TOOL3.md)**.

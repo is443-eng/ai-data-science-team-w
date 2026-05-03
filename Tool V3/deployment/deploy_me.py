@@ -11,7 +11,7 @@ vars (see ``_resolve_api_key``) — or load them from the repo ``.env`` via
 New deployments use a unique content title (UUID suffix) unless you pass ``--title``,
 set ``DEPLOY_STREAMLIT_TITLE``, or ``--app-id`` / ``DEPLOY_CONNECT_APP_ID``.
 
-The Connect bundle requests **Python 3.12** by default (``--override-python-version``).
+The Connect bundle requests **Python 3.12.4** by default (``--override-python-version``); Cornell Connect currently exposes 3.12.4, not 3.12.0.
 
 If ``SOCRATA_APP_TOKEN``, ``OLLAMA_API_KEY``, ``OPENAI_API_KEY``, and/or ``OPENAI_MODEL``
 are set in the environment used to run this script (including after loading ``.env``),
@@ -31,7 +31,7 @@ from pathlib import Path
 
 
 DEFAULT_SERVER = "https://connect.systems-apps.com/"
-DEFAULT_PYTHON_VERSION = "3.12"
+DEFAULT_PYTHON_VERSION = "3.12.4"
 
 # Default bundle excludes (rsconnect ``-x``): shrink upload and skip non-runtime paths.
 DEFAULT_EXCLUDES = (

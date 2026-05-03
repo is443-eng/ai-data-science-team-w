@@ -12,6 +12,7 @@ __pycache__/
 venv/
 .venv/
 .venv-docx/
+.venv-req-check/
 env/
 
 # Data output (CSV from API scripts)

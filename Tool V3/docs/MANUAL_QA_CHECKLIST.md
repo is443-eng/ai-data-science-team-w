@@ -1,6 +1,6 @@
-# Manual QA checklist (Tool V2)
+# Manual QA checklist (Tool V3)
 
-Run after code changes that touch loaders, risk model, orchestrator, or UI. Pair with `python3 -m pytest tests/` from the `Tool V2/` directory (network allowed for live parity tests). When preparing to submit, align with [`APP_SUBMISSION_READINESS.md`](APP_SUBMISSION_READINESS.md).
+Run after code changes that touch loaders, risk model, orchestrator, or UI. Pair with `python3 -m pytest "Tool V3/tests/" -q` from the **repository root** (network allowed for live parity tests). When preparing to submit, align with [`APP_SUBMISSION_READINESS.md`](APP_SUBMISSION_READINESS.md). For the **hosted** build, repeat critical steps against the live URL in [`submission_notes.md`](submission_notes.md).
 
 **Environment:** `SOCRATA_APP_TOKEN` (optional but recommended for CDC pulls). For **Insights**: **`OPENAI_API_KEY`** (recommended; enables tool calling in agents) or **`OLLAMA_API_KEY`**. Optional `OPENAI_MODEL`.
 

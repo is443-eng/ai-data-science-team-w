@@ -16,6 +16,8 @@ if str(APP_DIR) not in sys.path:
 # Project root for .env (parent of dashboard when run locally)
 PROJECT_ROOT = APP_DIR.parent
 
+import time
+
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -51,7 +53,7 @@ if "coef_df" not in st.session_state:
 
 
 def load_and_model(use_cache: bool = True, outbreak_percentile: float = 95.0):
-    from loaders import load_all, clear_cache
+    from loaders import CACHE_TTL, load_all, clear_cache
     from risk import (
         fit_stage1,
         predict_alarm_probability,
@@ -59,6 +61,22 @@ def load_and_model(use_cache: bool = True, outbreak_percentile: float = 95.0):
         get_baseline_risk,
         get_state_risk_df,
     )
+
+    ss = st.session_state
+    if use_cache:
+        last_fetch = ss.get("_last_full_fetch_unix")
+        if (
+            last_fetch is not None
+            and (time.time() - float(last_fetch)) < float(CACHE_TTL)
+            and all(k in ss for k in ("hist", "kg", "ww", "nndss", "load_status", "data_as_of"))
+        ):
+            hist = ss.hist
+            kg = ss.kg
+            ww = ss.ww
+            nndss = ss.nndss
+            logger.info("Reusing session data and model (last fetch %.0fs ago, TTL %ss)", time.time() - float(last_fetch), CACHE_TTL)
+            return hist, kg, ww, nndss
+
     if not use_cache:
         clear_cache()
     hist, kg, ww, nndss, load_status, data_as_of = load_all(use_cache=use_cache)
@@ -103,6 +121,7 @@ def load_and_model(use_cache: bool = True, outbreak_percentile: float = 95.0):
     except Exception:
         st.session_state.baseline_tier = "low"
         st.session_state.baseline_val = 0.0
+    st.session_state._last_full_fetch_unix = time.time()
     return hist, kg, ww, nndss
 
 

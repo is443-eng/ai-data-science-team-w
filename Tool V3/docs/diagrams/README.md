@@ -14,10 +14,10 @@
    - Leading `%%` lines are comments; you can delete them if the editor complains.  
    - Use **Actions → Export** for PNG or SVG.
 
-2. **Mermaid CLI** (from repo root or `Tool V2/docs/diagrams/`):
+2. **Mermaid CLI** (from repo root or `Tool V3/docs/diagrams/`):
 
    ```bash
-   cd "Tool V2/docs/diagrams"
+   cd "Tool V3/docs/diagrams"
    npx --yes @mermaid-js/mermaid-cli -i architecture.mmd -o architecture.png
    ```
 

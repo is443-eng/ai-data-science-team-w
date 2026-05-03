@@ -1,2 +1,9 @@
 # Pytest
 .pytest_cache/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# App log (local)
+dashboard.log

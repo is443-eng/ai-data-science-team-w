@@ -1,18 +1,18 @@
-# Tool V2 — system architecture
+# Tool V3 — system architecture
 
-**Workflow:** Update this document when the shipped pipeline changes; the process diagram should match what you submit in the TOOL2 package. Sources: [`diagrams/architecture.mmd`](diagrams/architecture.mmd) (editable), Mermaid block below (same graph).
+**Workflow:** Update this document when the shipped pipeline changes; the process diagram should match what you submit in the **TOOL3** package ([`TOOL3_SUBMISSION_PACKAGE.md`](TOOL3_SUBMISSION_PACKAGE.md)). Sources: [`diagrams/architecture.mmd`](diagrams/architecture.mmd) (editable), Mermaid block below (same graph).
 
 ## Purpose
 
-The **Predictive Measles Risk Dashboard** (Streamlit) loads CDC surveillance and coverage data, fits a risk model, and presents charts, maps, and forecasts. **Tool V2** adds **agentic orchestration**: CDC-backed tools run first; then LLM agents produce state-level and national narratives grounded in tool output and dashboard metrics.
+The **Predictive Measles Risk Dashboard** (Streamlit) loads CDC surveillance and coverage data, fits a risk model, and presents charts, maps, and forecasts. **Tool V3** delivers **production-ready** behavior on top of prior milestones: CDC-backed **tools** run first; then LLM agents produce state-level and national narratives grounded in tool output and dashboard metrics. Optional **insight QC** and **refinement** loops validate AI outputs when enabled via environment variables.
 
 ## High-level flow
 
-1. **Loaders** (`loaders/`) pull kindergarten coverage, wastewater, NNDSS, and related tables from public CDC endpoints (Socrata).
-2. **Risk** (`risk/`) builds a stage-1 alarm model, national weekly aggregates, **per-state composite scores** (`get_state_risk_df`: coverage + recent cases + wastewater percentiles), **forecast** drivers, and the **Overview baseline gauge** (`get_baseline_risk`). The baseline score can be **harmonized** with the max state composite on the same run so the national meter does not contradict the state table on a shared 0–100 display.
+1. **Loaders** (`loaders.py`) pull kindergarten coverage, wastewater, NNDSS, and related tables from public CDC endpoints (Socrata).
+2. **Risk** (`risk.py`) builds a stage-1 alarm model, national weekly aggregates, **per-state composite scores** (`get_state_risk_df`: coverage + recent cases + wastewater percentiles), **forecast** drivers, and the **Overview baseline gauge** (`get_baseline_risk`). The baseline score can be **harmonized** with the max state composite on the same run so the national meter does not contradict the state table on a shared 0–100 display.
 3. **Streamlit** (`app.py`) renders pages: Overview (baseline gauge + optional **Insights** from the orchestrator), Historical, Kindergarten, Wastewater vs NNDSS, State risk, Forecast.
 4. **Orchestrator** (`agents/orchestrator.py`) runs **Agent 1** (five registered tools in fixed order), then **Agents 2 and 3 in parallel** (LLM), then **Agents 4 and 5 in parallel** (LLM). **Agent 2** is the state data analyst (tools + state-filtered excerpts). **Agent 3** is the national data analyst. **Agent 4** rewrites Agent 2’s output for a readable **state summary**. **Agent 5** produces the **national summary** prose from Agent 3’s output plus injected **TOP STATES BY COMPOSITE RISK** blocks. User messages prepend **DASHBOARD METRICS**, optional **BASELINE ATTRIBUTION**, and **STATE RISK SNAPSHOT** when a state is selected. **State risk JSON** for agents is recomputed from **Agent 1 tool payloads** when possible so rankings match the same CDC pull as the insights run (not only stale session state). Prompts load from `prompts/*.md` via `prompts/loader.py`. LLM calls go through `ollama_client.py`: **OpenAI** Chat Completions if `OPENAI_API_KEY` is set (optional `OPENAI_MODEL`, default `gpt-4o-mini`), otherwise **Ollama Cloud** with model fallback. Combined system+user prompts are bounded (`MAX_PROMPT_CHARS`); national reporter context orders **ranking blocks before** long tool dumps so truncation does not drop top-state lists.
-5. **Contracts** (`contracts/schemas.py`) define `AgentContext`, `AgentResult`, `ToolOutput` for consistent payloads and tests.
+5. **Contracts** (`contracts/schemas.py`) define `AgentContext`, `AgentResult`, `ToolOutput`, and optional **`InsightQCResult`** (rubric scores when `INSIGHT_QC_ENABLED=1`) for consistent payloads and tests.
 
 ## Process diagram (Mermaid)
 

@@ -1,8 +1,12 @@
 streamlit>=1.28.0
+# Posit Connect Streamlit runtime imports tornado (connect_streamlit_runtime.py); ensure present after uv lock.
+tornado>=6.4
 pandas>=1.5.0
 numpy>=1.21.0
 requests>=2.28.0
 python-dotenv>=1.0.0
 plotly>=5.14.0
 scikit-learn>=1.2.0
+scipy>=1.10.0
+# Used directly in risk.py (also pulled in by scikit-learn).
 pytest>=7.0.0

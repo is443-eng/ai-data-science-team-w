@@ -5,6 +5,7 @@ Aligned with ``reference/shiny_v1_cdc/call_cdc_child_vax.py`` and ``call_cdc_tee
 from __future__ import annotations
 
 import os
+import time
 from pathlib import Path
 from typing import Any, Optional
 
@@ -29,6 +30,14 @@ TEEN_MMR = {"≥2 Doses MMR"}
 
 GEOGRAPHY_TYPE_STATES = "States/Local Areas"
 GEOGRAPHY_NATIONAL = "United States"
+
+# Match loaders.CACHE_TTL (1 hour); keep child/teen Socrata pulls from bypassing cache on insights.
+FETCH_CACHE_TTL_S = 3600
+_soda_select_cache: dict[tuple[Any, ...], tuple[list[dict[str, Any]], float]] = {}
+
+
+def clear_soda_select_cache() -> None:
+    _soda_select_cache.clear()
 
 
 def _get_token() -> Optional[str]:
@@ -77,7 +86,14 @@ def soda3_select(
     *,
     limit: int,
     timeout: int,
+    use_cache: bool = True,
 ) -> list[dict[str, Any]]:
+    cache_key = (view_id, where, limit, timeout)
+    now = time.time()
+    if use_cache and cache_key in _soda_select_cache:
+        rows, ts = _soda_select_cache[cache_key]
+        if now - ts < FETCH_CACHE_TTL_S:
+            return rows
     url = f"https://data.cdc.gov/api/v3/views/{view_id}/query.json"
     soql = "SELECT *" + (f" WHERE {where}" if where else "")
     payload = {"query": soql, "page": {"pageNumber": 1, "pageSize": limit}}
@@ -86,7 +102,11 @@ def soda3_select(
     r.raise_for_status()
     data = r.json()
     if isinstance(data, dict) and "data" in data:
-        return data["data"]
-    if isinstance(data, list):
-        return data
-    return []
+        out = data["data"]
+    elif isinstance(data, list):
+        out = data
+    else:
+        out = []
+    if use_cache:
+        _soda_select_cache[cache_key] = (out, now)
+    return out

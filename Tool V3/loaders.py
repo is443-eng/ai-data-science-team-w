@@ -369,3 +369,9 @@ def clear_cache() -> None:
     """Clear in-memory cache (e.g. after 'Refresh data')."""
     _cache.clear()
     logger.info("Cache cleared")
+    try:
+        from tools.cdc_child_teen import clear_soda_select_cache
+
+        clear_soda_select_cache()
+    except Exception:
+        pass
