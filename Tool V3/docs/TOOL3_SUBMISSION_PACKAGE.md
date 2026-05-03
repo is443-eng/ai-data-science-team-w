@@ -1,91 +1,42 @@
 # TOOL3 — App V3 submission package
 
-Permanent URL prefix used below: **`main`** branch, repo **[is443-eng/ai-data-science-team-w](https://github.com/is443-eng/ai-data-science-team-w)** (`https://github.com/is443-eng/ai-data-science-team-w/blob/main/…`). All repository paths are spelled so exported **PDF readers can open links** without a repository clone.
+Permanent URL prefix used below: `**main**` branch, repo **[is443-eng/ai-data-science-team-w](https://github.com/is443-eng/ai-data-science-team-w)** (`https://github.com/is443-eng/ai-data-science-team-w/blob/main/…`). All repository paths are spelled so exported **PDF readers can open links** without a repository clone.
 
 ---
 
 ## Links
 
 
-| Item                                            | URL |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GitHub repository (main branch)                 | [https://github.com/is443-eng/ai-data-science-team-w](https://github.com/is443-eng/ai-data-science-team-w)                                                                                                                                                                                       |
-| Live deployed app (Posit Connect)               | [https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/](https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/)                                                                                                                             |
-| Live Video App Demo                             | [https://youtu.be/bpEJRjsjYyc](https://youtu.be/bpEJRjsjYyc)                                                                                                                                                                                                                                     |
-| Presentation materials — Demo Script Talking Points | [Demo Script Talking Points.md (GitHub)](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/Demo%20Script%20Talking%20Points.md)                                                                                                                                     |
-| Demo Final Script                               | [Demo Final Script.md (GitHub)](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/Demo%20Final%20Script.md)                                                                                                                                                           |
+| Item                              | URL                                                                                                                                                              |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GitHub repository (main branch)   | [https://github.com/is443-eng/ai-data-science-team-w](https://github.com/is443-eng/ai-data-science-team-w)                                                       |
+| Live deployed app (Posit Connect) | [https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/](https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/) |
+| Live Video App Demo               | [https://youtu.be/bpEJRjsjYyc](https://youtu.be/bpEJRjsjYyc)                                                                                                     |
+| Demo Final Script (GitHub)        | [Demo Final Script.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/Demo%20Final%20Script.md)                                    |
+
 
 ---
 
 ## Rubric mapping (TOOL3 — 100 pts)
 
 
-| Rubric item (from TOOL3)                     | How the shipped app addresses it                                                                                                                                                                                                                      |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **50 pts — Production-ready functional app** |                                                                                                                                                                                                                                                       |
-| Stakeholder alignment (10)                   | Public-health–oriented **Measles** dashboard: CDC open data, plain-language **Overview**, **state/national** insights, risk tiers and forecast context—not clinical advice; disclaimer in-app.                                                        |
-| Clarity (10)                                 | Streamlit **sidebar** navigation, **Data as of** and per-source load lines, **Overview** baseline + **Insights** with optional state; expanders for methodology.                                                                                      |
-| Streamlining (10)                            | Focused tab set (Overview, Historical, Kindergarten, Wastewater vs NNDSS, State risk, Forecast); LLM optional via **Include AI-written summaries**; no duplicate product surfaces.                                                                    |
-| Efficiency (10)                              | **1-hour** CDC/tool fetch caching, **session reuse** of model outputs within TTL, **Generate insights** reuses cached Socrata rows when available; **Python 3.12.4** on Connect.                                                                      |
-| Reliability (10)                             | **57** automated tests (`Tool V3/tests/`); partial tool/LLM failure handling in orchestrator; graceful empty states; **tornado** and explicit **scipy** in [requirements.txt](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/requirements.txt) for Connect builds.                                |
-| **20 pts — Quality control and validation**  |                                                                                                                                                                                                                                                       |
-| QC implementation (10)                       | **Insight quality rubric** (`INSIGHT_QC_ENABLED=1`) scores national/state summaries; **refinement loop** (`INSIGHT_REFINEMENT_*`) with documented env vars.                                                                                           |
-| Evidence of AI performance (10)              | **Insight quality expander** on Overview when QC runs; **insight regression** tests ([INSIGHT_QUALITY_REGRESSION.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/INSIGHT_QUALITY_REGRESSION.md)); `InsightQCResult` in [INTERFACE_CONTRACTS.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/INTERFACE_CONTRACTS.md) / [`contracts/schemas.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/contracts/schemas.py). |
-| **20 pts — Presentation**                    |                                                                                                                                                                                                                                                       |
-| Live demonstration (10)                      | [Demo Script Talking Points](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/Demo%20Script%20Talking%20Points.md) supports a 3–5 minute walkthrough of the **deployed** URL above.                                                                                                      |
-| Presentation materials (10)                  | Demo script + (team provides slides or video per course / DL policy in Canvas).                                                                                                                                                                       |
-| **10 pts — Deployed app link**               | **Working** Posit Connect URL in the table: direct content link above; Connect dashboard: [open in Connect (`#/apps/b8cfc1fa-…`)](https://connect.systems-apps.com/connect/#/apps/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933)                                                                      |
-| **Agentic loop** (course overview; design yours) | After tools run, **five LLM stages**: Agent **1** (tool runner) → **2 ∥ 3** (state vs national analysts) → **4 ∥ 5** (state vs national reporters). Optional **insight QC / refinement** env toggles. See [ARCHITECTURE.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/ARCHITECTURE.md), [`agents/orchestrator.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/agents/orchestrator.py). |
+| Rubric item (from TOOL3)                         | How the shipped app addresses it                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **50 pts — Production-ready functional app**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Stakeholder alignment (10)                       | Public-health–oriented **Measles** dashboard: CDC open data, plain-language **Overview**, **state/national** insights, risk tiers and forecast context—not clinical advice; disclaimer in-app.                                                                                                                                                                                                                                                                                                                  |
+| Clarity (10)                                     | Streamlit **sidebar** navigation, **Data as of** and per-source load lines, **Overview** baseline + **Insights** with optional state; expanders for methodology.                                                                                                                                                                                                                                                                                                                                                |
+| Streamlining (10)                                | Focused tab set (Overview, Historical, Kindergarten, Wastewater vs NNDSS, State risk, Forecast); LLM optional via **Include AI-written summaries**; no duplicate product surfaces.                                                                                                                                                                                                                                                                                                                              |
+| Efficiency (10)                                  | **1-hour** CDC/tool fetch caching, **session reuse** of model outputs within TTL, **Generate insights** reuses cached Socrata rows when available; **Python 3.12.4** on Connect.                                                                                                                                                                                                                                                                                                                                |
+| Reliability (10)                                 | **57** automated tests (`Tool V3/tests/`); partial tool/LLM failure handling in orchestrator; graceful empty states; **tornado** and explicit **scipy** in [requirements.txt](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/requirements.txt) for Connect builds.                                                                                                                                                                                                                     |
+| **20 pts — Quality control and validation**      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| QC implementation (10)                           | **Insight quality rubric** (`INSIGHT_QC_ENABLED=1`) scores national/state summaries; **refinement loop** (`INSIGHT_REFINEMENT_`*) with documented env vars.                                                                                                                                                                                                                                                                                                                                                     |
+| Evidence of AI performance (10)                  | **Insight quality expander** on Overview when QC runs; **insight regression** tests ([INSIGHT_QUALITY_REGRESSION.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/INSIGHT_QUALITY_REGRESSION.md)); `InsightQCResult` in [INTERFACE_CONTRACTS.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/INTERFACE_CONTRACTS.md) / `[contracts/schemas.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/contracts/schemas.py)`. |
+| **20 pts — Presentation**                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Live demonstration (10)                          | [Demo Script Talking Points](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/Demo%20Script%20Talking%20Points.md) supports a 3–5 minute walkthrough of the **deployed** URL above.                                                                                                                                                                                                                                                                                                 |
+| Presentation materials (10)                      | Demo script + (team provides slides or video per course / DL policy in Canvas).                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **10 pts — Deployed app link**                   | **Working** Posit Connect URL in the table: direct content link above; Connect dashboard: [open in Connect (`#/apps/b8cfc1fa-…`)](https://connect.systems-apps.com/connect/#/apps/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933)                                                                                                                                                                                                                                                                                         |
+| **Agentic loop** (course overview; design yours) | After tools run, **five LLM stages**: Agent **1** (tool runner) → **2 ∥ 3** (state vs national analysts) → **4 ∥ 5** (state vs national reporters). Optional **insight QC / refinement** env toggles. See [ARCHITECTURE.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/ARCHITECTURE.md), `[agents/orchestrator.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/agents/orchestrator.py)`.                                                          |
 
----
-
-## Process diagram
-
-Direct Mermaid source from [diagrams/architecture.mmd](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/diagrams/architecture.mmd):
-
-```mermaid
-flowchart TB
-  subgraph Data["CDC data layer"]
-    CDC["CDC Socrata APIs"]
-    L["loaders.load_all"]
-    CDC --> L
-  end
-
-  subgraph Model["Risk model (risk.py)"]
-    R["Stage-1 alarm, forecast, state composite, baseline gauge"]
-    L --> R
-  end
-
-  subgraph UI["Streamlit app.py"]
-    Ov["Overview: gauge + Generate insights"]
-    T1["Historical, Kindergarten, WW vs NNDSS"]
-    T2["State risk, Forecast"]
-    R --> Ov
-    R --> T1
-    R --> T2
-  end
-
-  subgraph Orch["Orchestrator (agents/orchestrator.py)"]
-    A1["Agent 1: 5 tools via registry"]
-    A2["Agent 2: state analyst LLM"]
-    A3["Agent 3: national analyst LLM"]
-    A4["Agent 4: state reporter LLM"]
-    A5["Agent 5: national reporter LLM"]
-    A1 --> A2
-    A1 --> A3
-    A2 --> A4
-    A3 --> A5
-  end
-
-  L --> A1
-  LLM["OpenAI or Ollama Cloud"]
-  LLM --> A2
-  LLM --> A3
-  LLM --> A4
-  LLM --> A5
-  A4 --> Ov
-  A5 --> Ov
-```
 
 ---
 
@@ -94,7 +45,7 @@ flowchart TB
 ### System architecture
 
 - **Frontend:** Streamlit (`app.py`); **Overview** integrates `ui/agent_insights.py` (**Generate insights**).
-- **Data:** `loaders.py` + `tools/*` for CDC; `risk.py` for alarm model, aggregates, **state composite** (`get_state_risk_df`), baseline, forecast.
+- **Data:** `loaders.py` + `tools/`* for CDC; `risk.py` for alarm model, aggregates, **state composite** (`get_state_risk_df`), baseline, forecast.
 - **Orchestration:** `agents/orchestrator.py` — Agent 1 → Agents 2 ∥ 3 → Agents 4 ∥ 5; optional `InsightQCResult` on `OrchestratorRun`. State risk JSON rebuilt from **Agent 1** tool payloads when possible.
 - **Prompts:** `prompts/*.md` + `prompts/loader.py`; `shared_guardrails.md`.
 
@@ -114,7 +65,7 @@ Exact fields: [INTERFACE_CONTRACTS.md](https://github.com/is443-eng/ai-data-scie
 
 ### Technical details
 
-- **Python:** [Tool V3/requirements.txt](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/requirements.txt) (includes **streamlit**, **tornado** for Connect runtime, **scipy** for `risk.py`, **scikit-learn**, etc.); bundle targets **Python 3.12.4**; [`.python-version`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/.python-version) and [`deployment/deploy_me.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/deployment/deploy_me.py) defaults align with the Connect image.
+- **Python:** [Tool V3/requirements.txt](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/requirements.txt) (includes **streamlit**, **tornado** for Connect runtime, **scipy** for `risk.py`, **scikit-learn**, etc.); bundle targets **Python 3.12.4**; `[.python-version](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/.python-version)` and `[deployment/deploy_me.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/deployment/deploy_me.py)` defaults align with the Connect image.
 - **Secrets:** `OPENAI_API_KEY` (recommended), `OLLAMA_API_KEY` (fallback), optional `SOCRATA_APP_TOKEN`, `OPENAI_MODEL`; deploy keys (`POSIT_PUBLISHER_KEY`, etc.) only on the **publisher** machine — use Connect **Vars** and `deploy_me.py` `**-E`** forwarding. Never commit secrets.
 - **Repo layout:** `Tool V3/` is the app root: `contracts/`, `tools/`, `agents/`, `prompts/`, `ui/`, `tests/`, `docs/`, `deployment/`.
 
@@ -132,20 +83,20 @@ Exact fields: [INTERFACE_CONTRACTS.md](https://github.com/is443-eng/ai-data-scie
 ## Team members by role
 
 
-| Name             | Role (examples)                                                     |
-| ---------------- | ------------------------------------------------------------------- |
+| Name           | Role (examples)         |
+| -------------- | ----------------------- |
 | Jonathan Lloyd | Frontend and Deployment |
-| Ian Steigmeyer  | Backend and Agents |
+| Ian Steigmeyer | Backend and Agents      |
 
 
 ---
 
 ## Pointers for grading
 
-- **Orchestration + tools:** [`agents/orchestrator.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/agents/orchestrator.py), [`tools/registry.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tools/registry.py), [`tests/test_orchestrator.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tests/test_orchestrator.py).
-- **UI:** [`app.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/app.py), [`ui/agent_insights.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/ui/agent_insights.py).
-- **Risk + state table:** [`risk.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/risk.py), [`tests/test_risk_leaderboard.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tests/test_risk_leaderboard.py).
-- **QC / regression:** [`agents/insight_quality.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/agents/insight_quality.py), [`tests/test_insight_quality.py`](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tests/test_insight_quality.py), [INSIGHT_QUALITY_REGRESSION.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/INSIGHT_QUALITY_REGRESSION.md).
+- **Orchestration + tools:** `[agents/orchestrator.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/agents/orchestrator.py)`, `[tools/registry.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tools/registry.py)`, `[tests/test_orchestrator.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tests/test_orchestrator.py)`.
+- **UI:** `[app.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/app.py)`, `[ui/agent_insights.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/ui/agent_insights.py)`.
+- **Risk + state table:** `[risk.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/risk.py)`, `[tests/test_risk_leaderboard.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tests/test_risk_leaderboard.py)`.
+- **QC / regression:** `[agents/insight_quality.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/agents/insight_quality.py)`, `[tests/test_insight_quality.py](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/tests/test_insight_quality.py)`, [INSIGHT_QUALITY_REGRESSION.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/INSIGHT_QUALITY_REGRESSION.md).
 - **Docs index:** [README.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/README.md), [submission_notes.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/submission_notes.md), [DEPLOYMENT_TEST_LOG.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/DEPLOYMENT_TEST_LOG.md), [APP_SUBMISSION_READINESS.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/APP_SUBMISSION_READINESS.md), [MANUAL_QA_CHECKLIST.md](https://github.com/is443-eng/ai-data-science-team-w/blob/main/Tool%20V3/docs/MANUAL_QA_CHECKLIST.md).
 
 ---
