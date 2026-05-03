@@ -31,6 +31,7 @@ Set `SOCRATA_APP_TOKEN` in a `.env` at repo root or in `Tool V3/` for reliable C
 ## Deployed app (Posit Connect)
 
 - **Direct:** https://connect.systems-apps.com/content/b8cfc1fa-8eb0-4c2e-ba98-b5f06837e933/
+- **Demo video (YouTube):** https://youtu.be/bpEJRjsjYyc
 
 See **[`docs/submission_notes.md`](docs/submission_notes.md)** for dashboard link, deploy commands, and env forwarding.
 
