@@ -1,0 +1,804 @@
+[Ian Steigmeyer] 10:55:18
+Can you hear me?
+
+[Jonathan Lloyd] 10:55:25
+Hey, what's up?
+
+[Ian Steigmeyer] 10:55:27
+I, uh, I saw the owls, it took a minute to realize it was you standing over there.
+
+[Jonathan Lloyd] 10:55:31
+Yeah. Coffee just finished.
+
+[Ian Steigmeyer] 10:55:34
+Nice.
+
+[Jonathan Lloyd] 10:55:36
+Uh, so what time are you driving out to…
+
+[Jonathan Lloyd] 10:55:39
+to Yosemite.
+
+[Ian Steigmeyer] 10:55:41
+Um… I think we'll probably leave around 11.30 or noon.
+
+[Jonathan Lloyd] 10:55:45
+That's better. Are you going for the whole week?
+
+[Ian Steigmeyer] 10:55:47
+Yeah. No, um…
+
+[Ian Steigmeyer] 10:55:51
+Just for a day, we got, um…
+
+[Ian Steigmeyer] 10:55:54
+my mom and my brother are in town.
+
+[Jonathan Lloyd] 10:55:56
+Nice.
+
+[Ian Steigmeyer] 10:55:57
+And, um, we…
+
+[Ian Steigmeyer] 10:55:59
+got an Airbnb along with, uh, like, a buddy of mine that…
+
+[Ian Steigmeyer] 10:56:03
+lives out here, and his wife.
+
+[Jonathan Lloyd] 10:56:04
+Okay.
+
+[Ian Steigmeyer] 10:56:07
+Um, then we're just gonna go hiking on Monday, and then…
+
+[Ian Steigmeyer] 10:56:10
+head back Tuesday.
+
+[Jonathan Lloyd] 10:56:12
+Nice. Good stuff.
+
+[Ian Steigmeyer] 10:56:15
+Yeah, it's really nice to be able to take a one-day trip to Yosemite and, like, not have it be a…
+
+[Ian Steigmeyer] 10:56:20
+It's like a hassle. It's like 3 hours from here.
+
+[Jonathan Lloyd] 10:56:23
+Oh, dude, that's like a… it's like a ski trip.
+
+[Ian Steigmeyer] 10:56:25
+Yeah, that's…
+
+[Jonathan Lloyd] 10:56:27
+Seriously.
+
+[Ian Steigmeyer] 10:56:27
+I, uh… I've talked to Chelsea about that a lot from…
+
+[Ian Steigmeyer] 10:56:31
+I mean, Tahoe's actually closer.
+
+[Jonathan Lloyd] 10:56:33
+Really?
+
+[Ian Steigmeyer] 10:56:34
+Yeah, but I've talked to Chelsea about that a lot. Like, we used to drive, like, 4 hours to ski at, like, a 500-foot-tall hill in Michigan.
+
+[Ian Steigmeyer] 10:56:42
+And it's like, now it's literally less distance for us to get to Tahoe or Yosemite.
+
+[Jonathan Lloyd] 10:56:47
+That's awesome.
+
+[Ian Steigmeyer] 10:56:50
+Or Shasta, too. If you go north, you get to Shasta.
+
+[Jonathan Lloyd] 10:56:54
+Nice.
+
+[Ian Steigmeyer] 10:56:56
+So, um…
+
+[Jonathan Lloyd] 10:56:58
+California's cracked, dude. It's not fair.
+
+[Jonathan Lloyd] 10:57:00
+It's just not fair.
+
+[Ian Steigmeyer] 10:57:00
+Yeah, it isn't…
+
+[Ian Steigmeyer] 10:57:05
+I don't know why my… there we go. See, I don't know why my video's not working.
+
+[Jonathan Lloyd] 10:57:19
+Let the games begin.
+
+[Ian Steigmeyer] 10:57:22
+Alright. How's the app look?
+
+[Jonathan Lloyd] 10:57:26
+It looks like it looks. No, I didn't change too much, but I added, um… I added the caching, that was the main thing.
+
+[Jonathan Lloyd] 10:57:34
+And then just a couple, like, file cleanup things.
+
+[Jonathan Lloyd] 10:57:38
+Um, but otherwise, I'm good shape.
+
+[Ian Steigmeyer] 10:57:38
+Did you delete?
+
+[Ian Steigmeyer] 10:57:40
+Did you delete any of the, like, random AI features, or you left them in?
+
+[Jonathan Lloyd] 10:57:45
+The random AI ones… like, the forecasting stuff?
+
+[Ian Steigmeyer] 10:57:48
+like, the first… Yeah.
+
+[Jonathan Lloyd] 10:57:50
+I left the forecasting.
+
+[Ian Steigmeyer] 10:57:52
+Okay. Alright, that's fine with me.
+
+[Jonathan Lloyd] 10:57:56
+Um, let me share, I'll show you.
+
+[Jonathan Lloyd] 10:57:58
+So this is…
+
+[Jonathan Lloyd] 10:58:01
+Here's what we got…
+
+[Jonathan Lloyd] 10:58:04
+Just about same, um…
+
+[Jonathan Lloyd] 10:58:06
+The… I did notice the non-AI summaries didn't really do anything.
+
+[Ian Steigmeyer] 10:58:11
+Yeah, I actually… I was gonna get rid of that button.
+
+[Jonathan Lloyd] 10:58:15
+Okay. Um…
+
+[Jonathan Lloyd] 10:58:17
+Do you want to… should we do that?
+
+[Ian Steigmeyer] 10:58:20
+Um…
+
+[Jonathan Lloyd] 10:58:21
+I can… I can do it if you think we need to, or we can just leave it checked and just not even talk about it.
+
+[Ian Steigmeyer] 10:58:26
+I think just not even talk about it.
+
+[Jonathan Lloyd] 10:58:27
+Okay, alright, I like that idea.
+
+[Ian Steigmeyer] 10:58:30
+Just pretend it's not there.
+
+[Jonathan Lloyd] 10:58:31
+Yeah. Um, script-wise…
+
+[Jonathan Lloyd] 10:58:36
+There's what I, um…
+
+[Jonathan Lloyd] 10:58:39
+AI kind of cooked most of this, and I figured we can just riff on it, and then, um, we will… I have it to record transcript right now.
+
+[Jonathan Lloyd] 10:58:48
+So, I'll export the transcript and clean that up.
+
+[Jonathan Lloyd] 10:58:53
+is the artifact.
+
+[Jonathan Lloyd] 10:58:55
+Um, so, intro about, you know, what this is, what the, um…
+
+[Jonathan Lloyd] 10:59:00
+who the users are.
+
+[Jonathan Lloyd] 10:59:02
+Uh, next one is gonna be… I figure we'd just talk, like, um, page… down the page.
+
+[Jonathan Lloyd] 10:59:07
+So, overview first, we say, like, what is this screen? What is this, uh, risk, baseline risk mean? It's a score out of 0 to 100.
+
+[Jonathan Lloyd] 10:59:17
+Um, and then we have a Generate Insights option that uses AI to go… it's a… to go through all the data and give you a comprehensive picture about the national or the state level,
+
+[Jonathan Lloyd] 10:59:28
+with an agentic quality control loop built in for, uh, accuracy.
+
+[Jonathan Lloyd] 10:59:36
+Then, down the line, historical trends…
+
+[Jonathan Lloyd] 10:59:38
+Right? You just talk to each of these graphs.
+
+[Jonathan Lloyd] 10:59:42
+I can send you this link, too.
+
+[Jonathan Lloyd] 10:59:46
+I'm just gonna have it up on my side monitor.
+
+[Ian Steigmeyer] 10:59:50
+Uh, yeah, I figured you will, uh…
+
+[Ian Steigmeyer] 10:59:53
+you're gonna have the script up on your side monitor, or…?
+
+[Jonathan Lloyd] 10:59:56
+Yeah.
+
+[Ian Steigmeyer] 10:59:58
+Okay. And you'll…
+
+[Jonathan Lloyd] 10:59:58
+the script.
+
+[Ian Steigmeyer] 11:00:00
+You'll screen share for the presentation.
+
+[Jonathan Lloyd] 11:00:02
+Yep, and I'll record it, and have it downloaded to…
+
+[Jonathan Lloyd] 11:00:07
+my computer…
+
+[Jonathan Lloyd] 11:00:09
+Um, and then I can put it on YouTube and post it.
+
+[Jonathan Lloyd] 11:00:15
+I mean, I think we're just about done.
+
+[Ian Steigmeyer] 11:00:18
+Yep.
+
+[Jonathan Lloyd] 11:00:20
+Just once we get through this.
+
+[Jonathan Lloyd] 11:00:22
+Alright, I just texted you.
+
+[Ian Steigmeyer] 11:00:27
+Okay, sorry, um…
+
+[Jonathan Lloyd] 11:00:30
+How do they calculate this risk again?
+
+[Jonathan Lloyd] 11:00:33
+What goes into the score?
+
+[Ian Steigmeyer] 11:00:37
+Um… it's a combination… I think there's a thing that actually explains it on there, but it's basically a combination of…
+
+[Ian Steigmeyer] 11:00:44
+Um… like, vaccination rates,
+
+[Ian Steigmeyer] 11:00:47
+And, uh, recent cases and wastewater scores.
+
+[Jonathan Lloyd] 11:00:53
+Okay, so all three of our data sets.
+
+[Ian Steigmeyer] 11:00:53
+So it's… come on.
+
+[Ian Steigmeyer] 11:00:55
+Yeah.
+
+[Jonathan Lloyd] 11:00:56
+Yeah.
+
+[Ian Steigmeyer] 11:00:58
+Yeah, that's one of the things that I actually made some big changes to.
+
+[Ian Steigmeyer] 11:01:03
+Um, in the last version,
+
+[Ian Steigmeyer] 11:01:06
+Um, because it originally said, like, there's no risk of an outbreak,
+
+[Jonathan Lloyd] 11:01:10
+Yeah.
+
+[Ian Steigmeyer] 11:01:10
+Like, when we… the tool V1.
+
+[Ian Steigmeyer] 11:01:14
+Um, but, like…
+
+[Ian Steigmeyer] 11:01:16
+This is, like… I mean, we are in the midst of an outbreak, so I figured it should, uh, say that the risk was high when we were…
+
+[Jonathan Lloyd] 11:01:20
+Yeah.
+
+[Jonathan Lloyd] 11:01:24
+True.
+
+[Ian Steigmeyer] 11:01:24
+Actually…
+
+[Ian Steigmeyer] 11:01:26
+So, um…
+
+[Jonathan Lloyd] 11:01:27
+I hear ya.
+
+[Ian Steigmeyer] 11:01:29
+But, alright, I'm… I'm trying to pull up the script here…
+
+[Jonathan Lloyd] 11:01:29
+Okay.
+
+[Jonathan Lloyd] 11:01:35
+So, let's… let's break this up. I can do the open and the overview, because I remember this page pretty well. I'll talk about the…
+
+[Jonathan Lloyd] 11:01:42
+the agent, historical trends, what was going on here, um…
+
+[Jonathan Lloyd] 11:01:46
+Alright, I'll also cover the refresh button during the overview, like…
+
+[Jonathan Lloyd] 11:01:52
+At any time, you can refresh the data, it'll pull if it's, um…
+
+[Jonathan Lloyd] 11:01:56
+older… if the data's older than 1 hour.
+
+[Jonathan Lloyd] 11:02:01
+So the historical trends… oh, here's baseline risk and score on the trends page.
+
+[Jonathan Lloyd] 11:02:32
+Idaho, bro.
+
+[Ian Steigmeyer] 11:02:34
+What's that?
+
+[Jonathan Lloyd] 11:02:35
+Frickin' Idaho.
+
+[Jonathan Lloyd] 11:02:37
+these guys.
+
+[Jonathan Lloyd] 11:02:47
+Wastewater…
+
+[Jonathan Lloyd] 11:03:11
+report.
+
+[Jonathan Lloyd] 11:03:25
+That was pretty quick.
+
+[Jonathan Lloyd] 11:03:27
+Nice.
+
+[Jonathan Lloyd] 11:03:31
+Should we pre-generate these?
+
+[Ian Steigmeyer] 11:03:36
+Um…
+
+[Jonathan Lloyd] 11:03:39
+like, let's say, like, Texas.
+
+[Ian Steigmeyer] 11:03:41
+I think they would want to, uh…
+
+[Ian Steigmeyer] 11:03:44
+How long does it take now? I think they would prefer that we…
+
+[Jonathan Lloyd] 11:03:47
+Okay. The wastewater one was really quick.
+
+[Ian Steigmeyer] 11:03:48
+do it live.
+
+[Jonathan Lloyd] 11:03:57
+Okay, yeah, let's run it live. Um…
+
+[Jonathan Lloyd] 11:04:01
+You wanna just alternate, so I'll take over you, you take historical, I take kindergarten.
+
+[Jonathan Lloyd] 11:04:06
+You take wastewater.
+
+[Jonathan Lloyd] 11:04:08
+I'll take state… what's going on in state?
+
+[Jonathan Lloyd] 11:04:14
+Um, okay, so it combines…
+
+[Jonathan Lloyd] 11:04:16
+wastewater.
+
+[Jonathan Lloyd] 11:04:18
+with recent cases.
+
+[Ian Steigmeyer] 11:04:20
+Yeah, and then see where it says, how is state risk calculated?
+
+[Jonathan Lloyd] 11:04:24
+Yeah.
+
+[Jonathan Lloyd] 11:04:27
+coverage cases in wastewater.
+
+[Jonathan Lloyd] 11:04:34
+Yeah.
+
+[Jonathan Lloyd] 11:04:40
+Yeah. Well, there's… I guess there's no button, but…
+
+[Jonathan Lloyd] 11:04:44
+Um…
+
+[Jonathan Lloyd] 11:04:45
+Like, if we pick dark, it's small.
+
+[Jonathan Lloyd] 11:04:47
+Oh, there's the button if it shows up, then. Alright, I'm gonna leave that up.
+
+[Jonathan Lloyd] 11:04:51
+And then forecast. This would be…
+
+[Jonathan Lloyd] 11:04:54
+Me, you, me, you, me, you, spe you.
+
+[Jonathan Lloyd] 11:05:04
+Yeah. I mean, I think this one we just kind of pitched as, like, a…
+
+[Jonathan Lloyd] 11:05:09
+You can get this info other places, but, like, the overview page, but if you wanted to see all the states in one go, this would be where to see it.
+
+[Ian Steigmeyer] 11:05:19
+Yeah. Yeah, like, that's… I was thinking about just, like, totally getting rid of this page.
+
+[Jonathan Lloyd] 11:05:25
+I… I like the ability to see it all, though, because otherwise you kind of have to go and click through.
+
+[Jonathan Lloyd] 11:05:31
+each of these and generate an insight.
+
+[Jonathan Lloyd] 11:05:36
+Because this one, too…
+
+[Jonathan Lloyd] 11:05:38
+This one doesn't really say…
+
+[Jonathan Lloyd] 11:05:41
+like, forecasted risk, does it?
+
+[Jonathan Lloyd] 11:05:48
+It gives you a score.
+
+[Jonathan Lloyd] 11:05:51
+But that score is…
+
+[Jonathan Lloyd] 11:05:54
+is risk.
+
+[Jonathan Lloyd] 11:05:57
+But, oh, no, no, so the value here is interpretation.
+
+[Ian Steigmeyer] 11:06:02
+And the map.
+
+[Jonathan Lloyd] 11:06:03
+And the map.
+
+[Ian Steigmeyer] 11:06:04
+Oh, no, sorry, the map's on the other one.
+
+[Jonathan Lloyd] 11:06:07
+Um, but so, so this score is calculated, and then that score feeds a high…
+
+[Jonathan Lloyd] 11:06:13
+watching low, and then what's driving it. This is the… this is the important column.
+
+[Ian Steigmeyer] 11:06:19
+Yeah.
+
+[Jonathan Lloyd] 11:06:20
+Listen.
+
+[Ian Steigmeyer] 11:06:27
+Okay, let's, uh, let's give it a shot, because I'm going to run out of time.
+
+[Jonathan Lloyd] 11:06:30
+Alright, let's go. Um…
+
+[Jonathan Lloyd] 11:06:34
+Let's see… record, record to this computer…
+
+[Ian Steigmeyer] 11:06:38
+Um, actually, do we… sorry, real quick, could we check out the historical trends page?
+
+[Jonathan Lloyd] 11:06:42
+historical trends, yes.
+
+[Ian Steigmeyer] 11:06:51
+Okay. Um, and then go down.
+
+[Ian Steigmeyer] 11:06:58
+Okay, alright.
+
+[Jonathan Lloyd] 11:06:59
+Yep.
+
+[Jonathan Lloyd] 11:07:02
+I think we… we don't need to spend too long on any slide either, like…
+
+[Jonathan Lloyd] 11:07:07
+This is not… this is not a difficult functionality app, we just want to show them everything.
+
+[Ian Steigmeyer] 11:07:07
+Yeah.
+
+[Jonathan Lloyd] 11:07:15
+Okay, recording in 3…
+
+[Jonathan Lloyd] 11:07:17
+2… 1…
+
+[Jonathan Lloyd] 11:07:20
+Alright, good morning, everybody. My name is Jonathan Lloyd, here with Ian Stegmaier. Uh, we're gonna be presenting our interactive dashboard on measles and Outbreak data in the United States.
+
+[Jonathan Lloyd] 11:07:32
+Um, this website was deployed to our Posit Cloud server.
+
+[Jonathan Lloyd] 11:07:36
+Uh, this is our third iteration. Um…
+
+[Jonathan Lloyd] 11:07:39
+We're gonna start on the landing page here, which is the overview page, uh, because we've got to generate this insight. I'm gonna start running it now, um, but it takes about 30 seconds sometimes.
+
+[Jonathan Lloyd] 11:07:50
+Um, the baseline risk is a high, medium, low, uh, bucketed in scores, so this baseline risk is calculated as a factor of, um, all of our data sets combined, so we've got historical trends that rely on
+
+[Jonathan Lloyd] 11:08:06
+Um, all CDC data, but cases over time. We've got kindergarten vaccination coverage, and we have some wastewater testing indicators that all go in to feed the score. So, as you can see, 72…
+
+[Jonathan Lloyd] 11:08:19
+We're in the red zone, um, as you may know, having looked at the news lately, there are some cases going on across the country, so…
+
+[Jonathan Lloyd] 11:08:26
+This does make sense. Um, in order to generate some insights from the data, uh, for particular states of concern, so, for example, Idaho, I can tell you that's got low vaccination rates, so if I'm a parent in Idaho, or perhaps a CDC administrator, and I'm trying to get some quick insights out of this data without going through and doing some forensics,
+
+[Jonathan Lloyd] 11:08:48
+Uh, you can run this report.
+
+[Jonathan Lloyd] 11:08:51
+And it'll give you an AI-generated summary. This also has some quality control built into it in an agentic loop.
+
+[Jonathan Lloyd] 11:08:59
+Uh, we've got quality control metrics that are running in the background. It'll loop up to about 3 times.
+
+[Jonathan Lloyd] 11:09:04
+If needed, to make sure that the data that is generated is not hallucinated and is good quality.
+
+[Jonathan Lloyd] 11:09:11
+Um, to… for useful insights.
+
+[Jonathan Lloyd] 11:09:13
+So, as you can see here, both of these passed on their first quality try.
+
+[Jonathan Lloyd] 11:09:19
+Both 5 out of 5, love to see that.
+
+[Jonathan Lloyd] 11:09:22
+Um, Mary, like I mentioned, Idaho is high risk.
+
+[Jonathan Lloyd] 11:09:25
+It's got a composite risk score, and Ian will talk a little bit about that score later on.
+
+[Jonathan Lloyd] 11:09:31
+So, we'll move on to the next page.
+
+[Ian Steigmeyer] 11:09:34
+I was gonna say that the source of the data is the Socrata API. All of the data sets are accessed with an API key for Socrata.
+
+[Jonathan Lloyd] 11:09:35
+historical traps.
+
+[Jonathan Lloyd] 11:09:43
+Great point, thank you.
+
+[Ian Steigmeyer] 11:09:46
+So this is the historical trends page. Um, the first page is meant to be, uh, if you're only going to see one page on the site,
+
+[Ian Steigmeyer] 11:09:54
+It's meant to be the first page, you can kind of get the information you need there, but if you're curious about more details,
+
+[Ian Steigmeyer] 11:10:00
+Um, there's these other pages that, um, kind of, like, break out the different data sets.
+
+[Ian Steigmeyer] 11:10:05
+So this first one is showing, um, the historical trends of measles cases.
+
+[Ian Steigmeyer] 11:10:11
+So you can see, uh…
+
+[Ian Steigmeyer] 11:10:13
+both, um, like, a longer range,
+
+[Ian Steigmeyer] 11:10:16
+Uh, yearly score, which is what, um, what Jonathan's…
+
+[Ian Steigmeyer] 11:10:21
+pointing at there.
+
+[Ian Steigmeyer] 11:10:23
+And then you can also see, kind of, like, more recently,
+
+[Ian Steigmeyer] 11:10:26
+Um, just over the course of the last couple of years or so, how cases have
+
+[Ian Steigmeyer] 11:10:30
+Um, trended.
+
+[Jonathan Lloyd] 11:10:34
+Yeah.
+
+[Ian Steigmeyer] 11:10:34
+Yeah, and you can look at… you can look at a weekly view of each… each individual year.
+
+[Jonathan Lloyd] 11:10:41
+Alright, so the next dataset we pulled from Socrata was kindergarten MMR vaccination coverage.
+
+[Jonathan Lloyd] 11:10:47
+Um, this dataset has information from 2009 all the way to 2024, uh, when it seems like
+
+[Jonathan Lloyd] 11:10:53
+Data collection started to lapse.
+
+[Jonathan Lloyd] 11:10:55
+Um, the… this is a straight, uh, percent coverage score, which we…
+
+[Jonathan Lloyd] 11:11:01
+visualized nice, pretty here. Um…
+
+[Jonathan Lloyd] 11:11:04
+As you can see, Idaho not looking so great. Some other states with data unavailable, but generally, very varying shades of blue.
+
+[Jonathan Lloyd] 11:11:11
+Um, and this… this percent coverage does go in to feed some of the other risk scores.
+
+[Ian Steigmeyer] 11:11:21
+So, this is, uh, one of the most interesting data sets, I think, for tracking measles.
+
+[Ian Steigmeyer] 11:11:26
+Um, and it's actually looking at, um, detection of
+
+[Ian Steigmeyer] 11:11:30
+MMR, uh, RNA in the wastewater system.
+
+[Ian Steigmeyer] 11:11:35
+Um, and so it's actually a precursor, a forecasting
+
+[Ian Steigmeyer] 11:11:39
+indicator for…
+
+[Ian Steigmeyer] 11:11:40
+measles outbreaks, so that's… that's one of the, um…
+
+[Ian Steigmeyer] 11:11:44
+That's one of the factors in our risk score, is detection of MMR, RNA in the wastewater.
+
+[Ian Steigmeyer] 11:11:51
+Um, but this… this chart shows, uh, the comparison between
+
+[Ian Steigmeyer] 11:11:57
+Um, MMR detection in the wastewater, and the number of cases, um,
+
+[Ian Steigmeyer] 11:12:02
+It looks like this one is… this one is annual.
+
+[Ian Steigmeyer] 11:12:05
+Um, but we also have the data for, uh, each state.
+
+[Ian Steigmeyer] 11:12:09
+So I think, yeah, you can select… you can select which state you want to look at.
+
+[Jonathan Lloyd] 11:12:13
+Yeah.
+
+[Jonathan Lloyd] 11:12:16
+got a dedicated AI reporter here as well, as we do have on some of the other pages.
+
+[Jonathan Lloyd] 11:12:21
+Just to allow you to get some more targeted insights on specific data sets of interest.
+
+[Jonathan Lloyd] 11:12:28
+State risk, same thing, we've got a state AI reporter, um, but this goes and combines, at a state level,
+
+[Jonathan Lloyd] 11:12:36
+what the risk score might be. Um, so we've got the case count,
+
+[Jonathan Lloyd] 11:12:42
+Uh, wastewater data, as well as the coverage.
+
+[Jonathan Lloyd] 11:12:46
+availability or not. So, you can see in Utah, not looking so great.
+
+[Jonathan Lloyd] 11:12:52
+Oregon not looking so great, um, ranked by score.
+
+[Jonathan Lloyd] 11:12:58
+Which this then feeds the forecasting page.
+
+[Jonathan Lloyd] 11:13:02
+Ian, which kind of rolls it all up.
+
+[Ian Steigmeyer] 11:13:06
+Yeah, so the forecasting page is, um…
+
+[Ian Steigmeyer] 11:13:10
+meant to show which, uh, which states have the highest risk of
+
+[Ian Steigmeyer] 11:13:16
+Um, of an outbreak, or I guess it shows a score for every single state, but…
+
+[Ian Steigmeyer] 11:13:20
+Um, it's really useful for seeing which states are having an outbreak currently, and then…
+
+[Ian Steigmeyer] 11:13:27
+Um, it also, over there on the right, you can see there's an explanation of, um, what the highest factors
+
+[Ian Steigmeyer] 11:13:34
+Um, driving a score for that state are. If it's having a lot of recent cases, or it's detecting the MNR,
+
+[Ian Steigmeyer] 11:13:41
+MMR in the wastewater, or, um, like, low vaccination rates, that shows up on the…
+
+[Ian Steigmeyer] 11:13:46
+in the column on the right.
+
+[Ian Steigmeyer] 11:13:48
+And then there's also a, um…
+
+[Ian Steigmeyer] 11:13:50
+There's a, uh…
+
+[Ian Steigmeyer] 11:13:52
+AI reporter as well for this that…
+
+[Ian Steigmeyer] 11:13:56
+give some information about which states are at the highest risk and what's causing that.
+
+[Jonathan Lloyd] 11:14:03
+Alright, that's our app. Thank you all very much, hope you enjoyed it, hope you were able to get some, uh…
+
+[Jonathan Lloyd] 11:14:09
+useful insights out of this.
+
+[Ian Steigmeyer] 11:14:11
+Great. Thank you.
+
+[Jonathan Lloyd] 11:14:14
+Okay, recording stopped.
+
+[Ian Steigmeyer] 11:14:19
+All right, that was alright.
+
+[Jonathan Lloyd] 11:14:20
+That'll do.
+
+[Ian Steigmeyer] 11:14:21
+Yeah, ship it.
+
+[Jonathan Lloyd] 11:14:23
+Let's get out of here. Alright, let me get the transcript downloaded…
+
+[Ian Steigmeyer] 11:14:25
+Alright.
+
